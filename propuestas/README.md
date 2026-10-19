@@ -2,7 +2,7 @@
 
 Presentaciones comerciales publicadas con GitHub Pages para compartirlas con clientes mediante un enlace.
 
-- Catálogo: https://nathaliavelasco.github.io/claude-pages/propuestas/
+- Catálogo: https://www.experienciasimone.com/gestion-comercial/propuestas/
 - Cada propuesta vive en su propia carpeta: `propuestas/<cliente>-<proyecto>/index.html` con sus imágenes en `img/`.
 
 ## Propuestas
@@ -10,7 +10,7 @@ Presentaciones comerciales publicadas con GitHub Pages para compartirlas con cli
 | Cliente | Proyecto | Enlace |
 |---|---|---|
 | Evoforma · Megalabs | La Ruta de la Huella — Convención de Ventas 2027 | [Ver presentación](https://nathaliavelasco.github.io/gestion-comercial/propuestas/megalabs-la-ruta-de-la-huella/) |
-| Evoforma · Megalabs | El Circuito del Reconocimiento — demo del artefacto digital | [Ver demo](https://www.experienciasimone.com/claude-pages/propuestas/megalabs-circuito-del-reconocimiento/) |
+| Evoforma · Megalabs | El Circuito del Reconocimiento — demo del artefacto digital | [Ver demo](https://www.experienciasimone.com/gestion-comercial/propuestas/megalabs-circuito-del-reconocimiento/) |
 
 ## Cómo se ve una propuesta
 
