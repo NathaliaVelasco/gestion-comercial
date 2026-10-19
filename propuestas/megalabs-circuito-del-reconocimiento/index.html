@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="av/01.webp">
+<title>El Circuito del Reconocimiento</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Demo del artefacto de elección de tribus, cupos, puntos y claves para la Convención de Ventas Megalabs 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+<style>
+  /* Layout: mobile-first app shell — role switcher on top, one view at a time; the reef's deep teal as ground, aqua for progress, coral for "full" and alerts.
+     Single dark look by choice: it continues the event's underwater illustration world. */
+  :root {
+    --abyss: #071F24;
+    --deep: #0B2E33;
+    --panel: #10393F;
+    --panel-2: #154850;
+    --line: #22585F;
+    --aqua: #3FD0A8;
+    --aqua-ink: #06261F;
+    --sun: #FFC25A;
+    --coral: #FF7A59;
+    --text: #EAF6F2;
+    --soft: #A9CFC6;
+    --muted: #7FA8A0;
+    --head: 'Fredoka', 'Nunito Sans', system-ui, sans-serif;
+    --body: 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --r: 18px;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { min-height: 100%; }
+  body { margin: 0; background: radial-gradient(120% 70% at 50% -10%, #134A50 0%, var(--abyss) 60%) fixed, var(--abyss); color: var(--text); font-family: var(--body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, p { margin: 0; }
+  h1, h2, h3 { font-family: var(--head); font-weight: 600; text-wrap: balance; letter-spacing: .005em; }
+  button, input, select { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  :focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; border-radius: 8px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  .tabnum { font-variant-numeric: tabular-nums; }
+
+  .shell { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 48px; display: flex; flex-direction: column; gap: 20px; }
+
+  /* Header */
+  header.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+  .brand { display: flex; flex-direction: column; gap: 2px; }
+  .brand .ev { font-size: 12px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; color: var(--aqua); }
+  .brand h1 { font-size: clamp(22px, 3.4vw, 30px); line-height: 1.1; }
+  .live { display: flex; align-items: center; gap: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px 8px 12px; font-size: 14px; color: var(--soft); }
+  .live b { color: var(--text); }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--aqua); box-shadow: 0 0 0 0 rgba(63, 208, 168, .6); animation: pulse 2s infinite; }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(63, 208, 168, .55); } 70% { box-shadow: 0 0 0 9px rgba(63, 208, 168, 0); } 100% { box-shadow: 0 0 0 0 rgba(63, 208, 168, 0); } }
+
+  .demo-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; background: rgba(255, 194, 90, .08); border: 1px dashed rgba(255, 194, 90, .45); border-radius: var(--r); padding: 10px 12px; }
+  .demo-bar .lbl { font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--sun); }
+  .seg { display: flex; flex-wrap: wrap; gap: 6px; }
+  .seg button { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 700; color: var(--soft); }
+  .seg button[aria-pressed="true"] { background: var(--aqua); border-color: var(--aqua); color: var(--aqua-ink); }
+  .demo-bar .hint { font-size: 13px; color: var(--soft); margin-left: auto; }
+
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: clamp(18px, 3vw, 26px); }
+  .eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--aqua); }
+  .stack { display: flex; flex-direction: column; gap: 14px; }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .muted { color: var(--muted); }
+  .soft { color: var(--soft); }
+  .btn { border: 0; border-radius: 14px; padding: 13px 18px; font-weight: 800; font-size: 15px; background: var(--aqua); color: var(--aqua-ink); display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+  .btn:hover { filter: brightness(1.06); }
+  .btn:disabled { opacity: .45; cursor: not-allowed; }
+  .btn.ghost { background: transparent; border: 1px solid var(--line); color: var(--text); }
+  .btn.ghost:hover { background: var(--panel-2); }
+  .btn.warn { background: var(--coral); color: #2A0D05; }
+  .btn.sm { padding: 8px 12px; font-size: 13px; border-radius: 10px; }
+  label.f { display: flex; flex-direction: column; gap: 6px; font-weight: 700; font-size: 14px; color: var(--soft); }
+  input[type="text"], input[type="password"], select { background: var(--deep); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-size: 16px; color: var(--text); width: 100%; }
+  input::placeholder { color: var(--muted); }
+  .err { color: var(--coral); font-weight: 700; font-size: 14px; }
+
+  /* Steps */
+  .steps { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--muted); font-weight: 700; flex-wrap: wrap; }
+  .steps span { display: inline-flex; align-items: center; gap: 6px; }
+  .steps i { font-style: normal; width: 22px; height: 22px; border-radius: 50%; display: inline-grid; place-items: center; background: var(--panel-2); color: var(--soft); font-size: 12px; }
+  .steps .on { color: var(--text); }
+  .steps .on i { background: var(--aqua); color: var(--aqua-ink); }
+  .steps .sep { width: 18px; height: 1px; background: var(--line); }
+
+  .roles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .role-opt { text-align: left; background: var(--deep); border: 2px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+  .role-opt b { font-family: var(--head); font-weight: 600; font-size: 18px; }
+  .role-opt span { font-size: 14px; color: var(--soft); }
+  .role-opt[aria-pressed="true"] { border-color: var(--aqua); background: rgba(63, 208, 168, .08); }
+
+  /* Avatar grid */
+  .avgrid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+  .av { position: relative; background: var(--deep); border: 2px solid transparent; border-radius: 20px; padding: 12px 10px 14px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; transition: transform .15s, border-color .15s; }
+  button.av:hover:not(:disabled) { transform: translateY(-3px); border-color: var(--aqua); }
+  .av img { width: 100%; max-width: 150px; aspect-ratio: 1; border-radius: 50%; }
+  .av .nm { font-family: var(--head); font-weight: 600; font-size: 15px; line-height: 1.2; }
+  .meter { width: 100%; height: 6px; border-radius: 3px; background: var(--panel-2); overflow: hidden; }
+  .meter > span { display: block; height: 100%; background: var(--aqua); border-radius: 3px; }
+  .av .left { font-size: 13px; color: var(--soft); }
+  .av .left b { color: var(--text); }
+  .av.full img { filter: grayscale(1) brightness(.55); }
+  .av.full .nm, .av.full .left { opacity: .6; }
+  .stamp { position: absolute; top: 38%; left: 50%; transform: translate(-50%, -50%) rotate(-12deg); background: var(--coral); color: #2A0D05; font-family: var(--head); font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; padding: 6px 10px; border-radius: 8px; white-space: nowrap; box-shadow: 0 6px 18px rgba(0, 0, 0, .35); }
+  .av.few .left b { color: var(--sun); }
+
+  /* Sheet (detail) */
+  .sheet-wrap { position: fixed; inset: 0; z-index: 30; background: rgba(3, 14, 16, .7); display: grid; place-items: end center; padding: 16px; padding-bottom: max(16px, env(safe-area-inset-bottom, 0px)); }
+  .sheet { width: min(520px, 100%); background: var(--panel); border: 1px solid var(--line); border-radius: 24px; padding: 22px; display: flex; flex-direction: column; gap: 14px; animation: up .22s ease-out; max-height: calc(100vh - 32px); overflow: auto; }
+  @media (min-width: 700px) { .sheet-wrap { place-items: center; } }
+  @keyframes up { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .sheet .hero { display: flex; gap: 16px; align-items: center; }
+  .sheet .hero img { width: 112px; height: 112px; border-radius: 50%; flex: none; }
+  .sheet h2 { font-size: 26px; line-height: 1.1; }
+
+  /* Confirmation */
+  .welcome { text-align: center; align-items: center; background: linear-gradient(180deg, #145158 0%, var(--panel) 100%); }
+  .welcome img { width: 168px; height: 168px; border-radius: 50%; box-shadow: 0 0 0 6px rgba(63, 208, 168, .25), 0 18px 40px rgba(0, 0, 0, .4); animation: pop .5s ease-out; }
+  @keyframes pop { 0% { transform: scale(.6); opacity: 0; } 70% { transform: scale(1.06); } 100% { transform: scale(1); opacity: 1; } }
+  .welcome h2 { font-size: clamp(26px, 4vw, 36px); line-height: 1.1; }
+  .welcome p.msg { font-size: 18px; color: var(--soft); max-width: 36ch; }
+
+  /* Tribe dashboard */
+  .dash { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+  .ring { --p: 0; width: 150px; height: 150px; border-radius: 50%; background: conic-gradient(var(--aqua) calc(var(--p) * 1%), var(--panel-2) 0); display: grid; place-items: center; flex: none; }
+  .ring > div { width: 118px; height: 118px; border-radius: 50%; background: var(--panel); display: grid; place-items: center; text-align: center; line-height: 1.1; }
+  .ring b { font-family: var(--head); font-size: 30px; font-weight: 700; }
+  .ring small { display: block; font-size: 12px; color: var(--soft); }
+  .stamps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .st { border: 2px dashed var(--line); border-radius: 14px; padding: 10px 8px; text-align: center; display: flex; flex-direction: column; gap: 4px; align-items: center; min-height: 92px; justify-content: center; }
+  .st .ic { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--panel-2); color: var(--muted); font-weight: 800; font-size: 14px; }
+  .st span { font-size: 12.5px; color: var(--soft); line-height: 1.25; }
+  .st.done { border-style: solid; border-color: var(--aqua); background: rgba(63, 208, 168, .07); }
+  .st.done .ic { background: var(--aqua); color: var(--aqua-ink); }
+  .st em { font-style: normal; font-size: 11px; font-weight: 800; color: var(--sun); text-transform: uppercase; letter-spacing: .06em; }
+  .members { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 16px; font-size: 14px; }
+  .members li { display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px solid var(--line); padding: 6px 0; min-width: 0; }
+  .members li span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .chip { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 3px 8px; white-space: nowrap; }
+  .chip.campo { background: rgba(63, 208, 168, .14); color: var(--aqua); }
+  .chip.lider { background: rgba(255, 194, 90, .14); color: var(--sun); }
+  .chip.capt { background: var(--sun); color: #2B1B00; }
+  .log { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .log li { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .log li .pts { font-family: var(--head); font-weight: 700; color: var(--aqua); font-size: 17px; }
+  .log li small { color: var(--muted); grid-column: 1 / -1; }
+
+  /* Facilitator */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips button { border: 1px solid var(--line); background: var(--deep); border-radius: 12px; padding: 10px 12px; font-weight: 700; font-size: 14px; text-align: left; color: var(--soft); }
+  .chips button[aria-pressed="true"] { border-color: var(--aqua); background: rgba(63, 208, 168, .12); color: var(--text); }
+  .tribes-mini { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+  .tm { background: var(--deep); border: 2px solid var(--line); border-radius: 14px; padding: 8px; display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+  .tm img { width: 64px; height: 64px; border-radius: 50%; }
+  .tm b { font-size: 12.5px; line-height: 1.2; }
+  .tm small { font-size: 12px; color: var(--soft); }
+  .tm[aria-pressed="true"] { border-color: var(--aqua); background: rgba(63, 208, 168, .1); }
+  .tm.got { position: relative; }
+  .tm.got::after { content: "✓ sellado"; position: absolute; top: 6px; right: 6px; font-size: 10px; font-weight: 800; background: var(--aqua); color: var(--aqua-ink); border-radius: 6px; padding: 2px 5px; }
+  .summary { background: var(--deep); border-radius: 14px; padding: 14px 16px; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; }
+  .summary .big { font-family: var(--head); font-size: 24px; font-weight: 700; color: var(--aqua); }
+
+  /* Admin */
+  .kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; }
+  .kpi b { font-family: var(--head); font-size: 30px; font-weight: 700; line-height: 1.1; }
+  .kpi span { font-size: 13px; color: var(--soft); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 860px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  th { font-size: 11.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); background: var(--deep); position: sticky; top: 0; }
+  tr:last-child td { border-bottom: 0; }
+  td .tn { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  td .tn img { width: 36px; height: 36px; border-radius: 50%; }
+  .q { font-variant-numeric: tabular-nums; }
+  .q.ok { color: var(--aqua); font-weight: 800; }
+  .key { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 15px; letter-spacing: .14em; background: var(--deep); border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; user-select: all; }
+  .acts { display: flex; gap: 6px; flex-wrap: wrap; }
+  .bar { height: 8px; border-radius: 4px; background: var(--panel-2); overflow: hidden; min-width: 90px; }
+  .bar span { display: block; height: 100%; background: var(--aqua); }
+  .rank { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .rank li { display: grid; grid-template-columns: 28px 40px minmax(0, 1fr) auto; gap: 10px; align-items: center; }
+  .rank .pos { font-family: var(--head); font-weight: 700; color: var(--muted); text-align: center; }
+  .rank li:nth-child(1) .pos { color: var(--sun); }
+  .rank img { width: 40px; height: 40px; border-radius: 50%; }
+  .rank .nm { font-weight: 700; font-size: 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .rank .pts { font-family: var(--head); font-weight: 700; }
+
+  .toast { position: fixed; left: 50%; bottom: max(20px, env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 40; background: var(--text); color: var(--abyss); font-weight: 800; padding: 12px 18px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0, 0, 0, .4); max-width: calc(100vw - 32px); text-align: center; }
+
+  footer.note { font-size: 13px; color: var(--muted); text-align: center; max-width: 72ch; margin: 0 auto; }
+
+  @media (max-width: 860px) {
+    .avgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .tribes-mini { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .dash, .kpis { grid-template-columns: 1fr 1fr; }
+    .dash { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) {
+    .avgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .roles { grid-template-columns: 1fr; }
+    .stamps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .members { grid-template-columns: 1fr; }
+    .demo-bar .hint { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <header class="top">
+    <div class="brand">
+      <span class="ev">Megalabs 2027 · La Ruta de la Huella</span>
+      <h1>El Circuito del Reconocimiento</h1>
+    </div>
+    <div class="live" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="liveCount"></span></div>
+  </header>
+
+  <div class="demo-bar">
+    <span class="lbl">Demo · ver como</span>
+    <div class="seg" role="group" aria-label="Ver la plataforma como">
+      <button type="button" data-view="participante" aria-pressed="true">Participante</button>
+      <button type="button" data-view="facilitador" aria-pressed="false">Facilitador</button>
+      <button type="button" data-view="lider" aria-pressed="false">Líder de tribu</button>
+      <button type="button" data-view="admin" aria-pressed="false">Administrador</button>
+    </div>
+    <span class="hint" id="hint"></span>
+  </div>
+
+  <main id="app"></main>
+
+  <footer class="note">Demostración con datos simulados: lo que hagas se guarda solo en este dispositivo. En la versión final, los 300 participantes, los facilitadores y el equipo administrador comparten la misma información en tiempo real.</footer>
+</div>
+<div id="layer"></div>
+
+<script>
+(() => {
+  // ---------- Datos fijos ----------
+  const AV = [
+    ['La Tortuga Carey', 'Protección, agilidad en el mercado y eliminación de barreras en el territorio.'],
+    ['El Coral Guardián', 'Estructura, fortaleza, respaldo técnico y solidez institucional.'],
+    ['El Manta Raya', 'Navegación estratégica, elegancia en la negociación y visión de futuro.'],
+    ['El Pez Cirujano', 'Precisión científica, rigor de portafolio y efectividad en la recomendación.'],
+    ['El Faro del Arrecife', 'Liderazgo, guía, claridad de metas y dirección unificada.'],
+    ['La Estrella de Mar', 'Resiliencia, capacidad de adaptación, renovación y trabajo en equipo.'],
+    ['El Arrecife de Neón', 'Impulso de los 24 nuevos lanzamientos, brillo y captura de valor en punto de venta.'],
+    ['El Rompeolas', 'Estrategia comercial, defensa competitiva y protección del mercado.'],
+    ['El Caballito de Mar', 'Cercanía, empatía con el cliente, fidelización y relacionamiento a largo plazo.'],
+    ['El Pez Payaso', 'Simbiosis Viva: sinergia interdepartamental, colaboración estrecha y trabajo en alianza (1 + 1 > 2).'],
+    ['El Delfín del Pacífico', 'Comunicación fluida, velocidad de respuesta, agilidad comercial y dinamismo.'],
+    ['El Anémona', 'Acogida, gestión de clientes clave, soporte continuo y servicio integral.'],
+    ['El Halcón Marino', 'Lectura rápida de datos (DDD, rotación), anticipación de tendencias y visión táctica.'],
+    ['El Nautilus', 'Disciplina comercial, consistencia, evolución constante y estructura operativa.'],
+    ['La Perla del Pacífico', 'Excelencia en la ejecución, valor diferencial y entrega de resultados excepcionales.']
+  ].map(([name, desc], i) => ({ id: i + 1, name, desc, img: `av/${String(i + 1).padStart(2, '0')}.webp` }));
+  const CUPO = { campo: 17, lider: 3 };
+  const META = 1000;
+  const STATIONS = [
+    { id: 'e1', name: 'Pintura Colectiva', sub: 'Tortuga Carey', per: 5, stamp: true },
+    { id: 'e2', name: 'Jenga Gigante', sub: 'Arquitectura de Portafolio', per: 5, stamp: true },
+    { id: 'e3', name: 'Retratos Dirigidos', sub: 'Perfil de Cliente PX/IE', per: 5, stamp: true },
+    { id: 'e4', name: 'Pictionary Gigante', sub: 'Marcas y Lanzamientos 2027', per: 5, stamp: true },
+    { id: 'e5', name: 'Circuito de Relevos', sub: 'Cadena de Ejecución en Campo', per: 5, stamp: true },
+    { id: 'e6', name: 'El Espejo', sub: 'Obligatoria', per: 5, stamp: true, req: true },
+    { id: 'acuario', name: 'El Acuario', sub: 'Dinámica de cooperación', per: null, stamp: false },
+    { id: 'plenaria', name: 'Plenarias y retos de sinergia', sub: 'Puntos adicionales', per: null, stamp: false }
+  ];
+  const PIN = { facilitador: '2027', admin: 'ARRECIFE' };
+  const ALPH = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  const FN = ['Andrea','Carlos','Valentina','Juan','Camila','Diego','Laura','Andrés','María','Felipe','Daniela','Santiago','Paula','Sebastián','Natalia','Mateo','Sofía','Alejandro','Isabella','David','Mariana','Javier','Gabriela','Luis','Carolina','Ricardo','Lucía','Óscar','Ana','Fernando','Juliana','Miguel','Sara','Esteban','Verónica','Tomás','Claudia','Héctor','Melissa','Rafael'];
+  const LN = ['Martínez','Gómez','Rodríguez','López','Hernández','García','Ramírez','Torres','Flores','Rivera','Morales','Castro','Ortiz','Vargas','Rojas','Mejía','Aguilar','Herrera','Medina','Cruz','Reyes','Guzmán','Pineda','Salazar','Molina','Peña','Cortés','Navarro','Romero','Suárez'];
+
+  // ---------- Estado ----------
+  const KEY = 'circuito-demo-v1';
+  let S = null;
+  let ui = { view: 'participante', step: 1, name: '', role: null, me: null, fac: false, adm: false, leader: null, facStation: 'e1', facTribe: null, acuPts: 10, showKeys: false };
+
+  function load() { try { const raw = localStorage.getItem(KEY); return raw ? JSON.parse(raw) : null; } catch (e) { return null; } }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* demo sin almacenamiento */ } }
+
+  function rng(seedN) { let a = seedN >>> 0; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function newKey(r) { let k = ''; const buf = new Uint32Array(6); if (!r && window.crypto && crypto.getRandomValues) crypto.getRandomValues(buf); for (let i = 0; i < 6; i++) k += ALPH[(r ? Math.floor(r() * 4294967296) : buf[i]) % ALPH.length]; return k; }
+  function personName(r) { return `${FN[Math.floor(r() * FN.length)]} ${LN[Math.floor(r() * LN.length)]}`; }
+
+  function seed() {
+    const r = rng(2027);
+    const st = { participants: [], leaders: {}, keys: {}, points: [], seq: 1 };
+    // Ocupación inicial: algunas tribus completas, otras casi, otras con espacio.
+    const fill = { 1: [17, 3], 2: [15, 3], 3: [17, 2], 4: [11, 2], 5: [17, 3], 6: [16, 3], 7: [17, 3], 8: [9, 1], 9: [17, 3], 10: [17, 3], 11: [14, 2], 12: [17, 3], 13: [12, 3], 14: [17, 1], 15: [17, 3] };
+    for (const t of AV) {
+      const [c, l] = fill[t.id];
+      for (let i = 0; i < c; i++) st.participants.push({ id: st.seq++, name: personName(r), role: 'campo', tribe: t.id });
+      for (let i = 0; i < l; i++) st.participants.push({ id: st.seq++, name: personName(r), role: 'lider', tribe: t.id });
+    }
+    S = st;
+    for (const t of AV) if (members(t.id).length === 20) assignLeader(t.id, r);
+    // Puntos de ejemplo: primeras estaciones del Día 1 en algunas tribus completas.
+    const sample = [[1, 'e1'], [1, 'e4'], [5, 'e2'], [7, 'e1'], [7, 'e3'], [7, 'e6'], [9, 'e5'], [10, 'e2'], [10, 'e6'], [12, 'e4'], [15, 'e3']];
+    sample.forEach(([tid, sid]) => addStationPoints(tid, sid, 'Facilitador demo', true));
+    return st;
+  }
+
+  // ---------- Lógica ----------
+  const members = tid => S.participants.filter(p => p.tribe === tid);
+  const countRole = (tid, role) => S.participants.filter(p => p.tribe === tid && p.role === role).length;
+  const left = (tid, role) => CUPO[role] - countRole(tid, role);
+  const isFull = tid => members(tid).length >= 20;
+  const tribePts = tid => S.points.filter(x => x.tribe === tid).reduce((a, b) => a + b.total, 0);
+  const stampsOf = tid => new Set(S.points.filter(x => x.tribe === tid && x.stamp).map(x => x.station));
+  const av = id => AV[id - 1];
+  const station = id => STATIONS.find(s => s.id === id);
+  const fmt = n => n.toLocaleString('es-CO');
+
+  function assignLeader(tid, r) {
+    const ms = members(tid); if (!ms.length) return;
+    const pick = ms[Math.floor((r ? r() : Math.random()) * ms.length)];
+    S.leaders[tid] = pick.id;
+    if (!S.keys[tid]) S.keys[tid] = newKey(r);
+  }
+  function join(name, role, tid) {
+    if (left(tid, role) <= 0) return null;
+    const p = { id: S.seq++, name, role, tribe: tid };
+    S.participants.push(p);
+    if (isFull(tid) && !S.leaders[tid]) assignLeader(tid);
+    save(); return p;
+  }
+  function addStationPoints(tid, sid, by, silent) {
+    const s = station(sid); const n = members(tid).length;
+    const per = s.per ?? ui.acuPts;
+    const entry = { id: S.seq++, tribe: tid, station: sid, per, n, total: per * n, stamp: !!s.stamp, by, ts: Date.now() };
+    S.points.push(entry); if (!silent) save(); return entry;
+  }
+  function ranking() { return AV.map(t => ({ t, pts: tribePts(t.id) })).sort((a, b) => b.pts - a.pts); }
+
+  // ---------- Render helpers ----------
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const app = $('#app'); const layer = $('#layer');
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  function toast(msg) { const d = document.createElement('div'); d.className = 'toast'; d.setAttribute('role', 'status'); d.textContent = msg; document.body.appendChild(d); setTimeout(() => d.remove(), 2600); }
+  function header() {
+    const total = S.participants.length;
+    $('#liveCount').innerHTML = `<b class="tabnum">${total}</b> de 300 lugares reservados · <b class="tabnum">${AV.filter(t => isFull(t.id)).length}</b> tribus completas`;
+    const hints = { participante: 'Así lo ve cada persona desde el enlace de WhatsApp o el QR.', facilitador: `Clave de facilitador para el demo: ${PIN.facilitador}`, lider: 'La clave de cada tribu está en la consola del Administrador.', admin: `Clave de administrador para el demo: ${PIN.admin}` };
+    $('#hint').textContent = hints[ui.view];
+    document.querySelectorAll('.seg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === ui.view)));
+  }
+  function render() { header(); ({ participante: vPart, facilitador: vFac, lider: vLider, admin: vAdmin })[ui.view](); }
+
+  function stepsBar(n) {
+    const lab = ['Tus datos', 'Elige tu tribu', 'Confirmación'];
+    return `<div class="steps" aria-label="Paso ${n} de 3">${lab.map((l, i) => `${i ? '<span class="sep"></span>' : ''}<span class="${i + 1 <= n ? 'on' : ''}"><i>${i + 1}</i>${l}</span>`).join('')}</div>`;
+  }
+
+  // ---------- Participante ----------
+  function vPart() {
+    if (ui.step === 1) {
+      app.innerHTML = `<div class="card stack" style="max-width:640px;margin:0 auto">
+        ${stepsBar(1)}
+        <p class="eyebrow">Fase 1 · Pre-evento</p>
+        <h2 style="font-size:clamp(24px,4vw,32px)">Elige tu identidad en el Arrecife Vivo</h2>
+        <p class="soft">Escoge el avatar con el que te identificas. Cada tribu tiene 20 lugares: 17 para la Fuerza de Ventas y 3 para Líderes y Soporte, para que todos los equipos queden balanceados.</p>
+        <label class="f" for="pname">Tu nombre completo<input id="pname" type="text" autocomplete="name" placeholder="Ej. Andrea Martínez" value="${esc(ui.name)}"></label>
+        <div class="stack" style="gap:8px"><span class="soft" style="font-weight:700;font-size:14px">¿Desde dónde aportas?</span>
+          <div class="roles" role="group" aria-label="Tu rol">
+            <button type="button" class="role-opt" data-role="campo" aria-pressed="${ui.role === 'campo'}"><b>Fuerza de Ventas en Campo</b><span>Visitador Médico, Dermoconsultor o Visitador Clínico</span></button>
+            <button type="button" class="role-opt" data-role="lider" aria-pressed="${ui.role === 'lider'}"><b>Oficina · Liderazgo y Soporte</b><span>Gerencia General, Marketing, Promoción, Comercial, Médica, P&amp;C, Finanzas o Compliance</span></button>
+          </div></div>
+        <p class="err" id="perr" hidden></p>
+        <div class="row"><button type="button" class="btn" id="next1">Ver tribus disponibles →</button></div>
+      </div>`;
+      app.querySelectorAll('.role-opt').forEach(b => b.onclick = () => { ui.role = b.dataset.role; ui.name = $('#pname').value; vPart(); });
+      $('#next1').onclick = () => {
+        ui.name = $('#pname').value.trim();
+        const e = $('#perr');
+        if (!ui.name) { e.textContent = 'Escribe tu nombre para reservar tu lugar.'; e.hidden = false; return; }
+        if (!ui.role) { e.textContent = 'Elige si perteneces a Campo o a Oficina · Liderazgo.'; e.hidden = false; return; }
+        ui.step = 2; vPart();
+      };
+      return;
+    }
+    if (ui.step === 2) {
+      const roleLabel = ui.role === 'campo' ? 'Fuerza de Ventas en Campo' : 'Oficina · Liderazgo y Soporte';
+      const avail = AV.filter(t => left(t.id, ui.role) > 0).length;
+      app.innerHTML = `<div class="stack">
+        <div class="card stack">
+          ${stepsBar(2)}
+          <div class="row" style="justify-content:space-between"><div class="stack" style="gap:4px"><h2 style="font-size:clamp(22px,3.4vw,28px)">Hola, ${esc(ui.name.split(' ')[0])}. Elige tu tribu</h2>
+          <p class="soft">Viendo cupos para <b style="color:var(--text)">${roleLabel}</b> · ${avail} de 15 tribus con lugar disponible.</p></div>
+          <button type="button" class="btn ghost sm" id="back">← Cambiar datos</button></div>
+        </div>
+        <div class="avgrid">${AV.map(t => {
+          const l = left(t.id, ui.role), full = l <= 0, used = CUPO[ui.role] - l;
+          const lbl = full ? (isFull(t.id) ? 'Tribu completa' : 'Cupo agotado') : '';
+          return `<button type="button" class="av ${full ? 'full' : ''} ${!full && l <= 3 ? 'few' : ''}" data-t="${t.id}" ${full ? 'disabled' : ''} aria-label="${esc(t.name)}${full ? ', ' + lbl : ', quedan ' + l + ' lugares'}">
+            <img src="${t.img}" alt="" loading="lazy" width="150" height="150">
+            <span class="nm">${esc(t.name)}</span>
+            <span class="meter" aria-hidden="true"><span style="width:${(used / CUPO[ui.role]) * 100}%;${full ? 'background:var(--coral)' : ''}"></span></span>
+            <span class="left">${full ? lbl : `Quedan <b class="tabnum">${l}</b> de ${CUPO[ui.role]}`}</span>
+            ${full ? `<span class="stamp">${lbl}</span>` : ''}
+          </button>`; }).join('')}</div>
+      </div>`;
+      $('#back').onclick = () => { ui.step = 1; vPart(); };
+      app.querySelectorAll('button.av').forEach(b => b.onclick = () => openTribe(+b.dataset.t));
+      return;
+    }
+    // Paso 3
+    const me = S.participants.find(p => p.id === ui.me); if (!me) { ui.step = 1; return vPart(); }
+    const t = av(me.tribe);
+    app.innerHTML = `<div class="stack">
+      <div class="card stack welcome">
+        ${stepsBar(3)}
+        <img src="${t.img}" alt="${esc(t.name)}" width="168" height="168">
+        <h2>¡Bienvenido a la Tribu ${esc(t.name)}!</h2>
+        <p class="msg">Tu lugar en el Arrecife 2027 está reservado.</p>
+        <p class="soft" style="max-width:52ch">En el check-in en Salinitas recibirás tu escarapela con esta ilustración y el color de tu tribu, para reconocer a tus 19 compañeros desde el primer momento.</p>
+        <div class="row" style="justify-content:center"><button type="button" class="btn ghost" id="again">Registrar a otra persona (demo)</button></div>
+      </div>
+      ${tribeDash(me.tribe, me.id)}
+    </div>`;
+    $('#again').onclick = () => { ui.step = 1; ui.name = ''; ui.role = null; vPart(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+  }
+
+  function openTribe(tid) {
+    const t = av(tid), l = left(tid, ui.role);
+    layer.innerHTML = `<div class="sheet-wrap" id="sw"><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-t">
+      <div class="hero"><img src="${t.img}" alt=""><div class="stack" style="gap:6px"><p class="eyebrow">Tribu ${t.id} de 15</p><h2 id="sh-t">${esc(t.name)}</h2></div></div>
+      <p style="font-size:17px">${esc(t.desc)}</p>
+      <div class="summary"><span class="soft">Integrantes</span><span class="big tabnum">${members(tid).length} / 20</span><span class="soft">Quedan <b style="color:var(--text)">${l}</b> lugares para tu rol</span></div>
+      <div class="row"><button type="button" class="btn" id="joinBtn" style="flex:1">Unirme a esta tribu</button><button type="button" class="btn ghost" id="closeBtn">Ver otras</button></div>
+    </div></div>`;
+    const close = () => { layer.innerHTML = ''; };
+    $('#closeBtn').onclick = close; $('#sw').onclick = e => { if (e.target.id === 'sw') close(); };
+    document.addEventListener('keydown', function k(e) { if (e.key === 'Escape') { close(); document.removeEventListener('keydown', k); } });
+    $('#joinBtn').focus();
+    $('#joinBtn').onclick = () => {
+      const p = join(ui.name, ui.role, tid); close();
+      if (!p) { toast('Esta tribu acaba de completarse. Elige otra.'); vPart(); return; }
+      ui.me = p.id; ui.step = 3; render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  }
+
+  // ---------- Tablero de tribu (participante y líder) ----------
+  function tribeDash(tid, highlightId) {
+    const t = av(tid), ms = members(tid), pts = tribePts(tid), pct = Math.min(100, Math.round(pts / META * 100));
+    const got = stampsOf(tid), leadId = S.leaders[tid];
+    const pos = ranking().findIndex(x => x.t.id === tid) + 1;
+    const hist = S.points.filter(x => x.tribe === tid).slice().reverse();
+    return `<div class="dash">
+      <div class="card stack">
+        <p class="eyebrow">Meta colectiva</p>
+        <div class="row" style="gap:20px;flex-wrap:nowrap">
+          <div class="ring" style="--p:${pct}"><div><span><b class="tabnum">${fmt(pts)}</b><small>de ${fmt(META)} pts</small></span></div></div>
+          <div class="stack" style="gap:6px;min-width:0"><h3 style="font-size:22px">Tribu ${esc(t.name)}</h3>
+            <p class="soft">Puesto <b style="color:var(--text)">${pos}</b> de 15 · ${ms.length} integrantes</p>
+            <p class="muted" style="font-size:14px">Cada persona aporta 50 puntos: 20 × 50 = 1.000 puntos por tribu.</p></div>
+        </div>
+      </div>
+      <div class="card stack">
+        <p class="eyebrow">Álbum de sellos · Estaciones</p>
+        <div class="stamps">${STATIONS.filter(s => s.stamp).map((s, i) => `<div class="st ${got.has(s.id) ? 'done' : ''} ${s.req ? 'req' : ''}"><span class="ic">${got.has(s.id) ? '✓' : i + 1}</span><span>${esc(s.name)}</span>${s.req ? '<em>Obligatoria</em>' : ''}</div>`).join('')}</div>
+        <p class="muted" style="font-size:13px">Meta de la tarde del Día 1: 3 estaciones (5 puntos por persona en cada una). El Espejo es obligatoria.</p>
+      </div>
+      <div class="card stack">
+        <p class="eyebrow">Integrantes</p>
+        <ul class="members">${ms.map(p => `<li><span>${esc(p.name)}${p.id === highlightId ? ' (tú)' : ''}</span>${p.id === leadId ? '<span class="chip capt">Líder</span>' : `<span class="chip ${p.role}">${p.role === 'campo' ? 'Campo' : 'Oficina'}</span>`}</li>`).join('')}</ul>
+        ${ms.length < 20 ? `<p class="muted" style="font-size:13px">El líder de la tribu se asigna al azar cuando se completan los 20 integrantes.</p>` : ''}
+      </div>
+      <div class="card stack">
+        <p class="eyebrow">Historial de puntos</p>
+        ${hist.length ? `<ul class="log">${hist.slice(0, 8).map(h => `<li><span>${esc(station(h.station).name)}</span><span class="pts">+${fmt(h.total)}</span><small>${h.per} pts × ${h.n} integrantes · ${esc(h.by)}</small></li>`).join('')}</ul>` : '<p class="muted">Aún no hay puntos. Se suman durante el evento cuando un facilitador registra cada reto superado.</p>'}
+      </div>
+    </div>`;
+  }
+
+  // ---------- Facilitador ----------
+  function gate(kind, title, sub) {
+    app.innerHTML = `<form class="card stack" id="gate" style="max-width:460px;margin:0 auto">
+      <p class="eyebrow">Acceso restringido</p><h2 style="font-size:26px">${title}</h2><p class="soft">${sub}</p>
+      <label class="f" for="gpin">Clave de acceso<input id="gpin" type="password" autocomplete="off" required></label>
+      <p class="err" id="gerr" hidden>Clave incorrecta. Revisa la clave e inténtalo de nuevo.</p>
+      <button class="btn" type="submit">Entrar</button></form>`;
+    $('#gpin').focus();
+    $('#gate').onsubmit = e => { e.preventDefault(); if ($('#gpin').value.trim().toUpperCase() === PIN[kind].toUpperCase()) { ui[kind === 'admin' ? 'adm' : 'fac'] = true; render(); } else $('#gerr').hidden = false; };
+  }
+  function vFac() {
+    if (!ui.fac) return gate('facilitador', 'Consola del facilitador', 'Registra los retos superados en tu estación. Solo los facilitadores asignan puntos y sellos.');
+    const s = station(ui.facStation);
+    const per = s.per ?? ui.acuPts;
+    const tid = ui.facTribe;
+    const already = tid && s.stamp && stampsOf(tid).has(s.id);
+    const n = tid ? members(tid).length : 20;
+    const recent = S.points.slice().reverse().filter(x => x.by.startsWith('Facilitador')).slice(0, 6);
+    app.innerHTML = `<div class="stack">
+      <div class="card stack">
+        <p class="eyebrow">1 · Tu estación</p>
+        <div class="chips" role="group" aria-label="Estación">${STATIONS.map(x => `<button type="button" data-s="${x.id}" aria-pressed="${x.id === ui.facStation}">${esc(x.name)}<br><small class="muted">${esc(x.sub)}</small></button>`).join('')}</div>
+        ${s.per == null ? `<div class="row"><span class="soft" style="font-weight:700">Puntos por persona en esta dinámica:</span><div class="chips" role="group" aria-label="Puntos por persona">${[5, 10, 15, 20].map(v => `<button type="button" data-p="${v}" aria-pressed="${v === ui.acuPts}">${v} pts</button>`).join('')}</div></div>` : ''}
+      </div>
+      <div class="card stack">
+        <p class="eyebrow">2 · La tribu que superó el reto</p>
+        <div class="tribes-mini">${AV.map(t => `<button type="button" class="tm ${s.stamp && stampsOf(t.id).has(s.id) ? 'got' : ''}" data-t="${t.id}" aria-pressed="${t.id === tid}"><img src="${t.img}" alt="" loading="lazy"><b>${esc(t.name)}</b><small class="tabnum">${fmt(tribePts(t.id))} pts</small></button>`).join('')}</div>
+      </div>
+      <div class="card stack">
+        <p class="eyebrow">3 · Confirmar</p>
+        <div class="summary">
+          <span>${tid ? `<b>${esc(av(tid).name)}</b> en <b>${esc(s.name)}</b>` : '<span class="muted">Elige una tribu para registrar el reto.</span>'}</span>
+          <span class="soft tabnum">${per} pts × ${n} integrantes</span>
+          <span class="big tabnum">+${fmt(per * n)} pts</span>
+        </div>
+        ${already ? '<p class="err">Esta tribu ya tiene el sello de esta estación. Registrarlo otra vez sumaría puntos duplicados.</p>' : ''}
+        <div class="row"><button type="button" class="btn" id="award" ${!tid || already ? 'disabled' : ''}>${s.stamp ? 'Registrar reto superado y sello' : 'Registrar puntos'}</button>
+        <span class="muted" style="font-size:13px">${s.stamp ? 'Recuerda estampar el sello físico en la Bitácora de cada integrante.' : ''}</span></div>
+      </div>
+      <div class="card stack">
+        <p class="eyebrow">Últimos registros</p>
+        ${recent.length ? `<ul class="log">${recent.map(h => `<li><span>${esc(av(h.tribe).name)} · ${esc(station(h.station).name)}</span><span class="pts">+${fmt(h.total)}</span><small>${h.per} pts × ${h.n} integrantes <button type="button" class="btn ghost sm" data-undo="${h.id}" style="margin-left:8px">Deshacer</button></small></li>`).join('')}</ul>` : '<p class="muted">Todavía no has registrado retos.</p>'}
+      </div>
+    </div>`;
+    app.querySelectorAll('[data-s]').forEach(b => b.onclick = () => { ui.facStation = b.dataset.s; vFac(); });
+    app.querySelectorAll('[data-p]').forEach(b => b.onclick = () => { ui.acuPts = +b.dataset.p; vFac(); });
+    app.querySelectorAll('.tm').forEach(b => b.onclick = () => { ui.facTribe = +b.dataset.t; vFac(); });
+    app.querySelectorAll('[data-undo]').forEach(b => b.onclick = () => { S.points = S.points.filter(x => x.id !== +b.dataset.undo); save(); toast('Registro eliminado'); render(); });
+    const aw = $('#award'); if (aw) aw.onclick = () => { const e = addStationPoints(tid, ui.facStation, 'Facilitador demo'); toast(`+${fmt(e.total)} pts para ${av(tid).name}`); render(); };
+  }
+
+  // ---------- Líder ----------
+  function vLider() {
+    if (!ui.leader) {
+      app.innerHTML = `<form class="card stack" id="lg" style="max-width:460px;margin:0 auto">
+        <p class="eyebrow">Acceso de líder</p><h2 style="font-size:26px">Tablero de tu tribu</h2>
+        <p class="soft">El líder de cada tribu entra con la clave que le entrega el equipo organizador durante el evento.</p>
+        <label class="f" for="ltribe">Tu tribu<select id="ltribe">${AV.map(t => `<option value="${t.id}">${t.id}. ${esc(t.name)}</option>`).join('')}</select></label>
+        <label class="f" for="lkey">Clave de la tribu<input id="lkey" type="text" autocomplete="off" autocapitalize="characters" placeholder="6 caracteres" maxlength="6"></label>
+        <p class="err" id="lerr" hidden></p>
+        <button class="btn" type="submit">Entrar</button></form>`;
+      $('#lg').onsubmit = e => {
+        e.preventDefault();
+        const tid = +$('#ltribe').value, k = $('#lkey').value.trim().toUpperCase(), er = $('#lerr');
+        if (!S.keys[tid]) { er.textContent = 'Esta tribu todavía no tiene clave: se genera cuando la tribu se completa y se asigna su líder.'; er.hidden = false; return; }
+        if (k !== S.keys[tid]) { er.textContent = 'La clave no coincide. Pídela al equipo organizador.'; er.hidden = false; return; }
+        ui.leader = tid; render();
+      };
+      return;
+    }
+    const lead = S.participants.find(p => p.id === S.leaders[ui.leader]);
+    app.innerHTML = `<div class="stack">
+      <div class="card row" style="justify-content:space-between">
+        <div class="row"><img src="${av(ui.leader).img}" alt="" style="width:64px;height:64px;border-radius:50%"><div><p class="eyebrow">Líder de tribu</p><h2 style="font-size:24px">${lead ? esc(lead.name) : 'Sin líder asignado'}</h2></div></div>
+        <button type="button" class="btn ghost sm" id="lout">Salir</button>
+      </div>
+      ${tribeDash(ui.leader, lead && lead.id)}
+    </div>`;
+    $('#lout').onclick = () => { ui.leader = null; render(); };
+  }
+
+  // ---------- Administrador ----------
+  function vAdmin() {
+    if (!ui.adm) return gate('admin', 'Consola de administración', 'Control de tribus, líderes, claves de ingreso y puntaje general.');
+    const total = S.participants.length, full = AV.filter(t => isFull(t.id)).length;
+    const leaders = Object.keys(S.leaders).length, allPts = S.points.reduce((a, b) => a + b.total, 0);
+    const rk = ranking();
+    app.innerHTML = `<div class="stack">
+      <div class="kpis">
+        <div class="kpi"><b class="tabnum">${total}<span class="muted" style="font-size:18px"> / 300</span></b><span>participantes inscritos</span></div>
+        <div class="kpi"><b class="tabnum">${full}<span class="muted" style="font-size:18px"> / 15</span></b><span>tribus completas</span></div>
+        <div class="kpi"><b class="tabnum">${leaders}</b><span>líderes asignados con clave</span></div>
+        <div class="kpi"><b class="tabnum">${fmt(allPts)}</b><span>puntos registrados en total</span></div>
+      </div>
+      <div class="card stack">
+        <div class="row" style="justify-content:space-between"><div><p class="eyebrow">Consola de claves</p><h2 style="font-size:22px">Tribus, líderes y claves de ingreso</h2></div>
+          <div class="acts">
+            <button type="button" class="btn ghost sm" id="tgl">${ui.showKeys ? 'Ocultar claves' : 'Mostrar claves'}</button>
+            <button type="button" class="btn ghost sm" id="sim">Simular 10 inscripciones</button>
+            <button type="button" class="btn ghost sm" id="rst">Reiniciar demo</button>
+          </div></div>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Tribu</th><th>Campo</th><th>Oficina</th><th>Líder</th><th>Clave</th><th>Puntos</th><th>Acciones</th></tr></thead>
+          <tbody>${AV.map(t => {
+            const c = countRole(t.id, 'campo'), l = countRole(t.id, 'lider');
+            const ld = S.participants.find(p => p.id === S.leaders[t.id]); const k = S.keys[t.id]; const pts = tribePts(t.id);
+            return `<tr>
+              <td><span class="tn"><img src="${t.img}" alt="">${esc(t.name)}</span></td>
+              <td class="q ${c === 17 ? 'ok' : ''}">${c}/17</td>
+              <td class="q ${l === 3 ? 'ok' : ''}">${l}/3</td>
+              <td>${ld ? esc(ld.name) : `<span class="muted">${isFull(t.id) ? 'Pendiente' : 'Se asigna al completar'}</span>`}</td>
+              <td>${k ? `<span class="key">${ui.showKeys ? k : '••••••'}</span>` : '<span class="muted">—</span>'}</td>
+              <td><div class="stack" style="gap:4px"><span class="q">${fmt(pts)}</span><span class="bar"><span style="width:${Math.min(100, pts / META * 100)}%"></span></span></div></td>
+              <td><div class="acts">${isFull(t.id) ? `<button type="button" class="btn ghost sm" data-draw="${t.id}">Sortear líder</button><button type="button" class="btn ghost sm" data-key="${t.id}">${k ? 'Nueva clave' : 'Generar clave'}</button>${k ? `<button type="button" class="btn ghost sm" data-copy="${t.id}">Copiar</button>` : ''}` : '<span class="muted" style="font-size:13px">Esperando cupos</span>'}</div></td>
+            </tr>`; }).join('')}</tbody></table></div>
+        <p class="muted" style="font-size:13px">Cuando una tribu llega a 20 integrantes, la plataforma sortea su líder y genera su clave. Desde aquí puedes repetir el sorteo, cambiar una clave si se pierde y entregarla al líder durante el evento.</p>
+      </div>
+      <div class="card stack">
+        <p class="eyebrow">Ranking en vivo</p>
+        <ol class="rank">${rk.map((x, i) => `<li><span class="pos tabnum">${i + 1}</span><img src="${x.t.img}" alt=""><span class="nm">${esc(x.t.name)}<span class="bar"><span style="width:${Math.min(100, x.pts / META * 100)}%"></span></span></span><span class="pts tabnum">${fmt(x.pts)}</span></li>`).join('')}</ol>
+      </div>
+    </div>`;
+    $('#tgl').onclick = () => { ui.showKeys = !ui.showKeys; vAdmin(); };
+    $('#rst').onclick = () => {
+      const b = $('#rst');
+      if (b.dataset.armed) { try { localStorage.removeItem(KEY); } catch (e) {} S = seed(); save(); ui.me = null; ui.step = 1; ui.leader = null; toast('Demo reiniciado'); render(); }
+      else { b.dataset.armed = '1'; b.textContent = '¿Seguro? Toca de nuevo'; b.classList.add('warn'); setTimeout(() => { if (b.isConnected) { delete b.dataset.armed; b.textContent = 'Reiniciar demo'; b.classList.remove('warn'); } }, 3000); }
+    };
+    $('#sim').onclick = () => {
+      let added = 0;
+      for (let i = 0; i < 10; i++) {
+        const role = Math.random() < .85 ? 'campo' : 'lider';
+        const opts = AV.filter(t => left(t.id, role) > 0); if (!opts.length) continue;
+        const t = opts[Math.floor(Math.random() * opts.length)];
+        if (join(personName(Math.random), role, t.id)) added++;
+      }
+      toast(added ? `${added} personas se unieron a sus tribus` : 'No quedan cupos disponibles'); render();
+    };
+    app.querySelectorAll('[data-draw]').forEach(b => b.onclick = () => { const tid = +b.dataset.draw; assignLeader(tid); save(); const ld = S.participants.find(p => p.id === S.leaders[tid]); toast(`Nuevo líder de ${av(tid).name}: ${ld.name}`); vAdmin(); });
+    app.querySelectorAll('[data-key]').forEach(b => b.onclick = () => { const tid = +b.dataset.key; S.keys[tid] = newKey(); save(); ui.showKeys = true; toast(`Nueva clave para ${av(tid).name}`); vAdmin(); });
+    app.querySelectorAll('[data-copy]').forEach(b => b.onclick = () => {
+      const k = S.keys[+b.dataset.copy];
+      try { navigator.clipboard.writeText(k).then(() => toast('Clave copiada'), () => toast(`Clave: ${k}`)); } catch (e) { toast(`Clave: ${k}`); }
+    });
+  }
+
+  // ---------- Navegación ----------
+  document.querySelectorAll('.seg button').forEach(b => b.onclick = () => { ui.view = b.dataset.view; layer.innerHTML = ''; render(); window.scrollTo({ top: 0 }); });
+  window.addEventListener('storage', e => { if (e.key === KEY) { S = load() || S; render(); } });
+  S = load() || seed();
+  save(); render();
+})();
+</script>
+</body>
+</html>

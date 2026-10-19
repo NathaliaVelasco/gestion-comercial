@@ -10,6 +10,7 @@ Presentaciones comerciales publicadas con GitHub Pages para compartirlas con cli
 | Cliente | Proyecto | Enlace |
 |---|---|---|
 | Evoforma · Megalabs | La Ruta de la Huella — Convención de Ventas 2027 | [Ver presentación](https://nathaliavelasco.github.io/gestion-comercial/propuestas/megalabs-la-ruta-de-la-huella/) |
+| Evoforma · Megalabs | El Circuito del Reconocimiento — demo del artefacto digital | [Ver demo](https://www.experienciasimone.com/claude-pages/propuestas/megalabs-circuito-del-reconocimiento/) |
 
 ## Cómo se ve una propuesta
 
