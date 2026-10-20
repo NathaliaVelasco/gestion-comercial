@@ -47,7 +47,8 @@
   b, strong { font-weight: 700; }
 
   .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-  section { padding-block: clamp(56px, 9vw, 112px); scroll-margin-top: 64px; }
+  section, .desglose { padding-block: clamp(56px, 9vw, 112px); scroll-margin-top: 64px; }
+  .desglose { padding-block: 0; }
   .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--rust); }
   .h2 { font-size: clamp(30px, 4.4vw, 50px); font-weight: 700; line-height: 1.1; letter-spacing: -.01em; }
   .lead { font-size: clamp(18px, 2vw, 21px); line-height: 1.6; color: var(--body); max-width: 62ch; }
@@ -206,6 +207,20 @@
   .term h3 { color: var(--on-dark); font-size: 22px; line-height: 1.2; }
   .term p { color: var(--on-dark-soft); font-size: 15.5px; }
   .term .num { font-variant-numeric: tabular-nums; color: var(--on-dark); font-weight: 600; }
+
+  .withtax { font-size: 17px; color: var(--on-dark-soft); font-variant-numeric: tabular-nums; }
+  .withtax b { color: var(--on-dark); }
+  .withtax a { color: var(--orange); }
+  .desglose { margin-top: clamp(48px, 7vw, 80px); }
+  .tablebox { overflow-x: auto; border-radius: var(--radius); background: var(--olive-2); }
+  .desglose table { width: 100%; min-width: 560px; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .desglose th, .desglose td { padding: 16px 20px; text-align: right; border-bottom: 1px solid rgba(247, 242, 232, .14); font-size: 16px; }
+  .desglose th:first-child { text-align: left; }
+  .desglose thead th { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--orange); }
+  .desglose tbody th { font-weight: 600; color: var(--on-dark); }
+  .desglose tbody td { color: var(--on-dark-soft); }
+  .desglose tbody td:last-child { color: var(--on-dark); font-weight: 600; }
+  .desglose tfoot th, .desglose tfoot td { border-bottom: 0; font-weight: 800; color: var(--olive); background: var(--orange); font-size: 17px; }
 
   /* Cierre */
   .cierre { padding-block: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); background: var(--paper); }
@@ -478,6 +493,7 @@
       <div class="price">
         <p class="eyebrow">Inversión total</p>
         <p class="total">$71.457.000 <span>+&nbsp;IVA</span></p>
+        <p class="withtax">Total con IVA (19%): <b>$85.033.830</b> · <a href="#desglose">Ver desglose por rubro</a></p>
         <div class="terms">
           <div class="term">
             <span class="k">Forma de pago</span>
@@ -490,6 +506,26 @@
             <p>Aplica para pagos realizados dentro de los 20 días siguientes a emitida la factura.</p>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="wrap desglose" id="desglose">
+      <div class="head" style="margin-bottom:20px">
+        <p class="eyebrow">Desglose de la inversión</p>
+        <h2 class="h2" style="color:var(--on-dark)">Inversión por rubro</h2>
+      </div>
+      <div class="tablebox">
+        <table>
+          <thead><tr><th scope="col">Rubro</th><th scope="col">Base</th><th scope="col">IVA 19%</th><th scope="col">Total</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Gestión de conocimiento</th><td>$8.240.000</td><td>$1.565.600</td><td>$9.805.600</td></tr>
+            <tr><th scope="row">6 estaciones</th><td>$27.270.000</td><td>$5.181.300</td><td>$32.451.300</td></tr>
+            <tr><th scope="row">Kit de bienvenida</th><td>$3.210.000</td><td>$609.900</td><td>$3.819.900</td></tr>
+            <tr><th scope="row">El Acuario</th><td>$19.087.000</td><td>$3.626.530</td><td>$22.713.530</td></tr>
+            <tr><th scope="row">Herramientas</th><td>$6.150.000</td><td>$1.168.500</td><td>$7.318.500</td></tr>
+            <tr><th scope="row">Viáticos</th><td>$7.500.000</td><td>$1.425.000</td><td>$8.925.000</td></tr>
+          </tbody>
+          <tfoot><tr><th scope="row">Total</th><td>$71.457.000</td><td>$13.576.830</td><td>$85.033.830</td></tr></tfoot>
+        </table>
       </div>
     </div>
   </section>
