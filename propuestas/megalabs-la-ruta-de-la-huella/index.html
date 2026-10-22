@@ -213,14 +213,18 @@
   .withtax a { color: var(--orange); }
   .desglose { margin-top: clamp(48px, 7vw, 80px); }
   .tablebox { overflow-x: auto; border-radius: var(--radius); background: var(--olive-2); }
-  .desglose table { width: 100%; min-width: 560px; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .desglose table { width: 100%; min-width: 760px; border-collapse: collapse; font-variant-numeric: tabular-nums; }
   .desglose th, .desglose td { padding: 16px 20px; text-align: right; border-bottom: 1px solid rgba(247, 242, 232, .14); font-size: 16px; }
   .desglose th:first-child { text-align: left; }
+  .desglose td { white-space: nowrap; vertical-align: top; }
+  .desglose tbody th { vertical-align: top; min-width: 300px; }
+  .desglose .inc { display: block; margin-top: 4px; font-size: 14.5px; font-weight: 400; line-height: 1.45; color: var(--on-dark-soft); max-width: 46ch; }
   .desglose thead th { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--orange); }
   .desglose tbody th { font-weight: 600; color: var(--on-dark); }
   .desglose tbody td { color: var(--on-dark-soft); }
   .desglose tbody td:last-child { color: var(--on-dark); font-weight: 600; }
   .desglose tfoot th, .desglose tfoot td { border-bottom: 0; font-weight: 800; color: var(--olive); background: var(--orange); font-size: 17px; }
+
 
   /* Cierre */
   .cierre { padding-block: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); background: var(--paper); }
@@ -268,7 +272,7 @@
       <div class="fact"><strong>300</strong><span>participantes</span></div>
       <div class="fact"><strong>6</strong><span>estaciones de experiencia</span></div>
       <div class="fact"><strong>310</strong><span>impactos en El Acuario</span></div>
-      <div class="fact"><strong>7</strong><span>mediadores de la experiencia</span></div>
+      <div class="fact"><strong>8</strong><span>líderes y facilitadores en sitio</span></div>
     </div>
   </div>
   <div class="hero-photo"><img src="img/entrada.jpg" alt="Participantes entrando al evento entre pendones de La Ruta de la Huella y El Arrecife Vivo"></div>
@@ -444,8 +448,8 @@
     <div class="wrap eq-grid">
       <div class="eq-copy">
         <p class="eyebrow">Equipo de la experiencia</p>
-        <div class="seven"><strong>7</strong><h2>mediadores de la experiencia</h2></div>
-        <p class="lead">Este presupuesto contempla <b>7 personas</b> dedicadas a acompañar a los participantes durante toda la convención.</p>
+        <div class="seven"><strong>8</strong><h2>personas acompañan la experiencia</h2></div>
+        <p class="lead">Este presupuesto contempla <b>2 Líderes Mediadores</b> presentes durante los 3 días del evento y <b>6 facilitadores creativos</b> que acompañan las estaciones y El Acuario.</p>
         <ul class="checks">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Guían cada estación y El Acuario con instrucciones claras.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Sostienen el ritmo para lograr los impactos previstos.</span></li>
@@ -482,23 +486,24 @@
           <h2 class="h2" style="color:var(--on-dark)">Qué incluye</h2>
         </div>
         <ul class="incluye">
-          <li><b>Material físico</b><span>Empaque (caja exterior + tarjeta interior) y Kit de viaje “En Ruta” con Bitácora de Campo</span></li>
+          <li><b>Metodología</b><span>Diseño conceptual y metodológico de toda la experiencia</span></li>
+          <li><b>Equipo</b><span>2 Líderes Mediadores durante los 3 días y 6 facilitadores creativos</span></li>
           <li><b>Estaciones</b><span>Materiales para 6 estaciones · 150 impactos por estación</span></li>
-          <li><b>El Acuario</b><span>Materiales para 310 impactos por estación</span></li>
-          <li><b>Material digital</b><span>“Sinergia Previa” con entrega de resultados y “El Circuito del Reconocimiento”</span></li>
-          <li><b>Equipo</b><span>7 personas como mediadores de la experiencia</span></li>
-          <li><b>Aforo</b><span>300 participantes</span></li>
+          <li><b>El Acuario</b><span>Materiales para 310 impactos</span></li>
+          <li><b>Material físico</b><span>310 kits de bienvenida y 310 cajas expectativa con postal</span></li>
+          <li><b>Plataforma digital</b><span>Encuesta de expectativa y herramienta de formación de grupos</span></li>
+          <li><b>Logística</b><span>Alimentación, transporte interno en Salinitas y estadía del equipo</span></li>
         </ul>
       </div>
       <div class="price">
         <p class="eyebrow">Inversión total</p>
-        <p class="total">$71.457.000 <span>+&nbsp;IVA</span></p>
-        <p class="withtax">Total con IVA (19%): <b>$85.033.830</b> · <a href="#desglose">Ver desglose por rubro</a></p>
+        <p class="total">$73.590.439 <span>+&nbsp;IVA</span></p>
+        <p class="withtax">Total con IVA (19%): <b>$87.572.625</b> · <a href="#desglose">Ver desglose por rubro</a></p>
         <div class="terms">
           <div class="term">
             <span class="k">Forma de pago</span>
             <h3>Anticipo del 30%</h3>
-            <p>Anticipo de <span class="num">$21.437.100</span>, antes de IVA. Pago final: saldo del 70% (<span class="num">$50.019.900</span>) más el IVA total (<span class="num">$13.576.830</span>) = <span class="num">$63.596.730</span>.</p>
+            <p>Anticipo de <span class="num">$22.077.132</span>, antes de IVA. Pago final: saldo del 70% (<span class="num">$51.513.307</span>) más el IVA total (<span class="num">$13.982.186</span>) = <span class="num">$65.495.493</span>.</p>
           </div>
           <div class="term">
             <span class="k">Beneficio</span>
@@ -515,16 +520,17 @@
       </div>
       <div class="tablebox">
         <table>
-          <thead><tr><th scope="col">Rubro</th><th scope="col">Base</th><th scope="col">IVA 19%</th><th scope="col">Total</th></tr></thead>
+          <thead><tr><th scope="col">Rubro y qué incluye</th><th scope="col">Base</th><th scope="col">IVA 19%</th><th scope="col">Total</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Gestión de conocimiento</th><td>$8.240.000</td><td>$1.565.600</td><td>$9.805.600</td></tr>
-            <tr><th scope="row">6 estaciones</th><td>$27.270.000</td><td>$5.181.300</td><td>$32.451.300</td></tr>
-            <tr><th scope="row">Kit de bienvenida</th><td>$3.210.000</td><td>$609.900</td><td>$3.819.900</td></tr>
-            <tr><th scope="row">El Acuario</th><td>$19.087.000</td><td>$3.626.530</td><td>$22.713.530</td></tr>
-            <tr><th scope="row">Herramientas</th><td>$6.150.000</td><td>$1.168.500</td><td>$7.318.500</td></tr>
-            <tr><th scope="row">Viáticos</th><td>$7.500.000</td><td>$1.425.000</td><td>$8.925.000</td></tr>
+            <tr><th scope="row">Gestión de conocimiento<span class="inc">Diseño conceptual, diseño metodológico y presencia de 2 Líderes Mediadores durante los 3 días del evento.</span></th><td>$9.168.377</td><td>$1.741.992</td><td>$10.910.369</td></tr>
+            <tr><th scope="row">6 estaciones<span class="inc">Acompañamiento de 6 facilitadores creativos y materiales necesarios para las 6 estaciones.</span></th><td>$18.627.177</td><td>$3.539.164</td><td>$22.166.341</td></tr>
+            <tr><th scope="row">El Acuario<span class="inc">Acompañamiento de 6 facilitadores creativos y materiales necesarios para la dinámica de El Acuario.</span></th><td>$7.113.377</td><td>$1.351.542</td><td>$8.464.919</td></tr>
+            <tr><th scope="row">Kit de bienvenida<span class="inc">310 kits compuestos de postal, brújula de papel, mapa ilustrado, bitácora y caja. Tamaño aproximado: 21 × 27 cm.</span></th><td>$17.786.377</td><td>$3.379.412</td><td>$21.165.789</td></tr>
+            <tr><th scope="row">Caja expectativa<span class="inc">310 cajas de 10 × 10 cm y 310 postales para la entrega de la ficha del gran rompecabezas.</span></th><td>$7.246.377</td><td>$1.376.812</td><td>$8.623.189</td></tr>
+            <tr><th scope="row">Plataforma digital<span class="inc">Herramienta digital para la encuesta de expectativa y herramienta de formación de grupos.</span></th><td>$4.218.377</td><td>$801.492</td><td>$5.019.869</td></tr>
+            <tr><th scope="row">Viáticos<span class="inc">Alimentación, transporte interno en Salinitas y estadía de 7 personas.</span></th><td>$9.430.377</td><td>$1.791.772</td><td>$11.222.149</td></tr>
           </tbody>
-          <tfoot><tr><th scope="row">Total</th><td>$71.457.000</td><td>$13.576.830</td><td>$85.033.830</td></tr></tfoot>
+          <tfoot><tr><th scope="row">Total</th><td>$73.590.439</td><td>$13.982.186</td><td>$87.572.625</td></tr></tfoot>
         </table>
       </div>
     </div>
