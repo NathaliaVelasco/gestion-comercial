@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Máquina del Tiempo · Kits</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Propuesta comercial de Simoné para Solventum: producción de 3 kits físicos de la Máquina del Tiempo.">
+<meta property="og:title" content="Máquina del Tiempo · Propuesta de kits físicos">
+<meta property="og:description" content="3 kits portátiles para replicar la experiencia en 3 ciudades. Preparado por Simoné para Solventum.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: one scrolling proposal on a dark clinical ground; HUD corner brackets mark the key panels; the route E1→E5 is the one drawn sequence; the investment closes the page.
+     Single dark look by choice: Solventum brand (Deep Teal, Malachite, black). */
+  :root {
+    --void: #050B0A;
+    --teal: #01332B;
+    --teal-2: #0A2621;
+    --malachite: #05DD4D;
+    --malachite-soft: #7FEFA4;
+    --ink: #EEF4F2;
+    --body: #B9C7C3;
+    --muted: #82948F;
+    --line: #1C3A34;
+    --display: 'Orbitron', 'Eurostile', 'Arial Black', sans-serif;
+    --text: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    --wrap: 1120px;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+  body { margin: 0; background: var(--void); color: var(--ink); font-family: var(--text); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  h1, h2, h3, p, ul, ol { margin: 0; }
+  h1, h2, h3 { text-wrap: balance; }
+  ul, ol { padding: 0; list-style: none; }
+  sup { font-size: .55em; vertical-align: super; line-height: 0; }
+
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  section { padding-block: clamp(56px, 8vw, 104px); scroll-margin-top: 56px; border-top: 1px solid var(--line); }
+  .label { font-size: 12px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--malachite); }
+  .h2 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.15; letter-spacing: .01em; }
+  .lead { font-size: clamp(17px, 1.8vw, 20px); color: var(--body); max-width: 62ch; }
+  .head { display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(28px, 4vw, 48px); }
+
+  /* HUD frame: corner brackets */
+  .hud { position: relative; background: var(--teal-2); padding: 26px 28px; }
+  .hud::before, .hud::after { content: ""; position: absolute; width: 18px; height: 18px; border: 2px solid var(--malachite); pointer-events: none; }
+  .hud::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+  .hud::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+  /* Hero */
+  .hero { border-top: 0; padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 88px); background: radial-gradient(120% 90% at 85% 0%, var(--teal) 0%, var(--void) 62%); }
+  .hero .wrap { display: flex; flex-direction: column; gap: clamp(32px, 5vw, 56px); }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .logo { width: clamp(150px, 18vw, 200px); height: auto; }
+  .for { font-size: 14px; color: var(--muted); }
+  .for b { color: var(--ink); font-weight: 600; }
+  .hero-main { display: flex; flex-direction: column; gap: 20px; }
+  .hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 8vw, 92px); line-height: 1; letter-spacing: .01em; }
+  .hero h1 span { color: var(--malachite); }
+  .hero .lead { font-size: clamp(18px, 2.1vw, 23px); color: var(--ink); max-width: 46ch; }
+  .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+  .fact { padding: 18px 16px 0 0; display: flex; flex-direction: column; gap: 2px; }
+  .fact + .fact { padding-left: 16px; border-left: 1px solid var(--line); }
+  .fact strong { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); color: var(--malachite); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .fact span { font-size: 13px; color: var(--body); line-height: 1.35; }
+
+  /* Nav */
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--void); }
+  nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--void); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  nav.toc .wrap { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+  nav.toc .wrap::-webkit-scrollbar { display: none; }
+  nav.toc a { flex: none; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 15px 12px; border-bottom: 2px solid transparent; }
+  nav.toc a:hover, nav.toc a.on { color: var(--ink); border-bottom-color: var(--malachite); }
+  a:focus-visible { outline: 2px solid var(--malachite); outline-offset: 2px; }
+
+  /* Alcance */
+  .scope { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+  .scope p + p { margin-top: 16px; }
+  .scope .text p { color: var(--body); max-width: 60ch; }
+  .scope .text b { color: var(--ink); }
+  .spec { display: flex; flex-direction: column; }
+  .spec div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .spec div:last-child { border-bottom: 0; }
+  .spec dt, .spec .k { color: var(--body); }
+  .spec .v { font-weight: 600; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* Kit */
+  .kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .item { display: flex; flex-direction: column; gap: 10px; border-top: 2px solid var(--malachite); padding-top: 18px; }
+  .item h3 { font-size: 18px; font-weight: 700; line-height: 1.3; }
+  .item p { font-size: 15px; color: var(--body); }
+  .item .tag { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); }
+  .case { margin-top: clamp(28px, 4vw, 44px); display: flex; gap: 20px; align-items: center; }
+  .case .swatch { flex: none; width: 56px; height: 40px; border-radius: 6px; background: linear-gradient(160deg, #1F8A4C, #0E5A30); box-shadow: inset 0 -6px 0 rgba(0,0,0,.25); position: relative; }
+  .case .swatch::before { content: ""; position: absolute; top: -8px; left: 18px; width: 20px; height: 9px; border: 3px solid #0E5A30; border-bottom: 0; border-radius: 6px 6px 0 0; }
+  .case p { font-size: 15px; color: var(--body); max-width: 70ch; }
+  .case b { color: var(--ink); }
+
+  /* Ruta */
+  .route { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; counter-reset: st; }
+  .stop { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 20px 18px 22px; background: var(--teal-2); border: 1px solid var(--line); }
+  .stop .n { font-family: var(--display); font-weight: 700; font-size: 26px; color: var(--malachite); line-height: 1; }
+  .stop h3 { font-size: 15px; font-weight: 700; line-height: 1.35; }
+  .stop p { font-size: 13px; color: var(--body); line-height: 1.45; }
+  .stop:not(:last-child)::after { content: ""; position: absolute; top: 31px; right: -12px; width: 12px; height: 2px; background: var(--malachite); }
+  .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+  /* Roles */
+  .roles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+  .crew { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+  .badge { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+  .badge i { display: block; width: 100%; aspect-ratio: 3 / 4; max-width: 64px; border-radius: 6px; border: 1px solid var(--line); background: var(--teal-2); position: relative; }
+  .badge i::before { content: ""; position: absolute; top: 8px; left: 50%; width: 30%; height: 4px; margin-left: -15%; border-radius: 2px; background: var(--line); }
+  .badge.lead i { border-color: var(--malachite); background: var(--teal); }
+  .badge.lead i::after { content: ""; position: absolute; left: 50%; top: -9px; width: 26px; height: 9px; margin-left: -13px; background: var(--malachite); border-radius: 13px 13px 2px 2px; }
+  .badge span { font-size: 11px; font-weight: 600; color: var(--body); line-height: 1.25; }
+  .badge.lead span { color: var(--ink); }
+  .roles .text p { color: var(--body); }
+  .roles .text p + p { margin-top: 14px; }
+  .roles .text b { color: var(--ink); }
+
+  /* Onboarding */
+  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .two .hud { display: flex; flex-direction: column; gap: 10px; }
+  .two .k { font-family: var(--display); font-weight: 700; font-size: 30px; color: var(--malachite); line-height: 1; }
+  .two h3 { font-size: 19px; font-weight: 700; }
+  .two p { font-size: 15px; color: var(--body); }
+
+  /* Justificación */
+  .why { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+  .why li { display: flex; flex-direction: column; gap: 6px; padding-left: 18px; border-left: 2px solid var(--line); }
+  .why h3 { font-size: 17px; font-weight: 700; }
+  .why p { font-size: 15px; color: var(--body); }
+
+  /* Inversión */
+  #inversion { background: radial-gradient(100% 120% at 0% 100%, var(--teal) 0%, var(--void) 60%); }
+  .invest { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+  .total { display: flex; flex-direction: column; gap: 8px; }
+  .total .amount { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 6vw, 64px); color: var(--malachite); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+  .total .cur { font-size: 15px; color: var(--body); }
+  .incl { display: flex; flex-direction: column; }
+  .incl li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--body); }
+  .incl li:last-child { border-bottom: 0; }
+  .incl li::before { content: ""; flex: none; width: 10px; height: 10px; margin-top: 7px; border: 2px solid var(--malachite); transform: rotate(45deg); }
+  .phase { margin-top: 28px; font-size: 14px; color: var(--muted); max-width: 70ch; }
+
+  footer { border-top: 1px solid var(--line); padding-block: 32px; font-size: 13px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .route { grid-template-columns: 1fr; }
+    .stop:not(:last-child)::after { top: auto; bottom: -12px; right: auto; left: 31px; width: 2px; height: 12px; }
+    .kit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .scope, .roles, .invest { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .fact:nth-child(3) { padding-left: 0; border-left: 0; }
+    .fact:nth-child(n+3) { padding-top: 18px; }
+    .kit, .two, .why { grid-template-columns: 1fr; }
+    .crew { gap: 5px; }
+    .badge span { font-size: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <img class="logo" src="img/logo-simone.png" alt="Simoné">
+      <p class="for">Propuesta comercial para <b>Solventum</b> · Octubre 2026</p>
+    </div>
+    <div class="hero-main">
+      <p class="label">Réplica y producción de kits experienciales</p>
+      <h1>Máquina del <span>Tiempo</span></h1>
+      <p class="lead">Tres kits portátiles para llevar la experiencia de Cartagena a 3 ciudades, con la misma ruta, los mismos retos y facilitadores locales capacitados.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><strong>3</strong><span>kits, uno por ciudad</span></div>
+      <div class="fact"><strong>28</strong><span>participantes por sesión</span></div>
+      <div class="fact"><strong>4 × 7</strong><span>grupos por kit</span></div>
+      <div class="fact"><strong>5</strong><span>estaciones de juego</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Secciones">
+  <div class="wrap">
+    <a href="#alcance">Alcance</a>
+    <a href="#kit">El kit</a>
+    <a href="#ruta">Ruta</a>
+    <a href="#roles">Roles</a>
+    <a href="#acompanamiento">Acompañamiento</a>
+    <a href="#valor">Valor</a>
+    <a href="#inversion">Inversión</a>
+  </div>
+</nav>
+
+<main>
+  <section id="alcance">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Resumen ejecutivo</p>
+        <h2 class="h2">De un evento a un activo que viaja</h2>
+      </div>
+      <div class="scope">
+        <div class="text">
+          <p>Tras el éxito de la experiencia vivida en Cartagena, esta propuesta cubre el diseño, la producción y la entrega de <b>3 kits físicos y portátiles</b> de la Máquina del Tiempo, listos para replicar la metodología en 3 ciudades.</p>
+          <p>Cada kit es una solución integral de inmersión lúdica y formativa para <b>28 personas organizadas en 4 grupos de 7</b>. Su estructura permite que los facilitadores locales operen la experiencia con autonomía y con el mismo estándar estético y funcional del evento original.</p>
+        </div>
+        <div class="hud">
+          <dl class="spec">
+            <div><dt class="k">Kits producidos</dt><dd class="v">3</dd></div>
+            <div><dt class="k">Participantes por sesión y kit</dt><dd class="v">28</dd></div>
+            <div><dt class="k">Grupos por sesión</dt><dd class="v">4 de 7 personas</dd></div>
+            <div><dt class="k">Estaciones por kit</dt><dd class="v">5</dd></div>
+            <div><dt class="k">Facilitadores capacitados</dt><dd class="v">Hasta 3</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kit">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Especificaciones de producción</p>
+        <h2 class="h2">Todo lo que lleva cada maleta</h2>
+        <p class="lead">El kit llega completo y organizado. No requiere compras ni impresiones locales.</p>
+      </div>
+      <ul class="kit">
+        <li class="item">
+          <span class="tag">Contenido de juego</span>
+          <h3>Pistas de las 5 estaciones</h3>
+          <p>Los retos y dinámicas completas de la experiencia, para que cada ciudad juegue la misma ruta que Cartagena.</p>
+        </li>
+        <li class="item">
+          <span class="tag">Papel 300 g · plastificado</span>
+          <h3>Fichas de juego</h3>
+          <p>Impresas en papel de alto gramaje con acabado plastificado: resistentes, reutilizables y de textura impecable frente al uso continuo.</p>
+        </li>
+        <li class="item">
+          <span class="tag">Componentes lúdicos</span>
+          <h3>Dados y elementos de juego</h3>
+          <p>Las piezas centrales de cada estación, listas para usar en mesa.</p>
+        </li>
+        <li class="item">
+          <span class="tag">Reutilizables</span>
+          <h3>Escarapelas de roles</h3>
+          <p>Un juego completo con los roles del equipo, sin nombres impresos. Agilizan la conformación de los grupos y sirven para múltiples sesiones.</p>
+        </li>
+        <li class="item">
+          <span class="tag">Identidad de liderazgo</span>
+          <h3>3 sombreros distintivos</h3>
+          <p>Para los líderes de cada actividad. Hacen visible quién conduce al equipo y refuerzan la inmersión.</p>
+        </li>
+        <li class="item">
+          <span class="tag">Guía de terreno</span>
+          <h3>Instructivo de uso</h3>
+          <p>Paso a paso para consulta rápida del facilitador durante la sesión.</p>
+        </li>
+      </ul>
+      <div class="case">
+        <span class="swatch" aria-hidden="true"></span>
+        <p>Cada unidad se entrega en una <b>maleta de viaje rígida color verde</b>, fácil de transportar y almacenar, que protege el material en los traslados entre ciudades.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ruta">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">La experiencia que se replica</p>
+        <h2 class="h2">Una ruta de 5 estaciones</h2>
+        <p class="lead">Los grupos recorren las estaciones en orden, siguiendo la evolución del paciente desde el trauma hasta el cierre.</p>
+      </div>
+      <ol class="route">
+        <li class="stop"><span class="n">E1</span><h3>Trauma y decisión quirúrgica</h3><p>Indicaciones del abdomen abierto.</p></li>
+        <li class="stop"><span class="n">E2</span><h3>Funciones de la TPN</h3><p>Terapia de presión negativa frente a otras técnicas de cierre temporal.</p></li>
+        <li class="stop"><span class="n">E3</span><h3>Ensamble AbThera<sup>™</sup></h3><p>Armado del sistema paso a paso.</p></li>
+        <li class="stop"><span class="n">E4</span><h3>Monitoreo en UCI</h3><p>Seguimiento y alarmas del paciente.</p></li>
+        <li class="stop"><span class="n">E5</span><h3>Cierre y Prevena<sup>™</sup></h3><p>Cierre definitivo y cuidado de la incisión.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="roles">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Sistema de roles</p>
+        <h2 class="h2">Cada grupo, una tripulación</h2>
+      </div>
+      <div class="roles">
+        <div class="hud">
+          <div class="crew" role="img" aria-label="Grupo de 7: Piloto, Copiloto, Comandante y 4 Tripulantes">
+            <div class="badge lead"><i></i><span>Piloto</span></div>
+            <div class="badge lead"><i></i><span>Copiloto</span></div>
+            <div class="badge lead"><i></i><span>Coman&shy;dante</span></div>
+            <div class="badge"><i></i><span>Tripu&shy;lante</span></div>
+            <div class="badge"><i></i><span>Tripu&shy;lante</span></div>
+            <div class="badge"><i></i><span>Tripu&shy;lante</span></div>
+            <div class="badge"><i></i><span>Tripu&shy;lante</span></div>
+          </div>
+        </div>
+        <div class="text">
+          <p>Las <b>escarapelas</b> se reparten al armar los grupos: en minutos cada persona sabe qué rol cumple. Al no llevar nombres impresos, el mismo juego sirve para todas las sesiones.</p>
+          <p>Los <b>sombreros</b> distinguen a quienes lideran la actividad, para que el equipo sepa a quién seguir cuando corre el reloj.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="acompanamiento">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Transferencia metodológica</p>
+        <h2 class="h2">La misma fluidez en cada ciudad</h2>
+        <p class="lead">La inversión incluye la transferencia de conocimiento a quienes facilitarán la experiencia.</p>
+      </div>
+      <div class="two">
+        <div class="hud">
+          <span class="k">45 min</span>
+          <h3>Sesión de alineación y capacitación</h3>
+          <p>Espacio exclusivo, virtual o presencial, para hasta 3 líderes facilitadores. Recorre la dinámica, el manejo de los tiempos y las claves de facilitación.</p>
+        </div>
+        <div class="hud">
+          <span class="k">1 por kit</span>
+          <h3>Instructivo de uso</h3>
+          <p>Guía detallada paso a paso que viaja dentro de la maleta, para consulta rápida de los facilitadores en terreno.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="valor">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Justificación ejecutiva</p>
+        <h2 class="h2">Por qué esta inversión</h2>
+        <p class="lead">Convierte una experiencia de un solo evento en un activo reutilizable que Solventum lleva a 3 ciudades sin depender del equipo creador.</p>
+      </div>
+      <ul class="why">
+        <li><h3>Calidad que dura</h3><p>Materiales de alto gramaje y plastificados, pensados para muchas sesiones y no para un solo uso.</p></li>
+        <li><h3>Operación autónoma</h3><p>Cada kit llega completo, organizado y con instructivo; los facilitadores locales quedan capacitados.</p></li>
+        <li><h3>Misma experiencia en cada ciudad</h3><p>Las 5 estaciones, los roles y la dinámica son idénticos a los de Cartagena.</p></li>
+        <li><h3>Reutilización</h3><p>Escarapelas sin nombre y fichas resistentes permiten repetir la experiencia con nuevos grupos.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="inversion">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Inversión</p>
+        <h2 class="h2">Inversión total del proyecto</h2>
+      </div>
+      <div class="invest">
+        <div class="total">
+          <span class="amount">$24.637.310</span>
+          <span class="cur">Pesos colombianos (COP) · 3 kits completos</span>
+        </div>
+        <ul class="incl">
+          <li>Producción de 3 kits físicos: maleta, pistas, fichas, dados, escarapelas y sombreros</li>
+          <li>Sesión de alineación y capacitación de facilitadores (45 min, hasta 3 personas)</li>
+          <li>Instructivo de uso por kit</li>
+        </ul>
+      </div>
+      <p class="phase">Esta propuesta corresponde a la primera parte del proyecto: los kits físicos. El componente digital se presenta por separado.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Simoné · Nathalia Velasco</span>
+    <span>nathalia@experienciasimone.com · experienciasimone@gmail.com</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var links = document.querySelectorAll('nav.toc a');
+    if (!('IntersectionObserver' in window)) return;
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          links.forEach(function (a) { a.classList.remove('on'); });
+          var a = map[e.target.id];
+          if (a) a.classList.add('on');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { obs.observe(s); });
+  })();
+</script>
+</body>
+</html>
