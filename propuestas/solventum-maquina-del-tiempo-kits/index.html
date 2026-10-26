@@ -58,8 +58,11 @@
   .hero { border-top: 0; padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 88px); background: radial-gradient(120% 90% at 85% 0%, var(--teal) 0%, var(--void) 62%); }
   .hero .wrap { display: flex; flex-direction: column; gap: clamp(32px, 5vw, 56px); }
   .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-  .logo-plate { display: inline-flex; background: #F7F2E8; padding: 12px 18px; border-radius: 10px; }
-  .logo { width: clamp(170px, 20vw, 230px); height: auto; }
+  .brandbar { background: #F7F2E8; }
+  .brandbar .top { padding-block: 18px; }
+  .brandbar .for { color: #5A5C3A; }
+  .brandbar .for b { color: #373A0E; }
+  .logo { width: clamp(170px, 20vw, 240px); height: auto; }
   .for { font-size: 14px; color: var(--muted); }
   .for b { color: var(--ink); font-weight: 600; }
   .hero-main { display: flex; flex-direction: column; gap: 20px; }
@@ -193,12 +196,15 @@
 </head>
 <body>
 
+<div class="brandbar">
+  <div class="wrap top">
+    <img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte">
+    <p class="for">Propuesta comercial para <b>Solventum</b> · Octubre 2026</p>
+  </div>
+</div>
+
 <header class="hero">
   <div class="wrap">
-    <div class="top">
-      <span class="logo-plate"><img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte"></span>
-      <p class="for">Propuesta comercial para <b>Solventum</b> · Octubre 2026</p>
-    </div>
     <div class="hero-main">
       <p class="label">Réplica y producción de kits experienciales</p>
       <h1>Máquina del <span>Tiempo</span></h1>
