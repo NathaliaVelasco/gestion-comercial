@@ -152,6 +152,14 @@
   .total { display: flex; flex-direction: column; gap: 8px; }
   .total .amount { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 6vw, 64px); color: var(--malachite); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
   .total .cur { font-size: 15px; color: var(--body); }
+  .options { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .options .hud { display: flex; flex-direction: column; gap: 8px; }
+  .opt-label { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--malachite-soft); }
+  .options h3 { font-size: 19px; font-weight: 700; }
+  .opt-amount { font-family: var(--display); font-weight: 700; font-size: clamp(24px, 3vw, 32px); color: var(--ink); font-variant-numeric: tabular-nums; line-height: 1.2; }
+  .opt-amount small { font-family: var(--text); font-size: 14px; font-weight: 500; color: var(--body); }
+  .options p { font-size: 15px; color: var(--body); }
+  @media (max-width: 640px) { .options { grid-template-columns: 1fr; } }
   .breakdown { margin: 14px 0 0; display: flex; flex-direction: column; max-width: 440px; }
   .breakdown div { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
   .breakdown dt { color: var(--body); }
@@ -325,7 +333,7 @@
       </div>
       <div class="case">
         <span class="rollup" aria-hidden="true"></span>
-        <p><b>Adicional: 3 roll-ups por kit.</b> Diseño e impresión de 9 roll-ups de 85 × 190 cm, cada uno con su bolsa de transporte, para señalizar y ambientar el salón en cada ciudad.</p>
+        <p><b>Adicional: 3 roll-ups por kit.</b> Diseño e impresión de 9 roll-ups de 85 × 190 cm, cada uno con su bolsa de transporte, para señalizar y ambientar el salón en cada ciudad. Se cotiza aparte (ver Inversión).</p>
       </div>
     </div>
   </section>
@@ -419,22 +427,30 @@
       </div>
       <div class="invest">
         <div class="total">
-          <span class="amount">$34.630.100</span>
-          <span class="cur">Pesos colombianos (COP) + IVA · 3 kits completos con roll-ups</span>
-          <dl class="breakdown">
-            <div><dt>3 kits experienciales</dt><dd>$31.705.100</dd></div>
-            <div><dt>9 roll-ups · 9 × $325.000</dt><dd>$2.925.000</dd></div>
-            <div class="sum"><dt>Total + IVA</dt><dd>$34.630.100</dd></div>
-          </dl>
+          <span class="amount">$31.705.100</span>
+          <span class="cur">Pesos colombianos (COP) + IVA · 3 kits completos</span>
         </div>
         <ul class="incl">
           <li>Producción de 3 kits físicos: maleta, pistas, fichas, dados, rompecabezas, escarapelas y sombreros</li>
           <li>Por kit: 5 cronómetros, 3 bafles inalámbricos, 5 manteles negros y elementos de información para las paredes</li>
           <li>Lista de reproducción para la ambientación</li>
-          <li>Diseño e impresión de 9 roll-ups de 85 × 190 cm con bolsa (3 por kit)</li>
           <li>Sesión de alineación y capacitación de facilitadores (45 min, hasta 3 personas)</li>
           <li>Instructivo de uso por kit</li>
         </ul>
+      </div>
+      <div class="options">
+        <div class="hud">
+          <span class="opt-label">Adicional · no incluido en el valor</span>
+          <h3>Roll-ups</h3>
+          <span class="opt-amount">$2.925.000 <small>+ IVA</small></span>
+          <p>Diseño e impresión de 9 roll-ups de 85 × 190 cm con bolsa, 3 por kit, a $325.000 cada uno. Se cotiza aparte porque tiene implicaciones adicionales.</p>
+        </div>
+        <div class="hud">
+          <span class="opt-label">Opción · un kit más</span>
+          <h3>4 kits en total</h3>
+          <span class="opt-amount">$39.150.800 <small>+ IVA</small></span>
+          <p>Si la cantidad pasa a 4 kits, este es el valor total del proyecto, con el mismo contenido y acompañamiento por kit.</p>
+        </div>
       </div>
       <p class="phase">Esta propuesta corresponde a la primera parte del proyecto: los kits físicos. El componente digital se presenta por separado.</p>
     </div>
