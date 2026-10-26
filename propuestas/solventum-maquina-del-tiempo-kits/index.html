@@ -103,6 +103,10 @@
   .case { margin-top: clamp(28px, 4vw, 44px); display: flex; gap: 20px; align-items: center; }
   .case .swatch { flex: none; width: 56px; height: 40px; border-radius: 6px; background: linear-gradient(160deg, #1F8A4C, #0E5A30); box-shadow: inset 0 -6px 0 rgba(0,0,0,.25); position: relative; }
   .case .swatch::before { content: ""; position: absolute; top: -8px; left: 18px; width: 20px; height: 9px; border: 3px solid #0E5A30; border-bottom: 0; border-radius: 6px 6px 0 0; }
+  .case + .case { margin-top: 18px; }
+  .case .rollup { flex: none; width: 56px; height: 56px; position: relative; }
+  .case .rollup::before { content: ""; position: absolute; left: 19px; top: 0; width: 18px; height: 50px; border: 2px solid var(--malachite); border-radius: 2px; }
+  .case .rollup::after { content: ""; position: absolute; left: 12px; bottom: 0; width: 32px; height: 6px; background: var(--malachite); border-radius: 3px; }
   .case p { font-size: 15px; color: var(--body); max-width: 70ch; }
   .case b { color: var(--ink); }
 
@@ -148,6 +152,12 @@
   .total { display: flex; flex-direction: column; gap: 8px; }
   .total .amount { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 6vw, 64px); color: var(--malachite); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
   .total .cur { font-size: 15px; color: var(--body); }
+  .breakdown { margin: 14px 0 0; display: flex; flex-direction: column; max-width: 440px; }
+  .breakdown div { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .breakdown dt { color: var(--body); }
+  .breakdown dd { margin: 0; color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .breakdown .sum { border-bottom: 0; }
+  .breakdown .sum dt, .breakdown .sum dd { color: var(--malachite); font-weight: 700; }
   .incl { display: flex; flex-direction: column; }
   .incl li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--body); }
   .incl li:last-child { border-bottom: 0; }
@@ -313,6 +323,10 @@
         <span class="swatch" aria-hidden="true"></span>
         <p>Cada unidad se entrega en una <b>maleta de viaje rígida color verde</b>, fácil de transportar y almacenar, que protege el material en los traslados entre ciudades.</p>
       </div>
+      <div class="case">
+        <span class="rollup" aria-hidden="true"></span>
+        <p><b>Adicional: 3 roll-ups por kit.</b> Diseño e impresión de 9 roll-ups de 85 × 190 cm, cada uno con su bolsa de transporte, para señalizar y ambientar el salón en cada ciudad.</p>
+      </div>
     </div>
   </section>
 
@@ -405,13 +419,19 @@
       </div>
       <div class="invest">
         <div class="total">
-          <span class="amount">$31.705.100</span>
-          <span class="cur">Pesos colombianos (COP) + IVA · 3 kits completos</span>
+          <span class="amount">$34.630.100</span>
+          <span class="cur">Pesos colombianos (COP) + IVA · 3 kits completos con roll-ups</span>
+          <dl class="breakdown">
+            <div><dt>3 kits experienciales</dt><dd>$31.705.100</dd></div>
+            <div><dt>9 roll-ups · 9 × $325.000</dt><dd>$2.925.000</dd></div>
+            <div class="sum"><dt>Total + IVA</dt><dd>$34.630.100</dd></div>
+          </dl>
         </div>
         <ul class="incl">
           <li>Producción de 3 kits físicos: maleta, pistas, fichas, dados, rompecabezas, escarapelas y sombreros</li>
           <li>Por kit: 5 cronómetros, 3 bafles inalámbricos, 5 manteles negros y elementos de información para las paredes</li>
           <li>Lista de reproducción para la ambientación</li>
+          <li>Diseño e impresión de 9 roll-ups de 85 × 190 cm con bolsa (3 por kit)</li>
           <li>Sesión de alineación y capacitación de facilitadores (45 min, hasta 3 personas)</li>
           <li>Instructivo de uso por kit</li>
         </ul>
