@@ -58,7 +58,8 @@
   .hero { border-top: 0; padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 88px); background: radial-gradient(120% 90% at 85% 0%, var(--teal) 0%, var(--void) 62%); }
   .hero .wrap { display: flex; flex-direction: column; gap: clamp(32px, 5vw, 56px); }
   .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-  .logo { width: clamp(150px, 18vw, 200px); height: auto; }
+  .logo-plate { display: inline-flex; background: #F7F2E8; padding: 12px 18px; border-radius: 10px; }
+  .logo { width: clamp(170px, 20vw, 230px); height: auto; }
   .for { font-size: 14px; color: var(--muted); }
   .for b { color: var(--ink); font-weight: 600; }
   .hero-main { display: flex; flex-direction: column; gap: 20px; }
@@ -92,6 +93,8 @@
   .spec .v { font-weight: 600; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
 
   /* Kit */
+  .group + .group { margin-top: clamp(36px, 5vw, 56px); }
+  .group-title { font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin-bottom: 20px; }
   .kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
   .item { display: flex; flex-direction: column; gap: 10px; border-top: 2px solid var(--malachite); padding-top: 18px; }
   .item h3 { font-size: 18px; font-weight: 700; line-height: 1.3; }
@@ -175,7 +178,7 @@
 <header class="hero">
   <div class="wrap">
     <div class="top">
-      <img class="logo" src="img/logo-simone.png" alt="Simoné">
+      <span class="logo-plate"><img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte"></span>
       <p class="for">Propuesta comercial para <b>Solventum</b> · Octubre 2026</p>
     </div>
     <div class="hero-main">
@@ -234,40 +237,78 @@
       <div class="head">
         <p class="label">Especificaciones de producción</p>
         <h2 class="h2">Todo lo que lleva cada maleta</h2>
-        <p class="lead">El kit llega completo y organizado. No requiere compras ni impresiones locales.</p>
+        <p class="lead">El kit llega completo y organizado, con el material de juego y todo lo necesario para ambientar el salón. No requiere compras ni impresiones locales.</p>
       </div>
-      <ul class="kit">
-        <li class="item">
-          <span class="tag">Contenido de juego</span>
-          <h3>Pistas de las 5 estaciones</h3>
-          <p>Los retos y dinámicas completas de la experiencia, para que cada ciudad juegue la misma ruta que Cartagena.</p>
-        </li>
-        <li class="item">
-          <span class="tag">Papel 300 g · plastificado</span>
-          <h3>Fichas de juego</h3>
-          <p>Impresas en papel de alto gramaje con acabado plastificado: resistentes, reutilizables y de textura impecable frente al uso continuo.</p>
-        </li>
-        <li class="item">
-          <span class="tag">Componentes lúdicos</span>
-          <h3>Dados y elementos de juego</h3>
-          <p>Las piezas centrales de cada estación, listas para usar en mesa.</p>
-        </li>
-        <li class="item">
-          <span class="tag">Reutilizables</span>
-          <h3>Escarapelas de roles</h3>
-          <p>Un juego completo con los roles del equipo, sin nombres impresos. Agilizan la conformación de los grupos y sirven para múltiples sesiones.</p>
-        </li>
-        <li class="item">
-          <span class="tag">Identidad de liderazgo</span>
-          <h3>3 sombreros distintivos</h3>
-          <p>Para los líderes de cada actividad. Hacen visible quién conduce al equipo y refuerzan la inmersión.</p>
-        </li>
-        <li class="item">
-          <span class="tag">Guía de terreno</span>
-          <h3>Instructivo de uso</h3>
-          <p>Paso a paso para consulta rápida del facilitador durante la sesión.</p>
-        </li>
-      </ul>
+      <div class="group">
+        <h3 class="group-title">Material de juego</h3>
+        <ul class="kit">
+          <li class="item">
+            <span class="tag">Contenido de juego</span>
+            <h3>Pistas de las 5 estaciones</h3>
+            <p>Los retos y dinámicas completas de la experiencia, para que cada ciudad juegue la misma ruta que Cartagena.</p>
+          </li>
+          <li class="item">
+            <span class="tag">Papel 300 g · plastificado</span>
+            <h3>Fichas de juego</h3>
+            <p>Impresas en papel de alto gramaje con acabado plastificado: resistentes, reutilizables y de textura impecable frente al uso continuo.</p>
+          </li>
+          <li class="item">
+            <span class="tag">Componentes lúdicos</span>
+            <h3>Dados y elementos de juego</h3>
+            <p>Las piezas centrales de cada estación, listas para usar en mesa.</p>
+          </li>
+          <li class="item">
+            <span class="tag">Reto de ensamble</span>
+            <h3>Juego de rompecabezas</h3>
+            <p>Un reto físico que el equipo arma en conjunto para avanzar en la ruta.</p>
+          </li>
+          <li class="item">
+            <span class="tag">Reutilizables</span>
+            <h3>Escarapelas de roles</h3>
+            <p>Un juego completo con los roles del equipo, sin nombres impresos. Agilizan la conformación de los grupos y sirven para múltiples sesiones.</p>
+          </li>
+          <li class="item">
+            <span class="tag">Identidad de liderazgo</span>
+            <h3>3 sombreros distintivos</h3>
+            <p>Para los líderes de cada actividad. Hacen visible quién conduce al equipo y refuerzan la inmersión.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3 class="group-title">Ambientación y control del tiempo</h3>
+        <ul class="kit">
+          <li class="item">
+            <span class="tag">5 por kit</span>
+            <h3>Cronómetros</h3>
+            <p>Uno por estación, para hacer seguimiento al tiempo de cada grupo y mantener el ritmo de la experiencia.</p>
+          </li>
+          <li class="item">
+            <span class="tag">3 por kit · inalámbricos</span>
+            <h3>Bafles</h3>
+            <p>Llevan el sonido a todo el salón sin cables ni montaje técnico.</p>
+          </li>
+          <li class="item">
+            <span class="tag">Ambientación sonora</span>
+            <h3>Lista de reproducción</h3>
+            <p>Música seleccionada para cada momento de la experiencia, lista para sonar en los bafles.</p>
+          </li>
+          <li class="item">
+            <span class="tag">Información en sala</span>
+            <h3>Elementos para las paredes</h3>
+            <p>Piezas gráficas con la información que los equipos consultan en el espacio durante el juego.</p>
+          </li>
+          <li class="item">
+            <span class="tag">5 por kit · color negro</span>
+            <h3>Manteles</h3>
+            <p>Uno por estación. Unifican la imagen de las mesas en cualquier salón.</p>
+          </li>
+          <li class="item">
+            <span class="tag">Guía de terreno</span>
+            <h3>Instructivo de uso</h3>
+            <p>Paso a paso para consulta rápida del facilitador durante la sesión.</p>
+          </li>
+        </ul>
+      </div>
       <div class="case">
         <span class="swatch" aria-hidden="true"></span>
         <p>Cada unidad se entrega en una <b>maleta de viaje rígida color verde</b>, fácil de transportar y almacenar, que protege el material en los traslados entre ciudades.</p>
@@ -364,11 +405,13 @@
       </div>
       <div class="invest">
         <div class="total">
-          <span class="amount">$24.637.310</span>
-          <span class="cur">Pesos colombianos (COP) · 3 kits completos</span>
+          <span class="amount">$31.705.100</span>
+          <span class="cur">Pesos colombianos (COP) + IVA · 3 kits completos</span>
         </div>
         <ul class="incl">
-          <li>Producción de 3 kits físicos: maleta, pistas, fichas, dados, escarapelas y sombreros</li>
+          <li>Producción de 3 kits físicos: maleta, pistas, fichas, dados, rompecabezas, escarapelas y sombreros</li>
+          <li>Por kit: 5 cronómetros, 3 bafles inalámbricos, 5 manteles negros y elementos de información para las paredes</li>
+          <li>Lista de reproducción para la ambientación</li>
           <li>Sesión de alineación y capacitación de facilitadores (45 min, hasta 3 personas)</li>
           <li>Instructivo de uso por kit</li>
         </ul>
