@@ -6,6 +6,8 @@
 <style>[hidden]{display:none!important}body{margin:0}</style>
 <title>Expedición Curiosa</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/simbolo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 </head>
@@ -15,16 +17,17 @@
 :root{
   --bg:#f7f8f3; --surface:#ffffff; --ink:#16263a; --muted:#56657a; --line:#dde3d8;
   --leaf:#2f7a4f; --leaf-soft:#e3f0e6; --sun:#f2a516; --sun-soft:#fdf0d2; --sky:#2c6bc4; --sky-soft:#e2ecf9; --berry:#c2416b; --berry-soft:#f8e3ea;
+  --logo-bg:transparent; --logo-pad:0;
   --display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
   --body:"Figtree", "Segoe UI", system-ui, sans-serif;
   --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#101a24; --surface:#17232f; --ink:#eef2ea; --muted:#a3b0bf; --line:#2a3846;
-  --leaf:#6cc391; --leaf-soft:#173527; --sun:#f6bc4a; --sun-soft:#3a2d12; --sky:#7eaaf0; --sky-soft:#18294a; --berry:#ec7fa0; --berry-soft:#3b1a26; color-scheme:dark}}
+  --leaf:#6cc391; --leaf-soft:#173527; --sun:#f6bc4a; --sun-soft:#3a2d12; --sky:#7eaaf0; --sky-soft:#18294a; --berry:#ec7fa0; --berry-soft:#3b1a26; --logo-bg:#f7f8f3; --logo-pad:8px 12px; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#101a24; --surface:#17232f; --ink:#eef2ea; --muted:#a3b0bf; --line:#2a3846;
-  --leaf:#6cc391; --leaf-soft:#173527; --sun:#f6bc4a; --sun-soft:#3a2d12; --sky:#7eaaf0; --sky-soft:#18294a; --berry:#ec7fa0; --berry-soft:#3b1a26; color-scheme:dark}
+  --leaf:#6cc391; --leaf-soft:#173527; --sun:#f6bc4a; --sun-soft:#3a2d12; --sky:#7eaaf0; --sky-soft:#18294a; --berry:#ec7fa0; --berry-soft:#3b1a26; --logo-bg:#f7f8f3; --logo-pad:8px 12px; color-scheme:dark}
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.6}
@@ -161,6 +164,10 @@ ul.clean li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;he
 .invest .eyebrow{color:var(--bg);opacity:.7}
 .invest p{opacity:.85;max-width:60ch}
 footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.brand{display:flex;align-items:center;gap:14px;margin-top:22px;flex-wrap:wrap}
+.logo{display:block;width:clamp(170px,22vw,240px);height:auto;max-width:100%;background:var(--logo-bg);border-radius:10px;padding:var(--logo-pad)}
+.logo.sm{width:130px}
 
 @media (max-width:860px){
   .hero-grid,.groups,.kit,.day,.ops{grid-template-columns:1fr}
@@ -183,7 +190,8 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
         <p class="eyebrow">Propuesta · Programa recreativo y de aprendizaje · Enero–febrero</p>
         <h1 style="margin-top:14px">Expedición <span>Curiosa</span></h1>
         <p class="lede">Cuatro días para que 80 niños y jóvenes exploren la ciudad como científicos, artistas e inventores. Cada jornada combina movimiento, creación y reto en locaciones externas, con una operación segura y diferenciada por edades.</p>
-        <div class="byline"><span>Presenta <b>Alfil</b></span><span>Operador logístico y de experiencias</span><span>Bogotá y afueras</span></div>
+        <div class="byline"><span>Presenta <b>Alfil</b> · operación y logística</span><span>Diseño de experiencia <b>Simoné</b></span><span>Bogotá y afueras</span></div>
+        <div class="brand"><span class="eyebrow">Diseño de experiencia</span><img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte" width="1020" height="280"></div>
       </div>
       <div class="route" aria-label="Ruta de los cuatro días">
         <div class="stop"><span class="d">DÍA 1</span><span class="dot" style="background:var(--leaf)"></span><p>Integración y exploración creativa<small>Jardín Botánico · Parque Simón Bolívar</small></p></div>
@@ -459,7 +467,7 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
   </div>
 </section>
 
-<footer><div class="wrap">Alfil · Propuesta Expedición Curiosa · Programa recreativo y de aprendizaje para niños y jóvenes</div></footer>
+<footer><div class="wrap foot"><img class="logo sm" src="img/logo-simone.png" alt="Simoné" width="1020" height="280"><span>Expedición Curiosa · Propuesta de Alfil con diseño de experiencia de Simoné · nathalia@experienciasimone.com</span></div></footer>
 
 <script>
 const days=[

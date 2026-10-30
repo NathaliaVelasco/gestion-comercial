@@ -12,6 +12,7 @@ Presentaciones comerciales publicadas con GitHub Pages para compartirlas con cli
 | Evoforma · Megalabs | La Ruta de la Huella — Convención de Ventas 2027 | [Ver presentación](https://nathaliavelasco.github.io/gestion-comercial/propuestas/megalabs-la-ruta-de-la-huella/) |
 | Evoforma · Megalabs | El Circuito del Reconocimiento — demo del artefacto digital | [Ver demo](https://www.experienciasimone.com/gestion-comercial/propuestas/megalabs-circuito-del-reconocimiento/) |
 | Solventum | Máquina del Tiempo — kits físicos para 3 ciudades | [Ver propuesta](https://www.experienciasimone.com/gestion-comercial/propuestas/solventum-maquina-del-tiempo-kits/) |
+| Alfil | Expedición Curiosa — programa vacacional para niños | [Ver propuesta](https://www.experienciasimone.com/gestion-comercial/propuestas/alfil-expedicion-curiosa/) |
 
 ## Cómo se ve una propuesta
 
