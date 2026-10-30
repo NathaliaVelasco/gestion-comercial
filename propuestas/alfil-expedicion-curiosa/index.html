@@ -9,25 +9,25 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="img/simbolo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap">
 </head>
 <body>
 <style>
 /* Layout: cuaderno de expedición — columna de lectura con bandas de color por capítulo; programación como mapa de ruta por días */
 :root{
-  --bg:#f7f8f3; --surface:#ffffff; --ink:#16263a; --muted:#56657a; --line:#dde3d8;
-  --leaf:#2f7a4f; --leaf-soft:#e3f0e6; --sun:#f2a516; --sun-soft:#fdf0d2; --sky:#2c6bc4; --sky-soft:#e2ecf9; --berry:#c2416b; --berry-soft:#f8e3ea;
+  --bg:#FCF9F2; --surface:#ffffff; --ink:#363A12; --muted:#6B6C4E; --line:#DCD3BC;
+  --leaf:#5C6132; --leaf-soft:#EEEBD9; --sun:#F2A03D; --sun-soft:#FCEBD2; --sky:#BE1A82; --sky-soft:#F7E1EF; --berry:#8A3300; --berry-soft:#F4E2D6;
   --logo-bg:transparent; --logo-pad:0;
-  --display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
-  --body:"Figtree", "Segoe UI", system-ui, sans-serif;
-  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --display:"Montserrat", "Trebuchet MS", system-ui, sans-serif;
+  --body:"Lato", "Segoe UI", system-ui, sans-serif;
+  --mono:"Montserrat", system-ui, sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#101a24; --surface:#17232f; --ink:#eef2ea; --muted:#a3b0bf; --line:#2a3846;
-  --leaf:#6cc391; --leaf-soft:#173527; --sun:#f6bc4a; --sun-soft:#3a2d12; --sky:#7eaaf0; --sky-soft:#18294a; --berry:#ec7fa0; --berry-soft:#3b1a26; --logo-bg:#f7f8f3; --logo-pad:8px 12px; color-scheme:dark}}
+  --bg:#1B1D0D; --surface:#24271A; --ink:#EFE9D8; --muted:#C2BEA6; --line:#3B3F24;
+  --leaf:#C9CF8F; --leaf-soft:#2C3014; --sun:#F2A03D; --sun-soft:#3A2C12; --sky:#E764B3; --sky-soft:#3A1630; --berry:#E8895A; --berry-soft:#3A2214; --logo-bg:#F6F0E2; --logo-pad:8px 12px; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#101a24; --surface:#17232f; --ink:#eef2ea; --muted:#a3b0bf; --line:#2a3846;
-  --leaf:#6cc391; --leaf-soft:#173527; --sun:#f6bc4a; --sun-soft:#3a2d12; --sky:#7eaaf0; --sky-soft:#18294a; --berry:#ec7fa0; --berry-soft:#3b1a26; --logo-bg:#f7f8f3; --logo-pad:8px 12px; color-scheme:dark}
+  --bg:#1B1D0D; --surface:#24271A; --ink:#EFE9D8; --muted:#C2BEA6; --line:#3B3F24;
+  --leaf:#C9CF8F; --leaf-soft:#2C3014; --sun:#F2A03D; --sun-soft:#3A2C12; --sky:#E764B3; --sky-soft:#3A1630; --berry:#E8895A; --berry-soft:#3A2214; --logo-bg:#F6F0E2; --logo-pad:8px 12px; color-scheme:dark}
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.6}
@@ -45,7 +45,7 @@ section{padding-block:clamp(48px,8vw,84px);border-top:1px solid var(--line)}
 .hero{padding-block:clamp(40px,7vw,80px) clamp(36px,6vw,64px);border:0}
 .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:end}
 .hero h1{font-size:clamp(2.6rem,7.5vw,5rem);font-weight:800;letter-spacing:-.025em}
-.hero h1 span{color:var(--leaf)}
+.hero h1 span{color:var(--berry)}
 .hero .lede{margin-top:20px}
 .byline{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:.92rem;color:var(--muted)}
 .byline b{color:var(--ink);font-weight:600}
@@ -168,6 +168,20 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
 .brand{display:flex;align-items:center;gap:14px;margin-top:22px;flex-wrap:wrap}
 .logo{display:block;width:clamp(170px,22vw,240px);height:auto;max-width:100%;background:var(--logo-bg);border-radius:10px;padding:var(--logo-pad)}
 .logo.sm{width:130px}
+.topbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-bottom:28px;margin-bottom:clamp(28px,5vw,48px);border-bottom:1px solid var(--line)}
+.topbar .logo{width:clamp(150px,20vw,210px)}
+.topbar b{color:var(--ink)}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why div{display:grid;gap:8px;align-content:start;border-top:3px solid var(--sun);padding-top:16px}
+.why p{color:var(--muted);font-size:.95rem}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.opt{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:10px;align-content:start}
+.opt .eyebrow{color:var(--berry)}
+.opt p{font-size:.94rem;color:var(--muted)}
+.opt ul{margin:0;padding-left:18px;font-size:.92rem;display:grid;gap:4px}
+.pill{justify-self:start;font-family:var(--display);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--sun-soft);color:var(--ink)}
+.pill.rec{background:var(--leaf-soft)}
+@media (max-width:860px){.why,.opts{grid-template-columns:1fr}}
 
 @media (max-width:860px){
   .hero-grid,.groups,.kit,.day,.ops{grid-template-columns:1fr}
@@ -185,13 +199,13 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
 
 <header class="hero">
   <div class="wrap">
+    <div class="topbar"><img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte" width="1020" height="280"><span class="eyebrow">Propuesta de experiencia para <b>Alfil</b></span></div>
     <div class="hero-grid">
       <div>
         <p class="eyebrow">Propuesta · Programa recreativo y de aprendizaje · Enero–febrero</p>
         <h1 style="margin-top:14px">Expedición <span>Curiosa</span></h1>
         <p class="lede">Cuatro días para que 80 niños y jóvenes exploren la ciudad como científicos, artistas e inventores. Cada jornada combina movimiento, creación y reto en locaciones externas, con una operación segura y diferenciada por edades.</p>
-        <div class="byline"><span>Presenta <b>Alfil</b> · operación y logística</span><span>Diseño de experiencia <b>Simoné</b></span><span>Bogotá y afueras</span></div>
-        <div class="brand"><span class="eyebrow">Diseño de experiencia</span><img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte" width="1020" height="280"></div>
+        <div class="byline"><span>Diseño de experiencia <b>Simoné</b></span><span>Operación y logística <b>Alfil</b></span><span>Bogotá y afueras</span></div>
       </div>
       <div class="route" aria-label="Ruta de los cuatro días">
         <div class="stop"><span class="d">DÍA 1</span><span class="dot" style="background:var(--leaf)"></span><p>Integración y exploración creativa<small>Jardín Botánico · Parque Simón Bolívar</small></p></div>
@@ -208,6 +222,21 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
     </div>
   </div>
 </header>
+
+<section id="enfoque">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Por qué este programa</p>
+      <h2>Lo que hoy buscan las familias en unas vacaciones</h2>
+      <p class="lede">Los planes vacacionales de Bogotá se están moviendo hacia experiencias con menos pantalla, más ciudad y más trabajo en equipo. Expedición Curiosa responde a esas tres búsquedas.</p>
+    </div>
+    <div class="why">
+      <div><h3>Manos y cuerpo antes que pantalla</h3><p>La tecnología aparece solo en el juego de bienvenida. El resto del tiempo los niños crean, se mueven y exploran con objetos reales que se llevan a casa.</p></div>
+      <div><h3>Habilidades socioemocionales</h3><p>Convivir, negociar, resolver conflictos y celebrar en equipo. Cada reto y cada taller está pensado para que el grupo se necesite.</p></div>
+      <div><h3>La ciudad como aula</h3><p>Museos, parques y espacios culturales de Bogotá se vuelven escenario de aprendizaje, con una operación segura en cada traslado.</p></div>
+    </div>
+  </div>
+</section>
 
 <section id="grupos">
   <div class="wrap">
@@ -350,6 +379,35 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
   </div>
 </section>
 
+<section id="sede">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Sede base y plan de lluvia</p>
+      <h2>Un lugar propio para el grupo</h2>
+      <p class="lede">Proponemos una sede base con acceso controlado, salones cubiertos, zonas verdes y restaurante. Sirve para el día de integración y como plan B si llueve en alguna salida. Opciones por cotizar:</p>
+    </div>
+    <div class="opts">
+      <div class="opt"><span class="pill rec">Recomendada</span><span class="eyebrow">Colsubsidio</span><h3>Clubes La Colina, Calle 195 o Bellavista</h3><p>Clubes en Bogotá con zonas verdes, escenarios deportivos, salones y restaurante. Permiten integración, juegos de gran formato y almuerzo en un solo lugar.</p></div>
+      <div class="opt"><span class="pill">Ciencia y cine</span><span class="eyebrow">Maloka</span><h3>Sala Digital y Cine Domo</h3><p>Sala Digital para 176 personas y Cine Domo para 309, con apoyo de logística, mobiliario, sonido y alimentos. Encaja con el día 3.</p></div>
+      <div class="opt"><span class="pill">Salones cubiertos</span><span class="eyebrow">Cafam</span><h3>Centro de Convenciones Floresta</h3><p>Salones empresariales y espacios multipropósito en Bogotá. Útil como sede cubierta para talleres si se prioriza el clima.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="opcionales">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Módulos opcionales</p>
+      <h2>Para hacer la experiencia aún más memorable</h2>
+    </div>
+    <div class="opts">
+      <div class="opt"><span class="eyebrow">Tarde de cine</span><h3>Función privada con foro</h3><p>Una película para cada rango de edad, con crispetas y una conversación guiada al final sobre lo que vieron.</p><ul><li>Cine Domo de Maloka, 309 sillas</li><li>Cinemateca de Bogotá, Sala E para 100 personas</li></ul></div>
+      <div class="opt"><span class="eyebrow">Muestra final</span><h3>Exposición para familias y la compañía</h3><p>Las bitácoras, terrarios, cascos y objetos mágicos se exhiben el último día. Las familias y los líderes ven lo que vivieron los niños.</p></div>
+      <div class="opt"><span class="eyebrow">Kit ampliado</span><h3>Gorra y bloqueador solar</h3><p>Las salidas son al aire libre buena parte del día. Sumar protección solar al kit reduce riesgos y es un detalle que las familias valoran.</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="equipo">
   <div class="wrap ops">
     <div>
@@ -417,6 +475,7 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
         <li>Identificación de cada participante con su escarapela y grupo.</li>
         <li>Actividades de aventura del día 4 ajustadas por edad, con operadores certificados del parque.</li>
         <li>Cumplimiento de la normativa de transporte de menores y servicios recreativos.</li>
+        <li>Inscripción con consentimiento informado de padres, certificado de EPS vigente y ficha de salud y alimentación.</li>
       </ul>
     </div>
     <div>
@@ -467,7 +526,7 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
   </div>
 </section>
 
-<footer><div class="wrap foot"><img class="logo sm" src="img/logo-simone.png" alt="Simoné" width="1020" height="280"><span>Expedición Curiosa · Propuesta de Alfil con diseño de experiencia de Simoné · nathalia@experienciasimone.com</span></div></footer>
+<footer><div class="wrap foot"><img class="logo sm" src="img/logo-simone.png" alt="Simoné" width="1020" height="280"><span>Expedición Curiosa · Propuesta de Simoné para Alfil · nathalia@experienciasimone.com</span></div></footer>
 
 <script>
 const days=[
