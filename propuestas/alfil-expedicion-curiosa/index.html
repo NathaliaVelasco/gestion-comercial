@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}</style>
+<title>Expedición Curiosa</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+</head>
+<body>
+<style>
+/* Layout: cuaderno de expedición — columna de lectura con bandas de color por capítulo; programación como mapa de ruta por días */
+:root{
+  --bg:#f7f8f3; --surface:#ffffff; --ink:#16263a; --muted:#56657a; --line:#dde3d8;
+  --leaf:#2f7a4f; --leaf-soft:#e3f0e6; --sun:#f2a516; --sun-soft:#fdf0d2; --sky:#2c6bc4; --sky-soft:#e2ecf9; --berry:#c2416b; --berry-soft:#f8e3ea;
+  --display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101a24; --surface:#17232f; --ink:#eef2ea; --muted:#a3b0bf; --line:#2a3846;
+  --leaf:#6cc391; --leaf-soft:#173527; --sun:#f6bc4a; --sun-soft:#3a2d12; --sky:#7eaaf0; --sky-soft:#18294a; --berry:#ec7fa0; --berry-soft:#3b1a26; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101a24; --surface:#17232f; --ink:#eef2ea; --muted:#a3b0bf; --line:#2a3846;
+  --leaf:#6cc391; --leaf-soft:#173527; --sun:#f6bc4a; --sun-soft:#3a2d12; --sky:#7eaaf0; --sky-soft:#18294a; --berry:#ec7fa0; --berry-soft:#3b1a26; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:800;letter-spacing:-.01em}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:1.1rem;color:var(--muted);max-width:62ch}
+section{padding-block:clamp(48px,8vw,84px);border-top:1px solid var(--line)}
+.sec-head{display:grid;gap:12px;margin-bottom:32px;max-width:720px}
+
+/* hero */
+.hero{padding-block:clamp(40px,7vw,80px) clamp(36px,6vw,64px);border:0}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:end}
+.hero h1{font-size:clamp(2.6rem,7.5vw,5rem);font-weight:800;letter-spacing:-.025em}
+.hero h1 span{color:var(--leaf)}
+.hero .lede{margin-top:20px}
+.byline{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:.92rem;color:var(--muted)}
+.byline b{color:var(--ink);font-weight:600}
+.route{display:grid;gap:10px}
+.stop{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.stop .d{font-family:var(--mono);font-size:.78rem;width:46px;flex:none;color:var(--muted)}
+.stop .dot{width:12px;height:12px;border-radius:50%;flex:none}
+.stop p{font-weight:600;line-height:1.3}
+.stop small{display:block;font-weight:400;color:var(--muted);font-size:.84rem}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:44px}
+.fact{background:var(--surface);padding:18px 20px}
+.fact strong{display:block;font-family:var(--display);font-size:2rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.fact span{font-size:.88rem;color:var(--muted)}
+
+/* groups */
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.group{border-radius:18px;padding:26px;display:grid;gap:14px;align-content:start}
+.group.g1{background:var(--sun-soft)} .group.g2{background:var(--sky-soft)}
+.group .tag{font-family:var(--mono);font-size:.78rem}
+.names{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.9rem;font-weight:500}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px;counter-reset:s}
+.step{border-top:3px solid var(--leaf);padding-top:14px;display:grid;gap:6px}
+.step::before{counter-increment:s;content:"Paso " counter(s);font-family:var(--mono);font-size:.74rem;color:var(--leaf);letter-spacing:.06em;text-transform:uppercase}
+.step p{font-size:.95rem;color:var(--muted)}
+
+/* kit */
+.kit{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:start}
+.kit-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kit-item{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;gap:2px}
+.kit-item b{font-weight:600}
+.kit-item span{font-size:.87rem;color:var(--muted)}
+
+/* themes */
+.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.theme{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.theme .band{padding:20px 22px 18px;display:grid;gap:6px}
+.theme .band .eyebrow{color:inherit;opacity:.8}
+.t1 .band{background:var(--leaf-soft);color:var(--leaf)}
+.t2 .band{background:var(--sky-soft);color:var(--sky)}
+.t3 .band{background:var(--berry-soft);color:var(--berry)}
+.theme .band h3{color:var(--ink);font-size:1.3rem}
+.theme .body{padding:18px 22px 22px;display:grid;gap:12px;align-content:start}
+.theme .ref{font-size:.88rem;color:var(--muted)}
+.theme .ref b{color:var(--ink);font-weight:600}
+.ages{display:grid;gap:8px;font-size:.92rem}
+.ages div{display:grid;grid-template-columns:62px 1fr;gap:8px}
+.ages code{font-family:var(--mono);font-size:.76rem;color:var(--muted);padding-top:3px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.gallery figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.gallery img{display:block;width:100%;height:auto;max-width:100%}
+.gallery figcaption{padding:12px 16px 14px;font-size:.9rem;color:var(--muted);display:grid;gap:2px}
+.gallery figcaption b{color:var(--ink);font-weight:600;font-size:.86rem}
+.g-square{grid-column:1/-1;display:grid!important;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;grid-template-rows:auto!important;align-items:center}
+.g-square figcaption{padding:20px 24px;font-size:1rem}
+@media (max-width:640px){.gallery{grid-template-columns:1fr}.g-square{grid-template-columns:1fr!important}}
+
+/* schedule */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tab{font:inherit;font-weight:600;font-size:.95rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 16px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tab:focus-visible,.copy:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.day{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:start}
+.day-intro{display:grid;gap:14px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px)}
+.places{display:grid;gap:8px}
+.place{display:flex;gap:10px;align-items:baseline;font-size:.95rem}
+.place i{font-style:normal;font-family:var(--mono);font-size:.72rem;color:var(--muted);flex:none;width:28px}
+.timeline{display:grid;border-left:2px solid var(--line);margin-left:6px}
+.slot{display:grid;grid-template-columns:118px 1fr;gap:14px;padding:10px 0 14px 18px;position:relative}
+.slot::before{content:"";position:absolute;left:-7px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
+.slot.block::before{background:var(--leaf);border-color:var(--leaf)}
+.slot.food::before{background:var(--sun);border-color:var(--sun)}
+.slot time{font-family:var(--mono);font-size:.8rem;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
+.slot b{font-weight:600}
+.slot p{font-size:.93rem;color:var(--muted)}
+.slot .who{display:inline-block;font-family:var(--mono);font-size:.7rem;padding:1px 7px;border-radius:5px;margin-right:4px}
+.who.a{background:var(--sun-soft)} .who.b{background:var(--sky-soft)}
+
+/* venues */
+.venues{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.venue{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:8px;align-content:start}
+.venue .kind{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)}
+.venue p{font-size:.93rem;color:var(--muted)}
+.venue .when{font-size:.84rem;color:var(--ink);font-weight:600}
+
+/* ops tables */
+.ops{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.ops > div{min-width:0;display:grid;gap:14px;align-content:start}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.n{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+ul.clean{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+ul.clean li{padding-left:22px;position:relative}
+ul.clean li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;height:8px;border-radius:2px;background:var(--leaf)}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--sun);padding:4px 0 4px 12px}
+
+.menu{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.menu div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:6px;font-size:.88rem}
+.menu h3{font-size:1rem}
+.menu dt{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.menu dd{margin:0 0 4px}
+
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.check{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.check span{font-family:var(--mono);font-size:.74rem;color:var(--leaf);flex:none}
+.check a{color:var(--ink);text-decoration:none}
+.check a:hover{text-decoration:underline}
+
+.invest{background:var(--ink);color:var(--bg);border-radius:20px;padding:clamp(24px,5vw,44px);display:grid;gap:14px}
+.invest .eyebrow{color:var(--bg);opacity:.7}
+.invest p{opacity:.85;max-width:60ch}
+footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
+
+@media (max-width:860px){
+  .hero-grid,.groups,.kit,.day,.ops{grid-template-columns:1fr}
+  .themes,.venues{grid-template-columns:1fr 1fr}
+  .steps,.menu{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .day-intro{position:static}
+}
+@media (max-width:560px){
+  .themes,.venues,.steps,.menu,.kit-list,.checks{grid-template-columns:1fr}
+  .slot{grid-template-columns:1fr;gap:2px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Propuesta · Programa recreativo y de aprendizaje · Enero–febrero</p>
+        <h1 style="margin-top:14px">Expedición <span>Curiosa</span></h1>
+        <p class="lede">Cuatro días para que 80 niños y jóvenes exploren la ciudad como científicos, artistas e inventores. Cada jornada combina movimiento, creación y reto en locaciones externas, con una operación segura y diferenciada por edades.</p>
+        <div class="byline"><span>Presenta <b>Alfil</b></span><span>Operador logístico y de experiencias</span><span>Bogotá y afueras</span></div>
+      </div>
+      <div class="route" aria-label="Ruta de los cuatro días">
+        <div class="stop"><span class="d">DÍA 1</span><span class="dot" style="background:var(--leaf)"></span><p>Integración y exploración creativa<small>Jardín Botánico · Parque Simón Bolívar</small></p></div>
+        <div class="stop"><span class="d">DÍA 2</span><span class="dot" style="background:var(--sky)"></span><p>Salida cultural<small>Museo del Oro · Planetario de Bogotá</small></p></div>
+        <div class="stop"><span class="d">DÍA 3</span><span class="dot" style="background:var(--berry)"></span><p>Desafíos de equipo<small>Maloka · Parque Simón Bolívar</small></p></div>
+        <div class="stop"><span class="d">DÍA 4</span><span class="dot" style="background:var(--sun)"></span><p>Aventura en las afueras<small>Parque Jaime Duque, Tocancipá</small></p></div>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact"><strong>80</strong><span>niños y jóvenes de 6 a 17 años</span></div>
+      <div class="fact"><strong>2</strong><span>grupos con metodología propia</span></div>
+      <div class="fact"><strong>4</strong><span>días · 8 a. m. a 5 p. m. (día 4 hasta 6 p. m.)</span></div>
+      <div class="fact"><strong>6</strong><span>locaciones externas, 2 por día</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="grupos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Participantes y conformación de grupos</p>
+      <h2>Los equipos se forman jugando</h2>
+      <p class="lede">Creamos un juego digital para la conformación de los grupos. Cada equipo supera una serie de retos hasta llegar a la meta, donde vota el nombre que lo acompañará los cuatro días. Cada grupo tiene tres opciones de nombre y gana la más votada.</p>
+    </div>
+    <div class="groups">
+      <div class="group g1">
+        <span class="tag">GRUPO 1 · 6 a 10 años · 4 representantes de la compañía</span>
+        <h3>Retos visuales y cooperativos</h3>
+        <p>Pistas con imágenes, sonidos y movimiento. Los retos se resuelven en equipo, con apoyo de los recreadores.</p>
+        <div class="names"><span class="chip">Guardianes del Bosque</span><span class="chip">Cometas Curiosos</span><span class="chip">Exploradores Luciérnaga</span></div>
+      </div>
+      <div class="group g2">
+        <span class="tag">GRUPO 2 · 11 a 17 años · 4 representantes de la compañía</span>
+        <h3>Acertijos, estrategia y velocidad</h3>
+        <p>Desafíos de lógica, trivia y colaboración con tiempo en contra. El grupo decide cómo repartir roles para avanzar.</p>
+        <div class="names"><span class="chip">Cartógrafos del Cosmos</span><span class="chip">Inventores Alquimistas</span><span class="chip">Expedición Cóndor</span></div>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Llegada</h3><p>Cada participante recibe su escarapela con el avatar de su grupo.</p></div>
+      <div class="step"><h3>Retos</h3><p>El grupo avanza en el juego digital superando pruebas en pantalla y en el espacio.</p></div>
+      <div class="step"><h3>Meta</h3><p>Al llegar, votan entre las tres opciones de nombre de su categoría.</p></div>
+      <div class="step"><h3>Identidad</h3><p>El nombre ganador acompaña al equipo en los retos y reconocimientos de los cuatro días.</p></div>
+    </div>
+    <p class="note" style="margin-top:24px">Los nombres son una propuesta inicial y se ajustan con la compañía antes del evento.</p>
+  </div>
+</section>
+
+<section id="kit">
+  <div class="wrap kit">
+    <div class="sec-head" style="margin:0">
+      <p class="eyebrow">Kit individual</p>
+      <h2>80 kits para crear, explorar e hidratarse</h2>
+      <p class="lede">Cada niño o joven recibe un kit pensado para las actividades de los cuatro días. Incluye diseño, elementos, armado y entrega en sitio.</p>
+      <p class="note">La bitácora es el hilo del programa: allí cada participante registra lo que observa, dibuja y descubre en cada locación.</p>
+    </div>
+    <div class="kit-list">
+      <div class="kit-item"><b>Tula</b><span>Para llevar el kit y lo que creen en cada salida</span></div>
+      <div class="kit-item"><b>Bitácora</b><span>Cuaderno de campo para registro y dibujo</span></div>
+      <div class="kit-item"><b>Materiales de arte</b><span>Para los talleres creativos de cada día</span></div>
+      <div class="kit-item"><b>Botilito de agua</b><span>Hidratación durante todas las jornadas</span></div>
+      <div class="kit-item"><b>Botón</b><span>Con la identidad del programa</span></div>
+      <div class="kit-item"><b>Lápiz, borrador y tajalápiz</b><span>Para la bitácora y los bocetos</span></div>
+      <div class="kit-item" style="grid-column:1/-1"><b>Rompecabezas para colorear</b><span>Un juego para armar y personalizar, también para llevar a casa</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="universos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Metodología creativa</p>
+      <h2>Tres universos inspirados en arte contemporáneo</h2>
+      <p class="lede">Los talleres artísticos parten de la obra de tres artistas. Cada universo guía un día de programación y se adapta a cada rango de edad.</p>
+    </div>
+    <div class="themes">
+      <article class="theme t1">
+        <div class="band"><span class="eyebrow">Universo 1 · Día 1</span><h3>Plantas, bichos y otras maravillas</h3></div>
+        <div class="body">
+          <p class="ref">Artista referente: <b>María Buenaventura</b></p>
+          <p>Naturaleza viva y escultura plástica: siembra, terrarios y observación. Conecta con lo ecológico y con la experiencia de los sentidos.</p>
+          <div class="ages"><div><code>6–10</code><span>Terrario en frasco y bichos modelados.</span></div><div><code>11–17</code><span>Mini ecosistema y ficha de especie en la bitácora.</span></div></div>
+        </div>
+      </article>
+      <article class="theme t2">
+        <div class="band"><span class="eyebrow">Universo 2 · Día 2</span><h3>Viaje a través del espacio</h3></div>
+        <div class="body">
+          <p class="ref">Artista referente: <b>Regina de Miguel</b></p>
+          <p>Ciencia ficción, exploración y cosmos. Funciona para ambas franjas de edad: se crean cascos y se diseñan universos pictóricos inmersivos.</p>
+          <div class="ages"><div><code>6–10</code><span>Casco de explorador y su planeta pintado.</span></div><div><code>11–17</code><span>Mapa de un universo propio con sus reglas.</span></div></div>
+        </div>
+      </article>
+      <article class="theme t3">
+        <div class="band"><span class="eyebrow">Universo 3 · Día 3</span><h3>Objetos mágicos</h3></div>
+        <div class="body">
+          <p class="ref">Artista referente: <b>Wim Delvoye</b></p>
+          <p>Material reciclado que cobra nueva vida. Estimula la inventiva, el ingenio manual y el diseño de objetos fantásticos.</p>
+          <div class="ages"><div><code>6–10</code><span>Amuleto o juguete con poderes inventados.</span></div><div><code>11–17</code><span>Objeto funcional con ficha técnica de su "magia".</span></div></div>
+        </div>
+      </article>
+    </div>
+    <p class="note" style="margin-top:24px">El día 4 los equipos reúnen lo creado en una instalación efímera o bitácora de campo en el parque, como cierre del programa.</p>
+  </div>
+</section>
+
+<section id="talleres">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Talleres realizados</p>
+      <h2>Así se ve un taller del equipo creativo</h2>
+      <p class="lede">Una muestra de experiencias anteriores con niños y jóvenes. Cada pieza sale del taller hecha por sus propias manos y se la llevan a casa.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g-wide"><img src="img/reciclaje-terrarios.jpg" alt="Objetos inventados con botellas recicladas y terrarios con plantas, cada uno con un nombre escrito en una hoja de papel" loading="lazy"><figcaption><b>Objetos mágicos · Plantas, bichos y otras maravillas</b>Submarinos y cohetes con material reciclado; terrarios con nombre propio.</figcaption></figure>
+      <figure class="g-wide"><img src="img/pinturas.jpg" alt="Niños con gorros cónicos decorados mostrando autorretratos en acuarela" loading="lazy"><figcaption><b>Viaje a través del espacio</b>Gorros de explorador y personajes pintados en acuarela.</figcaption></figure>
+      <figure class="g-wide"><img src="img/mascaras-alas.jpg" alt="Niña con alas pintadas y niños con máscaras de animales hechas en cartulina" loading="lazy"><figcaption><b>Juego y transformación</b>Alas pintadas y máscaras de animales para el bloque de movimiento.</figcaption></figure>
+      <figure class="g-wide"><img src="img/collage-movil.jpg" alt="Collage de animales en papel de colores y un loro pintado en acuarela colgado como móvil" loading="lazy"><figcaption><b>Bichos y otras maravillas</b>Collage de criaturas y aves pintadas que se cuelgan como móvil.</figcaption></figure>
+      <figure class="g-square"><img src="img/macetas.jpg" alt="Macetas de cerámica en forma de animales pintadas a mano con suculentas" loading="lazy"><figcaption><b>Plantas, bichos y otras maravillas</b>Macetas con forma de animal, pintadas a mano para sembrar.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="programacion">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Programación y cronograma diario</p>
+      <h2>Cuatro jornadas, tres bloques cada una</h2>
+      <p class="lede">Todos los días siguen el mismo ritmo: juego y movimiento, creación artística y reto deportivo, con alimentación e hidratación programadas. Salida desde las oficinas de la compañía.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Días del programa">
+      <button class="tab" role="tab" id="t1" aria-selected="true" aria-controls="d1">Día 1</button>
+      <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="d2">Día 2</button>
+      <button class="tab" role="tab" id="t3" aria-selected="false" aria-controls="d3">Día 3</button>
+      <button class="tab" role="tab" id="t4" aria-selected="false" aria-controls="d4">Día 4</button>
+    </div>
+    <div id="days"></div>
+  </div>
+</section>
+
+<section id="locaciones">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Locaciones sugeridas</p>
+      <h2>La ciudad como aula</h2>
+      <p class="lede">Alfil gestiona reservas, entradas, guías y permisos de cada locación, y verifica sus condiciones de seguridad antes del evento.</p>
+    </div>
+    <div class="venues">
+      <div class="venue"><span class="kind">Jardín botánico</span><h3>Jardín Botánico José Celestino Mutis</h3><p>Colecciones vivas de flora altoandina, tropicario y espacios para observación ambiental y talleres de siembra.</p><span class="when">Día 1</span></div>
+      <div class="venue"><span class="kind">Parque metropolitano</span><h3>Parque Simón Bolívar</h3><p>Amplias zonas verdes para juegos de gran formato, carrera de obstáculos e integración al aire libre.</p><span class="when">Días 1 y 3</span></div>
+      <div class="venue"><span class="kind">Museo patrimonial</span><h3>Museo del Oro</h3><p>Orfebrería y alfarería prehispánica. Recorrido guiado sobre la relación de las culturas ancestrales con el sol, la luna y el cosmos.</p><span class="when">Día 2</span></div>
+      <div class="venue"><span class="kind">Planetario</span><h3>Planetario de Bogotá</h3><p>Funciones inmersivas en el domo y museo del espacio, para conectar con la escala del cosmos.</p><span class="when">Día 2</span></div>
+      <div class="venue"><span class="kind">Museo interactivo</span><h3>Maloka</h3><p>Ciencia y tecnología para ambas edades: salas de inmersión, física, biodiversidad y pantallas que despiertan la curiosidad.</p><span class="when">Día 3</span></div>
+      <div class="venue"><span class="kind">Parque · afueras de Bogotá</span><h3>Parque Jaime Duque</h3><p>En las afueras de Bogotá, con atracciones, zonas de aventura y espacios abiertos para la gran jornada de cierre.</p><span class="when">Día 4</span></div>
+    </div>
+    <p class="note" style="margin-top:24px">Los costos de entradas y servicios de cada locación se detallan en la cotización.</p>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="wrap ops">
+    <div>
+      <p class="eyebrow">Personal operativo, recreativo y prehospitalario</p>
+      <h2>Un adulto atento para cada pequeño grupo</h2>
+      <p class="lede">El equipo cumple las proporciones solicitadas y se ajusta a la distribución final de inscritos.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Rol</th><th>Cant.</th><th>Función</th></tr></thead>
+        <tbody>
+          <tr><td>Recreadores</td><td class="n">14</td><td>1 por cada 6 participantes. Dinamizan los bloques y acompañan desplazamientos.</td></tr>
+          <tr><td>Mediadores creativos</td><td class="n">Por grupo</td><td>Guían los talleres artísticos de cada universo.</td></tr>
+          <tr><td>Apoyo prehospitalario</td><td class="n">8</td><td>1 por cada 10 participantes. Personal APH certificado presente en todas las actividades.</td></tr>
+          <tr><td>Coordinadores de grupo</td><td class="n">2</td><td>Uno por grupo: horarios, logística y desarrollo de la jornada.</td></tr>
+          <tr><td>Coordinación general</td><td class="n">1</td><td>Punto único de contacto con la compañía y control de la operación.</td></tr>
+          <tr><td>Ambulancia medicalizada</td><td class="n">1</td><td>Disponible durante las actividades, con cobertura acorde a cada experiencia.</td></tr>
+        </tbody></table></div>
+    </div>
+    <div>
+      <p class="eyebrow">Transporte</p>
+      <h2>Ida y regreso, todos los días</h2>
+      <p class="lede">Buses habilitados para transporte de menores, con conductores certificados y capacidad para participantes, representantes y personal.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Jornada</th><th>Salida</th><th>Regreso</th></tr></thead>
+        <tbody>
+          <tr><td>Días 1 a 3</td><td class="n">8:00 a. m.</td><td class="n">5:00 p. m.</td></tr>
+          <tr><td>Día 4 · afueras</td><td class="n">7:30 a. m.</td><td class="n">6:00 p. m.</td></tr>
+        </tbody></table></div>
+      <ul class="clean">
+        <li>Capacidad para cerca de 115 personas: 80 participantes, 8 representantes y el equipo operativo.</li>
+        <li>Traslados entre las dos locaciones de cada día incluidos.</li>
+        <li>Lista de abordaje y conteo por grupo en cada subida y bajada.</li>
+        <li>Tipo, número de vehículos y documentación de habilitación se detallan en la cotización.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="alimentacion">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Alimentación e hidratación</p>
+      <h2>Tres momentos de comida al día</h2>
+      <p class="lede">Refrigerio de la mañana, almuerzo y refrigerio de la tarde para 88 personas (80 participantes y 8 representantes), con hidratación permanente. Menús con fruta, variedad y porciones pensadas para jornadas activas.</p>
+    </div>
+    <div class="menu">
+      <div><h3>Día 1</h3><dl><dt>Mañana</dt><dd>Fruta picada y pan de yuca</dd><dt>Almuerzo</dt><dd>Pollo a la plancha, arroz, ensalada y jugo natural</dd><dt>Tarde</dt><dd>Yogur con granola</dd></dl></div>
+      <div><h3>Día 2</h3><dl><dt>Mañana</dt><dd>Sándwich de queso y fruta entera</dd><dt>Almuerzo</dt><dd>Pasta boloñesa, ensalada y limonada</dd><dt>Tarde</dt><dd>Brownie casero y fruta</dd></dl></div>
+      <div><h3>Día 3</h3><dl><dt>Mañana</dt><dd>Arepa con queso y jugo</dd><dt>Almuerzo</dt><dd>Carne en salsa, arroz, papa y ensalada</dd><dt>Tarde</dt><dd>Wrap pequeño y fruta</dd></dl></div>
+      <div><h3>Día 4</h3><dl><dt>Mañana</dt><dd>Muffin y fruta picada</dd><dt>Almuerzo</dt><dd>Menú tipo pícnic o del parque</dd><dt>Tarde</dt><dd>Helado o postre de cierre</dd></dl></div>
+    </div>
+    <p class="note" style="margin-top:20px">Menú sugerido, sujeto a confirmación con el proveedor. Incluye alternativa vegetariana cada día y atención de requerimientos especiales según lo reportado en las inscripciones.</p>
+  </div>
+</section>
+
+<section id="seguridad">
+  <div class="wrap ops">
+    <div>
+      <p class="eyebrow">Seguridad y gestión de riesgos</p>
+      <h2>Cada locación, revisada antes de llegar</h2>
+      <ul class="clean">
+        <li>Visita técnica y verificación de condiciones de cada espacio.</li>
+        <li>Matriz de riesgos por locación y actividad, con medidas preventivas.</li>
+        <li>Protocolo de emergencias y ruta de atención con ambulancia y APH.</li>
+        <li>Control de asistencia al abordar, al llegar y al cambiar de bloque.</li>
+        <li>Identificación de cada participante con su escarapela y grupo.</li>
+        <li>Actividades de aventura del día 4 ajustadas por edad, con operadores certificados del parque.</li>
+        <li>Cumplimiento de la normativa de transporte de menores y servicios recreativos.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Seguros, permisos y coberturas</p>
+      <h2>Lo que cubre la operación</h2>
+      <div class="tbl"><table>
+        <thead><tr><th>Cobertura</th><th>Alcance</th></tr></thead>
+        <tbody>
+          <tr><td>Póliza de accidentes personales</td><td>Participantes y representantes durante los 4 días</td></tr>
+          <tr><td>Responsabilidad civil extracontractual</td><td>Operación del programa</td></tr>
+          <tr><td>Pólizas de transporte</td><td>Vehículos y pasajeros, según normativa</td></tr>
+          <tr><td>Seguridad social del personal</td><td>Todo el equipo contratado</td></tr>
+          <tr><td>Permisos y reservas</td><td>Cada locación y actividad</td></tr>
+        </tbody></table></div>
+      <p class="note">Las pólizas y certificados se entregan a la compañía antes del inicio del programa.</p>
+    </div>
+  </div>
+</section>
+
+<section id="entregables">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Entregables solicitados</p>
+      <h2>Dónde encontrar cada punto</h2>
+    </div>
+    <div class="checks">
+      <div class="check"><span>✓</span><a href="#programacion">Programación general de los cuatro días</a></div>
+      <div class="check"><span>✓</span><a href="#universos">Actividades por grupo de edad</a></div>
+      <div class="check"><span>✓</span><a href="#locaciones">Locaciones sugeridas</a></div>
+      <div class="check"><span>✓</span><a href="#programacion">Plan logístico y cronograma diario</a></div>
+      <div class="check"><span>✓</span><a href="#equipo">Propuesta de transporte</a></div>
+      <div class="check"><span>✓</span><a href="#alimentacion">Alimentación, menús y alternativas</a></div>
+      <div class="check"><span>✓</span><a href="#kit">Kit individual por participante</a></div>
+      <div class="check"><span>✓</span><a href="#seguridad">Plan de seguridad y emergencias</a></div>
+      <div class="check"><span>✓</span><a href="#seguridad">Seguros, permisos y coberturas</a></div>
+      <div class="check"><span>→</span><a href="#inversion">Cotización desglosada</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="inversion">
+  <div class="wrap">
+    <div class="invest">
+      <p class="eyebrow">Inversión</p>
+      <h2>Cotización económica</h2>
+      <p>La cotización desglosada por componente, con cantidades, tarifas unitarias, subtotales, impuestos y valor total, se entrega como anexo a esta propuesta.</p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Alfil · Propuesta Expedición Curiosa · Programa recreativo y de aprendizaje para niños y jóvenes</div></footer>
+
+<script>
+const days=[
+ {n:1,title:"Integración y exploración creativa",color:"var(--leaf)",uni:"Universo 1 · Plantas, bichos y otras maravillas",
+  places:["Jardín Botánico José Celestino Mutis (mañana)","Parque Simón Bolívar (tarde)"],
+  intro:"El primer día se forman los equipos con el juego digital, se entregan escarapelas y kits, y arranca la bitácora.",
+  start:"08:00 – 09:00", startTxt:"Salida desde las oficinas en transporte autorizado y traslado a la locación.",
+  b1:"Dinámica de apertura, juego de conformación de grupos, expresión corporal y baile de integración.",
+  b2:"Taller de siembra y terrarios guiado por los mediadores creativos.",
+  a:"Terrario en frasco", b:"Mini ecosistema y ficha de especie",
+  b3:"Juegos grupales, desafíos recreativos y competencia por equipos en el Simón Bolívar.",
+  end:"04:00 – 05:00", endTxt:"Cierre de la jornada, abordaje de buses y regreso a las oficinas."},
+ {n:2,title:"Salida cultural",color:"var(--sky)",uni:"Universo 2 · Viaje a través del espacio",
+  places:["Museo del Oro (mañana)","Planetario de Bogotá (tarde)"],
+  intro:"Del cielo de las culturas ancestrales al cosmos del domo: un recorrido por el centro de la ciudad.",
+  start:"08:00 – 09:00", startTxt:"Salida desde las oficinas hacia el centro de Bogotá.",
+  b1:"Calentamiento, dinámicas de ritmo, movimiento consciente y juegos de activación.",
+  b2:"Recorrido guiado por el Museo del Oro y creación artística en sitio.",
+  a:"Casco de explorador", b:"Mapa de un universo propio",
+  b3:"Función inmersiva en el domo del Planetario y retos de exploración por equipos.",
+  end:"04:00 – 05:00", endTxt:"Reflexión de cierre, abordaje de transporte y regreso a la compañía."},
+ {n:3,title:"Desafíos de equipo",color:"var(--berry)",uni:"Universo 3 · Objetos mágicos",
+  places:["Maloka (mañana)","Parque Simón Bolívar (tarde)"],
+  intro:"Ciencia, ingenio y reto físico. Los equipos inventan objetos y compiten en el gran circuito.",
+  start:"08:00 – 09:00", startTxt:"Salida desde las oficinas hacia Maloka.",
+  b1:"Juegos teatrales, baile grupal y rutinas de movimiento expresivo.",
+  b2:"Laboratorio creativo con material reciclado, tras la visita a las salas de Maloka.",
+  a:"Amuleto o juguete mágico", b:"Objeto funcional con ficha técnica",
+  b3:"Gran circuito de desafíos físicos, agilidad y carrera de obstáculos por estaciones.",
+  end:"04:00 – 05:00", endTxt:"Cierre de resultados, abordaje de buses y regreso a la compañía."},
+ {n:4,title:"Aventura en las afueras",color:"var(--sun)",uni:"Cierre · Instalación efímera y bitácora de campo",
+  places:["Parque Jaime Duque, afueras de Bogotá (todo el día)"],
+  intro:"Jornada inmersiva de aventura, con actividades ajustadas a cada edad y el cierre general del programa.",
+  start:"07:30 – 09:00", startTxt:"Salida programada desde las oficinas hacia el parque.",
+  b1:"Activación corporal, juegos colectivos y preparación física para el parque.",
+  b2:"Instalación efímera o bitácora de campo con lo creado durante la semana.",
+  a:"Bitácora ilustrada", b:"Instalación colectiva",
+  b3:"Desafíos de aventura, competencias integrales y atracciones del parque.",
+  end:"04:00 – 06:00", endTxt:"Cierre general, reconocimientos por equipo, abordaje y regreso a las 6:00 p. m."}
+];
+function render(d){
+ return `<div class="day" id="d${d.n}" role="tabpanel" aria-labelledby="t${d.n}">
+  <div class="day-intro">
+   <p class="eyebrow" style="color:${d.color}">Día ${d.n} · ${d.uni}</p>
+   <h3 style="font-size:1.6rem">${d.title}</h3>
+   <p style="color:var(--muted)">${d.intro}</p>
+   <div class="places">${d.places.map((p,i)=>`<div class="place"><i>L${i+1}</i><span>${p}</span></div>`).join("")}</div>
+  </div>
+  <div class="timeline">
+   <div class="slot"><time>${d.start}</time><div><b>Salida</b><p>${d.startTxt}</p></div></div>
+   <div class="slot block"><time>09:00 – 10:00</time><div><b>Bloque 1 · Juego, baile y movimiento</b><p>${d.b1}</p></div></div>
+   <div class="slot"><time>10:00 – 10:30</time><div><b>Alistamiento e hidratación</b></div></div>
+   <div class="slot food"><time>10:30 – 11:00</time><div><b>Refrigerio de la mañana</b><p>88 unidades</p></div></div>
+   <div class="slot block"><time>11:00 – 12:30</time><div><b>Bloque 2 · Actividad artística</b><p>${d.b2}</p><p style="margin-top:6px"><span class="who a">6–10</span>${d.a} &nbsp; <span class="who b">11–17</span>${d.b}</p></div></div>
+   <div class="slot food"><time>12:30 – 01:30</time><div><b>Almuerzo e hidratación</b><p>88 unidades</p></div></div>
+   <div class="slot block"><time>01:30 – 03:30</time><div><b>Bloque 3 · Deporte y competencia</b><p>${d.b3}</p></div></div>
+   <div class="slot food"><time>03:30 – 04:00</time><div><b>Refrigerio de la tarde</b><p>88 unidades</p></div></div>
+   <div class="slot"><time>${d.end}</time><div><b>Cierre y regreso</b><p>${d.endTxt}</p></div></div>
+  </div></div>`;
+}
+const box=document.getElementById("days");
+box.innerHTML=days.map(render).join("");
+const tabs=[...document.querySelectorAll(".tab")];
+function show(n){
+ tabs.forEach((t,i)=>t.setAttribute("aria-selected",String(i+1===n)));
+ days.forEach(d=>{document.getElementById("d"+d.n).hidden=d.n!==n});
+}
+tabs.forEach((t,i)=>t.addEventListener("click",()=>show(i+1)));
+show(1);
+</script>
+
+</body>
+</html>
