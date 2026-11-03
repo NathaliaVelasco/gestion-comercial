@@ -17,17 +17,17 @@
 :root{
   --bg:#FCF9F2; --surface:#ffffff; --ink:#363A12; --muted:#6B6C4E; --line:#DCD3BC;
   --leaf:#5C6132; --leaf-soft:#EEEBD9; --sun:#F2A03D; --sun-soft:#FCEBD2; --sky:#BE1A82; --sky-soft:#F7E1EF; --berry:#8A3300; --berry-soft:#F4E2D6;
-  --logo-bg:transparent; --logo-pad:0;
+  --logo-bg:transparent; --logo-pad:0; --ink-accent:#F2A03D;
   --display:"Montserrat", "Trebuchet MS", system-ui, sans-serif;
   --body:"Lato", "Segoe UI", system-ui, sans-serif;
   --mono:"Montserrat", system-ui, sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#1B1D0D; --surface:#24271A; --ink:#EFE9D8; --muted:#C2BEA6; --line:#3B3F24;
-  --leaf:#C9CF8F; --leaf-soft:#2C3014; --sun:#F2A03D; --sun-soft:#3A2C12; --sky:#E764B3; --sky-soft:#3A1630; --berry:#E8895A; --berry-soft:#3A2214; --logo-bg:#F6F0E2; --logo-pad:8px 12px; color-scheme:dark}}
+  --leaf:#C9CF8F; --leaf-soft:#2C3014; --sun:#F2A03D; --sun-soft:#3A2C12; --sky:#E764B3; --sky-soft:#3A1630; --berry:#E8895A; --berry-soft:#3A2214; --logo-bg:#F6F0E2; --logo-pad:8px 12px; --ink-accent:#8A3300; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#1B1D0D; --surface:#24271A; --ink:#EFE9D8; --muted:#C2BEA6; --line:#3B3F24;
-  --leaf:#C9CF8F; --leaf-soft:#2C3014; --sun:#F2A03D; --sun-soft:#3A2C12; --sky:#E764B3; --sky-soft:#3A1630; --berry:#E8895A; --berry-soft:#3A2214; --logo-bg:#F6F0E2; --logo-pad:8px 12px; color-scheme:dark}
+  --leaf:#C9CF8F; --leaf-soft:#2C3014; --sun:#F2A03D; --sun-soft:#3A2C12; --sky:#E764B3; --sky-soft:#3A1630; --berry:#E8895A; --berry-soft:#3A2214; --logo-bg:#F6F0E2; --logo-pad:8px 12px; --ink-accent:#8A3300; color-scheme:dark}
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.6}
@@ -161,7 +161,22 @@ ul.clean li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;he
 .check a:hover{text-decoration:underline}
 
 .invest{background:var(--ink);color:var(--bg);border-radius:20px;padding:clamp(24px,5vw,44px);display:grid;gap:14px}
-.invest .eyebrow{color:var(--bg);opacity:.7}
+.invest .eyebrow{color:var(--ink-accent)}
+.inv-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,5vw,56px)}
+.inv-grid > div{min-width:0;display:grid;gap:12px;align-content:start}
+.invest h2{color:var(--bg)}
+.total{font-family:var(--display);font-weight:800;font-size:clamp(2.1rem,5vw,3rem);line-height:1;font-variant-numeric:tabular-nums;color:var(--bg);opacity:1!important}
+.total span{font-size:.4em;font-weight:600;color:var(--ink-accent);white-space:nowrap}
+.withtax b,.pay b{font-variant-numeric:tabular-nums}
+.pay,.notinc{border:1px solid color-mix(in srgb,var(--bg) 25%,transparent);border-radius:14px;padding:16px 18px;display:grid;gap:6px}
+.pay h3{color:var(--bg)}
+.k{font-family:var(--display);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-accent)}
+.inc{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.inc li{display:grid;gap:2px;padding-bottom:12px;border-bottom:1px solid color-mix(in srgb,var(--bg) 18%,transparent)}
+.inc li:last-child{border-bottom:0;padding-bottom:0}
+.inc span{opacity:.8;font-size:.93rem}
+.notinc{margin-top:24px}
+@media (max-width:860px){.inv-grid{grid-template-columns:1fr}}
 .invest p{opacity:.85;max-width:60ch}
 footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
 .foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
@@ -181,6 +196,10 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
 .opt ul{margin:0;padding-left:18px;font-size:.92rem;display:grid;gap:4px}
 .pill{justify-self:start;font-family:var(--display);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--sun-soft);color:var(--ink)}
 .pill.rec{background:var(--leaf-soft)}
+.opts-4{grid-template-columns:repeat(4,1fr)}
+.opt .addr{font-size:.85rem;color:var(--ink);font-weight:700}
+@media (max-width:1000px){.opts-4{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.opts-4{grid-template-columns:1fr}}
 @media (max-width:860px){.why,.opts{grid-template-columns:1fr}}
 
 @media (max-width:860px){
@@ -208,7 +227,7 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
         <div class="byline"><span>Diseño de experiencia <b>Simoné</b></span><span>Operación y logística <b>Alfil</b></span><span>Bogotá y afueras</span></div>
       </div>
       <div class="route" aria-label="Ruta de los cuatro días">
-        <div class="stop"><span class="d">DÍA 1</span><span class="dot" style="background:var(--leaf)"></span><p>Integración y exploración creativa<small>Jardín Botánico · Parque Simón Bolívar</small></p></div>
+        <div class="stop"><span class="d">DÍA 1</span><span class="dot" style="background:var(--leaf)"></span><p>Integración y exploración creativa<small>Club Colsubsidio Bellavista</small></p></div>
         <div class="stop"><span class="d">DÍA 2</span><span class="dot" style="background:var(--sky)"></span><p>Salida cultural<small>Museo del Oro · Planetario de Bogotá</small></p></div>
         <div class="stop"><span class="d">DÍA 3</span><span class="dot" style="background:var(--berry)"></span><p>Desafíos de equipo<small>Maloka · Parque Simón Bolívar</small></p></div>
         <div class="stop"><span class="d">DÍA 4</span><span class="dot" style="background:var(--sun)"></span><p>Aventura en las afueras<small>Parque Jaime Duque, Tocancipá</small></p></div>
@@ -218,7 +237,7 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
       <div class="fact"><strong>80</strong><span>niños y jóvenes de 6 a 17 años</span></div>
       <div class="fact"><strong>2</strong><span>grupos con metodología propia</span></div>
       <div class="fact"><strong>4</strong><span>días · 8 a. m. a 5 p. m. (día 4 hasta 6 p. m.)</span></div>
-      <div class="fact"><strong>6</strong><span>locaciones externas, 2 por día</span></div>
+      <div class="fact"><strong>6</strong><span>locaciones, con sede base en un club Colsubsidio</span></div>
     </div>
   </div>
 </header>
@@ -368,8 +387,8 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
       <p class="lede">Alfil gestiona reservas, entradas, guías y permisos de cada locación, y verifica sus condiciones de seguridad antes del evento.</p>
     </div>
     <div class="venues">
-      <div class="venue"><span class="kind">Jardín botánico</span><h3>Jardín Botánico José Celestino Mutis</h3><p>Colecciones vivas de flora altoandina, tropicario y espacios para observación ambiental y talleres de siembra.</p><span class="when">Día 1</span></div>
-      <div class="venue"><span class="kind">Parque metropolitano</span><h3>Parque Simón Bolívar</h3><p>Amplias zonas verdes para juegos de gran formato, carrera de obstáculos e integración al aire libre.</p><span class="when">Días 1 y 3</span></div>
+      <div class="venue"><span class="kind">Club campestre · sede base</span><h3>Club Colsubsidio Bellavista</h3><p>Zonas verdes, complejo deportivo y espacios de recreación familiar en Bogotá. Acceso controlado para el día de integración y los talleres de siembra.</p><span class="when">Día 1</span></div>
+      <div class="venue"><span class="kind">Parque metropolitano</span><h3>Parque Simón Bolívar</h3><p>Amplias zonas verdes para juegos de gran formato, carrera de obstáculos e integración al aire libre.</p><span class="when">Día 3</span></div>
       <div class="venue"><span class="kind">Museo patrimonial</span><h3>Museo del Oro</h3><p>Orfebrería y alfarería prehispánica. Recorrido guiado sobre la relación de las culturas ancestrales con el sol, la luna y el cosmos.</p><span class="when">Día 2</span></div>
       <div class="venue"><span class="kind">Planetario</span><h3>Planetario de Bogotá</h3><p>Funciones inmersivas en el domo y museo del espacio, para conectar con la escala del cosmos.</p><span class="when">Día 2</span></div>
       <div class="venue"><span class="kind">Museo interactivo</span><h3>Maloka</h3><p>Ciencia y tecnología para ambas edades: salas de inmersión, física, biodiversidad y pantallas que despiertan la curiosidad.</p><span class="when">Día 3</span></div>
@@ -382,15 +401,17 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
 <section id="sede">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Sede base y plan de lluvia</p>
-      <h2>Un lugar propio para el grupo</h2>
-      <p class="lede">Proponemos una sede base con acceso controlado, salones cubiertos, zonas verdes y restaurante. Sirve para el día de integración y como plan B si llueve en alguna salida. Opciones por cotizar:</p>
+      <p class="eyebrow">Sede base · Clubes Colsubsidio</p>
+      <h2>Un club para la integración y el plan de lluvia</h2>
+      <p class="lede">La jornada de integración se hace en un club Colsubsidio: acceso controlado, zonas verdes, escenarios deportivos, salones cubiertos y restaurante en un solo lugar. El mismo club sirve de plan B si llueve en alguna salida.</p>
     </div>
-    <div class="opts">
-      <div class="opt"><span class="pill rec">Recomendada</span><span class="eyebrow">Colsubsidio</span><h3>Clubes La Colina, Calle 195 o Bellavista</h3><p>Clubes en Bogotá con zonas verdes, escenarios deportivos, salones y restaurante. Permiten integración, juegos de gran formato y almuerzo en un solo lugar.</p></div>
-      <div class="opt"><span class="pill">Ciencia y cine</span><span class="eyebrow">Maloka</span><h3>Sala Digital y Cine Domo</h3><p>Sala Digital para 176 personas y Cine Domo para 309, con apoyo de logística, mobiliario, sonido y alimentos. Encaja con el día 3.</p></div>
-      <div class="opt"><span class="pill">Salones cubiertos</span><span class="eyebrow">Cafam</span><h3>Centro de Convenciones Floresta</h3><p>Salones empresariales y espacios multipropósito en Bogotá. Útil como sede cubierta para talleres si se prioriza el clima.</p></div>
+    <div class="opts opts-4">
+      <div class="opt"><span class="pill rec">Recomendado</span><span class="eyebrow">Norte · Autopista Norte</span><h3>Club Bellavista</h3><p>Club campestre con zonas verdes, complejo deportivo y espacios de recreación familiar. Ideal para siembra, juegos de gran formato y el reto de bienvenida.</p><p class="addr">Carrera 45 (Autopista Norte) n.° 245-91</p></div>
+      <div class="opt"><span class="eyebrow">Norte</span><h3>Club Calle 195</h3><p>Entorno natural con escenarios deportivos y culturales. Colsubsidio lo destaca para eventos especiales y empresariales.</p></div>
+      <div class="opt"><span class="eyebrow">Centro · Galerías</span><h3>Club El Cubo</h3><p>Centro recreativo y empresarial con salones para eventos. La opción cubierta y central si se prioriza el clima.</p><p class="addr">Avenida carrera 30 n.° 52-77</p></div>
+      <div class="opt"><span class="eyebrow">Norte</span><h3>Club La Colina</h3><p>Club familiar con deportes, gimnasio y oferta gastronómica, con buenas vías de acceso.</p></div>
     </div>
+    <p class="note" style="margin-top:20px">El alquiler del club se cotiza directamente con el área de eventos empresariales de Colsubsidio, según fecha, espacios y número de asistentes.</p>
   </div>
 </section>
 
@@ -418,7 +439,8 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
         <thead><tr><th>Rol</th><th>Cant.</th><th>Función</th></tr></thead>
         <tbody>
           <tr><td>Recreadores</td><td class="n">14</td><td>1 por cada 6 participantes. Dinamizan los bloques y acompañan desplazamientos.</td></tr>
-          <tr><td>Mediadores creativos</td><td class="n">Por grupo</td><td>Guían los talleres artísticos de cada universo.</td></tr>
+          <tr><td>Coordinador de experiencia Simoné</td><td class="n">1</td><td>Dirige la metodología creativa y el equipo de mediadores.</td></tr>
+          <tr><td>Mediadores de experiencia</td><td class="n">6</td><td>Artistas, actores y bailarines. Guían los talleres, el juego y el movimiento.</td></tr>
           <tr><td>Apoyo prehospitalario</td><td class="n">8</td><td>1 por cada 10 participantes. Personal APH certificado presente en todas las actividades.</td></tr>
           <tr><td>Coordinadores de grupo</td><td class="n">2</td><td>Uno por grupo: horarios, logística y desarrollo de la jornada.</td></tr>
           <tr><td>Coordinación general</td><td class="n">1</td><td>Punto único de contacto con la compañía y control de la operación.</td></tr>
@@ -511,7 +533,7 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
       <div class="check"><span>✓</span><a href="#kit">Kit individual por participante</a></div>
       <div class="check"><span>✓</span><a href="#seguridad">Plan de seguridad y emergencias</a></div>
       <div class="check"><span>✓</span><a href="#seguridad">Seguros, permisos y coberturas</a></div>
-      <div class="check"><span>→</span><a href="#inversion">Cotización desglosada</a></div>
+      <div class="check"><span>✓</span><a href="#inversion">Inversión y forma de pago</a></div>
     </div>
   </div>
 </section>
@@ -519,9 +541,34 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
 <section id="inversion">
   <div class="wrap">
     <div class="invest">
-      <p class="eyebrow">Inversión</p>
-      <h2>Cotización económica</h2>
-      <p>La cotización desglosada por componente, con cantidades, tarifas unitarias, subtotales, impuestos y valor total, se entrega como anexo a esta propuesta.</p>
+      <div class="inv-grid">
+        <div class="inv-main">
+          <p class="eyebrow">Inversión · Experiencia creativa Simoné</p>
+          <h2>Tres días de experiencia creativa</h2>
+          <p class="total">$60.727.000 <span>+&nbsp;IVA</span></p>
+          <p class="withtax">Total con IVA (19%): <b>$72.265.130</b></p>
+          <div class="pay">
+            <span class="k">Forma de pago</span>
+            <h3>Anticipo del 30%</h3>
+            <p>Anticipo de <b>$18.218.100</b>, calculado antes de IVA. Pago final: saldo del 70% (<b>$42.508.900</b>) más el IVA total (<b>$11.538.130</b>) = <b>$54.047.030</b>.</p>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Qué incluye</p>
+          <ul class="inc">
+            <li><b>Equipo de 7 personas</b><span>Un coordinador y 6 mediadores de experiencia con perfiles de artistas, actores y bailarines, durante toda la actividad.</span></li>
+            <li><b>6 proyectos creativos</b><span>Materiales para dos proyectos por día durante los 3 días.</span></li>
+            <li><b>Alimentación para 88 personas</b><span>Refrigerio de media mañana, almuerzo y refrigerio de media tarde.</span></li>
+            <li><b>80 kits en tula</b><span>Bitácora, materiales de arte, botilito, botón, lápiz, borrador, tajalápiz y rompecabezas para colorear.</span></li>
+            <li><b>Escarapelas de identificación</b><span>Con el avatar de cada grupo.</span></li>
+            <li><b>Galería digital</b><span>Los proyectos de los niños reunidos en una galería para compartir con las familias y la compañía.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="notinc">
+        <span class="k">Se cotiza aparte con Alfil</span>
+        <p>Alquiler de la sede Colsubsidio, transporte, entradas a museos y parques, recreadores, personal prehospitalario y ambulancia, seguros, y la operación y alimentación del día 4 de aventura.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -531,13 +578,13 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
 <script>
 const days=[
  {n:1,title:"Integración y exploración creativa",color:"var(--leaf)",uni:"Universo 1 · Plantas, bichos y otras maravillas",
-  places:["Jardín Botánico José Celestino Mutis (mañana)","Parque Simón Bolívar (tarde)"],
+  places:["Club Colsubsidio Bellavista, Autopista Norte (todo el día)"],
   intro:"El primer día se forman los equipos con el juego digital, se entregan escarapelas y kits, y arranca la bitácora.",
   start:"08:00 – 09:00", startTxt:"Salida desde las oficinas en transporte autorizado y traslado a la locación.",
   b1:"Dinámica de apertura, juego de conformación de grupos, expresión corporal y baile de integración.",
-  b2:"Taller de siembra y terrarios guiado por los mediadores creativos.",
+  b2:"Taller de siembra y terrarios en los jardines del club, guiado por los mediadores de experiencia.",
   a:"Terrario en frasco", b:"Mini ecosistema y ficha de especie",
-  b3:"Juegos grupales, desafíos recreativos y competencia por equipos en el Simón Bolívar.",
+  b3:"Juegos grupales, desafíos recreativos y competencia por equipos en las zonas verdes del club.",
   end:"04:00 – 05:00", endTxt:"Cierre de la jornada, abordaje de buses y regreso a las oficinas."},
  {n:2,title:"Salida cultural",color:"var(--sky)",uni:"Universo 2 · Viaje a través del espacio",
   places:["Museo del Oro (mañana)","Planetario de Bogotá (tarde)"],
