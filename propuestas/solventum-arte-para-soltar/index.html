@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Solventum · Arte para Soltar</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Arte para Soltar · Propuesta para Solventum">
+<meta property="og:description" content="Cuatro experiencias de arte de 3 horas para relajarse, expresarse y liberar tensiones. Simoné.">
+<meta property="og:image" content="https://www.experienciasimone.com/gestion-comercial/propuestas/solventum-arte-para-soltar/img/mitchell.jpg">
+<link rel="icon" href="img/simbolo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap">
+</head>
+<body>
+<style>
+/* Layout: una sola columna editorial; las 4 experiencias alternan imagen/texto como una galería que se recorre */
+:root{
+  --bg:#FBFAF6; --surface:#FFFFFF; --ink:#2B2F0C; --muted:#5D5F4A; --line:#E4E1D4;
+  --olive:#353A0E; --rust:#8B3A12; --magenta:#B0247F; --orange:#F2A03D; --tint:#F4EFE3;
+  --on-dark:#FBFAF6;
+  --display:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Lato",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17180F; --surface:#202214; --ink:#EEEBDD; --muted:#B5B29C; --line:#34361F;
+  --olive:#C9CF8A; --rust:#E58A5A; --magenta:#E36BB8; --orange:#F5B25E; --tint:#232515; --on-dark:#17180F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17180F; --surface:#202214; --ink:#EEEBDD; --muted:#B5B29C; --line:#34361F;
+  --olive:#C9CF8A; --rust:#E58A5A; --magenta:#E36BB8; --orange:#F5B25E; --tint:#232515; --on-dark:#17180F; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--ink)}
+p{margin:0}
+.eyebrow{font-family:var(--display);font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}
+a{color:var(--rust)}
+a:focus-visible{outline:2px solid var(--magenta);outline-offset:3px}
+
+/* Cabecera */
+header{border-bottom:1px solid var(--line);background:var(--surface)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:18px}
+.logo{height:56px;width:auto;background:#fff;border-radius:6px;padding:4px 8px}
+.meta{font-family:var(--display);font-size:.78rem;color:var(--muted);text-align:right;line-height:1.5}
+.meta strong{color:var(--ink);font-weight:600}
+
+/* Portada */
+.hero{padding-block:clamp(48px,8vw,96px) clamp(40px,6vw,72px)}
+.hero h1{font-size:clamp(2.3rem,6vw,4.2rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;max-width:15ch;margin-top:14px}
+.hero h1 em{font-style:normal;color:var(--magenta)}
+.hero .lead{font-size:1.18rem;color:var(--muted);max-width:60ch;margin-top:22px}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:44px;border-radius:10px;overflow:hidden}
+.strip img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+
+/* Secciones */
+section{padding-block:clamp(48px,7vw,84px)}
+.band{background:var(--tint)}
+.sec-head{max-width:62ch;margin-bottom:36px}
+.sec-head h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px}
+.sec-head p{color:var(--muted);margin-top:14px}
+
+.why{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.why > *{min-width:0}
+.why p + p{margin-top:16px}
+.signs{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.signs li{display:flex;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.signs b{font-family:var(--display);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--rust);min-width:7.5em}
+
+/* Experiencias */
+.exp{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;padding-block:40px;border-top:1px solid var(--line)}
+.exp:first-of-type{border-top:0}
+.exp > *{min-width:0}
+.exp:nth-child(even) .exp-img{order:2}
+.exp-img img{width:100%;max-width:100%;border-radius:10px;display:block;aspect-ratio:4/3;object-fit:cover}
+.exp-img figcaption{font-size:.8rem;color:var(--muted);margin-top:8px;font-style:italic}
+.opt{font-family:var(--display);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--magenta)}
+.exp h3{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.15;margin-top:8px}
+.ref{font-family:var(--display);font-size:.88rem;color:var(--rust);font-weight:600;margin-top:6px}
+.exp p.desc{margin-top:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding:0;list-style:none}
+.tags li{font-family:var(--display);font-size:.74rem;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--tint);color:var(--ink);border:1px solid var(--line)}
+.band .tags li{background:var(--surface)}
+
+/* Recorrido de la sesión */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:3px solid var(--olive)}
+.flow > div{padding:20px 20px 4px 0;min-width:0}
+.flow .t{font-family:var(--display);font-variant-numeric:tabular-nums;font-size:.8rem;font-weight:700;color:var(--rust);letter-spacing:.05em}
+.flow h3{font-size:1.05rem;font-weight:700;margin-top:6px}
+.flow p{font-size:.95rem;color:var(--muted);margin-top:8px}
+
+/* Incluye */
+.incl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.incl > div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;min-width:0}
+.incl h3{font-size:1rem;font-weight:700}
+.incl p{font-size:.93rem;color:var(--muted);margin-top:8px}
+.dot{width:12px;height:12px;border-radius:50%;margin-bottom:14px}
+
+/* Inversión */
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{width:100%;border-collapse:collapse;min-width:520px}
+th,td{text-align:left;padding:18px 22px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--display);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--tint)}
+td{font-variant-numeric:tabular-nums}
+td.n{font-family:var(--display);font-weight:700;font-size:1.1rem}
+td.p{font-family:var(--display);font-weight:700;font-size:1.25rem;color:var(--ink);white-space:nowrap}
+td.p small{font-weight:500;font-size:.8rem;color:var(--muted);margin-left:4px}
+.note{font-size:.9rem;color:var(--muted);margin-top:16px;max-width:70ch}
+
+/* Facilitadora */
+.lead-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,44px)}
+.lead-card > *{min-width:0}
+.mono{width:96px;height:96px;border-radius:50%;background:var(--orange);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:2rem;color:#353A0E}
+.lead-card h3{color:var(--on-dark);font-size:1.5rem;font-weight:700}
+.lead-card .role{font-family:var(--display);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-top:6px;font-weight:600}
+.lead-card p.bio{margin-top:14px;opacity:.92;max-width:62ch}
+.lead-card a{color:var(--orange);font-family:var(--display);font-weight:600;font-size:.92rem;display:inline-block;margin-top:14px}
+
+/* Cierre */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
+.next > *{min-width:0}
+.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;color:var(--magenta);min-width:1.2em}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:26px}
+.contact .mail{font-family:var(--display);font-weight:600;font-size:1.02rem;user-select:all;word-break:break-word;display:block;margin-top:6px}
+.contact .mail + .lbl{margin-top:18px}
+.lbl{font-family:var(--display);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .why,.exp,.next{grid-template-columns:1fr}
+  .exp:nth-child(even) .exp-img{order:0}
+  .flow,.incl{grid-template-columns:1fr 1fr}
+  .flow{row-gap:8px}
+}
+@media (max-width:520px){
+  .strip{grid-template-columns:1fr 1fr}
+  .flow,.incl{grid-template-columns:1fr}
+  .lead-card{grid-template-columns:1fr}
+  .meta{text-align:left}
+  .signs li{flex-direction:column;gap:2px}
+}
+</style>
+
+<header>
+  <div class="wrap">
+    <img class="logo" src="img/logo.png" alt="Simoné · Desarrollo humano a través del arte">
+    <div class="meta">Propuesta para <strong>Solventum</strong><br>Atención: <strong>Julia Cruz</strong> · Noviembre 2026</div>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <p class="eyebrow">Experiencias de bienestar a través del arte</p>
+    <h1>Un espacio para <em>soltar</em> lo que el cuerpo carga</h1>
+    <p class="lead">Julia, te compartimos cuatro experiencias de tres horas para que los equipos de Solventum se relajen, se expresen y liberen la tensión acumulada. Nadie necesita saber pintar: el arte es el canal, y el cuerpo, el punto de partida.</p>
+    <div class="strip" aria-hidden="true">
+      <img src="img/mitchell.jpg" alt="">
+      <img src="img/pollock.jpg" alt="">
+      <img src="img/cartografias.jpg" alt="">
+      <img src="img/caballo.jpg" alt="">
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap why">
+      <div>
+        <p class="eyebrow">Por qué ahora</p>
+        <h2 style="font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px">El estrés no se queda en la agenda. Se instala en el cuerpo.</h2>
+        <p style="margin-top:18px">Hombros tensos, mandíbula apretada, respiración corta. Muchas veces lo que sentimos no encuentra palabras, y se acumula. Cuando una persona pinta con movimiento, color y música, esa carga encuentra una salida.</p>
+        <p>Cada experiencia está diseñada para que el grupo baje el ritmo, se reconozca y vuelva a su trabajo con más calma y más conexión entre sí.</p>
+      </div>
+      <ul class="signs">
+        <li><b>Relajarse</b><span>Pausa real de la rutina, con música y respiración guiada.</span></li>
+        <li><b>Expresarse</b><span>Dar forma a lo que cuesta decir en voz alta.</span></li>
+        <li><b>Soltar</b><span>Movimiento y pintura como catarsis segura.</span></li>
+        <li><b>Conectar</b><span>Una obra colectiva que deja memoria en el equipo.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Cuatro opciones temáticas</p>
+        <h2>Elige la experiencia que mejor acompaña a tu equipo</h2>
+        <p>Todas duran tres horas e incluyen materiales, memoria visual, invitación digital y cápsula de recordación.</p>
+      </div>
+
+      <div class="exps">
+        <article class="exp">
+          <figure class="exp-img" style="margin:0">
+            <img src="img/mitchell.jpg" alt="Obra de gran formato de Joan Mitchell con trazos amarillos, verdes y violetas, junto a un retrato de la artista">
+            <figcaption>Referencia: Joan Mitchell (1925–1992)</figcaption>
+          </figure>
+          <div>
+            <p class="opt">Opción 1</p>
+            <h3>Bailando sobre el Papel</h3>
+            <p class="ref">Inspirada en Joan Mitchell</p>
+            <p class="desc">Un laboratorio de liberación creativa inspirado en el expresionismo abstracto de Joan Mitchell, quien pintaba lo que sentía más que lo que veía. Con movimiento corporal, pintura fluida y música rítmica, las participantes usan todo su cuerpo para llevar al papel emociones difíciles de verbalizar. Una experiencia dinámica para romper la rutina, activar el impulso creativo y transformar la tensión acumulada en una obra colectiva.</p>
+            <ul class="tags"><li>Movimiento</li><li>Música</li><li>Catarsis</li><li>Obra colectiva</li></ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <figure class="exp-img" style="margin:0">
+            <img src="img/pollock.jpg" alt="Pintura de chorreado con capas de azul, negro, gris y amarillo">
+            <figcaption>Técnica de action painting</figcaption>
+          </figure>
+          <div>
+            <p class="opt">Opción 2</p>
+            <h3>Pintando al estilo de Jackson Pollock</h3>
+            <p class="ref">Action painting para la catarsis</p>
+            <p class="desc">Una conversación sobre el estrés y sobre cómo se concentra en zonas específicas del cuerpo. A partir de ese reconocimiento, el grupo pasa a la acción: chorrear, salpicar y dejar caer la pintura sobre lienzos en el piso. El gesto amplio y libre del action painting permite descargar la tensión y convertirla en una obra llena de energía.</p>
+            <ul class="tags"><li>Estrés y cuerpo</li><li>Gesto libre</li><li>Descarga</li></ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <figure class="exp-img" style="margin:0">
+            <img src="img/cartografias.jpg" alt="Silueta humana pintada con trazos de colores, rodeada de pasteles, marcadores, paleta y pinceles">
+            <figcaption>Silueta en gran formato</figcaption>
+          </figure>
+          <div>
+            <p class="opt">Opción 3</p>
+            <h3>Cartografías Corporales</h3>
+            <p class="ref">Arte para el fortalecimiento socioemocional</p>
+            <p class="desc">Una experiencia de pintura y construcción en gran formato para la gestión emocional. Cada participante traza su silueta y la convierte en un mapa: dónde siente la tensión, dónde la calma, qué le da fuerza. Al compartir sus cartografías, el grupo se reconoce desde un lugar más humano y cercano.</p>
+            <ul class="tags"><li>Gestión emocional</li><li>Gran formato</li><li>Autoconocimiento</li></ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <figure class="exp-img" style="margin:0">
+            <img src="img/caballo.jpg" alt="Pintura de un caballo blanco dividida en fragmentos que se unen en una sola imagen">
+            <figcaption>Obra fragmentada que se une en una sola imagen</figcaption>
+          </figure>
+          <div>
+            <p class="opt">Opción 4</p>
+            <h3>El Gran Caballo Blanco</h3>
+            <p class="ref">Articulación, comunicación y sinergia</p>
+            <p class="desc">El Gran Caballo Blanco es una metáfora de fuerza, elegancia, dirección y nobleza. Cada asistente pinta un fragmento sin ver la obra completa, y al final todas las piezas se unen para formar una sola identidad visual. El ejercicio pone en juego la articulación, la comunicación y la sinergia entre grupos.</p>
+            <ul class="tags"><li>Trabajo en equipo</li><li>Identidad colectiva</li><li>Comunicación</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Así se vive la sesión</p>
+        <h2>Tres horas con un ritmo pensado para soltar</h2>
+      </div>
+      <div class="flow">
+        <div><p class="t">Apertura</p><h3>Llegar y respirar</h3><p>Bienvenida, respiración y activación corporal para dejar afuera el ritmo del día.</p></div>
+        <div><p class="t">Inspiración</p><h3>Conocer la obra</h3><p>Presentamos el artista o la metáfora y la conectamos con lo que vive el equipo.</p></div>
+        <div><p class="t">Creación</p><h3>Pintar con el cuerpo</h3><p>El momento central: color, movimiento y música para expresar y liberar.</p></div>
+        <div><p class="t">Cierre</p><h3>Mirar y compartir</h3><p>Recorrido por las obras y un círculo de palabras para llevarse lo vivido.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Qué incluye</p>
+        <h2>Ustedes llegan, nosotras nos encargamos del resto</h2>
+      </div>
+      <div class="incl">
+        <div><span class="dot" style="background:var(--orange)"></span><h3>Todos los materiales</h3><p>Pinturas, papeles, lienzos, pinceles y todo lo necesario para la experiencia.</p></div>
+        <div><span class="dot" style="background:var(--magenta)"></span><h3>Memoria visual</h3><p>Registro fotográfico de la experiencia y de las obras creadas.</p></div>
+        <div><span class="dot" style="background:var(--rust)"></span><h3>Invitación digital</h3><p>Pieza para convocar a los participantes al evento.</p></div>
+        <div><span class="dot" style="background:var(--olive)"></span><h3>Cápsula de 3 minutos</h3><p>Video de recordación con los temas centrales de la sesión.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Inversión</p>
+        <h2>Una tarifa por sesión, según el tamaño del grupo</h2>
+        <p>El valor es el mismo para cualquiera de las cuatro opciones temáticas.</p>
+      </div>
+      <div class="tablebox">
+        <table>
+          <thead><tr><th>Participantes</th><th>Duración</th><th>Inversión</th></tr></thead>
+          <tbody>
+            <tr><td class="n">15 personas</td><td>3 horas</td><td class="p">$3.650.000<small>+ IVA</small></td></tr>
+            <tr><td class="n">30 personas</td><td>3 horas</td><td class="p">$3.995.000<small>+ IVA</small></td></tr>
+            <tr><td class="n">45 personas</td><td>3 horas</td><td class="p">$4.575.000<small>+ IVA</small></td></tr>
+            <tr><td class="n">100 personas</td><td>3 horas</td><td class="p">$6.795.000<small>+ IVA</small></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Valores en pesos colombianos. Incluyen materiales, facilitación, memoria visual, invitación digital y cápsula de recordación.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Quién acompaña</p>
+        <h2>Facilitación con experiencia en arte y desarrollo humano</h2>
+      </div>
+      <div class="lead-card">
+        <div class="mono" aria-hidden="true">NV</div>
+        <div>
+          <h3>Nathalia Velasco</h3>
+          <p class="role">Directora de Simoné · Facilitadora principal</p>
+          <p class="bio">Nathalia diseña y guía cada experiencia. Según el tamaño del grupo, la acompaña un equipo de cofacilitadoras, hasta cuatro personas para grupos de 100, para que cada participante reciba atención cercana.</p>
+          <a href="https://www.linkedin.com/in/nathalia-andrea-velasco-duarte/" target="_blank" rel="noopener">Ver perfil en LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap next">
+      <div>
+        <p class="eyebrow">Próximos pasos</p>
+        <h2 style="font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px">Diseñemos juntas el espacio para Solventum</h2>
+        <ol class="steps" style="margin-top:24px">
+          <li>Eligen la opción temática que más resuena con el equipo.</li>
+          <li>Confirmamos número de participantes, fecha y lugar.</li>
+          <li>Enviamos la invitación digital y preparamos los materiales.</li>
+        </ol>
+      </div>
+      <div class="contact">
+        <p class="lbl">Escríbenos</p>
+        <span class="mail">nathalia@experienciasimone.com</span>
+        <p class="lbl">También</p>
+        <span class="mail">experienciasimone@gmail.com</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Simoné · Desarrollo humano a través del arte</span><span>Propuesta para Solventum · Noviembre 2026</span></div>
+</footer>
+
+</body>
+</html>
