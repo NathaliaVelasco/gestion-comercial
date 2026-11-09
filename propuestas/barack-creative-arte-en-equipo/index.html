@@ -197,7 +197,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <header>
   <div class="wrap">
     <img class="logo" src="img/logo.png" alt="Simoné · Desarrollo humano a través del arte">
-    <div class="meta">Propuesta para <strong>Barack Creative</strong><br>Evento corporativo · Noviembre 2026</div>
+    <div class="meta">Propuesta para <strong>Barack Creative</strong><br>Evento corporativo · Emitida el 9 de noviembre de 2026</div>
   </div>
 </header>
 <nav class="menu" aria-label="Secciones">
@@ -503,6 +503,32 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </section>
 </main>
 
+<!-- Datos de la oferta (fecha de emisión, NIT, teléfono, validez) -->
+<style>
+.sm-ficha{border-top:1px solid rgba(53,58,14,.16);background:#F4EFE3;color:#2B2F0C;font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif}
+.sm-ficha .sm-in{max-width:1080px;margin:0 auto;padding:28px max(20px,env(safe-area-inset-left,0px));display:flex;flex-wrap:wrap;align-items:center;gap:18px 36px}
+.sm-ficha img{height:52px;width:auto;background:#fff;border-radius:8px;padding:6px 10px;display:block}
+.sm-ficha dl{display:flex;flex-wrap:wrap;gap:12px 32px;margin:0}
+.sm-ficha dl > div{min-width:0}
+.sm-ficha dt{font-family:"Montserrat",system-ui,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6A6C55;margin:0}
+.sm-ficha dd{margin:2px 0 0;font-family:"Montserrat",system-ui,sans-serif;font-weight:600;font-size:.95rem;font-variant-numeric:tabular-nums}
+.sm-ficha dd small{font-weight:500;color:#6A6C55;font-size:.8rem}
+.sm-ficha a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-ficha{background:#232515;color:#EEEBDD;border-top-color:#34361F}:root:not([data-theme="light"]) .sm-ficha dt,:root:not([data-theme="light"]) .sm-ficha dd small{color:#B5B29C}}
+:root[data-theme="dark"] .sm-ficha{background:#232515;color:#EEEBDD;border-top-color:#34361F}
+:root[data-theme="dark"] .sm-ficha dt,:root[data-theme="dark"] .sm-ficha dd small{color:#B5B29C}
+</style>
+<aside class="sm-ficha" aria-label="Datos de la oferta">
+  <div class="sm-in">
+    <img src="img/logo.png" alt="Simoné · Desarrollo humano a través del arte">
+    <dl>
+      <div><dt>Fecha de emisión</dt><dd>9 de noviembre de 2026</dd></div>
+      <div><dt>NIT</dt><dd>901.8393283-3</dd></div>
+      <div><dt>Teléfono</dt><dd><a href="tel:+573217738039">321 773 8039</a></dd></div>
+      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 9 de diciembre de 2026</small></dd></div>
+    </dl>
+  </div>
+</aside>
 <footer>
   <div class="wrap"><span>Simoné · Desarrollo humano a través del arte</span><span>Propuesta para Barack Creative · Noviembre 2026</span></div>
 </footer>
