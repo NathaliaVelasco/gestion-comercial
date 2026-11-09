@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Barack Creative · Arte en Equipo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Arte en Equipo · Propuesta para Barack Creative">
+<meta property="og:description" content="Evento corporativo de 2 días para 70 personas: manejo del estrés, trabajo en equipo, comunicación asertiva y gestión emocional a través del arte. Simoné.">
+<meta property="og:image" content="https://www.experienciasimone.com/gestion-comercial/propuestas/barack-creative-arte-en-equipo/img/grupo-obras.jpg">
+<link rel="icon" href="img/simbolo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap">
+</head>
+<body>
+<style>
+/* Layout: una columna editorial que se recorre bajando; los proyectos alternan imagen/texto y la galería de personas cierra con prueba social */
+:root{
+  --bg:#FBFAF6; --surface:#FFFFFF; --ink:#2B2F0C; --muted:#5D5F4A; --line:#E4E1D4;
+  --olive:#353A0E; --rust:#8B3A12; --magenta:#B0247F; --orange:#F2A03D; --tint:#F4EFE3;
+  --on-dark:#FBFAF6;
+  --display:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Lato",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17180F; --surface:#202214; --ink:#EEEBDD; --muted:#B5B29C; --line:#34361F;
+  --olive:#C9CF8A; --rust:#E58A5A; --magenta:#E36BB8; --orange:#F5B25E; --tint:#232515; --on-dark:#17180F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17180F; --surface:#202214; --ink:#EEEBDD; --muted:#B5B29C; --line:#34361F;
+  --olive:#C9CF8A; --rust:#E58A5A; --magenta:#E36BB8; --orange:#F5B25E; --tint:#232515; --on-dark:#17180F; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--ink)}
+p{margin:0}
+.eyebrow{font-family:var(--display);font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}
+a{color:var(--rust)}
+a:focus-visible{outline:2px solid var(--magenta);outline-offset:3px}
+
+/* Cabecera */
+header{border-bottom:1px solid var(--line);background:var(--surface)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:18px}
+.logo{height:56px;width:auto;background:#fff;border-radius:6px;padding:4px 8px}
+.meta{font-family:var(--display);font-size:.78rem;color:var(--muted);text-align:right;line-height:1.5}
+.meta strong{color:var(--ink);font-weight:600}
+nav.menu{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.menu .wrap{display:flex;gap:22px;overflow-x:auto;padding-block:12px;scrollbar-width:none}
+nav.menu .wrap::-webkit-scrollbar{display:none}
+nav.menu a{font-family:var(--display);font-size:.8rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+nav.menu a:hover{color:var(--magenta)}
+section[id]{scroll-margin-top:52px}
+
+/* Portada */
+.hero{padding-block:clamp(48px,8vw,96px) clamp(40px,6vw,72px)}
+.hero h1{font-size:clamp(2.3rem,6vw,4.2rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;max-width:15ch;margin-top:14px}
+.hero h1 em{font-style:normal;color:var(--magenta)}
+.hero .lead{font-size:1.18rem;color:var(--muted);max-width:60ch;margin-top:22px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:28px;padding:0;list-style:none}
+.facts li{font-family:var(--display);font-size:.92rem;color:var(--muted)}
+.facts b{display:block;font-size:1.6rem;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.2}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:44px;border-radius:10px;overflow:hidden}
+.strip img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+
+/* Secciones */
+section{padding-block:clamp(48px,7vw,84px)}
+.band{background:var(--tint)}
+.sec-head{max-width:62ch;margin-bottom:36px}
+.sec-head h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px}
+.sec-head p{color:var(--muted);margin-top:14px}
+
+.why{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.why > *{min-width:0}
+.why p + p{margin-top:16px}
+.signs{list-style:none;padding:0;margin:0;display:grid;gap:4px}
+.signs li{display:flex;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.signs b{font-family:var(--display);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--rust);min-width:9.5em}
+
+/* Días */
+.days{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:clamp(22px,3vw,32px);min-width:0}
+.day .num{font-family:var(--display);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--magenta)}
+.day .people{font-family:var(--display);font-size:clamp(2rem,5vw,2.8rem);font-weight:800;line-height:1.1;margin-top:6px;font-variant-numeric:tabular-nums}
+.day .people small{font-size:1rem;font-weight:600;color:var(--muted)}
+.day .time{font-family:var(--display);font-weight:600;color:var(--rust);margin-top:4px}
+.day p.combo{margin-top:16px;color:var(--muted);font-size:.95rem}
+.day ul{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px}
+.day ul li{display:flex;gap:10px;align-items:baseline;font-size:.97rem}
+.day ul li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);flex:none;transform:translateY(-1px)}
+
+/* Recorrido de la tarde */
+.agenda{list-style:none;margin:0;padding:0;border-left:3px solid var(--olive);max-width:760px}
+.agenda li{display:grid;grid-template-columns:6.5em 1fr;gap:14px;padding:16px 0 16px 18px;border-bottom:1px solid var(--line)}
+.agenda li:last-child{border-bottom:0}
+.agenda .h{font-family:var(--display);font-variant-numeric:tabular-nums;font-weight:700;font-size:.85rem;color:var(--rust);padding-top:2px}
+.agenda b{font-family:var(--display);font-size:1.02rem;display:block}
+.agenda span.d{color:var(--muted);font-size:.95rem}
+.agenda .th{display:inline-block;font-family:var(--display);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--magenta);margin-top:6px}
+
+/* Proyectos */
+.exp{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;padding-block:40px;border-top:1px solid var(--line)}
+.exp:first-of-type{border-top:0;padding-top:0}
+.exp > *{min-width:0}
+.exp:nth-child(even) .exp-img{order:2}
+.exp-img{margin:0}
+.exp-img img{width:100%;border-radius:10px;display:block;aspect-ratio:4/3;object-fit:cover}
+.opt{font-family:var(--display);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--magenta)}
+.exp h3{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;line-height:1.15;margin-top:8px}
+.ref{font-family:var(--display);font-size:.88rem;color:var(--rust);font-weight:600;margin-top:6px}
+.exp p.desc{margin-top:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding:0;list-style:none}
+.tags li{font-family:var(--display);font-size:.74rem;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--tint);color:var(--ink);border:1px solid var(--line)}
+
+/* Galería de personas */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,18vw,220px);gap:8px}
+.gallery figure{margin:0;border-radius:10px;overflow:hidden;min-width:0}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery .w2{grid-column:span 2}
+.gallery .h2{grid-row:span 2}
+.quote{font-family:var(--display);font-size:clamp(1.3rem,3vw,1.9rem);font-weight:700;line-height:1.25;max-width:24ch;margin-top:10px}
+.quote em{font-style:normal;color:var(--magenta)}
+
+/* Incluye */
+.incl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.incl > div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;min-width:0}
+.incl h3{font-size:1rem;font-weight:700}
+.incl p{font-size:.93rem;color:var(--muted);margin-top:8px}
+.dot{width:12px;height:12px;border-radius:50%;margin-bottom:14px}
+.bonus{margin-top:16px;display:flex;gap:14px;align-items:center;background:var(--surface);border:1px dashed var(--orange);border-radius:10px;padding:18px 22px}
+.bonus b{font-family:var(--display)}
+.bonus .tagfree{font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--orange);color:#353A0E;border-radius:999px;padding:5px 12px;white-space:nowrap}
+
+/* Inversión */
+.invest{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:stretch}
+.invest > *{min-width:0}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:18px 22px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--display);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--tint)}
+td{font-variant-numeric:tabular-nums}
+td.n{font-family:var(--display);font-weight:700;font-size:1.05rem}
+tr.tot td{background:var(--tint);font-family:var(--display);font-weight:800}
+.price{background:var(--olive);color:var(--on-dark);border-radius:10px;padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.price .lbl{color:var(--orange)}
+.price .big{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,2.7rem);font-variant-numeric:tabular-nums;margin-top:6px;display:block;line-height:1.1}
+.price .big small{font-size:1rem;font-weight:500;opacity:.85}
+.price p{font-size:.92rem;opacity:.92;margin-top:10px}
+.note{font-size:.9rem;color:var(--muted);margin-top:16px;max-width:70ch}
+
+/* Facilitadora */
+.lead-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,44px)}
+.lead-card > *{min-width:0}
+.lead-card .ph{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--orange)}
+.lead-card h3{color:var(--on-dark);font-size:1.5rem;font-weight:700}
+.lead-card .role{font-family:var(--display);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-top:6px;font-weight:600}
+.lead-card p.bio{margin-top:14px;opacity:.92;max-width:62ch}
+.lead-card a{color:var(--orange);font-family:var(--display);font-weight:600;font-size:.92rem;display:inline-block;margin-top:14px}
+
+/* Cierre */
+.next{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
+.next > *{min-width:0}
+.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;color:var(--magenta);min-width:1.2em}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:26px;align-self:start}
+.contact .mail{font-family:var(--display);font-weight:600;font-size:1.02rem;user-select:all;word-break:break-word;display:block;margin-top:6px}
+.contact .mail + .lbl{margin-top:18px}
+.lbl{font-family:var(--display);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .why,.exp,.next,.invest{grid-template-columns:1fr}
+  .exp:nth-child(even) .exp-img{order:0}
+  .incl{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(150px,34vw,240px)}
+}
+@media (max-width:560px){
+  .days{grid-template-columns:1fr}
+  th,td{padding:12px 12px}
+  td{font-size:.92rem}
+  .agenda li{grid-template-columns:1fr;gap:2px}
+  .strip{grid-template-columns:1fr 1fr}
+  .incl{grid-template-columns:1fr}
+  .lead-card{grid-template-columns:1fr}
+  .meta{text-align:left}
+  .signs li{flex-direction:column;gap:2px}
+  .bonus{flex-direction:column;align-items:flex-start}
+}
+</style>
+
+<header>
+  <div class="wrap">
+    <img class="logo" src="img/logo.png" alt="Simoné · Desarrollo humano a través del arte">
+    <div class="meta">Propuesta para <strong>Barack Creative</strong><br>Evento corporativo · Noviembre 2026</div>
+  </div>
+</header>
+<nav class="menu" aria-label="Secciones">
+  <div class="wrap">
+    <a href="#evento">El evento</a>
+    <a href="#tarde">La tarde</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#personas">Así se vive</a>
+    <a href="#incluye">Qué incluye</a>
+    <a href="#inversion">Inversión</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<main>
+  <div class="hero wrap">
+    <p class="eyebrow">Desarrollo humano a través del arte</p>
+    <h1>Cuando el equipo crea junto, <em>se entiende mejor</em></h1>
+    <p class="lead">Dos tardes de experiencias artísticas para que las personas bajen el ritmo, reconozcan lo que sienten, se comuniquen con más claridad y descubran lo que logran cuando trabajan como un solo equipo. Nadie necesita saber pintar: el arte es el canal.</p>
+    <ul class="facts">
+      <li><b>2 días</b>de experiencia</li>
+      <li><b>70</b>participantes</li>
+      <li><b>3 horas</b>por tarde · 2:00 a 5:00 p.m.</li>
+      <li><b>4 temas</b>de desarrollo humano</li>
+    </ul>
+    <div class="strip" aria-hidden="true">
+      <img src="img/caballo.jpg" alt="">
+      <img src="img/cartografias.jpg" alt="">
+      <img src="img/elefante.jpg" alt="">
+      <img src="img/pensamientos.jpg" alt="">
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap why">
+      <div>
+        <p class="eyebrow">Por qué el arte</p>
+        <h2 style="font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px">Lo que no se dice en una reunión, aparece en el papel.</h2>
+        <p style="margin-top:18px">La presión del día a día se acumula en el cuerpo y en las conversaciones. Muchas veces el equipo sabe lo que debería cambiar, pero no encuentra el momento ni las palabras para hablarlo.</p>
+        <p>Cuando las personas pintan, construyen y crean juntas, salen de sus roles habituales. Se escuchan de otra manera, se ríen, se equivocan sin miedo y descubren que la obra solo funciona si cada parte aporta. Eso es lo que se llevan de vuelta al trabajo.</p>
+      </div>
+      <ul class="signs">
+        <li><b>Manejo del estrés</b><span>Una pausa real para soltar la tensión acumulada y volver a la calma.</span></li>
+        <li><b>Trabajo en equipo</b><span>Obras colectivas donde cada pieza es necesaria para el resultado.</span></li>
+        <li><b>Comunicación asertiva</b><span>Decir lo que se piensa y se siente, con claridad y respeto.</span></li>
+        <li><b>Gestión emocional</b><span>Reconocer las propias emociones y lo que nos impulsa o nos frena.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="evento">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">El evento</p>
+        <h2>Dos tardes, dos grupos, una misma experiencia completa</h2>
+        <p>Cada grupo vive una tarde que recorre los cuatro temas. Proponemos una combinación de proyectos para cada día; la ajustamos con ustedes según los objetivos del evento.</p>
+      </div>
+      <div class="days">
+        <article class="day">
+          <p class="num">Día 1</p>
+          <p class="people">40 <small>personas</small></p>
+          <p class="time">2:00 a 5:00 p.m.</p>
+          <p class="combo">Combinación sugerida:</p>
+          <ul>
+            <li>Animales del equipo · activación</li>
+            <li>Cartografías corporales</li>
+            <li>El Gran Caballo Blanco</li>
+          </ul>
+        </article>
+        <article class="day">
+          <p class="num">Día 2</p>
+          <p class="people">30 <small>personas</small></p>
+          <p class="time">2:00 a 5:00 p.m.</p>
+          <p class="combo">Combinación sugerida:</p>
+          <ul>
+            <li>Animales del equipo · activación</li>
+            <li>Pensamientos que limitan y que impulsan</li>
+            <li>El Elefante de Retazos</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="tarde">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Así transcurre cada tarde</p>
+        <h2>De soltar la tensión a crear juntos</h2>
+        <p>La tarde va de lo individual a lo colectivo: primero cada persona se encuentra consigo misma, luego el grupo construye algo que nadie podría hacer solo.</p>
+      </div>
+      <ol class="agenda">
+        <li><span class="h">2:00 p.m.</span><div><b>Bienvenida y activación</b><span class="d">Respiración, movimiento y un juego de cartas para romper el hielo y reconocer cómo se comunica cada uno.</span><span class="th">Manejo del estrés · Comunicación</span></div></li>
+        <li><span class="h">2:30 p.m.</span><div><b>Mirarse por dentro</b><span class="d">Un proyecto individual de pintura para ponerle color y forma a lo que cada persona siente y piensa.</span><span class="th">Gestión emocional</span></div></li>
+        <li><span class="h">3:30 p.m.</span><div><b>Crear como equipo</b><span class="d">Una obra colectiva en la que cada parte es necesaria. Acordar, escuchar y ajustar sobre la marcha.</span><span class="th">Trabajo en equipo · Comunicación asertiva</span></div></li>
+        <li><span class="h">4:30 p.m.</span><div><b>Galería y círculo de palabra</b><span class="d">Recorrido por las obras y una conversación guiada para expresar con claridad lo que cada uno se lleva y propone al equipo.</span><span class="th">Comunicación asertiva</span></div></li>
+        <li><span class="h">5:00 p.m.</span><div><b>Cierre</b><span class="d">Foto grupal con las obras.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Proyectos que podemos realizar</p>
+        <h2>Un menú de experiencias para construir cada tarde</h2>
+        <p>Todos los proyectos han sido probados con equipos de empresas. Elegimos juntos los que mejor respondan a lo que quieren trabajar.</p>
+      </div>
+
+      <div class="exps">
+        <article class="exp">
+          <figure class="exp-img"><img src="img/caballo.jpg" alt="Pintura de un caballo blanco en un prado, hecha en nueve fragmentos que se unen en una sola imagen, junto a la obra de referencia"></figure>
+          <div>
+            <p class="opt">Trabajo en equipo</p>
+            <h3>El Gran Caballo Blanco</h3>
+            <p class="ref">Articulación, comunicación y sinergia</p>
+            <p class="desc">El caballo blanco es una metáfora de fuerza, dirección y nobleza. Cada participante pinta un fragmento sin ver la obra completa; al final, todas las piezas se unen para formar una sola imagen. El grupo descubre que el resultado depende de que cada persona haga bien su parte y se coordine con las demás.</p>
+            <ul class="tags"><li>Trabajo en equipo</li><li>Comunicación</li><li>Identidad colectiva</li></ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <figure class="exp-img"><img src="img/cartografias.jpg" alt="Silueta humana pintada con colores cálidos y trazos que representan emociones, rodeada de pasteles, marcadores y pinceles"></figure>
+          <div>
+            <p class="opt">Manejo del estrés · Gestión emocional</p>
+            <h3>Cartografías Corporales</h3>
+            <p class="ref">El cuerpo como mapa de lo que sentimos</p>
+            <p class="desc">Cada persona convierte una silueta en un mapa: dónde siente la tensión, dónde la calma, qué le da fuerza. Al compartir sus cartografías, el grupo entiende cómo el estrés se instala en el cuerpo y se reconoce desde un lugar más humano y cercano.</p>
+            <ul class="tags"><li>Estrés y cuerpo</li><li>Autoconocimiento</li><li>Gestión emocional</li></ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <figure class="exp-img"><img src="img/pensamientos.jpg" alt="Dos ilustraciones de personas divididas en dos mitades, rosa y azul, con anotaciones sobre pensamientos limitantes, motivadores, miedos y recursos"></figure>
+          <div>
+            <p class="opt">Gestión emocional · Comunicación asertiva</p>
+            <h3>Pensamientos que limitan y que impulsan</h3>
+            <p class="ref">Mirar las dos caras de cómo enfrentamos los retos</p>
+            <p class="desc">Una figura dividida en dos mitades: de un lado los pensamientos que frenan, los miedos y lo que falta por formar; del otro, las motivaciones y los recursos con los que ya cuento. El ejercicio cierra con una pregunta: ¿a dónde quiero llegar? Una forma clara y sin juicio de hablar de lo que nos pasa.</p>
+            <ul class="tags"><li>Autoconocimiento</li><li>Motivación</li><li>Expresión</li></ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <figure class="exp-img"><img src="img/elefante.jpg" alt="Elefante hecho con un collage de cuadros de papel de muchos colores, junto a tijeras y pegante"></figure>
+          <div>
+            <p class="opt">Trabajo en equipo</p>
+            <h3>El Elefante de Retazos</h3>
+            <p class="ref">La diversidad que forma un todo</p>
+            <p class="desc">Un collage colectivo en el que cada persona aporta sus propios retazos de color. Ningún cuadro es igual a otro y, justamente por eso, el conjunto resulta único. Una conversación sobre cómo las diferencias suman cuando el equipo las reconoce y las integra.</p>
+            <ul class="tags"><li>Diversidad</li><li>Colaboración</li><li>Obra colectiva</li></ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <figure class="exp-img"><img src="img/animales.jpg" alt="Cartas ilustradas con animales como búho, ardilla, águila, zorro, gato, gallo, conejo y pájaro, con plastilina, lana, lápices y un reloj de arena"></figure>
+          <div>
+            <p class="opt">Comunicación asertiva</p>
+            <h3>Animales del Equipo</h3>
+            <p class="ref">Juego para reconocer cómo nos comunicamos</p>
+            <p class="desc">Búho, águila, zorro, conejo… cada animal representa una manera de actuar y de comunicarse. Con cartas, plastilina y el reloj de arena marcando los turnos, el grupo juega a reconocerse y a reconocer a los demás, y practica cómo expresar una idea con claridad en poco tiempo.</p>
+            <ul class="tags"><li>Estilos de comunicación</li><li>Escucha</li><li>Juego</li></ul>
+          </div>
+        </article>
+
+        <article class="exp">
+          <figure class="exp-img"><img src="img/paisaje.jpg" alt="Acuarela de un paseo de árboles en tonos amarillos y verdes junto a una reproducción de Les Alyscamps de Vincent van Gogh"></figure>
+          <div>
+            <p class="opt">Manejo del estrés · Gestión emocional</p>
+            <h3>Paisaje Interior</h3>
+            <p class="ref">Inspirado en Vincent van Gogh</p>
+            <p class="desc">Partimos de una obra de Van Gogh y cada persona la reinterpreta en acuarela con sus propios colores y su propio ritmo. La técnica invita a ir despacio, a soltar el control y a aceptar lo inesperado: una pausa que calma la mente y muestra que una misma escena puede verse de muchas maneras.</p>
+            <ul class="tags"><li>Calma</li><li>Acuarela</li><li>Perspectiva</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="personas">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Experiencias con empresas</p>
+        <p class="quote">Así se ven las personas <em>aprendiendo y compartiendo</em> a través del arte</p>
+      </div>
+      <div class="gallery">
+        <figure class="w2 h2"><img src="img/grupo-obras.jpg" alt="Grupo de colaboradores sonrientes mostrando las pinturas abstractas que crearon"></figure>
+        <figure><img src="img/hilo.jpg" alt="Participantes conectados por un hilo durante una dinámica de grupo"></figure>
+        <figure class="h2"><img src="img/monica.jpg" alt="Participante concentrada escribiendo en su puesto de trabajo durante un taller"></figure>
+        <figure><img src="img/sombreros.jpg" alt="Equipo sosteniendo sombreros de papel de colores durante un ejercicio de pensamiento"></figure>
+        <figure class="w2"><img src="img/pintura-piso.jpg" alt="Personas pintando juntas sobre un rollo de papel extendido en el piso"></figure>
+        <figure class="w2"><img src="img/trabajo-mesa.jpg" alt="Equipo reunido alrededor de una mesa mientras una participante pinta"></figure>
+        <figure class="w2 h2"><img src="img/arboles.jpg" alt="Grupo grande mostrando los árboles en acuarela que pintó cada participante"></figure>
+        <figure class="w2 h2"><img src="img/grupo-mariposas.jpg" alt="Grupo con sus dibujos y mariposas de papel naranja junto a la facilitadora de Simoné"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="incluye">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Qué incluye</p>
+        <h2>Ustedes convocan, nosotras nos encargamos del resto</h2>
+      </div>
+      <div class="incl">
+        <div><span class="dot" style="background:var(--orange)"></span><h3>Todos los materiales de arte</h3><p>Pinturas, papeles, pinceles, plastilina, lana y todo lo necesario para cada proyecto, en los dos días.</p></div>
+        <div><span class="dot" style="background:var(--magenta)"></span><h3>Equipo de 3 personas cada día</h3><p>Facilitación y acompañamiento cercano para que cada participante esté atendido.</p></div>
+        <div><span class="dot" style="background:var(--rust)"></span><h3>Registro fotográfico</h3><p>Fotografías de las dos tardes: las personas, el proceso y las obras creadas.</p></div>
+        <div><span class="dot" style="background:var(--olive)"></span><h3>Memorias del evento</h3><p>Documento que recoge lo vivido, los aprendizajes y las reflexiones del grupo.</p></div>
+      </div>
+      <div class="bonus">
+        <span class="tagfree">Sin costo adicional</span>
+        <p><b>Mesas de trabajo de arte.</b> Si el espacio no cuenta con ellas, las llevamos nosotras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="inversion">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Inversión</p>
+        <h2>Un solo valor para los dos días</h2>
+      </div>
+      <div class="invest">
+        <div class="tablebox">
+          <table>
+            <thead><tr><th>Día</th><th>Participantes</th><th>Horario</th></tr></thead>
+            <tbody>
+              <tr><td class="n">Día 1</td><td>40 personas</td><td>2:00 a 5:00 p.m.</td></tr>
+              <tr><td class="n">Día 2</td><td>30 personas</td><td>2:00 a 5:00 p.m.</td></tr>
+              <tr class="tot"><td>Total</td><td>70 personas</td><td>6 horas de experiencia</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="price">
+          <p class="lbl">Inversión total · 70 participantes</p>
+          <span class="big">$7.875.000 <small>+ IVA</small></span>
+          <p>Equivale a $112.500 + IVA por participante. Incluye materiales de arte, equipo de 3 personas cada día, registro fotográfico y memorias del evento.</p>
+        </div>
+      </div>
+      <p class="note">Valores en pesos colombianos. Las mesas de trabajo de arte se incluyen sin costo adicional si el espacio las requiere.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Quién acompaña</p>
+        <h2>Facilitación con experiencia en arte y desarrollo humano</h2>
+      </div>
+      <div class="lead-card">
+        <img class="ph" src="img/nathalia.jpg" alt="Nathalia Velasco">
+        <div>
+          <h3>Nathalia Velasco</h3>
+          <p class="role">Directora de Simoné · Facilitadora principal</p>
+          <p class="bio">Nathalia diseña y guía cada experiencia. En este evento la acompaña un equipo de tres personas cada día, para que los grupos de 40 y 30 participantes reciban atención cercana durante toda la tarde.</p>
+          <a href="https://www.linkedin.com/in/nathalia-andrea-velasco-duarte/" target="_blank" rel="noopener">Ver perfil en LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap next">
+      <div>
+        <p class="eyebrow">Próximos pasos</p>
+        <h2 style="font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px">Diseñemos juntos estas dos tardes</h2>
+        <ol class="steps" style="margin-top:24px">
+          <li>Confirmamos las fechas y el lugar del evento.</li>
+          <li>Elegimos los proyectos de cada día según los objetivos del equipo.</li>
+          <li>Preparamos materiales, montaje y equipo de facilitación.</li>
+        </ol>
+      </div>
+      <div class="contact">
+        <p class="lbl">Escríbenos</p>
+        <span class="mail">nathalia@experienciasimone.com</span>
+        <p class="lbl">También</p>
+        <span class="mail">experienciasimone@gmail.com</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Simoné · Desarrollo humano a través del arte</span><span>Propuesta para Barack Creative · Noviembre 2026</span></div>
+</footer>
+
+</body>
+</html>
