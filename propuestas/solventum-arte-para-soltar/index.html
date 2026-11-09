@@ -8,7 +8,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Arte para Soltar · Propuesta para Solventum">
-<meta property="og:description" content="Cuatro experiencias de arte de 3 horas para relajarse, expresarse y liberar tensiones. Simoné.">
+<meta property="og:description" content="Experiencia del 10 de diciembre y talleres de arte para relajarse, expresarse y liberar tensiones. Simoné.">
 <meta property="og:image" content="https://www.experienciasimone.com/gestion-comercial/propuestas/solventum-arte-para-soltar/img/mitchell.jpg">
 <link rel="icon" href="img/simbolo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,13 +133,47 @@ td.p small{font-weight:500;font-size:.8rem;color:var(--muted);margin-left:4px}
 footer{border-top:1px solid var(--line);padding-block:28px;font-size:.85rem;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
+/* Experiencia 10 de diciembre */
+.event{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(28px,5vw,56px);align-items:start}
+.event > *{min-width:0}
+.agenda{list-style:none;margin:0;padding:0;border-left:3px solid var(--olive)}
+.agenda li{display:grid;grid-template-columns:6.5em 1fr;gap:14px;padding:14px 0 14px 18px;border-bottom:1px solid var(--line)}
+.agenda li:last-child{border-bottom:0}
+.agenda .h{font-family:var(--display);font-variant-numeric:tabular-nums;font-weight:700;font-size:.85rem;color:var(--rust);padding-top:2px}
+.agenda b{font-family:var(--display);font-size:1.02rem;display:block}
+.agenda span.d{color:var(--muted);font-size:.95rem}
+.agenda li.key b{color:var(--magenta)}
+.cafe{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px}
+.cafe h3{font-size:1.1rem;font-weight:700}
+.cafe ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.cafe li{display:flex;gap:10px;align-items:baseline}
+.cafe li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);flex:none;transform:translateY(-1px)}
+.price15{margin-top:16px;background:var(--olive);color:var(--on-dark);border-radius:10px;padding:22px 24px}
+.price15 .lbl{color:var(--orange)}
+.price15 .big{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,4vw,2.1rem);font-variant-numeric:tabular-nums;margin-top:4px;display:block}
+.price15 .big small{font-size:.95rem;font-weight:500;opacity:.85}
+.price15 p{font-size:.9rem;opacity:.9;margin-top:6px}
+.group-t{font-family:var(--display);font-size:1.15rem;font-weight:700;margin:0 0 6px}
+.group + .group{margin-top:40px}
+.group > p.gd{color:var(--muted);margin-bottom:16px;font-size:.98rem}
+
 @media (max-width:860px){
+  .event{grid-template-columns:1fr}
   .why,.exp,.next{grid-template-columns:1fr}
   .exp:nth-child(even) .exp-img{order:0}
   .flow,.incl{grid-template-columns:1fr 1fr}
   .flow{row-gap:8px}
 }
 @media (max-width:520px){
+  table{min-width:0}
+  th,td{padding:12px 8px}
+  th:first-child,td:first-child{padding-left:14px}
+  td{font-size:.9rem}
+  th{font-size:.66rem;letter-spacing:.08em}
+  td.n{font-size:.95rem}
+  td.p{font-size:1rem}
+  td.p small{display:block;margin-left:0}
+  .agenda li{grid-template-columns:1fr;gap:2px}
   .strip{grid-template-columns:1fr 1fr}
   .flow,.incl{grid-template-columns:1fr}
   .lead-card{grid-template-columns:1fr}
@@ -159,7 +193,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="hero wrap">
     <p class="eyebrow">Experiencias de bienestar a través del arte</p>
     <h1>Un espacio para <em>soltar</em> lo que el cuerpo carga</h1>
-    <p class="lead">Julia, te compartimos cuatro experiencias de tres horas para que los equipos de Solventum se relajen, se expresen y liberen la tensión acumulada. Nadie necesita saber pintar: el arte es el canal, y el cuerpo, el punto de partida.</p>
+    <p class="lead">Julia, te compartimos la experiencia que diseñamos para el equipo de Solventum el <strong>10 de diciembre</strong>, junto con cuatro opciones temáticas de arte para relajarse, expresarse y liberar la tensión acumulada. Nadie necesita saber pintar: el arte es el canal, y el cuerpo, el punto de partida.</p>
     <div class="strip" aria-hidden="true">
       <img src="img/mitchell.jpg" alt="">
       <img src="img/pollock.jpg" alt="">
@@ -190,7 +224,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="sec-head">
         <p class="eyebrow">Cuatro opciones temáticas</p>
         <h2>Elige la experiencia que mejor acompaña a tu equipo</h2>
-        <p>Todas duran tres horas e incluyen materiales, memoria visual, invitación digital y cápsula de recordación.</p>
+        <p>Cualquiera de ellas puede ser la actividad creativa del 10 de diciembre, o realizarse como un taller independiente de tres horas para grupos más grandes.</p>
       </div>
 
       <div class="exps">
@@ -253,11 +287,49 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 
-  <section class="band">
+  <section class="band" id="diciembre">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Así se vive la sesión</p>
-        <h2>Tres horas con un ritmo pensado para soltar</h2>
+        <p class="eyebrow">Miércoles 10 de diciembre · 15 participantes</p>
+        <h2>Una tarde para soltar, respirar y agradecer</h2>
+        <p>Una experiencia completa de 2:00 a 5:30 p.m. que lleva al equipo del movimiento a la calma, y de la calma a la gratitud. Nosotras nos encargamos del espacio, los materiales y la estación de café.</p>
+      </div>
+      <div class="event">
+        <ol class="agenda">
+          <li><span class="h">1:00 p.m.</span><div><b>Preparación del espacio</b><span class="d">Montaje de la experiencia y de la estación de café.</span></div></li>
+          <li class="key"><span class="h">2:00 p.m.</span><div><b>Bienvenida</b><span class="d">Llegada, café y una primera activación para dejar afuera el ritmo del día.</span></div></li>
+          <li><span class="h"></span><div><b>Actividad creativa para liberar el estrés</b><span class="d">Pintura y movimiento a partir de la opción temática que elijan.</span></div></li>
+          <li><span class="h"></span><div><b>Respiración consciente</b><span class="d">Una práctica guiada para volver a la calma después de la descarga.</span></div></li>
+          <li><span class="h"></span><div><b>Escritura de gratitud colectiva</b><span class="d">El grupo escribe a muchas manos lo que agradece del año y de sus compañeros.</span></div></li>
+          <li class="key"><span class="h">5:30 p.m.</span><div><b>Cierre con bebida relajante</b><span class="d">Un último momento juntos para llevarse lo vivido.</span></div></li>
+        </ol>
+        <div>
+          <div class="cafe">
+            <p class="lbl">Incluido</p>
+            <h3 style="margin-top:6px">Estación de café</h3>
+            <ul>
+              <li>Dos bebidas calientes: café orgánico y aromática de frutas</li>
+              <li>Galletas tipo colaciones</li>
+              <li>Galletas de trigo y avena</li>
+              <li>Snack saludable</li>
+              <li>Bebida relajante de cierre</li>
+            </ul>
+          </div>
+          <div class="price15">
+            <p class="lbl">Inversión · 15 participantes</p>
+            <span class="big">$5.875.000 <small>+ IVA</small></span>
+            <p>Incluye experiencia completa, materiales, estación de café, memoria visual, invitación digital y cápsula de recordación.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Talleres de arte de 3 horas</p>
+        <h2>Así se vive un taller para grupos más grandes</h2>
       </div>
       <div class="flow">
         <div><p class="t">Apertura</p><h3>Llegar y respirar</h3><p>Bienvenida, respiración y activación corporal para dejar afuera el ritmo del día.</p></div>
@@ -268,11 +340,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 
-  <section>
+  <section class="band">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Qué incluye</p>
         <h2>Ustedes llegan, nosotras nos encargamos del resto</h2>
+        <p>En los dos formatos: la experiencia del 10 de diciembre y los talleres de 3 horas.</p>
       </div>
       <div class="incl">
         <div><span class="dot" style="background:var(--orange)"></span><h3>Todos los materiales</h3><p>Pinturas, papeles, lienzos, pinceles y todo lo necesario para la experiencia.</p></div>
@@ -283,29 +356,45 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 
-  <section class="band">
+  <section id="inversion">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Inversión</p>
-        <h2>Una tarifa por sesión, según el tamaño del grupo</h2>
-        <p>El valor es el mismo para cualquiera de las cuatro opciones temáticas.</p>
+        <h2>Dos formatos, dos tarifas</h2>
       </div>
-      <div class="tablebox">
-        <table>
-          <thead><tr><th>Participantes</th><th>Duración</th><th>Inversión</th></tr></thead>
-          <tbody>
-            <tr><td class="n">15 personas</td><td>3 horas</td><td class="p">$3.650.000<small>+ IVA</small></td></tr>
-            <tr><td class="n">30 personas</td><td>3 horas</td><td class="p">$3.995.000<small>+ IVA</small></td></tr>
-            <tr><td class="n">45 personas</td><td>3 horas</td><td class="p">$4.575.000<small>+ IVA</small></td></tr>
-            <tr><td class="n">100 personas</td><td>3 horas</td><td class="p">$6.795.000<small>+ IVA</small></td></tr>
-          </tbody>
-        </table>
+
+      <div class="group">
+        <p class="group-t">Experiencia del 10 de diciembre</p>
+        <p class="gd">Bienvenida, actividad creativa, respiración consciente, gratitud colectiva y cierre, con estación de café.</p>
+        <div class="tablebox">
+          <table>
+            <thead><tr><th>Participantes</th><th>Horario</th><th>Inversión</th></tr></thead>
+            <tbody>
+              <tr><td class="n">15 personas</td><td>1:00 a 5:30 p.m.<br><small style="color:var(--muted)">Experiencia de 2:00 a 5:30 p.m.</small></td><td class="p">$5.875.000<small>+ IVA</small></td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <p class="note">Valores en pesos colombianos. Incluyen materiales, facilitación, memoria visual, invitación digital y cápsula de recordación.</p>
+
+      <div class="group">
+        <p class="group-t">Talleres de arte de 3 horas</p>
+        <p class="gd">Cualquiera de las cuatro opciones temáticas, para grupos más grandes.</p>
+        <div class="tablebox">
+          <table>
+            <thead><tr><th>Participantes</th><th>Duración</th><th>Inversión</th></tr></thead>
+            <tbody>
+              <tr><td class="n">30 personas</td><td>3 horas</td><td class="p">$3.995.000<small>+ IVA</small></td></tr>
+              <tr><td class="n">45 personas</td><td>3 horas</td><td class="p">$4.575.000<small>+ IVA</small></td></tr>
+              <tr><td class="n">100 personas</td><td>3 horas</td><td class="p">$6.795.000<small>+ IVA</small></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="note">Valores en pesos colombianos. Ambos formatos incluyen materiales, facilitación, memoria visual, invitación digital y cápsula de recordación. La estación de café está incluida en la experiencia del 10 de diciembre.</p>
     </div>
   </section>
 
-  <section>
+  <section class="band">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Quién acompaña</p>
@@ -323,15 +412,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </section>
 
-  <section class="band">
+  <section>
     <div class="wrap next">
       <div>
         <p class="eyebrow">Próximos pasos</p>
-        <h2 style="font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px">Diseñemos juntas el espacio para Solventum</h2>
+        <h2 style="font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px">Preparemos juntas el 10 de diciembre</h2>
         <ol class="steps" style="margin-top:24px">
-          <li>Eligen la opción temática que más resuena con el equipo.</li>
-          <li>Confirmamos número de participantes, fecha y lugar.</li>
-          <li>Enviamos la invitación digital y preparamos los materiales.</li>
+          <li>Eligen la opción temática para la actividad creativa del 10 de diciembre.</li>
+          <li>Confirmamos el lugar y la lista de participantes.</li>
+          <li>Enviamos la invitación digital y preparamos materiales y estación de café.</li>
         </ol>
       </div>
       <div class="contact">
