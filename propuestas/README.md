@@ -9,6 +9,7 @@ Presentaciones comerciales publicadas con GitHub Pages para compartirlas con cli
 
 | Cliente | Proyecto | Enlace |
 |---|---|---|
+| Imprenta Nacional de Colombia | Ecoeficiencia 360 — propuesta aprobada: 3 jornadas para 255 colaboradores | [Ver propuesta](https://www.experienciasimone.com/gestion-comercial/propuestas/imprenta-nacional-ecoeficiencia-360/) |
 | USKO SAS | Árboles Plegados — 9 árboles plegados de 130 cm en cartulina iris azul celeste y blanca | [Ver propuesta](https://www.experienciasimone.com/gestion-comercial/propuestas/usko-arboles-plegados/) |
 | Barack Creative | Arte en Equipo — evento corporativo de 2 días para 70 personas | [Ver propuesta](https://www.experienciasimone.com/gestion-comercial/propuestas/barack-creative-arte-en-equipo/) |
 | Evoforma · Megalabs | La Ruta de la Huella — Convención de Ventas 2027 | [Ver presentación](https://nathaliavelasco.github.io/gestion-comercial/propuestas/megalabs-la-ruta-de-la-huella/) |

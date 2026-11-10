@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Imprenta Nacional · Ecoeficiencia 360</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Ecoeficiencia 360 · Propuesta para Imprenta Nacional de Colombia">
+<meta property="og:description" content="Operación consciente por un entorno sostenible: 3 jornadas, 3 conferencias, talleres en los puestos de trabajo y 255 kits para el equipo. Simoné.">
+<meta property="og:image" content="https://www.experienciasimone.com/gestion-comercial/propuestas/imprenta-nacional-ecoeficiencia-360/img/capacitacion-ambiental.jpg">
+<link rel="icon" href="img/simbolo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap">
+</head>
+<body>
+<style>
+/* Layout: una columna editorial que se recorre bajando; menú de secciones fijo arriba */
+:root{
+  --bg:#FBFAF6; --surface:#FFFFFF; --ink:#2B2F0C; --muted:#5D5F4A; --line:#E4E1D4;
+  --olive:#353A0E; --rust:#8B3A12; --magenta:#B0247F; --orange:#F2A03D; --teal:#3E8C88; --tint:#F4EFE3;
+  --on-dark:#FBFAF6;
+  --display:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Lato",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17180F; --surface:#202214; --ink:#EEEBDD; --muted:#B5B29C; --line:#34361F;
+  --olive:#C9CF8A; --rust:#E58A5A; --magenta:#E36BB8; --orange:#F5B25E; --teal:#7CC4BF; --tint:#232515; --on-dark:#17180F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17180F; --surface:#202214; --ink:#EEEBDD; --muted:#B5B29C; --line:#34361F;
+  --olive:#C9CF8A; --rust:#E58A5A; --magenta:#E36BB8; --orange:#F5B25E; --teal:#7CC4BF; --tint:#232515; --on-dark:#17180F; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--ink)}
+p{margin:0}
+.eyebrow{font-family:var(--display);font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}
+a{color:var(--rust)}
+a:focus-visible{outline:2px solid var(--magenta);outline-offset:3px}
+
+/* Cabecera */
+header{border-bottom:1px solid var(--line);background:var(--surface)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:18px}
+.logo{height:56px;width:auto;background:#fff;border-radius:6px;padding:4px 8px}
+.meta{font-family:var(--display);font-size:.78rem;color:var(--muted);text-align:right;line-height:1.55}
+.meta strong{color:var(--ink);font-weight:600}
+
+/* Menú de secciones */
+nav.toc{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;font-family:var(--display);font-size:.76rem;font-weight:600;color:var(--muted);text-decoration:none;padding:7px 12px;border-radius:999px;white-space:nowrap}
+nav.toc a:hover{background:var(--tint);color:var(--ink)}
+
+/* Portada */
+.hero{padding-block:clamp(44px,7vw,88px) clamp(36px,5vw,64px)}
+.badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);border:1px solid currentColor;border-radius:999px;padding:6px 14px}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.hero .eyebrow{margin-top:22px;display:block}
+.hero h1{font-size:clamp(2.2rem,5.8vw,4rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;max-width:17ch;margin-top:12px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero .sub{font-family:var(--display);font-weight:600;color:var(--rust);margin-top:14px;font-size:1.05rem}
+.hero .lead{font-size:1.15rem;color:var(--muted);max-width:62ch;margin-top:18px}
+.hero-img{margin:40px 0 0;border-radius:12px;overflow:hidden}
+.hero-img img{width:100%;display:block;aspect-ratio:16/7;object-fit:cover}
+.figs{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:3px solid var(--olive)}
+.figs li{padding:18px 16px 0 0;min-width:0}
+.figs b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3.4vw,2.3rem);font-variant-numeric:tabular-nums;line-height:1;color:var(--ink)}
+.figs span{display:block;font-size:.9rem;color:var(--muted);margin-top:8px;line-height:1.4}
+
+/* Secciones */
+section{padding-block:clamp(48px,7vw,84px)}
+.band{background:var(--tint)}
+.sec-head{max-width:64ch;margin-bottom:36px}
+.sec-head h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px}
+.sec-head p{color:var(--muted);margin-top:14px}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.two > *{min-width:0}
+.two h3{font-size:1.15rem;font-weight:700;margin-top:10px}
+.two p.body{margin-top:12px}
+.quote{border-left:3px solid var(--teal);padding:4px 0 4px 20px;font-size:1.08rem}
+
+/* Beneficios */
+.bens{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.bens > div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;min-width:0}
+.bens .kpi{font-family:var(--display);font-weight:800;font-size:1.9rem;font-variant-numeric:tabular-nums;color:var(--teal);line-height:1}
+.bens .kpi.word{font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase;padding-block:6px 2px}
+.bens h3{font-size:1rem;font-weight:700;margin-top:12px}
+.bens p{font-size:.93rem;color:var(--muted);margin-top:6px}
+.note{font-size:.88rem;color:var(--muted);margin-top:16px;max-width:76ch}
+
+/* Jornada */
+.event{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,5vw,56px);align-items:start}
+.event > *{min-width:0}
+.agenda{list-style:none;margin:0;padding:0;border-left:3px solid var(--olive)}
+.agenda li{display:grid;grid-template-columns:7.5em 1fr;gap:14px;padding:16px 0 16px 18px;border-bottom:1px solid var(--line)}
+.agenda li:last-child{border-bottom:0}
+.agenda .h{font-family:var(--display);font-variant-numeric:tabular-nums;font-weight:700;font-size:.85rem;color:var(--rust);padding-top:2px}
+.agenda b{font-family:var(--display);font-size:1.02rem;display:block}
+.agenda span.d{color:var(--muted);font-size:.95rem}
+.days{display:grid;gap:10px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:flex;gap:16px;align-items:center}
+.day .n{font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--magenta);min-width:1.4em;font-variant-numeric:tabular-nums}
+.day b{font-family:var(--display);display:block}
+.day span{color:var(--muted);font-size:.92rem}
+
+/* Estaciones */
+.stations{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.st{border-top:4px solid var(--teal);background:var(--surface);border-radius:0 0 12px 12px;padding:22px;min-width:0;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.st:nth-child(2){border-top-color:var(--orange)}
+.st:nth-child(3){border-top-color:var(--magenta)}
+.st .lbl{margin-bottom:6px}
+.st h3{font-size:1.15rem;font-weight:700}
+.st p{font-size:.95rem;color:var(--muted);margin-top:8px}
+
+/* Valor agregado */
+.bonus{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,44px);align-items:center;background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,44px)}
+.bonus > *{min-width:0}
+.bonus .big{font-family:var(--display);font-weight:800;font-size:clamp(3rem,8vw,4.6rem);line-height:.9;color:var(--orange);font-variant-numeric:tabular-nums}
+.bonus .big small{display:block;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark);opacity:.85;margin-top:10px}
+.bonus h3{color:var(--on-dark);font-size:1.4rem;font-weight:700}
+.bonus .tag{font-family:var(--display);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:700}
+.bonus p{margin-top:10px;opacity:.92}
+.bonus ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.bonus li{display:flex;gap:10px;align-items:baseline}
+.bonus li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);flex:none;transform:translateY(-1px)}
+
+/* Entregables */
+.incl{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.incl > div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;min-width:0}
+.incl .q{font-family:var(--display);font-weight:800;font-size:1.5rem;font-variant-numeric:tabular-nums;color:var(--ink)}
+.incl h3{font-size:1rem;font-weight:700;margin-top:6px}
+.incl p{font-size:.93rem;color:var(--muted);margin-top:8px}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:40px;border-radius:10px;overflow:hidden}
+.strip img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.strip-cap{font-size:.82rem;color:var(--muted);margin-top:8px;font-style:italic}
+
+/* Inversión */
+.inv{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+.inv > *{min-width:0}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:14px 20px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--display);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--tint)}
+td.c{font-family:var(--display);font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+td small{color:var(--muted);font-size:.86rem;display:block}
+.total{background:var(--olive);color:var(--on-dark);border-radius:12px;padding:26px}
+.total .lbl{color:var(--orange)}
+.total .big{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,2.6rem);font-variant-numeric:tabular-nums;margin-top:4px;display:block;line-height:1.1}
+.total .big small{font-size:1rem;font-weight:500;opacity:.85}
+.pay{margin-top:18px;border-top:1px solid rgba(255,255,255,.2);padding-top:16px;display:grid;gap:12px}
+.pay div{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.pay span{font-size:.92rem;opacity:.9}
+.pay b{font-family:var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.total p.fine{font-size:.84rem;opacity:.85;margin-top:16px}
+.lbl{font-family:var(--display);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* Mediadora líder */
+.lead-card{display:grid;grid-template-columns:220px 1fr;gap:clamp(24px,4vw,44px);align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3.5vw,36px)}
+.lead-card > *{min-width:0}
+.lead-card img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;display:block}
+.lead-card h3{font-size:1.5rem;font-weight:700}
+.lead-card .role{font-family:var(--display);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rust);margin-top:6px;font-weight:600;line-height:1.5}
+.lead-card p.bio{margin-top:14px;max-width:64ch}
+.lead-card p.bio + p.bio{margin-top:10px}
+.lead-card a{font-family:var(--display);font-weight:600;font-size:.92rem;display:inline-block;margin-top:16px}
+.team{margin-top:16px;font-size:.95rem;color:var(--muted);max-width:76ch}
+
+/* Cierre */
+.next{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(28px,5vw,64px)}
+.next > *{min-width:0}
+.steps{list-style:none;padding:0;margin:24px 0 0;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;color:var(--magenta);min-width:1.2em}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:26px;align-self:start}
+.contact .mail{font-family:var(--display);font-weight:600;font-size:1.02rem;user-select:all;word-break:break-word;display:block;margin-top:6px}
+.contact .mail + .lbl{margin-top:18px;display:block}
+.contact a.mail{color:var(--ink);text-decoration:none}
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .two,.event,.inv,.next{grid-template-columns:1fr}
+  .figs{grid-template-columns:repeat(3,1fr);row-gap:18px}
+  .bens,.stations{grid-template-columns:1fr 1fr}
+  .incl{grid-template-columns:1fr 1fr}
+  .lead-card{grid-template-columns:160px 1fr}
+}
+@media (max-width:560px){
+  .meta{text-align:left}
+  .figs{grid-template-columns:1fr 1fr}
+  .bens,.stations,.incl{grid-template-columns:1fr}
+  .strip{grid-template-columns:1fr 1fr}
+  .hero-img img{aspect-ratio:4/3}
+  .agenda li{grid-template-columns:1fr;gap:2px}
+  .bonus{grid-template-columns:1fr}
+  .lead-card{grid-template-columns:1fr}
+  .lead-card img{max-width:220px}
+  th,td{padding:12px 12px}
+}
+</style>
+
+<header>
+  <div class="wrap">
+    <img class="logo" src="img/logo.png" alt="Simoné · Desarrollo humano a través del arte">
+    <div class="meta">Propuesta para <strong>Imprenta Nacional de Colombia</strong> · Grupo de Mejora Continua<br>Atención: <strong>Ing. Wilder Velásquez Castro</strong> e <strong>Ing. Yaser Alfonso Ariño Manjarrez</strong><br>Emitida el 10 de noviembre de 2026</div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Secciones de la propuesta">
+  <div class="wrap">
+    <a href="#proyecto">Proyecto</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#jornadas">Jornadas</a>
+    <a href="#circuito">Circuito</a>
+    <a href="#reconocimiento">Reconocimiento</a>
+    <a href="#entregables">Entregables</a>
+    <a href="#inversion">Inversión</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#pasos">Próximos pasos</a>
+  </div>
+</nav>
+
+<main>
+  <div class="hero wrap">
+    <span class="badge">Propuesta aprobada · versión actualizada</span>
+    <span class="eyebrow">Proyecto Ecoeficiencia 360</span>
+    <h1>Operación consciente por un entorno <em>sostenible</em></h1>
+    <p class="sub">Transformando hábitos, optimizando resultados</p>
+    <p class="lead">Ingenieros Wilder y Yaser, gracias por la confianza. Esta es la versión actualizada de la propuesta aprobada: el alcance, el cronograma de las tres jornadas y la inversión para que los 255 colaboradores de la Imprenta Nacional vivan la Política Ambiental en su trabajo diario.</p>
+    <figure class="hero-img"><img src="img/capacitacion-ambiental.jpg" alt="Colaboradores con uniforme de planta y de oficina participando en una jornada de formación ambiental con material didáctico sobre las mesas"></figure>
+    <ul class="figs" aria-label="El proyecto en cifras">
+      <li><b>255</b><span>colaboradores de planta y áreas administrativas</span></li>
+      <li><b>3</b><span>jornadas consecutivas</span></li>
+      <li><b>3</b><span>conferencias, una por jornada</span></li>
+      <li><b>9 h</b><span>de talleres en los puestos de trabajo</span></li>
+      <li><b>255</b><span>kits de recordación para el equipo</span></li>
+    </ul>
+  </div>
+
+  <section class="band" id="proyecto">
+    <div class="wrap two">
+      <div>
+        <p class="eyebrow">Objetivo de aprendizaje</p>
+        <h3 style="font-size:clamp(1.4rem,3vw,1.9rem);line-height:1.2">De conocer la política a vivirla en la operación</h3>
+        <p class="body">Estandarizar y sensibilizar al personal sobre las prácticas operativas sostenibles, para garantizar la interiorización de la <strong>Política Ambiental</strong> y del <strong>Programa de Gestión Integral de Residuos Peligrosos (PGIRP)</strong>, mediante metodologías lúdicas que permitan la trazabilidad del conocimiento y la mejora continua en la gestión de recursos.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Descripción general</p>
+        <p class="quote" style="margin-top:14px">Ecoeficiencia 360 es una estrategia de intervención vivencial que cierra la brecha entre la Política Ambiental y el comportamiento operativo.</p>
+        <p class="body">El proyecto usa un circuito de transferencia de conocimiento y elementos físicos de recordación (gamificación) para que los 255 colaboradores no solo conozcan, sino que integren los estándares ambientales en su ejecución diaria, reduciendo la variabilidad operativa y los riesgos asociados al cumplimiento normativo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Beneficios estratégicos · 255 colaboradores</p>
+        <h2>Lo que gana la operación cuando el equipo se apropia de la política</h2>
+      </div>
+      <div class="bens">
+        <div><p class="kpi word">Cumplimiento</p><h3>Cultura de cumplimiento</h3><p>Mitigación de riesgos legales y sanciones mediante la adopción correcta del PGIRP.</p></div>
+        <div><p class="kpi word">Bienestar</p><h3>Bienestar organizacional</h3><p>Vínculo directo entre el compromiso ambiental y la salud mental, con un liderazgo centrado en la persona.</p></div>
+        <div><p class="kpi">8–12%</p><h3>Eficiencia energética e hídrica</h3><p>Reducción proyectada en consumos tras la optimización de prácticas.</p></div>
+        <div><p class="kpi">15%</p><h3>Gestión de residuos</h3><p>Reducción en la tasa de contaminación de residuos aprovechables.</p></div>
+        <div><p class="kpi">+20%</p><h3>Retención de conocimiento</h3><p>Incremento en las evaluaciones de competencia ambiental después de la intervención.</p></div>
+        <div><p class="kpi">30%</p><h3>Mitigación de riesgos</h3><p>Disminución en hallazgos de auditoría interna.</p></div>
+      </div>
+      <p class="note">Los porcentajes son metas proyectadas. Su seguimiento se hace con el sistema de evaluación del proyecto y con los indicadores ambientales que lleva la Imprenta Nacional.</p>
+    </div>
+  </section>
+
+  <section class="band" id="jornadas">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Estructura de la actividad · 3 jornadas</p>
+        <h2>Una misma metodología, tres jornadas, todo el equipo</h2>
+        <p>La metodología se replica en tres jornadas consecutivas para cubrir a los 255 colaboradores, manteniendo la consistencia en el mensaje y en la evaluación. Así se vive cada jornada:</p>
+      </div>
+      <div class="event">
+        <ol class="agenda">
+          <li><span class="h">8:00 – 9:30 a.m.</span><div><b>Conferencia: Visión y Política</b><span class="d">Alineación estratégica y KPI ambientales: por qué la política importa en cada puesto.</span></div></li>
+          <li><span class="h">10:00 a.m. – 12:30 p.m.</span><div><b>Circuito de Transformación</b><span class="d">Talleres en los puestos de trabajo, en planta y en áreas administrativas, por estaciones.</span></div></li>
+          <li><span class="h">12:30 – 1:00 p.m.</span><div><b>Validación y cierre</b><span class="d">Evaluación de conocimientos gamificada y entrega del kit de recordación.</span></div></li>
+        </ol>
+        <div class="days">
+          <div class="day"><span class="n">1</span><div><b>Jornada 1</b><span>Conferencia + circuito · primer grupo</span></div></div>
+          <div class="day"><span class="n">2</span><div><b>Jornada 2</b><span>Conferencia + circuito · segundo grupo</span></div></div>
+          <div class="day"><span class="n">3</span><div><b>Jornada 3</b><span>Conferencia + circuito · tercer grupo</span></div></div>
+          <p class="note" style="margin-top:6px">Las fechas, los grupos y los horarios se ajustan con el Grupo de Mejora Continua según los turnos de la planta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="circuito">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Circuito de Transformación</p>
+        <h2>Tres estaciones que llevan la política al puesto de trabajo</h2>
+        <p>Los mediadores del conocimiento de Simoné recorren con cada grupo tres estaciones prácticas y lúdicas, conectadas con lo que pasa todos los días en la operación.</p>
+      </div>
+      <div class="stations">
+        <div class="st"><p class="lbl">Estación 1</p><h3>Residuos (PGIRP)</h3><p>Clasificación, manejo y disposición correcta de residuos, con énfasis en los residuos peligrosos de la operación.</p></div>
+        <div class="st"><p class="lbl">Estación 2</p><h3>Eficiencia: energía y agua</h3><p>Prácticas concretas para reducir consumos en cada área y entender su efecto en los indicadores.</p></div>
+        <div class="st"><p class="lbl">Estación 3</p><h3>Liderazgo: El Panal</h3><p>La metáfora de la colmena para mostrar cómo cada persona sostiene el resultado colectivo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="reconocimiento">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Incentivos y reconocimiento · valor agregado</p>
+        <h2>Un estímulo para quienes más se apropian de la política</h2>
+        <p>Para fomentar la excelencia y la participación activa, el proyecto incluye un programa de estímulos basado en el desempeño durante los circuitos y la evaluación.</p>
+      </div>
+      <div class="bonus">
+        <div class="big">30<small>colaboradores</small></div>
+        <div>
+          <p class="tag">Taller de Alto Rendimiento Humano · 60 minutos</p>
+          <h3 style="margin-top:8px">Una sesión especial para los de mejor desempeño</h3>
+          <p>Los 30 colaboradores con el mejor desempeño y mayor apropiación de conceptos son seleccionados para una sesión especializada en:</p>
+          <ul>
+            <li>Gestión del estrés en entornos operativos</li>
+            <li>Herramientas para el manejo de la ansiedad</li>
+            <li>Técnicas de higiene del sueño para mejorar la recuperación y el desempeño</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="entregables">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Entregables y gestión del conocimiento</p>
+        <h2>Lo que queda en la Imprenta cuando terminan las jornadas</h2>
+      </div>
+      <div class="incl">
+        <div><p class="q">255</p><h3>Kit de empoderamiento</h3><p>Rompecabezas de 12 × 12 cm en papel ecológico con empaque sostenible. Cada uno resume los 3 pilares de la Política Ambiental y funciona como recordatorio en el puesto de trabajo.</p></div>
+        <div><p class="q">3</p><h3>Campaña digital: infografías</h3><p>Kit de comunicación con tres infografías sobre los temas centrales de la Política Ambiental.</p></div>
+        <div><p class="q">1</p><h3>Invitación digital</h3><p>Pieza creativa para convocar a los colaboradores y asegurar la asistencia.</p></div>
+        <div><p class="q">1</p><h3>Sistema de evaluación</h3><p>Cuestionario digital con reporte automático para la gerencia.</p></div>
+      </div>
+      <div class="strip" aria-hidden="true">
+        <img src="img/hojas-mural.jpg" alt="">
+        <img src="img/sombreros.jpg" alt="">
+        <img src="img/pintura-equipo.jpg" alt="">
+        <img src="img/hoja-colores.jpg" alt="">
+      </div>
+      <p class="strip-cap">Experiencias de Simoné con equipos de trabajo.</p>
+    </div>
+  </section>
+
+<!-- Empresas que han confiado en Simoné -->
+<style>
+.sm-clientes{padding:clamp(48px,7vw,80px) 0;font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;color:#2B2F0C;background:#F4EFE3}
+.sm-clientes .sm-in{max-width:1080px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px))}
+.sm-clientes .sm-eb{font-family:"Montserrat",system-ui,sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8B3A12;margin:0}
+.sm-clientes h2{font-family:"Montserrat",system-ui,sans-serif;font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:700;line-height:1.15;margin:10px 0 0;color:inherit;text-wrap:balance}
+.sm-clientes .sm-lead{color:#5D5F4A;margin:14px 0 32px;max-width:62ch;line-height:1.6}
+.sm-clientes ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.sm-clientes li{background:#fff;border:1px solid #E4E1D4;border-radius:10px;height:120px;display:flex;align-items:center;justify-content:center;padding:18px 22px;min-width:0}
+.sm-clientes img{max-width:100%;max-height:70px;width:auto;height:auto;object-fit:contain;display:block}
+@media (max-width:860px){.sm-clientes ul{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.sm-clientes ul{grid-template-columns:1fr 1fr}.sm-clientes li{height:96px;padding:14px}.sm-clientes img{max-height:54px}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-clientes{color:#EEEBDD;background:#232515}:root:not([data-theme="light"]) .sm-clientes .sm-lead{color:#B5B29C}:root:not([data-theme="light"]) .sm-clientes .sm-eb{color:#E58A5A}:root:not([data-theme="light"]) .sm-clientes li{background:#202214;border-color:#34361F}:root:not([data-theme="light"]) .sm-clientes img{filter:brightness(2.2)}}
+:root[data-theme="dark"] .sm-clientes{color:#EEEBDD;background:#232515}:root[data-theme="dark"] .sm-clientes .sm-lead{color:#B5B29C}:root[data-theme="dark"] .sm-clientes .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-clientes li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-clientes img{filter:brightness(2.2)}
+</style>
+<section class="sm-clientes" id="clientes" aria-label="Empresas que han confiado en Simoné">
+  <div class="sm-in">
+    <p class="sm-eb">Experiencia con empresas</p>
+    <h2>Empresas que han confiado en Simoné</h2>
+    <p class="sm-lead">Organizaciones de distintos sectores han vivido con sus equipos nuestras experiencias de desarrollo humano a través del arte.</p>
+    <ul>
+      <li><img src="../clientes-simone/bancoldex.png" alt="Bancóldex"></li>
+      <li><img src="../clientes-simone/nueva-eps.png" alt="Nueva EPS"></li>
+      <li><img src="../clientes-simone/fundacion-santa-fe.png" alt="Fundación Santa Fe de Bogotá"></li>
+      <li><img src="../clientes-simone/camara-comercio-cartagena.png" alt="Cámara de Comercio de Cartagena · Tejiendo Progreso en Bolívar"></li>
+      <li><img src="../clientes-simone/centro-mayor.png" alt="Centro Mayor Centro Comercial"></li>
+      <li><img src="../clientes-simone/cavipetrol.png" alt="Cavipetrol"></li>
+      <li><img src="../clientes-simone/ajover.png" alt="Ajover"></li>
+      <li><img src="../clientes-simone/tecna.png" alt="Tecna"></li>
+      <li><img src="../clientes-simone/evoforma.png" alt="Evoforma"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<style>
+.sm-testi{padding:0 0 clamp(48px,7vw,80px);font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;color:#2B2F0C;background:#F4EFE3}
+.sm-testi .sm-in{max-width:1080px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px))}
+.sm-testi .sm-eb{font-family:"Montserrat",system-ui,sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8B3A12;margin:0}
+.sm-testi h2{font-family:"Montserrat",system-ui,sans-serif;font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:700;line-height:1.15;margin:10px 0 28px;color:inherit;text-wrap:balance}
+.sm-testi ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sm-testi li{background:#fff;border:1px solid #E4E1D4;border-radius:12px;padding:24px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.sm-testi blockquote{margin:0;font-size:1rem;line-height:1.6;position:relative;padding-top:26px}
+.sm-testi blockquote::before{content:"\201C";position:absolute;top:-10px;left:-2px;font-family:Georgia,serif;font-size:3.2rem;line-height:1;color:#B0247F}
+.sm-testi .who{margin-top:auto;font-family:"Montserrat",system-ui,sans-serif;font-size:.86rem;line-height:1.4}
+.sm-testi .who b{display:block;font-weight:700}
+.sm-testi .who span{color:#6A6C55}
+@media (max-width:860px){.sm-testi ul{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.sm-testi ul{grid-template-columns:1fr}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-testi{color:#EEEBDD;background:#232515}:root:not([data-theme="light"]) .sm-testi .sm-eb{color:#E58A5A}:root:not([data-theme="light"]) .sm-testi li{background:#202214;border-color:#34361F}:root:not([data-theme="light"]) .sm-testi .who span{color:#B5B29C}}
+:root[data-theme="dark"] .sm-testi{color:#EEEBDD;background:#232515}:root[data-theme="dark"] .sm-testi .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-testi li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-testi .who span{color:#B5B29C}
+</style>
+<section class="sm-testi" id="testimonios" aria-label="Testimonios">
+  <div class="sm-in">
+    <p class="sm-eb">Testimonios</p>
+    <h2>Lo que dicen quienes han vivido la experiencia</h2>
+    <ul>
+      <li><blockquote>Con Simoné pude comunicar de manera objetiva a la comunidad en general las mejores prácticas para prevenir un ACV. Fueron creativos, innovadores y muy fáciles de entender.</blockquote><p class="who"><b>Diana María Castelblanco</b><span>Coordinadora Asistencial Centros de Cuidado Clínico · Fundación Santa Fe de Bogotá</span></p></li>
+      <li><blockquote>Superaron nuestras expectativas: encontraron el equilibrio entre las necesidades comerciales y las necesidades humanas que tenía nuestro equipo del call center.</blockquote><p class="who"><b>Katherine Arenas</b><span>Líder Centro de Servicio · Ajover - Darnell</span></p></li>
+      <li><blockquote>Una experiencia de reflexión, empoderamiento y llamado a sentir de una forma diferente. Nos ayuda a reconocernos, valorar lo que nos rodea y motivarnos para el trabajo en equipo.</blockquote><p class="who"><b>Diana María Álvarez</b><span>Productos Alimenticios Doria</span></p></li>
+    </ul>
+  </div>
+</section>
+
+  <section id="inversion">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Inversión del proyecto</p>
+        <h2>Un solo valor para todo el proyecto</h2>
+      </div>
+      <div class="inv">
+        <div class="tablebox">
+          <table>
+            <thead><tr><th>Componente</th><th>Alcance</th></tr></thead>
+            <tbody>
+              <tr><td class="c">Jornadas</td><td>3 días consecutivos para 255 colaboradores</td></tr>
+              <tr><td class="c">Conferencias</td><td>3 conferencias “Visión y Política”, una por jornada</td></tr>
+              <tr><td class="c">Talleres</td><td>9 horas de Circuito de Transformación en los puestos de trabajo<small>Estaciones de Residuos (PGIRP), Eficiencia y Liderazgo</small></td></tr>
+              <tr><td class="c">Obsequios</td><td>255 kits de empoderamiento (rompecabezas ecológicos)</td></tr>
+              <tr><td class="c">Campaña digital</td><td>3 infografías, invitación digital y sistema de evaluación con reporte</td></tr>
+              <tr><td class="c">Valor agregado</td><td>Taller de Alto Rendimiento Humano para 30 colaboradores (60 min)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="total">
+          <p class="lbl">Inversión total</p>
+          <span class="big">$8.435.000 <small>+ IVA</small></span>
+          <div class="pay">
+            <div><span>Anticipo 30% para iniciar</span><b>$2.530.500</b></div>
+            <div><span>Saldo 70% a 30 días</span><b>$5.904.500</b></div>
+          </div>
+          <p class="fine">Valores en pesos colombianos antes de IVA. El anticipo se calcula sobre el valor antes de IVA; el IVA se factura con el saldo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="equipo">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Mediadora líder</p>
+        <h2>Quién acompaña el proyecto</h2>
+      </div>
+      <div class="lead-card">
+        <img src="img/nathalia.jpg" alt="Retrato de Nathalia Andrea Velasco">
+        <div>
+          <h3>Nathalia Andrea Velasco</h3>
+          <p class="role">CEO y fundadora de Simoné · Magíster en Educación · Estratega de Bienestar Regenerativo</p>
+          <p class="bio">Estratega en procesos de transformación humana con 16 años de trayectoria diseñando y liderando proyectos interdisciplinarios que integran la educación, las artes plásticas y la gestión cultural. Desde 2013 lidera Simoné, donde ha consolidado una metodología que usa la creatividad y el contacto con la naturaleza para humanizar las organizaciones y fortalecer el tejido emocional de los equipos.</p>
+          <p class="bio">Magíster en Educación de la Universidad de La Sabana y profesional en Estudios y Gestión Cultural (EAN). Se especializa en la prevención y gestión del burnout corporativo. Ponente en TEDx Agua Linda con la charla “Creer en crear para educar”.</p>
+          <a href="https://www.linkedin.com/in/nathalia-andrea-velasco-duarte/" target="_blank" rel="noopener">Ver perfil en LinkedIn →</a>
+        </div>
+      </div>
+      <p class="team">La acompaña un equipo de mediadores del conocimiento, profesionales en teatro, danza contemporánea, diseño industrial y artes plásticas, que trabajan bajo el modelo de educación experiencial de Simoné.</p>
+    </div>
+  </section>
+
+  <section id="pasos">
+    <div class="wrap next">
+      <div>
+        <p class="eyebrow">Próximos pasos</p>
+        <h2 style="font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px">Pongamos en marcha Ecoeficiencia 360</h2>
+        <ol class="steps">
+          <li>Formalizamos la aprobación con la orden de servicio y el anticipo del 30%.</li>
+          <li>Hacemos una reunión de alineación con el Grupo de Mejora Continua para definir fechas, grupos, horarios y espacios de las tres jornadas.</li>
+          <li>Validamos con ustedes los contenidos de la Política Ambiental y del PGIRP para las infografías, la evaluación y los rompecabezas.</li>
+          <li>Producimos los 255 kits y lanzamos la invitación y la campaña digital.</li>
+          <li>Realizamos las tres jornadas, el Taller de Alto Rendimiento Humano y entregamos el reporte de evaluación a la gerencia.</li>
+        </ol>
+      </div>
+      <div class="contact">
+        <span class="lbl">Escríbenos</span>
+        <span class="mail">nathalia@experienciasimone.com</span>
+        <span class="lbl">También</span>
+        <span class="mail">experienciasimone@gmail.com</span>
+        <span class="lbl">WhatsApp</span>
+        <a class="mail" href="https://wa.me/573217738039" target="_blank" rel="noopener">321 773 8039</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Datos de la oferta (fecha de emisión, NIT, teléfono, validez) -->
+<style>
+.sm-ficha{border-top:1px solid rgba(53,58,14,.16);background:#F4EFE3;color:#2B2F0C;font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif}
+.sm-ficha .sm-in{max-width:1080px;margin:0 auto;padding:28px max(20px,env(safe-area-inset-left,0px));display:flex;flex-wrap:wrap;align-items:center;gap:18px 36px}
+.sm-ficha img{height:52px;width:auto;background:#fff;border-radius:8px;padding:6px 10px;display:block}
+.sm-ficha dl{display:flex;flex-wrap:wrap;gap:12px 32px;margin:0}
+.sm-ficha dl > div{min-width:0}
+.sm-ficha dt{font-family:"Montserrat",system-ui,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6A6C55;margin:0}
+.sm-ficha dd{margin:2px 0 0;font-family:"Montserrat",system-ui,sans-serif;font-weight:600;font-size:.95rem;font-variant-numeric:tabular-nums}
+.sm-ficha dd small{font-weight:500;color:#6A6C55;font-size:.8rem}
+.sm-ficha a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-ficha{background:#232515;color:#EEEBDD;border-top-color:#34361F}:root:not([data-theme="light"]) .sm-ficha dt,:root:not([data-theme="light"]) .sm-ficha dd small{color:#B5B29C}}
+:root[data-theme="dark"] .sm-ficha{background:#232515;color:#EEEBDD;border-top-color:#34361F}
+:root[data-theme="dark"] .sm-ficha dt,:root[data-theme="dark"] .sm-ficha dd small{color:#B5B29C}
+.sm-ficha .sm-notas{flex-basis:100%;border-top:1px solid rgba(53,58,14,.16);padding-top:16px}
+.sm-ficha .sm-notas p.t{font-family:"Montserrat",system-ui,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6A6C55;margin:0 0 8px}
+.sm-ficha .sm-notas ul{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:.88rem;line-height:1.5;max-width:80ch}
+</style>
+<aside class="sm-ficha" aria-label="Datos de la oferta">
+  <div class="sm-in">
+    <img src="img/logo.png" alt="Simoné · Desarrollo humano a través del arte">
+    <dl>
+      <div><dt>Fecha de emisión</dt><dd>10 de noviembre de 2026</dd></div>
+      <div><dt>NIT</dt><dd>901.838.283-3</dd></div>
+      <div><dt>Teléfono</dt><dd><a href="tel:+573217738039">321 773 8039</a></dd></div>
+      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 10 de diciembre de 2026</small></dd></div>
+    </dl>
+    <div class="sm-notas">
+      <p class="t">Notas finales</p>
+      <ul>
+        <li>Somos facturadores electrónicos y responsables de IVA.</li>
+        <li>Nos acogemos a la norma de pagos a 30 días para pymes. De ser necesario, enviamos la carta de certificación Mipyme.</li>
+        <li>Pertenecemos al Régimen Simple de Tributación, por lo que la única retención que deben practicarnos es un reteIVA del 15%.</li>
+      </ul>
+    </div>
+  </div>
+</aside>
+<footer>
+  <div class="wrap"><span>Simoné · Desarrollo humano a través del arte</span><span>Ecoeficiencia 360 · Imprenta Nacional de Colombia · Noviembre 2026</span></div>
+</footer>
+
+</body>
+</html>
