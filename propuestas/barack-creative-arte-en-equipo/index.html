@@ -135,21 +135,22 @@ section{padding-block:clamp(48px,7vw,84px)}
 .bonus .tagfree{font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--orange);color:#353A0E;border-radius:999px;padding:5px 12px;white-space:nowrap}
 
 /* Inversión */
-.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.opts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .optcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px 24px;min-width:0;display:flex;flex-direction:column}
 .optcard.rec{background:var(--olive);color:var(--on-dark);border-color:var(--olive)}
 .otag{font-family:var(--display);font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--magenta)}
 .optcard.rec .otag{color:var(--orange)}
 .odur{font-family:var(--display);font-weight:700;margin-top:10px}
-.odur small{font-weight:500;opacity:.75;font-size:.85rem}
-.oprice{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.2rem);font-variant-numeric:tabular-nums;display:block;line-height:1.1;margin-top:8px}
-.oprice small{font-size:.95rem;font-weight:500;opacity:.8}
+.odur small{display:block;font-weight:500;opacity:.75;font-size:.85rem}
+.oprice{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,2.4vw,1.9rem);white-space:nowrap;font-variant-numeric:tabular-nums;display:block;line-height:1.1;margin-top:8px}
+.oprice small{display:block;font-size:.9rem;font-weight:500;opacity:.8;margin-top:2px}
 .optcard ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px;font-size:.94rem;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent);padding-top:16px}
 .optcard li{display:flex;gap:10px;align-items:baseline}
 .optcard li::before{content:"✓";font-weight:700;color:var(--orange)}
 .optcard li.no{opacity:.7}
 .optcard li.no::before{content:"–";color:inherit}
-@media (max-width:860px){.opts{grid-template-columns:1fr}}
+@media (max-width:1000px){.opts{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.opts{grid-template-columns:1fr}}
 .invest{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:stretch}
 .invest > *{min-width:0}
 .tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
@@ -438,12 +439,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="sec-head">
         <p class="eyebrow">Qué incluye</p>
         <h2>Ustedes convocan, nosotras nos encargamos del resto</h2>
+        <p>Esto es lo que incluyen las experiencias de arte. El detalle de cada opción está en la sección de inversión.</p>
       </div>
       <div class="incl">
         <div><span class="dot" style="background:var(--orange)"></span><h3>Todos los materiales de arte</h3><p>Pinturas, papeles, pinceles, plastilina, lana y todo lo necesario para cada proyecto, en los dos días.</p></div>
         <div><span class="dot" style="background:var(--magenta)"></span><h3>Equipo de 3 mediadores cada día</h3><p>Mediación del conocimiento y acompañamiento cercano para que cada participante esté atendido.</p></div>
         <div><span class="dot" style="background:var(--rust)"></span><h3>Registro fotográfico</h3><p>Fotografías de las dos tardes: las personas, el proceso y las obras creadas. Incluido en la Opción 1.</p></div>
-        <div><span class="dot" style="background:var(--olive)"></span><h3>Memorias del evento</h3><p>Documento que recoge lo vivido, los aprendizajes y las reflexiones del grupo.</p></div>
+        <div><span class="dot" style="background:var(--olive)"></span><h3>Memorias del evento</h3><p>Documento que recoge lo vivido, los aprendizajes y las reflexiones del grupo. Incluido en la Opción 1.</p></div>
       </div>
       <div class="bonus">
         <span class="tagfree">Sin costo adicional</span>
@@ -456,13 +458,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Inversión</p>
-        <h2>Tres opciones para elegir la que mejor se ajusta</h2>
-        <p>Las tres opciones son para 70 participantes en dos días: 40 personas el día 1 y 30 personas el día 2.</p>
+        <h2>Cuatro opciones para elegir la que mejor se ajusta</h2>
+        <p>Todas las opciones son para 70 participantes en dos días: 40 personas el día 1 y 30 personas el día 2. Las opciones 1, 2 y 3 son experiencias de arte; la opción 4 trabaja los mismos temas desde el teatro y el movimiento.</p>
       </div>
       <div class="opts">
         <article class="optcard rec">
           <p class="otag">Opción 1 · Experiencia completa</p>
-          <p class="odur">3 horas por día <small>· 6 horas en total</small></p>
+          <p class="odur">3 horas por día <small>6 horas en total</small></p>
           <span class="oprice">$7.875.000 <small>+ IVA</small></span>
           <ul>
             <li>Materiales de arte</li>
@@ -473,28 +475,39 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         </article>
         <article class="optcard">
           <p class="otag">Opción 2</p>
-          <p class="odur">3 horas por día <small>· 6 horas en total</small></p>
+          <p class="odur">3 horas por día <small>6 horas en total</small></p>
           <span class="oprice">$5.845.000 <small>+ IVA</small></span>
           <ul>
             <li>Materiales de arte</li>
             <li>Equipo de 3 mediadores cada día</li>
-            <li>Memorias del evento</li>
+            <li class="no">No incluye memorias del evento</li>
             <li class="no">No incluye registro fotográfico</li>
           </ul>
         </article>
         <article class="optcard">
           <p class="otag">Opción 3</p>
-          <p class="odur">2 horas por día <small>· 4 horas en total</small></p>
+          <p class="odur">2 horas por día <small>4 horas en total</small></p>
           <span class="oprice">$4.895.000 <small>+ IVA</small></span>
           <ul>
             <li>Materiales de arte</li>
             <li>Equipo de 3 mediadores cada día</li>
-            <li>Memorias del evento</li>
+            <li class="no">No incluye memorias del evento</li>
             <li class="no">No incluye registro fotográfico</li>
           </ul>
         </article>
+        <article class="optcard">
+          <p class="otag">Opción 4 · Cuerpo y movimiento</p>
+          <p class="odur">3 horas por día <small>6 horas en total</small></p>
+          <span class="oprice">$3.985.000 <small>+ IVA</small></span>
+          <ul>
+            <li>Actividades de teatro</li>
+            <li>Expresión y movimiento corporal</li>
+            <li>Equipo de 2 mediadores cada día</li>
+            <li class="no">No incluye materiales de arte, memorias ni registro fotográfico</li>
+          </ul>
+        </article>
       </div>
-      <p class="note">Valores en pesos colombianos para 70 participantes. En todas las opciones, las mesas de trabajo de arte se incluyen sin costo adicional si el espacio las requiere.</p>
+      <p class="note">Valores en pesos colombianos para 70 participantes. En las opciones 1, 2 y 3, las mesas de trabajo de arte se incluyen sin costo adicional si el espacio las requiere.</p>
     </div>
   </section>
 
