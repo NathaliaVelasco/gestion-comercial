@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Máquina del Tiempo · Ecosistema</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Propuesta comercial de Simoné para Solventum: ecosistema digital de la Máquina del Tiempo, 3 años de infraestructura y 2 casos clínicos nuevos.">
+<meta property="og:title" content="Máquina del Tiempo · Ecosistema digital">
+<meta property="og:description" content="6 módulos digitales, 3 años de infraestructura y 2 casos clínicos nuevos. Preparado por Simoné para Solventum.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: one scrolling proposal on a dark clinical ground; HUD corner brackets mark the key panels; the route E1→E5 is the one drawn sequence; the investment closes the page.
+     Single dark look by choice: Solventum brand (Deep Teal, Malachite, black). */
+  :root {
+    --void: #050B0A;
+    --teal: #01332B;
+    --teal-2: #0A2621;
+    --malachite: #05DD4D;
+    --malachite-soft: #7FEFA4;
+    --ink: #EEF4F2;
+    --body: #B9C7C3;
+    --muted: #82948F;
+    --line: #1C3A34;
+    --display: 'Orbitron', 'Eurostile', 'Arial Black', sans-serif;
+    --text: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    --wrap: 1120px;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+  body { margin: 0; background: var(--void); color: var(--ink); font-family: var(--text); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  h1, h2, h3, p, ul, ol { margin: 0; }
+  h1, h2, h3 { text-wrap: balance; }
+  ul, ol { padding: 0; list-style: none; }
+  sup { font-size: .55em; vertical-align: super; line-height: 0; }
+
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  section { padding-block: clamp(56px, 8vw, 104px); scroll-margin-top: 56px; border-top: 1px solid var(--line); }
+  .label { font-size: 12px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--malachite); }
+  .h2 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.15; letter-spacing: .01em; }
+  .lead { font-size: clamp(17px, 1.8vw, 20px); color: var(--body); max-width: 62ch; }
+  .head { display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(28px, 4vw, 48px); }
+
+  /* HUD frame: corner brackets */
+  .hud { position: relative; background: var(--teal-2); padding: 26px 28px; }
+  .hud::before, .hud::after { content: ""; position: absolute; width: 18px; height: 18px; border: 2px solid var(--malachite); pointer-events: none; }
+  .hud::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+  .hud::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+  /* Hero */
+  .hero { border-top: 0; padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 88px); background: radial-gradient(120% 90% at 85% 0%, var(--teal) 0%, var(--void) 62%); }
+  .hero .wrap { display: flex; flex-direction: column; gap: clamp(32px, 5vw, 56px); }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .brandbar { background: #F7F2E8; }
+  .brandbar .top { padding-block: 18px; }
+  .brandbar .for { color: #5A5C3A; }
+  .brandbar .for b { color: #373A0E; }
+  .logo { width: clamp(170px, 20vw, 240px); height: auto; }
+  .for { font-size: 14px; color: var(--muted); }
+  .for b { color: var(--ink); font-weight: 600; }
+  .hero-main { display: flex; flex-direction: column; gap: 20px; }
+  .hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 8vw, 92px); line-height: 1; letter-spacing: .01em; }
+  .hero h1 span { color: var(--malachite); }
+  .hero .lead { font-size: clamp(18px, 2.1vw, 23px); color: var(--ink); max-width: 46ch; }
+  .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+  .fact { padding: 18px 16px 0 0; display: flex; flex-direction: column; gap: 2px; }
+  .fact + .fact { padding-left: 16px; border-left: 1px solid var(--line); }
+  .fact strong { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); color: var(--malachite); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .fact span { font-size: 13px; color: var(--body); line-height: 1.35; }
+
+  /* Nav */
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--void); }
+  nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--void); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  nav.toc .wrap { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+  nav.toc .wrap::-webkit-scrollbar { display: none; }
+  nav.toc a { flex: none; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 15px 12px; border-bottom: 2px solid transparent; }
+  nav.toc a:hover, nav.toc a.on { color: var(--ink); border-bottom-color: var(--malachite); }
+  a:focus-visible { outline: 2px solid var(--malachite); outline-offset: 2px; }
+
+  /* Alcance */
+  .scope { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+  .scope p + p { margin-top: 16px; }
+  .scope .text p { color: var(--body); max-width: 60ch; }
+  .scope .text b { color: var(--ink); }
+  .spec { display: flex; flex-direction: column; }
+  .spec div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .spec div:last-child { border-bottom: 0; }
+  .spec dt, .spec .k { color: var(--body); }
+  .spec .v { font-weight: 600; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* Kit */
+  .group + .group { margin-top: clamp(36px, 5vw, 56px); }
+  .group-title { font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin-bottom: 20px; }
+  .kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .item { display: flex; flex-direction: column; gap: 10px; border-top: 2px solid var(--malachite); padding-top: 18px; }
+  .item h3 { font-size: 18px; font-weight: 700; line-height: 1.3; }
+  .item p { font-size: 15px; color: var(--body); }
+  .item .tag { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); }
+  .case { margin-top: clamp(28px, 4vw, 44px); display: flex; gap: 20px; align-items: center; }
+  .case .swatch { flex: none; width: 56px; height: 40px; border-radius: 6px; background: linear-gradient(160deg, #1F8A4C, #0E5A30); box-shadow: inset 0 -6px 0 rgba(0,0,0,.25); position: relative; }
+  .case .swatch::before { content: ""; position: absolute; top: -8px; left: 18px; width: 20px; height: 9px; border: 3px solid #0E5A30; border-bottom: 0; border-radius: 6px 6px 0 0; }
+  .case + .case { margin-top: 18px; }
+  .case .rollup { flex: none; width: 56px; height: 56px; position: relative; }
+  .case .rollup::before { content: ""; position: absolute; left: 19px; top: 0; width: 18px; height: 50px; border: 2px solid var(--malachite); border-radius: 2px; }
+  .case .rollup::after { content: ""; position: absolute; left: 12px; bottom: 0; width: 32px; height: 6px; background: var(--malachite); border-radius: 3px; }
+  .case p { font-size: 15px; color: var(--body); max-width: 70ch; }
+  .case b { color: var(--ink); }
+
+  /* Ruta */
+  .route { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; counter-reset: st; }
+  .stop { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 20px 18px 22px; background: var(--teal-2); border: 1px solid var(--line); }
+  .stop .n { font-family: var(--display); font-weight: 700; font-size: 26px; color: var(--malachite); line-height: 1; }
+  .stop h3 { font-size: 15px; font-weight: 700; line-height: 1.35; }
+  .stop p { font-size: 13px; color: var(--body); line-height: 1.45; }
+  .stop:not(:last-child)::after { content: ""; position: absolute; top: 31px; right: -12px; width: 12px; height: 2px; background: var(--malachite); }
+  .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+  /* Roles */
+  .roles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+  .crew { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+  .badge { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+  .badge i { display: block; width: 100%; aspect-ratio: 3 / 4; max-width: 64px; border-radius: 6px; border: 1px solid var(--line); background: var(--teal-2); position: relative; }
+  .badge i::before { content: ""; position: absolute; top: 8px; left: 50%; width: 30%; height: 4px; margin-left: -15%; border-radius: 2px; background: var(--line); }
+  .badge.lead i { border-color: var(--malachite); background: var(--teal); }
+  .badge.lead i::after { content: ""; position: absolute; left: 50%; top: -9px; width: 26px; height: 9px; margin-left: -13px; background: var(--malachite); border-radius: 13px 13px 2px 2px; }
+  .badge span { font-size: 11px; font-weight: 600; color: var(--body); line-height: 1.25; }
+  .badge.lead span { color: var(--ink); }
+  .roles .text p { color: var(--body); }
+  .roles .text p + p { margin-top: 14px; }
+  .roles .text b { color: var(--ink); }
+
+  /* Onboarding */
+  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .two .hud { display: flex; flex-direction: column; gap: 10px; }
+  .two .k { font-family: var(--display); font-weight: 700; font-size: 30px; color: var(--malachite); line-height: 1; }
+  .two h3 { font-size: 19px; font-weight: 700; }
+  .two p { font-size: 15px; color: var(--body); }
+
+  /* Justificación */
+  .why { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+  .why li { display: flex; flex-direction: column; gap: 6px; padding-left: 18px; border-left: 2px solid var(--line); }
+  .why h3 { font-size: 17px; font-weight: 700; }
+  .why p { font-size: 15px; color: var(--body); }
+
+  /* Inversión */
+  #inversion { background: radial-gradient(100% 120% at 0% 100%, var(--teal) 0%, var(--void) 60%); }
+  .invest { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+  .total { display: flex; flex-direction: column; gap: 8px; }
+  .total .amount { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 6vw, 64px); color: var(--malachite); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+  .total .cur { font-size: 15px; color: var(--body); }
+  .options { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .options .hud { display: flex; flex-direction: column; gap: 8px; }
+  .opt-label { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--malachite-soft); }
+  .options h3 { font-size: 19px; font-weight: 700; }
+  .opt-amount { font-family: var(--display); font-weight: 700; font-size: clamp(24px, 3vw, 32px); color: var(--ink); font-variant-numeric: tabular-nums; line-height: 1.2; }
+  .opt-amount small { font-family: var(--text); font-size: 14px; font-weight: 500; color: var(--body); }
+  .options p { font-size: 15px; color: var(--body); }
+  @media (max-width: 640px) { .options { grid-template-columns: 1fr; } }
+  .breakdown { margin: 14px 0 0; display: flex; flex-direction: column; max-width: 440px; }
+  .breakdown div { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .breakdown dt { color: var(--body); }
+  .breakdown dd { margin: 0; color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .breakdown .sum { border-bottom: 0; }
+  .breakdown .sum dt, .breakdown .sum dd { color: var(--malachite); font-weight: 700; }
+  .incl { display: flex; flex-direction: column; }
+  .incl li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--body); }
+  .incl li:last-child { border-bottom: 0; }
+  .incl li::before { content: ""; flex: none; width: 10px; height: 10px; margin-top: 7px; border: 2px solid var(--malachite); transform: rotate(45deg); }
+  .phase { margin-top: 28px; font-size: 14px; color: var(--muted); max-width: 70ch; }
+
+  footer { border-top: 1px solid var(--line); padding-block: 32px; font-size: 13px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .route { grid-template-columns: 1fr; }
+    .stop:not(:last-child)::after { top: auto; bottom: -12px; right: auto; left: 31px; width: 2px; height: 12px; }
+    .kit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .scope, .roles, .invest { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .fact:nth-child(3) { padding-left: 0; border-left: 0; }
+    .fact:nth-child(n+3) { padding-top: 18px; }
+    .kit, .two, .why { grid-template-columns: 1fr; }
+    .crew { gap: 5px; }
+    .badge span { font-size: 10px; }
+  }
+</style>
+<style>
+  /* Ecosistema: 6 módulos */
+  .mods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .mod { display: flex; flex-direction: column; background: var(--teal-2); border: 1px solid var(--line); min-width: 0; }
+  .mod .shot { aspect-ratio: 4 / 3; overflow: hidden; background: #000; border-bottom: 1px solid var(--line); }
+  .mod .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .mod .body { display: flex; flex-direction: column; gap: 8px; padding: 20px 22px 24px; }
+  .mod .n { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: .14em; color: var(--malachite); }
+  .mod h3 { font-size: 19px; font-weight: 700; line-height: 1.3; }
+  .mod p { font-size: 15px; color: var(--body); }
+  .mod .when { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); }
+  /* Evaluación: gráfico antes / después en CSS */
+  .eval { aspect-ratio: 4 / 3; display: flex; flex-direction: column; justify-content: center; gap: 14px; padding: 24px 26px; background: radial-gradient(110% 90% at 80% 0%, var(--teal) 0%, #000 70%); border-bottom: 1px solid var(--line); }
+  .eval .row { display: grid; grid-template-columns: 64px minmax(0, 1fr) 40px; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--body); }
+  .eval .bar { height: 12px; background: var(--line); position: relative; }
+  .eval .bar i { position: absolute; inset: 0 auto 0 0; background: var(--muted); }
+  .eval .row.after .bar i { background: var(--malachite); }
+  .eval .row.after { color: var(--ink); }
+  .eval .v { font-family: var(--display); font-size: 14px; text-align: right; color: inherit; }
+  .eval .cap { font-size: 12px; color: var(--muted); letter-spacing: 0; text-transform: none; }
+
+  /* Fotos del evento */
+  .duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+  .duo figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .duo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--line); }
+  .duo figcaption { font-size: 14px; color: var(--body); }
+  .duo figcaption b { color: var(--ink); }
+  .wide { margin-top: 24px; position: relative; }
+  .wide img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; border: 1px solid var(--line); }
+
+  /* Ruta de 6 paradas */
+  .route.six { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .stop .t { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); }
+
+  /* Casos 2027 */
+  .cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .cases .hud { display: flex; flex-direction: column; gap: 12px; }
+  .cases .k { font-family: var(--display); font-weight: 700; font-size: 30px; color: var(--malachite); line-height: 1; }
+  .cases h3 { font-size: 19px; font-weight: 700; }
+  .cases .incl li { padding: 9px 0; }
+  .reuse { margin-top: clamp(28px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+  .reuse .box { border: 1px solid var(--line); padding: 22px 24px; display: flex; flex-direction: column; gap: 10px; }
+  .reuse .box.add { border-color: var(--malachite); border-style: dashed; }
+  .reuse h3 { font-size: 16px; font-weight: 700; letter-spacing: .02em; }
+  .reuse p { font-size: 15px; color: var(--body); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips span { font-size: 13px; font-weight: 600; color: var(--ink); border: 1px solid var(--line); background: var(--teal-2); padding: 6px 12px; border-radius: 999px; }
+
+  /* Inversión en 3 bloques */
+  .blocks { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .blocks .hud { display: flex; flex-direction: column; gap: 8px; }
+  .blocks h3 { font-size: 18px; font-weight: 700; }
+  .blocks p { font-size: 14px; color: var(--body); }
+  .blocks .breakdown { max-width: none; }
+  .blocks .breakdown div { font-size: 14px; }
+  .pay { margin-top: clamp(28px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+  .pay .hud { display: flex; flex-direction: column; gap: 6px; }
+
+  @media (max-width: 1000px) { .route.six { grid-template-columns: repeat(3, minmax(0, 1fr)); } .route.six .stop:nth-child(3)::after { display: none; } }
+  @media (max-width: 900px) {
+    .mods, .blocks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .route.six { grid-template-columns: 1fr; }
+    .route.six .stop:nth-child(3)::after { display: block; }
+  }
+  @media (max-width: 640px) {
+    .mods, .blocks, .duo, .cases, .reuse, .pay { grid-template-columns: 1fr; }
+    .duo img { aspect-ratio: 4 / 3; }
+    .wide img { aspect-ratio: 4 / 3; }
+  }
+</style>
+</head>
+<body>
+
+<div class="brandbar">
+  <div class="wrap top">
+    <img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte">
+    <p class="for">Propuesta comercial para <b>María Paula Ramos · Solventum</b> · Noviembre 2026</p>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-main">
+      <p class="label">Ecosistema digital de la experiencia</p>
+      <h1>Máquina del <span>Tiempo</span></h1>
+      <p class="lead">La consola digital que acompaña cada maleta: guía la ruta, controla el tiempo, valida las claves, muestra los resultados en vivo y mide lo aprendido. Las manos siguen en los dispositivos reales.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><strong>6</strong><span>módulos digitales conectados</span></div>
+      <div class="fact"><strong>3</strong><span>casos clínicos con la misma estructura</span></div>
+      <div class="fact"><strong>3 años</strong><span>de infraestructura incluida</span></div>
+      <div class="fact"><strong>28</strong><span>participantes por sesión</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Secciones">
+  <div class="wrap">
+    <a href="#alcance">Alcance</a>
+    <a href="#ecosistema">Ecosistema</a>
+    <a href="#ruta">Ruta</a>
+    <a href="#manos">Aprender haciendo</a>
+    <a href="#autonomia">Autonomía</a>
+    <a href="#casos">Casos 2027</a>
+    <a href="#valor">Valor</a>
+    <a href="#inversion">Inversión</a>
+  </div>
+</nav>
+
+<main>
+  <section id="alcance">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Resumen ejecutivo</p>
+        <h2 class="h2">De una maleta a un ecosistema que se renueva</h2>
+      </div>
+      <div class="scope">
+        <div class="text">
+          <p>Las 3 maletas ya llevan la Máquina del Tiempo a distintas ciudades. Esta propuesta suma la <b>capa digital</b>: seis módulos que acompañan al participante desde 3 días antes del juego hasta la medición final de lo aprendido.</p>
+          <p>El ecosistema se construye sobre el <b>diseño metodológico entregado en agosto</b> y validado por 3 cirujanos de alto prestigio del país. Ese desarrollo conceptual no se cobra de nuevo: aquí se invierte en la plataforma, su operación durante 3 años y <b>dos casos clínicos nuevos para 2027</b>.</p>
+          <p>La versión digital no reemplaza el juego físico ni la práctica con AbThera<sup>™</sup> y Prevena<sup>™</sup>: los ordena, les pone ritmo y deja evidencia de cada sesión.</p>
+        </div>
+        <div class="hud">
+          <dl class="spec">
+            <div><dt class="k">Módulos digitales</dt><dd class="v">6</dd></div>
+            <div><dt class="k">Casos clínicos</dt><dd class="v">1 actual + 2 en 2027</dd></div>
+            <div><dt class="k">Pruebas nuevas por caso</dt><dd class="v">15</dd></div>
+            <div><dt class="k">Infraestructura administrada</dt><dd class="v">3 años</dd></div>
+            <div><dt class="k">Funciona en</dt><dd class="v">Celulares y TV o tablet</dd></div>
+            <div><dt class="k">Sin conexión</dt><dd class="v">La maleta sigue funcionando</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosistema">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Componentes del desarrollo</p>
+        <h2 class="h2">Seis módulos, una sola experiencia</h2>
+        <p class="lead">Cada módulo cumple un momento de la ruta. Todos llevan la identidad de Solventum y se abren desde el celular de los participantes, sin instalar aplicaciones.</p>
+      </div>
+      <ul class="mods">
+        <li class="mod">
+          <div class="shot"><img src="img/pantalla-bitacora.jpg" alt="Pantalla de la Bitácora de Tránsito Temporal" loading="lazy"></div>
+          <div class="body"><span class="n">01</span><span class="when">3 días antes</span><h3>Bitácora digital</h3><p>Llega a cada participante antes del juego. Activa el conocimiento previo con los puntos clave del consenso de manejo del abdomen abierto y genera expectativa.</p></div>
+        </li>
+        <li class="mod">
+          <div class="shot"><img src="img/pantalla-entrada.jpg" alt="Pantalla del Pórtico de Entrada" loading="lazy"></div>
+          <div class="body"><span class="n">02</span><span class="when">Llegada al salón</span><h3>Pórtico de Entrada</h3><p>Registro con código QR en el celular. Cada persona entra a su grupo y recibe su rol, con insignias iguales a las escarapelas de la maleta.</p></div>
+        </li>
+        <li class="mod">
+          <div class="shot"><img src="img/pantalla-sala.jpg" alt="Pantalla de la Sala de Escape con los 4 grupos" loading="lazy"></div>
+          <div class="body"><span class="n">03</span><span class="when">El juego</span><h3>Sala de Escape · 5 estaciones</h3><p>Recorrido obligatorio de la estación 1 a la 5. Valida las claves de los candados, entrega pistas por voz en 3 niveles, anuncia el tiempo y cierra el puntaje de cada estación.</p></div>
+        </li>
+        <li class="mod">
+          <div class="shot"><img src="img/tablero-evento.jpg" alt="Tablet con la pantalla Misión completada y el puntaje de un equipo" loading="lazy"></div>
+          <div class="body"><span class="n">04</span><span class="when">En vivo</span><h3>El Gran Tablero</h3><p>La pantalla del salón: QR de ingreso, ranking de los grupos en tiempo real y anuncio del equipo ganador. Desde aquí el Guía Especialista controla la sesión.</p></div>
+        </li>
+        <li class="mod">
+          <div class="shot"><img src="img/pantalla-memoria-de-la-ruta.jpg" alt="Pantalla de la Memoria de la Ruta" loading="lazy"></div>
+          <div class="body"><span class="n">05</span><span class="when">Después del juego</span><h3>Memoria de la Ruta</h3><p>Cinco postales digitales que resumen el recorrido del paciente y la evidencia de cada decisión. El aprendizaje se queda con el participante.</p></div>
+        </li>
+        <li class="mod">
+          <div class="eval" role="img" aria-label="Ejemplo ilustrativo de la medición antes y después">
+            <div class="row"><span>Antes</span><span class="bar"><i style="width:48%"></i></span><span class="v">48%</span></div>
+            <div class="row after"><span>Después</span><span class="bar"><i style="width:86%"></i></span><span class="v">86%</span></div>
+            <span class="cap">Ejemplo ilustrativo del informe por sesión</span>
+          </div>
+          <div class="body"><span class="n">06</span><span class="when">Antes y después</span><h3>Evaluación del conocimiento</h3><p>El mismo cuestionario de 10 preguntas un día antes y al terminar. Mide manejo clínico, conocimiento de AbThera<sup>™</sup> y Prevena<sup>™</sup> y percepción de marca, con informe por grupo para Solventum.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="ruta">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">La ruta del participante</p>
+        <h2 class="h2">Del aviso previo a la medición final</h2>
+        <p class="lead">El ecosistema extiende la experiencia antes y después de la sesión, sin alargar el tiempo en el salón.</p>
+      </div>
+      <ol class="route six">
+        <li class="stop"><span class="n">T-3</span><span class="t">3 días antes</span><h3>Bitácora</h3><p>Expectativa y conocimiento previo.</p></li>
+        <li class="stop"><span class="n">T-1</span><span class="t">1 día antes</span><h3>Evaluación · antes</h3><p>Punto de partida del grupo.</p></li>
+        <li class="stop"><span class="n">01</span><span class="t">Llegada</span><h3>Pórtico de Entrada</h3><p>Registro, grupo y rol.</p></li>
+        <li class="stop"><span class="n">02</span><span class="t">Juego</span><h3>Sala de Escape</h3><p>5 estaciones en orden, con El Gran Tablero en vivo.</p></li>
+        <li class="stop"><span class="n">03</span><span class="t">Cierre</span><h3>Evaluación · después</h3><p>Lo aprendido, antes de salir del salón.</p></li>
+        <li class="stop"><span class="n">04</span><span class="t">Después</span><h3>Memoria de la Ruta</h3><p>Las 5 postales del recorrido.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="manos">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Aprender haciendo</p>
+        <h2 class="h2">La pantalla guía, las manos aprenden</h2>
+        <p class="lead">No hay simuladores. Los participantes colocan la espuma de AbThera<sup>™</sup> sobre el modelo anatómico y prueban Prevena<sup>™</sup> con el dispositivo real. El ecosistema ordena el paso a paso y deja el producto en el centro.</p>
+      </div>
+      <div class="duo">
+        <figure><img src="img/abthera-manos.jpg" alt="Participantes colocando la espuma de AbThera sobre un modelo anatómico" loading="lazy"><figcaption><b>Estación 3 · AbThera<sup>™</sup>.</b> Ensamble del sistema sobre el modelo, guiado desde la Sala de Escape.</figcaption></figure>
+        <figure><img src="img/prevena.jpg" alt="Unidad Prevena Incision Therapy en exhibición con participantes" loading="lazy"><figcaption><b>Estación 5 · Prevena<sup>™</sup>.</b> El cierre y el cuidado de la incisión con el dispositivo en la mano.</figcaption></figure>
+      </div>
+      <div class="wide"><img src="img/fichas.jpg" alt="Fichas de juego de la Estación 1 y baúl con candado" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="autonomia">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Operación en cualquier ciudad</p>
+        <h2 class="h2">Autonomía para el equipo de Solventum</h2>
+        <p class="lead">Quien viaja con la maleta monta, opera y cierra la sesión sin depender de Simoné ni de soporte técnico en sitio.</p>
+      </div>
+      <div class="two">
+        <div class="hud">
+          <span class="k">Modo Guía</span>
+          <h3>Control de la sesión</h3>
+          <p>Configurar el evento (ciudad y número de grupos), reiniciar entre grupos, mostrar los códigos de ingreso y descargar los resultados. Si no hay conexión, la maleta funciona sola con el instructivo del Guía Especialista.</p>
+        </div>
+        <div class="hud">
+          <span class="k">Kit de autonomía</span>
+          <h3>Manual, video y capacitación</h3>
+          <p>Manual paso a paso, video tutorial grabado de la plataforma y una capacitación virtual de 2 horas para los Guías Especialistas.</p>
+        </div>
+      </div>
+      <div class="two" style="margin-top:24px">
+        <div class="hud">
+          <span class="k">3 años</span>
+          <h3>Infraestructura administrada por Simoné</h3>
+          <p>Base de datos, dominio y hosting pagados y administrados durante 3 años consecutivos, con copias de seguridad y monitoreo. Solventum no tiene que contratar ni pagar servicios tecnológicos aparte.</p>
+        </div>
+        <div class="hud">
+          <span class="k">Datos</span>
+          <h3>Evidencia de cada sesión</h3>
+          <p>Participantes por ciudad, puntajes por grupo, estaciones donde más se detienen y avance del conocimiento. Insumo para reportar el impacto del programa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="casos">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Actualizaciones 2027</p>
+        <h2 class="h2">Dos casos clínicos nuevos, la misma máquina</h2>
+        <p class="lead">El caso actual es el de un hombre de 38 años tras un accidente automovilístico. En 2027 la Máquina del Tiempo viaja con dos pacientes nuevos sobre la misma estructura de 5 estaciones, la misma gráfica y los mismos módulos.</p>
+      </div>
+      <div class="cases">
+        <div class="hud">
+          <span class="k">Caso 2</span>
+          <h3>Nueva historia clínica</h3>
+          <ul class="incl">
+            <li>Nuevo paciente e historia clínica completa</li>
+            <li>15 pruebas nuevas en las 5 estaciones</li>
+            <li>Claves nuevas para los candados</li>
+            <li>Pistas por voz en 3 niveles y cierres de cada estación</li>
+            <li>Bitácora y Memoria de la Ruta adaptadas al paciente</li>
+            <li>Ronda de validación con los cirujanos de Solventum</li>
+            <li>Instructivo del Guía actualizado</li>
+          </ul>
+        </div>
+        <div class="hud">
+          <span class="k">Caso 3</span>
+          <h3>Nueva historia clínica</h3>
+          <ul class="incl">
+            <li>Nuevo paciente e historia clínica completa</li>
+            <li>15 pruebas nuevas en las 5 estaciones</li>
+            <li>Claves nuevas para los candados</li>
+            <li>Pistas por voz en 3 niveles y cierres de cada estación</li>
+            <li>Bitácora y Memoria de la Ruta adaptadas al paciente</li>
+            <li>Ronda de validación con los cirujanos de Solventum</li>
+            <li>Instructivo del Guía actualizado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="reuse">
+        <div class="box">
+          <h3>Lo que ya tienen las maletas y se reutiliza</h3>
+          <div class="chips"><span>Maletas de viaje</span><span>5 baúles</span><span>Temporizadores</span><span>Bafle</span><span>Sombreros</span><span>Escarapelas</span></div>
+          <p>La Evaluación del conocimiento tampoco cambia: sus preguntas no dependen del paciente, así que sirve para los tres casos.</p>
+        </div>
+        <div class="box add">
+          <h3>Adicional · impresión de fichas de juego</h3>
+          <p>Cada caso nuevo lleva fichas impresas propias. Su impresión se cotiza aparte, según el tamaño y la forma de cada pieza, una vez aprobado el contenido del caso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="valor">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Justificación ejecutiva</p>
+        <h2 class="h2">Por qué esta inversión</h2>
+        <p class="lead">Convierte las maletas en un programa de formación que se opera solo, se mide y se renueva con cada caso clínico.</p>
+      </div>
+      <ul class="why">
+        <li><h3>El Guía viaja dentro de la plataforma</h3><p>Pistas, tiempos, claves y puntaje ocurren en pantalla. La sesión depende menos de quién facilita y mantiene el mismo estándar en cada ciudad.</p></li>
+        <li><h3>El mismo rigor clínico en todo el país</h3><p>El contenido validado por cirujanos llega igual a cada sesión, sin variaciones de una ciudad a otra.</p></li>
+        <li><h3>Impacto medible</h3><p>La evaluación antes y después muestra cuánto conocimiento entrega la experiencia y cómo cambia la percepción de AbThera<sup>™</sup>, Prevena<sup>™</sup> y Solventum.</p></li>
+        <li><h3>Un activo que no envejece</h3><p>Dos casos nuevos en 2027 renuevan la experiencia para quienes ya jugaron, reutilizando maletas, baúles y módulos.</p></li>
+        <li><h3>Cero carga tecnológica</h3><p>Tres años de base de datos, dominio y hosting administrados por Simoné, sin contratos adicionales para Solventum.</p></li>
+        <li><h3>Sin pagar dos veces</h3><p>El diseño metodológico ya entregado es la base. La inversión va solo a la plataforma, su operación y los casos nuevos.</p></li>
+      </ul>
+    </div>
+  </section>
+
+<!-- Empresas que han confiado en Simoné -->
+<style>
+.sm-clientes{padding:clamp(48px,7vw,80px) 0;font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;color:#2B2F0C}
+.sm-clientes .sm-in{max-width:1080px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px))}
+.sm-clientes .sm-eb{font-family:"Montserrat",system-ui,sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8B3A12;margin:0}
+.sm-clientes h2{font-family:"Montserrat",system-ui,sans-serif;font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:700;line-height:1.15;margin:10px 0 0;color:inherit;text-wrap:balance}
+.sm-clientes .sm-lead{color:#5D5F4A;margin:14px 0 32px;max-width:62ch;line-height:1.6}
+.sm-clientes ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.sm-clientes li{background:#fff;border:1px solid #E4E1D4;border-radius:10px;height:120px;display:flex;align-items:center;justify-content:center;padding:18px 22px;min-width:0}
+.sm-clientes img{max-width:100%;max-height:70px;width:auto;height:auto;object-fit:contain;display:block}
+@media (max-width:860px){.sm-clientes ul{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.sm-clientes ul{grid-template-columns:1fr 1fr}.sm-clientes li{height:96px;padding:14px}.sm-clientes img{max-height:54px}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-clientes{color:#EEEBDD}:root:not([data-theme="light"]) .sm-clientes .sm-lead{color:#B5B29C}:root:not([data-theme="light"]) .sm-clientes .sm-eb{color:#E58A5A}:root:not([data-theme="light"]) .sm-clientes li{background:#202214;border-color:#34361F}:root:not([data-theme="light"]) .sm-clientes img{filter:brightness(2.2)}}
+:root[data-theme="dark"] .sm-clientes{color:#EEEBDD}:root[data-theme="dark"] .sm-clientes .sm-lead{color:#B5B29C}:root[data-theme="dark"] .sm-clientes .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-clientes li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-clientes img{filter:brightness(2.2)}
+.sm-clientes.sm-dark{color:#F2EEE3}.sm-clientes.sm-dark .sm-lead{color:#B9B6A8}.sm-clientes.sm-dark .sm-eb{color:#F2A03D}
+</style>
+<section class="sm-clientes sm-dark" id="clientes" aria-label="Empresas que han confiado en Simoné">
+  <div class="sm-in">
+    <p class="sm-eb">Experiencia con empresas</p>
+    <h2>Empresas que han confiado en Simoné</h2>
+    <p class="sm-lead">Organizaciones de distintos sectores han vivido con sus equipos nuestras experiencias de desarrollo humano a través del arte.</p>
+    <ul>
+      <li><img src="../clientes-simone/bancoldex.png" alt="Bancóldex"></li>
+      <li><img src="../clientes-simone/nueva-eps.png" alt="Nueva EPS"></li>
+      <li><img src="../clientes-simone/fundacion-santa-fe.png" alt="Fundación Santa Fe de Bogotá"></li>
+      <li><img src="../clientes-simone/imprenta-nacional.png" alt="Imprenta Nacional de Colombia"></li>
+      <li><img src="../clientes-simone/camara-comercio-cartagena.png" alt="Cámara de Comercio de Cartagena · Tejiendo Progreso en Bolívar"></li>
+      <li><img src="../clientes-simone/centro-mayor.png" alt="Centro Mayor Centro Comercial"></li>
+      <li><img src="../clientes-simone/cavipetrol.png" alt="Cavipetrol"></li>
+      <li><img src="../clientes-simone/ajover.png" alt="Ajover"></li>
+      <li><img src="../clientes-simone/tecna.png" alt="Tecna"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<style>
+.sm-testi{padding:0 0 clamp(48px,7vw,80px);font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;color:#2B2F0C}
+.sm-testi .sm-in{max-width:1080px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px))}
+.sm-testi .sm-eb{font-family:"Montserrat",system-ui,sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8B3A12;margin:0}
+.sm-testi h2{font-family:"Montserrat",system-ui,sans-serif;font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:700;line-height:1.15;margin:10px 0 28px;color:inherit;text-wrap:balance}
+.sm-testi ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sm-testi li{background:#fff;border:1px solid #E4E1D4;border-radius:12px;padding:24px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.sm-testi blockquote{margin:0;font-size:1rem;line-height:1.6;position:relative;padding-top:26px}
+.sm-testi blockquote::before{content:"\201C";position:absolute;top:-10px;left:-2px;font-family:Georgia,serif;font-size:3.2rem;line-height:1;color:#B0247F}
+.sm-testi .who{margin-top:auto;font-family:"Montserrat",system-ui,sans-serif;font-size:.86rem;line-height:1.4}
+.sm-testi .who b{display:block;font-weight:700}
+.sm-testi .who span{color:#6A6C55}
+@media (max-width:860px){.sm-testi ul{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.sm-testi ul{grid-template-columns:1fr}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-testi{color:#EEEBDD}:root:not([data-theme="light"]) .sm-testi .sm-eb{color:#E58A5A}:root:not([data-theme="light"]) .sm-testi li{background:#202214;border-color:#34361F}:root:not([data-theme="light"]) .sm-testi .who span{color:#B5B29C}}
+:root[data-theme="dark"] .sm-testi{color:#EEEBDD}:root[data-theme="dark"] .sm-testi .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-testi li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-testi .who span{color:#B5B29C}
+.sm-testi.sm-4 ul{grid-template-columns:1fr 1fr}@media (max-width:560px){.sm-testi.sm-4 ul{grid-template-columns:1fr}}
+.sm-testi.sm-dark{color:#F2EEE3}.sm-testi.sm-dark .sm-eb{color:#F2A03D}.sm-testi.sm-dark li{background:#14170F;border-color:#2C3020}.sm-testi.sm-dark .who span{color:#B9B6A8}
+</style>
+<section class="sm-testi sm-4 sm-dark" id="testimonios" aria-label="Testimonios">
+  <div class="sm-in">
+    <p class="sm-eb">Testimonios</p>
+    <h2>Lo que dicen quienes han vivido la experiencia</h2>
+    <ul>
+      <li><blockquote>Con Simoné pude comunicar de manera objetiva a la comunidad en general las mejores prácticas para prevenir un ACV. Fueron creativos, innovadores y muy fáciles de entender.</blockquote><p class="who"><b>Diana María Castelblanco</b><span>Coordinadora Asistencial Centros de Cuidado Clínico · Fundación Santa Fe de Bogotá</span></p></li>
+      <li><blockquote>Aprendí a cuidar mi cuerpo; me enseñaron de manera didáctica y creativa.</blockquote><p class="who"><b>Visitante · Expreso de la Salud</b><span>Fundación Santa Fe de Bogotá</span></p></li>
+      <li><blockquote>Superaron nuestras expectativas: encontraron el equilibrio entre las necesidades comerciales y las necesidades humanas que tenía nuestro equipo del call center.</blockquote><p class="who"><b>Katherine Arenas</b><span>Líder Centro de Servicio · Ajover - Darnell</span></p></li>
+      <li><blockquote>Una experiencia de reflexión, empoderamiento y llamado a sentir de una forma diferente. Nos ayuda a reconocernos, valorar lo que nos rodea y motivarnos para el trabajo en equipo.</blockquote><p class="who"><b>Diana María Álvarez</b><span>Productos Alimenticios Doria</span></p></li>
+    </ul>
+  </div>
+</section>
+  <section id="inversion">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Inversión</p>
+        <h2 class="h2">Inversión total del proyecto</h2>
+      </div>
+      <div class="invest">
+        <div class="total">
+          <span class="amount">$45.700.000</span>
+          <span class="cur">Pesos colombianos (COP) + IVA · ecosistema completo, 3 años de infraestructura y 2 casos clínicos nuevos</span>
+        </div>
+        <ul class="incl">
+          <li>Desarrollo de los 6 módulos con identidad Solventum y el caso clínico actual</li>
+          <li>Modo Guía para operar la sesión y kit de autonomía con capacitación de 2 horas</li>
+          <li>Base de datos, dominio y hosting pagados y administrados por 3 años</li>
+          <li>Casos clínicos 2 y 3 para 2027: 15 pruebas nuevas y claves nuevas de candados por caso</li>
+        </ul>
+      </div>
+
+      <div class="blocks">
+        <div class="hud">
+          <span class="opt-label">Bloque 1</span>
+          <h3>Desarrollo del ecosistema</h3>
+          <span class="opt-amount">$27.000.000 <small>+ IVA</small></span>
+          <dl class="breakdown">
+            <div><dt>Bitácora digital</dt><dd>$2.200.000</dd></div>
+            <div><dt>Pórtico de Entrada</dt><dd>$2.400.000</dd></div>
+            <div><dt>Sala de Escape · 5 estaciones</dt><dd>$9.800.000</dd></div>
+            <div><dt>El Gran Tablero</dt><dd>$2.800.000</dd></div>
+            <div><dt>Memoria de la Ruta</dt><dd>$1.800.000</dd></div>
+            <div><dt>Evaluación del conocimiento</dt><dd>$3.800.000</dd></div>
+            <div><dt>Identidad, Modo Guía y kit de autonomía</dt><dd>$4.200.000</dd></div>
+          </dl>
+        </div>
+        <div class="hud">
+          <span class="opt-label">Bloque 2</span>
+          <h3>Infraestructura por 3 años</h3>
+          <span class="opt-amount">$4.700.000 <small>+ IVA</small></span>
+          <p>Base de datos en la nube, dominio y hosting durante 3 años consecutivos. Simoné asume los pagos (incluida la variación del dólar), las copias de seguridad y el monitoreo.</p>
+        </div>
+        <div class="hud">
+          <span class="opt-label">Bloque 3</span>
+          <h3>2 casos clínicos nuevos · 2027</h3>
+          <span class="opt-amount">$14.000.000 <small>+ IVA</small></span>
+          <dl class="breakdown">
+            <div><dt>Caso 2</dt><dd>$7.000.000</dd></div>
+            <div><dt>Caso 3</dt><dd>$7.000.000</dd></div>
+          </dl>
+          <p>Valor por caso al contratar los dos en este paquete. Un caso contratado por separado: $8.500.000 + IVA.</p>
+        </div>
+      </div>
+
+      <div class="pay">
+        <div class="hud">
+          <span class="opt-label">Forma de pago</span>
+          <ul class="incl">
+            <li>Desarrollo: 50 % al aprobar la propuesta y 50 % a la entrega</li>
+            <li>Infraestructura: 100 % al aprobar, por ser un pago anticipado de 3 años</li>
+            <li>Cada caso clínico de 2027: 100 % contra entrega</li>
+          </ul>
+        </div>
+        <div class="hud">
+          <span class="opt-label">Adicional · no incluido en el valor</span>
+          <ul class="incl">
+            <li>Impresión de las fichas de juego de cada caso nuevo, según su tamaño y forma</li>
+            <li>Televisor o tablet para El Gran Tablero y celulares de los participantes, que aporta Solventum</li>
+            <li>Cambios de gráfica, estaciones nuevas u otros dispositivos</li>
+          </ul>
+        </div>
+      </div>
+      <p class="phase">Esta propuesta complementa la de <a href="../solventum-maquina-del-tiempo-kits/" style="color:var(--malachite-soft)">kits físicos de la Máquina del Tiempo</a>. La metodología y la plataforma son propiedad de Simoné; Solventum recibe la licencia de uso durante la vigencia de la infraestructura.</p>
+    </div>
+  </section>
+</main>
+
+<!-- Datos de la oferta (fecha de emisión, NIT, teléfono, validez) -->
+<style>
+.sm-ficha{border-top:1px solid rgba(53,58,14,.16);background:#F4EFE3;color:#2B2F0C;font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif}
+.sm-ficha .sm-in{max-width:1080px;margin:0 auto;padding:28px max(20px,env(safe-area-inset-left,0px));display:flex;flex-wrap:wrap;align-items:center;gap:18px 36px}
+.sm-ficha img{height:52px;width:auto;background:#fff;border-radius:8px;padding:6px 10px;display:block}
+.sm-ficha dl{display:flex;flex-wrap:wrap;gap:12px 32px;margin:0}
+.sm-ficha dl > div{min-width:0}
+.sm-ficha dt{font-family:"Montserrat",system-ui,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6A6C55;margin:0}
+.sm-ficha dd{margin:2px 0 0;font-family:"Montserrat",system-ui,sans-serif;font-weight:600;font-size:.95rem;font-variant-numeric:tabular-nums}
+.sm-ficha dd small{font-weight:500;color:#6A6C55;font-size:.8rem}
+.sm-ficha a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-ficha{background:#232515;color:#EEEBDD;border-top-color:#34361F}:root:not([data-theme="light"]) .sm-ficha dt,:root:not([data-theme="light"]) .sm-ficha dd small{color:#B5B29C}}
+:root[data-theme="dark"] .sm-ficha{background:#232515;color:#EEEBDD;border-top-color:#34361F}
+:root[data-theme="dark"] .sm-ficha dt,:root[data-theme="dark"] .sm-ficha dd small{color:#B5B29C}
+.sm-ficha .sm-notas{flex-basis:100%;border-top:1px solid rgba(53,58,14,.16);padding-top:16px}
+.sm-ficha .sm-notas p.t{font-family:"Montserrat",system-ui,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6A6C55;margin:0 0 8px}
+.sm-ficha .sm-notas ul{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:.88rem;line-height:1.5;max-width:80ch}
+</style>
+<aside class="sm-ficha" aria-label="Datos de la oferta">
+  <div class="sm-in">
+    <img src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte">
+    <dl>
+      <div><dt>Fecha de emisión</dt><dd>10 de noviembre de 2026</dd></div>
+      <div><dt>NIT</dt><dd>901.838.283-3</dd></div>
+      <div><dt>Teléfono</dt><dd><a href="tel:+573217738039">321 773 8039</a></dd></div>
+      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 10 de diciembre de 2026</small></dd></div>
+    </dl>
+    <div class="sm-notas">
+      <p class="t">Notas finales</p>
+      <ul>
+        <li>Somos facturadores electrónicos y responsables de IVA.</li>
+        <li>Nos acogemos a la norma de pagos a 30 días para pymes. De ser necesario, enviamos la carta de certificación Mipyme.</li>
+        <li>Pertenecemos al Régimen Simple de Tributación, por lo que la única retención que deben practicarnos es un reteIVA del 15%.</li>
+      </ul>
+    </div>
+  </div>
+</aside>
+<footer>
+  <div class="wrap">
+    <span>Simoné · Nathalia Velasco</span>
+    <span>nathalia@experienciasimone.com · experienciasimone@gmail.com</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var links = document.querySelectorAll('nav.toc a');
+    if (!('IntersectionObserver' in window)) return;
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          links.forEach(function (a) { a.classList.remove('on'); });
+          var a = map[e.target.id];
+          if (a) a.classList.add('on');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { obs.observe(s); });
+  })();
+</script>
+</body>
+</html>
