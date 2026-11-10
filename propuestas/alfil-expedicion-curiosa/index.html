@@ -573,6 +573,39 @@ footer{padding-block:32px 48px;font-size:.85rem;color:var(--muted)}
   </div>
 </section>
 
+<!-- Testimonios -->
+<style>
+.sm-testi{padding:0 0 clamp(48px,7vw,80px);font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;color:#2B2F0C}
+.sm-testi .sm-in{max-width:1080px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px))}
+.sm-testi .sm-eb{font-family:"Montserrat",system-ui,sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8B3A12;margin:0}
+.sm-testi h2{font-family:"Montserrat",system-ui,sans-serif;font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:700;line-height:1.15;margin:10px 0 28px;color:inherit;text-wrap:balance}
+.sm-testi ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sm-testi li{background:#fff;border:1px solid #E4E1D4;border-radius:12px;padding:24px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.sm-testi blockquote{margin:0;font-size:1rem;line-height:1.6;position:relative;padding-top:26px}
+.sm-testi blockquote::before{content:"\201C";position:absolute;top:-10px;left:-2px;font-family:Georgia,serif;font-size:3.2rem;line-height:1;color:#B0247F}
+.sm-testi .who{margin-top:auto;font-family:"Montserrat",system-ui,sans-serif;font-size:.86rem;line-height:1.4}
+.sm-testi .who b{display:block;font-weight:700}
+.sm-testi .who span{color:#6A6C55}
+@media (max-width:860px){.sm-testi ul{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.sm-testi ul{grid-template-columns:1fr}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-testi{color:#EEEBDD}:root:not([data-theme="light"]) .sm-testi .sm-eb{color:#E58A5A}:root:not([data-theme="light"]) .sm-testi li{background:#202214;border-color:#34361F}:root:not([data-theme="light"]) .sm-testi .who span{color:#B5B29C}}
+:root[data-theme="dark"] .sm-testi{color:#EEEBDD}:root[data-theme="dark"] .sm-testi .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-testi li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-testi .who span{color:#B5B29C}
+.sm-testi.sm-4 ul{grid-template-columns:1fr 1fr}@media (max-width:560px){.sm-testi.sm-4 ul{grid-template-columns:1fr}}
+.sm-testi.sm-dark{color:#F2EEE3}.sm-testi.sm-dark .sm-eb{color:#F2A03D}.sm-testi.sm-dark li{background:#14170F;border-color:#2C3020}.sm-testi.sm-dark .who span{color:#B9B6A8}
+</style>
+<section class="sm-testi sm-4" id="testimonios" aria-label="Testimonios">
+  <div class="sm-in">
+    <p class="sm-eb">Testimonios</p>
+    <h2>Lo que dicen quienes han vivido la experiencia</h2>
+    <ul>
+      <li><blockquote>Aprendimos a hablar, expresar y pensar las emociones desde una experiencia creativa muy enriquecedora para niños y adultos. No sentimos el tiempo pasar.</blockquote><p class="who"><b>Ana María Jiménez Daza</b><span>Liceo Católico Campestre</span></p></li>
+      <li><blockquote>Nathalia se distingue por ser una excelente profesional, amable y empática. Contribuyó a recrear mi motivación e imaginación.</blockquote><p class="who"><b>Martha Carolina Aguilera</b><span>Jardín Infantil Los Pequeños Intelectuales</span></p></li>
+      <li><blockquote>Me brindó herramientas que puedo usar no solo en mi día a día docente, sino también en mi entorno. Fue una manera de abrir mis ojos a cosas que no conocía.</blockquote><p class="who"><b>Yadyra Milena Medina</b><span>Docente · Colegio El Mundo Joven</span></p></li>
+      <li><blockquote>Me cambió la perspectiva frente a cómo afrontar los cambios y encontrar metodologías para ser mejores.</blockquote><p class="who"><b>Donny Stewart Londoño</b><span>Docente · Colegio El Mundo Joven</span></p></li>
+    </ul>
+  </div>
+</section>
+
 <section id="inversion">
   <div class="wrap">
     <div class="invest">
