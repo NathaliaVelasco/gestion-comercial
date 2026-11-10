@@ -135,6 +135,21 @@ section{padding-block:clamp(48px,7vw,84px)}
 .bonus .tagfree{font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--orange);color:#353A0E;border-radius:999px;padding:5px 12px;white-space:nowrap}
 
 /* Inversión */
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.optcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px 24px;min-width:0;display:flex;flex-direction:column}
+.optcard.rec{background:var(--olive);color:var(--on-dark);border-color:var(--olive)}
+.otag{font-family:var(--display);font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--magenta)}
+.optcard.rec .otag{color:var(--orange)}
+.odur{font-family:var(--display);font-weight:700;margin-top:10px}
+.odur small{font-weight:500;opacity:.75;font-size:.85rem}
+.oprice{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.2rem);font-variant-numeric:tabular-nums;display:block;line-height:1.1;margin-top:8px}
+.oprice small{font-size:.95rem;font-weight:500;opacity:.8}
+.optcard ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px;font-size:.94rem;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent);padding-top:16px}
+.optcard li{display:flex;gap:10px;align-items:baseline}
+.optcard li::before{content:"✓";font-weight:700;color:var(--orange)}
+.optcard li.no{opacity:.7}
+.optcard li.no::before{content:"–";color:inherit}
+@media (max-width:860px){.opts{grid-template-columns:1fr}}
 .invest{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:stretch}
 .invest > *{min-width:0}
 .tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
@@ -220,7 +235,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <ul class="facts">
       <li><b>2 días</b>de experiencia</li>
       <li><b>70</b>participantes</li>
-      <li><b>3 horas</b>por tarde · 2:00 a 5:00 p.m.</li>
+      <li><b>2 o 3 horas</b>por tarde · desde las 2:00 p.m.</li>
       <li><b>4 temas</b>de desarrollo humano</li>
     </ul>
     <div class="strip" aria-hidden="true">
@@ -259,7 +274,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <article class="day">
           <p class="num">Día 1</p>
           <p class="people">40 <small>personas</small></p>
-          <p class="time">2:00 a 5:00 p.m.</p>
+          <p class="time">Desde las 2:00 p.m. · 2 o 3 horas según la opción</p>
           <p class="combo">Combinación sugerida:</p>
           <ul>
             <li>Una Fábrica de Animales</li>
@@ -270,7 +285,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <article class="day">
           <p class="num">Día 2</p>
           <p class="people">30 <small>personas</small></p>
-          <p class="time">2:00 a 5:00 p.m.</p>
+          <p class="time">Desde las 2:00 p.m. · 2 o 3 horas según la opción</p>
           <p class="combo">Combinación sugerida:</p>
           <ul>
             <li>Retratos Dirigidos</li>
@@ -287,7 +302,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="sec-head">
         <p class="eyebrow">Así transcurre cada tarde</p>
         <h2>De soltar la tensión a crear juntos</h2>
-        <p>La tarde va de lo individual a lo colectivo: primero cada persona se encuentra consigo misma, luego el grupo construye algo que nadie podría hacer solo.</p>
+        <p>La tarde va de lo individual a lo colectivo: primero cada persona se encuentra consigo misma, luego el grupo construye algo que nadie podría hacer solo. Este es el recorrido de una tarde de 3 horas (opciones 1 y 2); en la opción de 2 horas se mantienen los mismos momentos en un tiempo más concentrado.</p>
       </div>
       <ol class="agenda">
         <li><span class="h">2:00 p.m.</span><div><b>Bienvenida y activación</b><span class="d">Respiración, movimiento y un primer juego en equipo para romper el hielo y dejar afuera el ritmo del día.</span><span class="th">Manejo del estrés · Comunicación</span></div></li>
@@ -427,7 +442,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="incl">
         <div><span class="dot" style="background:var(--orange)"></span><h3>Todos los materiales de arte</h3><p>Pinturas, papeles, pinceles, plastilina, lana y todo lo necesario para cada proyecto, en los dos días.</p></div>
         <div><span class="dot" style="background:var(--magenta)"></span><h3>Equipo de 3 mediadores cada día</h3><p>Mediación del conocimiento y acompañamiento cercano para que cada participante esté atendido.</p></div>
-        <div><span class="dot" style="background:var(--rust)"></span><h3>Registro fotográfico</h3><p>Fotografías de las dos tardes: las personas, el proceso y las obras creadas.</p></div>
+        <div><span class="dot" style="background:var(--rust)"></span><h3>Registro fotográfico</h3><p>Fotografías de las dos tardes: las personas, el proceso y las obras creadas. Incluido en la Opción 1.</p></div>
         <div><span class="dot" style="background:var(--olive)"></span><h3>Memorias del evento</h3><p>Documento que recoge lo vivido, los aprendizajes y las reflexiones del grupo.</p></div>
       </div>
       <div class="bonus">
@@ -441,26 +456,45 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Inversión</p>
-        <h2>Un solo valor para los dos días</h2>
+        <h2>Tres opciones para elegir la que mejor se ajusta</h2>
+        <p>Las tres opciones son para 70 participantes en dos días: 40 personas el día 1 y 30 personas el día 2.</p>
       </div>
-      <div class="invest">
-        <div class="tablebox">
-          <table>
-            <thead><tr><th>Día</th><th>Participantes</th><th>Horario</th></tr></thead>
-            <tbody>
-              <tr><td class="n">Día 1</td><td>40 personas</td><td>2:00 a 5:00 p.m.</td></tr>
-              <tr><td class="n">Día 2</td><td>30 personas</td><td>2:00 a 5:00 p.m.</td></tr>
-              <tr class="tot"><td>Total</td><td>70 personas</td><td>6 horas de experiencia</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="price">
-          <p class="lbl">Inversión total · 70 participantes</p>
-          <span class="big">$7.875.000 <small>+ IVA</small></span>
-          <p>Equivale a $112.500 + IVA por participante. Incluye materiales de arte, equipo de 3 mediadores cada día, registro fotográfico y memorias del evento.</p>
-        </div>
+      <div class="opts">
+        <article class="optcard rec">
+          <p class="otag">Opción 1 · Experiencia completa</p>
+          <p class="odur">3 horas por día <small>· 6 horas en total</small></p>
+          <span class="oprice">$7.875.000 <small>+ IVA</small></span>
+          <ul>
+            <li>Materiales de arte</li>
+            <li>Equipo de 3 mediadores cada día</li>
+            <li>Memorias del evento</li>
+            <li>Registro fotográfico</li>
+          </ul>
+        </article>
+        <article class="optcard">
+          <p class="otag">Opción 2</p>
+          <p class="odur">3 horas por día <small>· 6 horas en total</small></p>
+          <span class="oprice">$5.845.000 <small>+ IVA</small></span>
+          <ul>
+            <li>Materiales de arte</li>
+            <li>Equipo de 3 mediadores cada día</li>
+            <li>Memorias del evento</li>
+            <li class="no">No incluye registro fotográfico</li>
+          </ul>
+        </article>
+        <article class="optcard">
+          <p class="otag">Opción 3</p>
+          <p class="odur">2 horas por día <small>· 4 horas en total</small></p>
+          <span class="oprice">$4.895.000 <small>+ IVA</small></span>
+          <ul>
+            <li>Materiales de arte</li>
+            <li>Equipo de 3 mediadores cada día</li>
+            <li>Memorias del evento</li>
+            <li class="no">No incluye registro fotográfico</li>
+          </ul>
+        </article>
       </div>
-      <p class="note">Valores en pesos colombianos. Las mesas de trabajo de arte se incluyen sin costo adicional si el espacio las requiere.</p>
+      <p class="note">Valores en pesos colombianos para 70 participantes. En todas las opciones, las mesas de trabajo de arte se incluyen sin costo adicional si el espacio las requiere.</p>
     </div>
   </section>
 
