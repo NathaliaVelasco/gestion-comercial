@@ -126,6 +126,18 @@
   .incl li::before { content: ""; flex: none; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; background: var(--celeste-deep); }
   .incl b { color: var(--olive); }
 
+  .scale { margin-top: clamp(36px, 5vw, 56px); }
+  .scale h3 { font-size: 20px; font-weight: 700; margin: 6px 0 4px; }
+  .scale > p { font-size: 15px; color: var(--text); margin-bottom: 16px; }
+  .scale table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 16px; overflow: hidden; font-variant-numeric: tabular-nums; }
+  .scale th, .scale td { padding: 13px 16px; text-align: right; font-size: 15px; border-bottom: 1px solid var(--line); }
+  .scale th:first-child, .scale td:first-child { text-align: left; }
+  .scale thead th { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .scale tbody tr:last-child td { border-bottom: 0; }
+  .scale td:nth-child(2) { font-weight: 700; color: var(--olive); }
+  .scale tr.base td { background: #EAF5FB; }
+  .scale tr.base td:first-child b::after { content: "Propuesta"; margin-left: 8px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--celeste-deep); }
+  @media (max-width: 640px) { .scale th, .scale td { padding: 11px 8px; font-size: 13px; } .scale thead th { font-size: 10px; letter-spacing: .06em; } .scale tr.base td:first-child b::after { display: block; margin: 2px 0 0; } }
   footer { border-top: 1px solid var(--line); padding-block: 32px; font-size: 13px; color: var(--muted); }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
   footer .logo { width: 140px; }
@@ -539,6 +551,21 @@
             <li><span><b>Control de calidad</b> de cada árbol antes de la entrega.</span></li>
           </ul>
         </div>
+      </div>
+      <div class="scale">
+        <p class="label">Escala de precios</p>
+        <h3>Valor según la cantidad de árboles</h3>
+        <p>Si USKO necesita menos unidades, este es el valor total con la misma ficha técnica, tiempos y forma de pago.</p>
+        <table>
+          <thead><tr><th scope="col">Cantidad</th><th scope="col">Valor antes de IVA</th><th scope="col">Total con IVA</th><th scope="col">Anticipo 30%</th></tr></thead>
+          <tbody>
+            <tr class="base"><td><b>9 árboles</b></td><td>$4.276.000</td><td>$5.088.440</td><td>$1.282.800</td></tr>
+            <tr><td><b>8 árboles</b></td><td>$4.075.000</td><td>$4.849.250</td><td>$1.222.500</td></tr>
+            <tr><td><b>7 árboles</b></td><td>$3.885.000</td><td>$4.623.150</td><td>$1.165.500</td></tr>
+            <tr><td><b>6 árboles</b></td><td>$3.680.000</td><td>$4.379.200</td><td>$1.104.000</td></tr>
+            <tr><td><b>5 árboles</b></td><td>$3.050.000</td><td>$3.629.500</td><td>$915.000</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
