@@ -180,6 +180,13 @@ tr.tot td{background:var(--tint);font-family:var(--display);font-weight:800}
 .lead-card .creds li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);flex:none;transform:translateY(-1px)}
 .lead-card .ph{align-self:start}
 @media (max-width:860px){.pros{grid-template-columns:1fr 1fr}.lead-card .creds{grid-template-columns:1fr}}
+.clients{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.clients li{background:var(--surface);border:1px solid var(--line);border-radius:10px;height:120px;display:flex;align-items:center;justify-content:center;padding:18px 22px;min-width:0}
+.clients img{max-width:100%;max-height:70px;width:auto;height:auto;object-fit:contain;display:block}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .clients img{filter:brightness(2.2)}}
+:root[data-theme="dark"] .clients img{filter:brightness(2.2)}
+@media (max-width:860px){.clients{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.clients{grid-template-columns:1fr 1fr}.clients li{height:96px;padding:14px}.clients img{max-height:54px}}
 .lead-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,44px)}
 .lead-card > *{min-width:0}
 .lead-card .ph{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--orange)}
@@ -234,6 +241,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <a href="#proyectos">Proyectos</a>
     <a href="#personas">Así se vive</a>
     <a href="#incluye">Qué incluye</a>
+    <a href="#clientes">Clientes</a>
     <a href="#inversion">Inversión</a>
     <a href="#equipo">Equipo</a>
     <a href="#contacto">Contacto</a>
@@ -463,6 +471,28 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <span class="tagfree">Sin costo adicional</span>
         <p><b>Mesas de trabajo de arte.</b> Si el espacio no cuenta con ellas, las llevamos nosotras.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="clientes">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Experiencia con empresas</p>
+        <h2>Empresas que han confiado en Simoné</h2>
+        <p>Organizaciones de distintos sectores han vivido con sus equipos nuestras experiencias de desarrollo humano a través del arte.</p>
+      </div>
+      <ul class="clients">
+        <li><img src="img/clientes/bancoldex.png" alt="Bancóldex"></li>
+        <li><img src="img/clientes/nueva-eps.png" alt="Nueva EPS"></li>
+        <li><img src="img/clientes/fundacion-santa-fe.png" alt="Fundación Santa Fe de Bogotá"></li>
+        <li><img src="img/clientes/imprenta-nacional.png" alt="Imprenta Nacional de Colombia"></li>
+        <li><img src="img/clientes/camara-comercio-cartagena.png" alt="Cámara de Comercio de Cartagena · Tejiendo Progreso en Bolívar"></li>
+        <li><img src="img/clientes/centro-mayor.png" alt="Centro Mayor Centro Comercial"></li>
+        <li><img src="img/clientes/cavipetrol.png" alt="Cavipetrol"></li>
+        <li><img src="img/clientes/ajover.png" alt="Ajover"></li>
+        <li><img src="img/clientes/tecna.png" alt="Tecna"></li>
+        <li><img src="img/clientes/evoforma.png" alt="Evoforma"></li>
+      </ul>
     </div>
   </section>
 
