@@ -171,6 +171,15 @@ tr.tot td{background:var(--tint);font-family:var(--display);font-weight:800}
 .note{font-size:.9rem;color:var(--muted);margin-top:16px;max-width:70ch}
 
 /* Mediadora líder */
+.pros{list-style:none;padding:0;margin:0 0 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pros li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;min-width:0;display:flex;flex-direction:column;gap:4px}
+.pros b{font-family:var(--display);font-size:1.02rem}
+.pros li > span:last-child{font-size:.9rem;color:var(--muted)}
+.lead-card .creds{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:.93rem}
+.lead-card .creds li{display:flex;gap:10px;align-items:baseline;opacity:.95}
+.lead-card .creds li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);flex:none;transform:translateY(-1px)}
+.lead-card .ph{align-self:start}
+@media (max-width:860px){.pros{grid-template-columns:1fr 1fr}.lead-card .creds{grid-template-columns:1fr}}
 .lead-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,44px)}
 .lead-card > *{min-width:0}
 .lead-card .ph{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--orange)}
@@ -226,6 +235,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <a href="#personas">Así se vive</a>
     <a href="#incluye">Qué incluye</a>
     <a href="#inversion">Inversión</a>
+    <a href="#equipo">Equipo</a>
     <a href="#contacto">Contacto</a>
   </div>
 </nav>
@@ -461,7 +471,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="sec-head">
         <p class="eyebrow">Inversión</p>
         <h2>Cuatro opciones para elegir la que mejor se ajusta</h2>
-        <p>Todas las opciones son para 70 participantes en dos días: 40 personas el día 1 y 30 personas el día 2. Están organizadas por duración: las tres primeras son de 3 horas por día y la última de 2 horas. La opción 3 trabaja los mismos temas desde el teatro, la expresión corporal y el movimiento.</p>
+        <p>Cada opción la lidera un equipo de profesionales en teatro, danza contemporánea, diseño industrial y artes plásticas, con una metodología de educación experiencial. Todas las opciones son para 70 participantes en dos días: 40 personas el día 1 y 30 personas el día 2. Están organizadas por duración: las tres primeras son de 3 horas por día y la última de 2 horas. La opción 3 trabaja los mismos temas desde el teatro, la expresión corporal y el movimiento.</p>
       </div>
       <div class="opts">
         <article class="optcard rec">
@@ -511,25 +521,41 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </div>
       <p class="note">Valores en pesos colombianos para 70 participantes. En las opciones 1, 2 y 4, las mesas de trabajo de arte se incluyen sin costo adicional si el espacio las requiere.</p>
       <ul class="onotes">
-        <li><b>Memorias del evento:</b> álbum de fotos de las actividades, con 2 testimonios de la experiencia.</li>
+        <li><b>Memorias del evento (solo en la Opción 1):</b> álbum de fotos de las actividades, con 2 testimonios de la experiencia.</li>
         <li><b>En todas las opciones</b>, al final compartimos la presentación de la actividad en un archivo PDF, como registro de los temas tratados.</li>
         <li><b>Lista de asistencia:</b> si la necesitan, la levantamos con un código QR enlazado a un formulario en línea. Al final les entregamos el formulario y la información en un archivo de Excel.</li>
       </ul>
     </div>
   </section>
 
-  <section>
+  <section id="equipo">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Mediadora líder</p>
-        <h2>Mediación del conocimiento desde la educación experiencial</h2>
+        <p class="eyebrow">Quiénes acompañan</p>
+        <h2>Profesionales de las artes, no recreadores</h2>
+        <p>En Simoné no hablamos de talleristas ni de capacitadores: somos mediadores del conocimiento, porque trabajamos bajo el modelo de educación experiencial. Cada experiencia la diseña y la guía un equipo de profesionales formados en las artes y el diseño.</p>
       </div>
+      <ul class="pros">
+        <li><span class="dot" style="background:var(--magenta)"></span><b>Teatro</b><span>Profesionales en artes escénicas</span></li>
+        <li><span class="dot" style="background:var(--orange)"></span><b>Danza contemporánea</b><span>Cuerpo, movimiento y expresión</span></li>
+        <li><span class="dot" style="background:var(--rust)"></span><b>Diseño industrial</b><span>Pensamiento creativo y construcción</span></li>
+        <li><span class="dot" style="background:var(--olive)"></span><b>Artes plásticas</b><span>Técnica, color y lenguaje visual</span></li>
+      </ul>
+
       <div class="lead-card">
         <img class="ph" src="img/nathalia.jpg" alt="Nathalia Andrea Velasco">
         <div>
-          <h3>Nathalia Andrea Velasco</h3>
           <p class="role">Mediadora líder · Directora de Simoné</p>
-          <p class="bio">En Simoné no hablamos de talleristas ni de capacitadores: somos mediadores del conocimiento, porque trabajamos bajo el modelo de educación experiencial. Nathalia diseña y guía cada experiencia; en este evento la acompaña un equipo de dos o tres mediadores cada día, según la opción, para que los grupos de 40 y 30 participantes reciban atención cercana durante toda la tarde.</p>
+          <h3 style="margin-top:6px">Nathalia Andrea Velasco</h3>
+          <p class="bio"><b>15 años de experiencia en educación experiencial.</b> Diseña y guía cada experiencia; en este evento la acompaña un equipo de dos o tres mediadores cada día, según la opción.</p>
+          <ul class="creds">
+            <li>Diseñadora gráfica con estudios en artes plásticas</li>
+            <li>Profesional en estudios sociohumanísticos y gestión cultural</li>
+            <li>Aspirante a la maestría en educación</li>
+            <li>Arteterapeuta en formación</li>
+            <li>Estudios en salud emocional en el trabajo</li>
+            <li>Mentora de procesos de innovación</li>
+          </ul>
           <a href="https://www.linkedin.com/in/nathalia-andrea-velasco-duarte/" target="_blank" rel="noopener">Ver perfil en LinkedIn →</a>
         </div>
       </div>
