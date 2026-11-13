@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Innovation Day · Solventum</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Cotización de Simoné para Solventum: video de memoria y stand de 4 cuadrantes para el Innovation Day.">
+<meta property="og:title" content="Innovation Day · Cotización Simoné para Solventum">
+<meta property="og:description" content="Video de memoria de 5 minutos y stand de 4 cuadrantes. 26 de noviembre de 2026, Hotel Marriott, Bogotá.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: one scrolling proposal on a dark clinical ground; HUD corner brackets mark the key panels; the route E1→E5 is the one drawn sequence; the investment closes the page.
+     Single dark look by choice: Solventum brand (Deep Teal, Malachite, black). */
+  :root {
+    --void: #050B0A;
+    --teal: #01332B;
+    --teal-2: #0A2621;
+    --malachite: #05DD4D;
+    --malachite-soft: #7FEFA4;
+    --ink: #EEF4F2;
+    --body: #B9C7C3;
+    --muted: #82948F;
+    --line: #1C3A34;
+    --display: 'Orbitron', 'Eurostile', 'Arial Black', sans-serif;
+    --text: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    --wrap: 1120px;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+  body { margin: 0; background: var(--void); color: var(--ink); font-family: var(--text); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  h1, h2, h3, p, ul, ol { margin: 0; }
+  h1, h2, h3 { text-wrap: balance; }
+  ul, ol { padding: 0; list-style: none; }
+  sup { font-size: .55em; vertical-align: super; line-height: 0; }
+
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  section { padding-block: clamp(56px, 8vw, 104px); scroll-margin-top: 56px; border-top: 1px solid var(--line); }
+  .label { font-size: 12px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--malachite); }
+  .h2 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.15; letter-spacing: .01em; }
+  .lead { font-size: clamp(17px, 1.8vw, 20px); color: var(--body); max-width: 62ch; }
+  .head { display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(28px, 4vw, 48px); }
+
+  /* HUD frame: corner brackets */
+  .hud { position: relative; background: var(--teal-2); padding: 26px 28px; }
+  .hud::before, .hud::after { content: ""; position: absolute; width: 18px; height: 18px; border: 2px solid var(--malachite); pointer-events: none; }
+  .hud::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+  .hud::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+  /* Hero */
+  .hero { border-top: 0; padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 88px); background: radial-gradient(120% 90% at 85% 0%, var(--teal) 0%, var(--void) 62%); }
+  .hero .wrap { display: flex; flex-direction: column; gap: clamp(32px, 5vw, 56px); }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .brandbar { background: #F7F2E8; }
+  .brandbar .top { padding-block: 18px; }
+  .brandbar .for { color: #5A5C3A; }
+  .brandbar .for b { color: #373A0E; }
+  .logo { width: clamp(170px, 20vw, 240px); height: auto; }
+  .for { font-size: 14px; color: var(--muted); }
+  .for b { color: var(--ink); font-weight: 600; }
+  .hero-main { display: flex; flex-direction: column; gap: 20px; }
+  .hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 8vw, 92px); line-height: 1; letter-spacing: .01em; }
+  .hero h1 span { color: var(--malachite); }
+  .hero .lead { font-size: clamp(18px, 2.1vw, 23px); color: var(--ink); max-width: 46ch; }
+  .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+  .fact { padding: 18px 16px 0 0; display: flex; flex-direction: column; gap: 2px; }
+  .fact + .fact { padding-left: 16px; border-left: 1px solid var(--line); }
+  .fact strong { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); color: var(--malachite); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .fact span { font-size: 13px; color: var(--body); line-height: 1.35; }
+
+  /* Nav */
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--void); }
+  nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--void); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  nav.toc .wrap { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+  nav.toc .wrap::-webkit-scrollbar { display: none; }
+  nav.toc a { flex: none; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 15px 12px; border-bottom: 2px solid transparent; }
+  nav.toc a:hover, nav.toc a.on { color: var(--ink); border-bottom-color: var(--malachite); }
+  a:focus-visible { outline: 2px solid var(--malachite); outline-offset: 2px; }
+
+  /* Alcance */
+  .scope { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+  .scope p + p { margin-top: 16px; }
+  .scope .text p { color: var(--body); max-width: 60ch; }
+  .scope .text b { color: var(--ink); }
+  .spec { display: flex; flex-direction: column; }
+  .spec div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .spec div:last-child { border-bottom: 0; }
+  .spec dt, .spec .k { color: var(--body); }
+  .spec .v { font-weight: 600; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* Kit */
+  .group + .group { margin-top: clamp(36px, 5vw, 56px); }
+  .group-title { font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin-bottom: 20px; }
+  .kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .item { display: flex; flex-direction: column; gap: 10px; border-top: 2px solid var(--malachite); padding-top: 18px; }
+  .item h3 { font-size: 18px; font-weight: 700; line-height: 1.3; }
+  .item p { font-size: 15px; color: var(--body); }
+  .item .tag { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); }
+  .case { margin-top: clamp(28px, 4vw, 44px); display: flex; gap: 20px; align-items: center; }
+  .case .swatch { flex: none; width: 56px; height: 40px; border-radius: 6px; background: linear-gradient(160deg, #1F8A4C, #0E5A30); box-shadow: inset 0 -6px 0 rgba(0,0,0,.25); position: relative; }
+  .case .swatch::before { content: ""; position: absolute; top: -8px; left: 18px; width: 20px; height: 9px; border: 3px solid #0E5A30; border-bottom: 0; border-radius: 6px 6px 0 0; }
+  .case + .case { margin-top: 18px; }
+  .case .rollup { flex: none; width: 56px; height: 56px; position: relative; }
+  .case .rollup::before { content: ""; position: absolute; left: 19px; top: 0; width: 18px; height: 50px; border: 2px solid var(--malachite); border-radius: 2px; }
+  .case .rollup::after { content: ""; position: absolute; left: 12px; bottom: 0; width: 32px; height: 6px; background: var(--malachite); border-radius: 3px; }
+  .case p { font-size: 15px; color: var(--body); max-width: 70ch; }
+  .case b { color: var(--ink); }
+
+  /* Ruta */
+  .route { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; counter-reset: st; }
+  .stop { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 20px 18px 22px; background: var(--teal-2); border: 1px solid var(--line); }
+  .stop .n { font-family: var(--display); font-weight: 700; font-size: 26px; color: var(--malachite); line-height: 1; }
+  .stop h3 { font-size: 15px; font-weight: 700; line-height: 1.35; }
+  .stop p { font-size: 13px; color: var(--body); line-height: 1.45; }
+  .stop:not(:last-child)::after { content: ""; position: absolute; top: 31px; right: -12px; width: 12px; height: 2px; background: var(--malachite); }
+  .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+  /* Roles */
+  .roles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+  .crew { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+  .badge { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+  .badge i { display: block; width: 100%; aspect-ratio: 3 / 4; max-width: 64px; border-radius: 6px; border: 1px solid var(--line); background: var(--teal-2); position: relative; }
+  .badge i::before { content: ""; position: absolute; top: 8px; left: 50%; width: 30%; height: 4px; margin-left: -15%; border-radius: 2px; background: var(--line); }
+  .badge.lead i { border-color: var(--malachite); background: var(--teal); }
+  .badge.lead i::after { content: ""; position: absolute; left: 50%; top: -9px; width: 26px; height: 9px; margin-left: -13px; background: var(--malachite); border-radius: 13px 13px 2px 2px; }
+  .badge span { font-size: 11px; font-weight: 600; color: var(--body); line-height: 1.25; }
+  .badge.lead span { color: var(--ink); }
+  .roles .text p { color: var(--body); }
+  .roles .text p + p { margin-top: 14px; }
+  .roles .text b { color: var(--ink); }
+
+  /* Onboarding */
+  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .two .hud { display: flex; flex-direction: column; gap: 10px; }
+  .two .k { font-family: var(--display); font-weight: 700; font-size: 30px; color: var(--malachite); line-height: 1; }
+  .two h3 { font-size: 19px; font-weight: 700; }
+  .two p { font-size: 15px; color: var(--body); }
+
+  /* Justificación */
+  .why { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+  .why li { display: flex; flex-direction: column; gap: 6px; padding-left: 18px; border-left: 2px solid var(--line); }
+  .why h3 { font-size: 17px; font-weight: 700; }
+  .why p { font-size: 15px; color: var(--body); }
+
+  /* Inversión */
+  #inversion { background: radial-gradient(100% 120% at 0% 100%, var(--teal) 0%, var(--void) 60%); }
+  .invest { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+  .total { display: flex; flex-direction: column; gap: 8px; }
+  .total .amount { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 6vw, 64px); color: var(--malachite); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+  .total .cur { font-size: 15px; color: var(--body); }
+  .options { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .options .hud { display: flex; flex-direction: column; gap: 8px; }
+  .opt-label { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--malachite-soft); }
+  .options h3 { font-size: 19px; font-weight: 700; }
+  .opt-amount { font-family: var(--display); font-weight: 700; font-size: clamp(24px, 3vw, 32px); color: var(--ink); font-variant-numeric: tabular-nums; line-height: 1.2; }
+  .opt-amount small { font-family: var(--text); font-size: 14px; font-weight: 500; color: var(--body); }
+  .options p { font-size: 15px; color: var(--body); }
+  @media (max-width: 640px) { .options { grid-template-columns: 1fr; } }
+  .breakdown { margin: 14px 0 0; display: flex; flex-direction: column; max-width: 440px; }
+  .breakdown div { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .breakdown dt { color: var(--body); }
+  .breakdown dd { margin: 0; color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .breakdown .sum { border-bottom: 0; }
+  .breakdown .sum dt, .breakdown .sum dd { color: var(--malachite); font-weight: 700; }
+  .incl { display: flex; flex-direction: column; }
+  .incl li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--body); }
+  .incl li:last-child { border-bottom: 0; }
+  .incl li::before { content: ""; flex: none; width: 10px; height: 10px; margin-top: 7px; border: 2px solid var(--malachite); transform: rotate(45deg); }
+  .phase { margin-top: 28px; font-size: 14px; color: var(--muted); max-width: 70ch; }
+
+  footer { border-top: 1px solid var(--line); padding-block: 32px; font-size: 13px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .route { grid-template-columns: 1fr; }
+    .stop:not(:last-child)::after { top: auto; bottom: -12px; right: auto; left: 31px; width: 2px; height: 12px; }
+    .kit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .scope, .roles, .invest { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .fact:nth-child(3) { padding-left: 0; border-left: 0; }
+    .fact:nth-child(n+3) { padding-top: 18px; }
+    .kit, .two, .why { grid-template-columns: 1fr; }
+    .crew { gap: 5px; }
+    .badge span { font-size: 10px; }
+  }
+
+  /* Video + stand */
+  .media { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px; }
+  .media figure { margin: 0; background: #F2F2EF; border: 1px solid var(--line); overflow: hidden; }
+  .media figure img { width: 100%; height: 100%; object-fit: cover; }
+  .media .side { display: grid; grid-template-rows: 1fr 1fr; gap: 16px; }
+  .cap { margin-top: 12px; font-size: 13px; color: var(--muted); }
+  .ref { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: clamp(20px, 4vw, 48px); align-items: center; margin-top: clamp(32px, 5vw, 56px); }
+  .ref img { border: 1px solid var(--line); }
+  .ref p { color: var(--body); font-size: 15px; }
+  .ref p + p { margin-top: 12px; }
+  .ref b { color: var(--ink); }
+  .seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+  .seg div { background: var(--teal-2); border: 1px solid var(--line); padding: 14px; text-align: center; }
+  .seg strong { display: block; font-family: var(--display); font-size: 24px; color: var(--malachite); }
+  .seg span { font-size: 12px; color: var(--body); }
+  table.bom { width: 100%; border-collapse: collapse; font-size: 15px; }
+  table.bom th { text-align: left; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); padding: 10px 12px 10px 0; border-bottom: 1px solid var(--malachite); }
+  table.bom td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--line); color: var(--body); vertical-align: top; }
+  table.bom td:first-child { color: var(--ink); font-weight: 600; }
+  table.bom td.n { font-family: var(--display); color: var(--malachite); font-weight: 700; white-space: nowrap; }
+  .lead-me { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: center; }
+  .lead-me img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 2px solid var(--malachite); }
+  .lead-me h3 { font-size: 22px; font-weight: 700; }
+  .lead-me .role { color: var(--malachite-soft); font-size: 14px; font-weight: 600; margin: 4px 0 10px; }
+  .lead-me p { color: var(--body); font-size: 15px; max-width: 70ch; }
+  .lead-me a { display: inline-block; margin-top: 12px; color: var(--malachite); font-weight: 600; text-decoration: none; }
+  @media (max-width: 900px) { .media, .ref { grid-template-columns: 1fr; } .media .side { grid-template-rows: none; grid-template-columns: 1fr 1fr; } .ref img { max-width: 260px; } }
+  @media (max-width: 640px) { .seg { grid-template-columns: 1fr 1fr; } .lead-me { grid-template-columns: 1fr; } table.bom { font-size: 14px; } }
+</style>
+</head>
+<body>
+
+<div class="brandbar">
+  <div class="wrap top">
+    <img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte">
+    <p class="for">Cotización para <b>Solventum</b> · Atención: <b>Julia Cruz</b> · Noviembre 2026</p>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-main">
+      <p class="label">Video de memoria y stand · 26 de noviembre de 2026</p>
+      <h1>Innovation <span>Day</span></h1>
+      <p class="lead">Un video que cuenta la historia de los distribuidores con las marcas de Solventum y un stand de 4 cuadrantes para recorrer las soluciones. Salón Amatista, Hotel Marriott de la Calle 26, Bogotá.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><strong>32</strong><span>marcas de distribuidores</span></div>
+      <div class="fact"><strong>5 min</strong><span>de video de memoria</span></div>
+      <div class="fact"><strong>4</strong><span>cuadrantes en el stand</span></div>
+      <div class="fact"><strong>26 nov</strong><span>instalación a la 1:00 p.&nbsp;m.</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Secciones">
+  <div class="wrap">
+    <a href="#alcance">Alcance</a>
+    <a href="#video">Video</a>
+    <a href="#stand">Stand</a>
+    <a href="#cronograma">Cronograma</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#inversion">Inversión</a>
+  </div>
+</nav>
+
+<main>
+  <section id="alcance">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Resumen</p>
+        <h2 class="h2">Dos proyectos para un mismo encuentro</h2>
+      </div>
+      <div class="scope">
+        <div class="text">
+          <p>El <b>Innovation Day</b> reúne a las <b>32 marcas de distribuidores</b> que representan los productos de Solventum. Simoné desarrolla dos piezas para ese encuentro:</p>
+          <p><b>1. Video de memoria (5 minutos):</b> el recorrido de la relación entre los distribuidores y las marcas, con voz en off y animaciones 2D de textos.</p>
+          <p><b>2. Stand de 4 cuadrantes:</b> escenografía en cartón de doble pared con vinilo impreso, que organiza la información en cuatro segmentos alrededor de un octágono central, más cajas para ambientar y exhibir.</p>
+        </div>
+        <div class="hud">
+          <dl class="spec">
+            <div><dt class="k">Evento</dt><dd class="v">Innovation Day</dd></div>
+            <div><dt class="k">Fecha</dt><dd class="v">Miércoles 26 de noviembre</dd></div>
+            <div><dt class="k">Lugar</dt><dd class="v">Salón Amatista · Hotel Marriott Calle 26</dd></div>
+            <div><dt class="k">Ciudad</dt><dd class="v">Bogotá</dd></div>
+            <div><dt class="k">Instalación</dt><dd class="v">1:00 p.&nbsp;m.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Proyecto 1</p>
+        <h2 class="h2">Video de memoria de la relación con los distribuidores</h2>
+        <p class="lead">Una pieza de 5 minutos que pone en pantalla la historia compartida entre los distribuidores y las marcas de Solventum.</p>
+      </div>
+      <ul class="kit">
+        <li class="item"><span class="tag">Duración</span><h3>5 minutos</h3><p>Pensado para proyectarse en el salón durante el encuentro.</p></li>
+        <li class="item"><span class="tag">Narración</span><h3>Voz en off</h3><p>Locución que guía el relato a partir del copy aprobado por Solventum.</p></li>
+        <li class="item"><span class="tag">Gráfica en movimiento</span><h3>Animaciones 2D de textos</h3><p>Los mensajes clave aparecen animados sobre las fotos y videos de la memoria.</p></li>
+        <li class="item"><span class="tag">Insumos de Solventum</span><h3>Fotos, videos y copy</h3><p>Se reciben <b>antes del 18 de noviembre</b> para poder editar a tiempo.</p></li>
+        <li class="item"><span class="tag">20 de noviembre</span><h3>Revisión con Solventum</h3><p>Presentamos el primer corte para su revisión.</p></li>
+        <li class="item"><span class="tag">Incluidos</span><h3>Hasta 4 cambios</h3><p>Se aceptan 4 cambios sobre la revisión antes de la entrega final.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="stand">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Proyecto 2</p>
+        <h2 class="h2">Stand de 4 cuadrantes</h2>
+        <p class="lead">Ocho paredes salen de un octágono central y forman cuatro espacios. En cada cuadrante, una pieza gráfica vertical presenta una solución de Solventum.</p>
+      </div>
+      <div class="media">
+        <figure><img src="img/stand-perspectiva.jpg" alt="Render en perspectiva del stand octagonal con paredes verdes y una pieza gráfica vertical"></figure>
+        <div class="side">
+          <figure><img src="img/stand-frente.jpg" alt="Vista frontal de un cuadrante del stand con una persona leyendo la pieza gráfica"></figure>
+          <figure><img src="img/stand-planta.jpg" alt="Vista en planta del stand: octágono central con ocho paredes radiales"></figure>
+        </div>
+      </div>
+      <p class="cap">Renders de referencia del stand. Colores y piezas gráficas finales según la marca de Solventum.</p>
+      <div class="seg">
+        <div><strong>A</strong><span>Cuadrante 1</span></div>
+        <div><strong>B</strong><span>Cuadrante 2</span></div>
+        <div><strong>C</strong><span>Cuadrante 3</span></div>
+        <div><strong>D</strong><span>Cuadrante 4</span></div>
+      </div>
+
+      <div class="group" style="margin-top:clamp(36px,5vw,56px)">
+        <h3 class="group-title">Escenografía</h3>
+        <p class="lead" style="font-size:15px;margin-bottom:18px">Cartón doble pared entamborado, terminado con vinilo adhesivo impreso y laminado mate. Sistema de armado con alma en MDF y tornillo de sistema.</p>
+        <table class="bom">
+          <thead><tr><th>Pieza</th><th>Medidas</th><th>Cant.</th></tr></thead>
+          <tbody>
+            <tr><td>Paredes largas</td><td>100 × 220 × 6 cm</td><td class="n">4</td></tr>
+            <tr><td>Paredes cortas</td><td>70 × 220 × 6 cm</td><td class="n">4</td></tr>
+            <tr><td>Octágono central</td><td>100 × 220 cm</td><td class="n">1</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="group">
+        <h3 class="group-title">Cajas</h3>
+        <p class="lead" style="font-size:15px;margin-bottom:18px">Cartón doble pared entamborado, terminado con vinilo adhesivo impreso, acabado mate.</p>
+        <table class="bom">
+          <thead><tr><th>Pieza</th><th>Medidas</th><th>Cant.</th></tr></thead>
+          <tbody>
+            <tr><td>Cajas grandes</td><td>55 × 55 × 55 cm</td><td class="n">4</td></tr>
+            <tr><td>Cajas pequeñas</td><td>35 × 35 × 35 cm</td><td class="n">8</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ref">
+        <img src="img/cuadrante-d.jpg" alt="Pieza gráfica del Cuadrante D: Solución Integral de Optimización Quirúrgica y Protección Térmica">
+        <div>
+          <p class="label" style="margin-bottom:10px">Así se distribuye la información</p>
+          <p>Cada cuadrante lleva una pieza vertical con el nombre de la solución, una descripción breve, sus componentes y los <b>objetivos y beneficios clínicos</b>. Como ejemplo, el <b>Cuadrante D</b>: Solución Integral de Optimización Quirúrgica y Protección Térmica.</p>
+          <p>Las piezas se imprimen a partir del contenido que Solventum entrega para cada cuadrante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cronograma">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Cronograma</p>
+        <h2 class="h2">De la aprobación al montaje</h2>
+        <p class="lead">El calendario es corto, así que los insumos a tiempo son la clave para llegar al 26.</p>
+      </div>
+      <ol class="route">
+        <li class="stop"><span class="n">13</span><h3>Cotización</h3><p>Con su aprobación iniciamos la producción.</p></li>
+        <li class="stop"><span class="n">18</span><h3>Insumos del video</h3><p>Antes de esta fecha: fotos, videos y copy.</p></li>
+        <li class="stop"><span class="n">20</span><h3>Revisión del video</h3><p>Primer corte. Se aceptan hasta 4 cambios.</p></li>
+        <li class="stop"><span class="n">26</span><h3>Entrega e instalación</h3><p>Stand armado en el Salón Amatista a la 1:00 p.&nbsp;m.</p></li>
+        <li class="stop"><span class="n">26</span><h3>Acompañamiento</h3><p>Nuestro equipo acompaña el montaje.</p></li>
+      </ol>
+      <p class="note">Fechas de noviembre de 2026.</p>
+    </div>
+  </section>
+
+  <section id="equipo">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Mediadora líder</p>
+      </div>
+      <div class="lead-me">
+        <img src="img/nathalia.jpg" alt="Nathalia Andrea Velasco">
+        <div>
+          <h3>Nathalia Andrea Velasco</h3>
+          <p class="role">Directora de Simoné · Mediadora líder</p>
+          <p>Diseñadora gráfica con estudios en artes plásticas y 15 años de experiencia en educación experiencial. Lidera la dirección creativa del video y del stand y acompaña personalmente el montaje.</p>
+          <a href="https://www.linkedin.com/in/nathalia-andrea-velasco-duarte/" target="_blank" rel="noopener">Ver perfil en LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Empresas que han confiado en Simoné -->
+<style>
+.sm-clientes{padding:clamp(48px,7vw,80px) 0;font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;color:#2B2F0C}
+.sm-clientes .sm-in{max-width:1080px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px))}
+.sm-clientes .sm-eb{font-family:"Montserrat",system-ui,sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8B3A12;margin:0}
+.sm-clientes h2{font-family:"Montserrat",system-ui,sans-serif;font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:700;line-height:1.15;margin:10px 0 0;color:inherit;text-wrap:balance}
+.sm-clientes .sm-lead{color:#5D5F4A;margin:14px 0 32px;max-width:62ch;line-height:1.6}
+.sm-clientes ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.sm-clientes li{background:#fff;border:1px solid #E4E1D4;border-radius:10px;height:120px;display:flex;align-items:center;justify-content:center;padding:18px 22px;min-width:0}
+.sm-clientes img{max-width:100%;max-height:70px;width:auto;height:auto;object-fit:contain;display:block}
+@media (max-width:860px){.sm-clientes ul{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.sm-clientes ul{grid-template-columns:1fr 1fr}.sm-clientes li{height:96px;padding:14px}.sm-clientes img{max-height:54px}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-clientes{color:#EEEBDD}:root:not([data-theme="light"]) .sm-clientes .sm-lead{color:#B5B29C}:root:not([data-theme="light"]) .sm-clientes .sm-eb{color:#E58A5A}:root:not([data-theme="light"]) .sm-clientes li{background:#202214;border-color:#34361F}:root:not([data-theme="light"]) .sm-clientes img{filter:brightness(2.2)}}
+:root[data-theme="dark"] .sm-clientes{color:#EEEBDD}:root[data-theme="dark"] .sm-clientes .sm-lead{color:#B5B29C}:root[data-theme="dark"] .sm-clientes .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-clientes li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-clientes img{filter:brightness(2.2)}
+.sm-clientes.sm-dark{color:#F2EEE3}.sm-clientes.sm-dark .sm-lead{color:#B9B6A8}.sm-clientes.sm-dark .sm-eb{color:#F2A03D}
+</style>
+<section class="sm-clientes sm-dark" id="clientes" aria-label="Empresas que han confiado en Simoné">
+  <div class="sm-in">
+    <p class="sm-eb">Experiencia con empresas</p>
+    <h2>Empresas que han confiado en Simoné</h2>
+    <p class="sm-lead">Organizaciones de distintos sectores han vivido con sus equipos nuestras experiencias de desarrollo humano a través del arte.</p>
+    <ul>
+      <li><img src="../clientes-simone/bancoldex.png" alt="Bancóldex"></li>
+      <li><img src="../clientes-simone/nueva-eps.png" alt="Nueva EPS"></li>
+      <li><img src="../clientes-simone/fundacion-santa-fe.png" alt="Fundación Santa Fe de Bogotá"></li>
+      <li><img src="../clientes-simone/imprenta-nacional.png" alt="Imprenta Nacional de Colombia"></li>
+      <li><img src="../clientes-simone/camara-comercio-cartagena.png" alt="Cámara de Comercio de Cartagena · Tejiendo Progreso en Bolívar"></li>
+      <li><img src="../clientes-simone/centro-mayor.png" alt="Centro Mayor Centro Comercial"></li>
+      <li><img src="../clientes-simone/cavipetrol.png" alt="Cavipetrol"></li>
+      <li><img src="../clientes-simone/ajover.png" alt="Ajover"></li>
+      <li><img src="../clientes-simone/tecna.png" alt="Tecna"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<style>
+.sm-testi{padding:0 0 clamp(48px,7vw,80px);font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;color:#2B2F0C}
+.sm-testi .sm-in{max-width:1080px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px))}
+.sm-testi .sm-eb{font-family:"Montserrat",system-ui,sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8B3A12;margin:0}
+.sm-testi h2{font-family:"Montserrat",system-ui,sans-serif;font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:700;line-height:1.15;margin:10px 0 28px;color:inherit;text-wrap:balance}
+.sm-testi ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sm-testi li{background:#fff;border:1px solid #E4E1D4;border-radius:12px;padding:24px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.sm-testi blockquote{margin:0;font-size:1rem;line-height:1.6;position:relative;padding-top:26px}
+.sm-testi blockquote::before{content:"\201C";position:absolute;top:-10px;left:-2px;font-family:Georgia,serif;font-size:3.2rem;line-height:1;color:#B0247F}
+.sm-testi .who{margin-top:auto;font-family:"Montserrat",system-ui,sans-serif;font-size:.86rem;line-height:1.4}
+.sm-testi .who b{display:block;font-weight:700}
+.sm-testi .who span{color:#6A6C55}
+@media (max-width:860px){.sm-testi ul{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.sm-testi ul{grid-template-columns:1fr}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-testi{color:#EEEBDD}:root:not([data-theme="light"]) .sm-testi .sm-eb{color:#E58A5A}:root:not([data-theme="light"]) .sm-testi li{background:#202214;border-color:#34361F}:root:not([data-theme="light"]) .sm-testi .who span{color:#B5B29C}}
+:root[data-theme="dark"] .sm-testi{color:#EEEBDD}:root[data-theme="dark"] .sm-testi .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-testi li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-testi .who span{color:#B5B29C}
+.sm-testi.sm-4 ul{grid-template-columns:1fr 1fr}@media (max-width:560px){.sm-testi.sm-4 ul{grid-template-columns:1fr}}
+.sm-testi.sm-dark{color:#F2EEE3}.sm-testi.sm-dark .sm-eb{color:#F2A03D}.sm-testi.sm-dark li{background:#14170F;border-color:#2C3020}.sm-testi.sm-dark .who span{color:#B9B6A8}
+</style>
+<section class="sm-testi sm-4 sm-dark" id="testimonios" aria-label="Testimonios">
+  <div class="sm-in">
+    <p class="sm-eb">Testimonios</p>
+    <h2>Lo que dicen quienes han vivido la experiencia</h2>
+    <ul>
+      <li><blockquote>Con Simoné pude comunicar de manera objetiva a la comunidad en general las mejores prácticas para prevenir un ACV. Fueron creativos, innovadores y muy fáciles de entender.</blockquote><p class="who"><b>Diana María Castelblanco</b><span>Coordinadora Asistencial Centros de Cuidado Clínico · Fundación Santa Fe de Bogotá</span></p></li>
+      <li><blockquote>Aprendí a cuidar mi cuerpo; me enseñaron de manera didáctica y creativa.</blockquote><p class="who"><b>Visitante · Expreso de la Salud</b><span>Fundación Santa Fe de Bogotá</span></p></li>
+      <li><blockquote>Superaron nuestras expectativas: encontraron el equilibrio entre las necesidades comerciales y las necesidades humanas que tenía nuestro equipo del call center.</blockquote><p class="who"><b>Katherine Arenas</b><span>Líder Centro de Servicio · Ajover - Darnell</span></p></li>
+      <li><blockquote>Una experiencia de reflexión, empoderamiento y llamado a sentir de una forma diferente. Nos ayuda a reconocernos, valorar lo que nos rodea y motivarnos para el trabajo en equipo.</blockquote><p class="who"><b>Diana María Álvarez</b><span>Productos Alimenticios Doria</span></p></li>
+    </ul>
+  </div>
+</section>
+
+
+  <section id="inversion">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Inversión</p>
+        <h2 class="h2">Inversión total del proyecto</h2>
+      </div>
+      <div class="invest">
+        <div class="total">
+          <span class="amount">$11.120.000</span>
+          <span class="cur">Pesos colombianos (COP) + IVA · video y stand</span>
+        </div>
+        <ul class="incl">
+          <li>Video de memoria de 5 minutos con voz en off y animaciones 2D de textos</li>
+          <li>Revisión del video el 20 de noviembre con hasta 4 cambios</li>
+          <li>Escenografía de 4 cuadrantes: 4 paredes de 100 × 220 × 6 cm, 4 paredes de 70 × 220 × 6 cm y octágono central de 100 × 220 cm</li>
+          <li>Cajas: 4 de 55 × 55 × 55 cm y 8 de 35 × 35 × 35 cm</li>
+          <li>Cartón doble pared entamborado con vinilo impreso y acabado mate; armado con alma en MDF y tornillo de sistema</li>
+          <li>Entrega del material armado el 26 de noviembre, instalación a la 1:00 p.&nbsp;m. y acompañamiento en el montaje</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Datos de la oferta (fecha de emisión, NIT, teléfono, validez) -->
+<style>
+.sm-ficha{border-top:1px solid rgba(53,58,14,.16);background:#F4EFE3;color:#2B2F0C;font-family:"Lato","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif}
+.sm-ficha .sm-in{max-width:1080px;margin:0 auto;padding:28px max(20px,env(safe-area-inset-left,0px));display:flex;flex-wrap:wrap;align-items:center;gap:18px 36px}
+.sm-ficha img{height:52px;width:auto;background:#fff;border-radius:8px;padding:6px 10px;display:block}
+.sm-ficha dl{display:flex;flex-wrap:wrap;gap:12px 32px;margin:0}
+.sm-ficha dl > div{min-width:0}
+.sm-ficha dt{font-family:"Montserrat",system-ui,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6A6C55;margin:0}
+.sm-ficha dd{margin:2px 0 0;font-family:"Montserrat",system-ui,sans-serif;font-weight:600;font-size:.95rem;font-variant-numeric:tabular-nums}
+.sm-ficha dd small{font-weight:500;color:#6A6C55;font-size:.8rem}
+.sm-ficha a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-ficha{background:#232515;color:#EEEBDD;border-top-color:#34361F}:root:not([data-theme="light"]) .sm-ficha dt,:root:not([data-theme="light"]) .sm-ficha dd small{color:#B5B29C}}
+:root[data-theme="dark"] .sm-ficha{background:#232515;color:#EEEBDD;border-top-color:#34361F}
+:root[data-theme="dark"] .sm-ficha dt,:root[data-theme="dark"] .sm-ficha dd small{color:#B5B29C}
+.sm-ficha .sm-notas{flex-basis:100%;border-top:1px solid rgba(53,58,14,.16);padding-top:16px}
+.sm-ficha .sm-notas p.t{font-family:"Montserrat",system-ui,sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6A6C55;margin:0 0 8px}
+.sm-ficha .sm-notas ul{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:.88rem;line-height:1.5;max-width:80ch}
+</style>
+<aside class="sm-ficha" aria-label="Datos de la oferta">
+  <div class="sm-in">
+    <img src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte">
+    <dl>
+      <div><dt>Fecha de emisión</dt><dd>13 de noviembre de 2026</dd></div>
+      <div><dt>NIT</dt><dd>901.838.283-3</dd></div>
+      <div><dt>Teléfono</dt><dd><a href="tel:+573217738039">321 773 8039</a></dd></div>
+      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 13 de diciembre de 2026</small></dd></div>
+    </dl>
+    <div class="sm-notas">
+      <p class="t">Notas finales</p>
+      <ul>
+        <li>Somos facturadores electrónicos y responsables de IVA.</li>
+        <li>Nos acogemos a la norma de pagos a 30 días para pymes. De ser necesario, enviamos la carta de certificación Mipyme.</li>
+        <li>Pertenecemos al Régimen Simple de Tributación, por lo que la única retención que deben practicarnos es un reteIVA del 15%.</li>
+      </ul>
+    </div>
+  </div>
+</aside>
+<footer>
+  <div class="wrap">
+    <span>Simoné · Nathalia Velasco</span>
+    <span>nathalia@experienciasimone.com · experienciasimone@gmail.com</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var links = document.querySelectorAll('nav.toc a');
+    if (!('IntersectionObserver' in window)) return;
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          links.forEach(function (a) { a.classList.remove('on'); });
+          var a = map[e.target.id];
+          if (a) a.classList.add('on');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { obs.observe(s); });
+  })();
+</script>
+</body>
+</html>
