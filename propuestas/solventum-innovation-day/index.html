@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -10,9 +10,6 @@
 <meta property="og:title" content="Innovation Day · Cotización Simoné para Solventum">
 <meta property="og:description" content="Video de memoria de 5 minutos y stand de 4 cuadrantes. 26 de noviembre de 2026, Hotel Marriott, Bogotá.">
 <link rel="icon" href="img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap">
 <style>
   /* Layout: one scrolling proposal on a dark clinical ground; HUD corner brackets mark the key panels; the route E1→E5 is the one drawn sequence; the investment closes the page.
      Single dark look by choice: Solventum brand (Deep Teal, Malachite, black). */
@@ -222,6 +219,61 @@
   @media (max-width: 900px) { .media, .ref { grid-template-columns: 1fr; } .media .side { grid-template-rows: none; grid-template-columns: 1fr 1fr; } .ref img { max-width: 260px; } }
   @media (max-width: 640px) { .seg { grid-template-columns: 1fr 1fr; } .lead-me { grid-template-columns: 1fr; } table.bom { font-size: 14px; } }
 </style>
+
+<style>
+  /* Línea gráfica Solventum web: Deep Teal + blanco, verde malaquita como acento, Helvetica de peso regular en titulares */
+  :root { --void:#FFFFFF; --teal:#01332B; --teal-2:#EEF4F1; --malachite:#0E7C6B; --malachite-soft:#0E7C6B; --green:#05DD4D;
+    --ink:#01332B; --body:#3E5550; --muted:#6B7F7A; --line:#D7E2DE;
+    --display:"Helvetica Neue", Helvetica, Arial, sans-serif; --text:"Helvetica Neue", Helvetica, Arial, sans-serif; color-scheme: light; }
+  body, body * { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+  body { background:#fff; color:var(--ink); }
+  .brandbar { background:#fff; border-bottom:1px solid var(--line); }
+  .brandbar .for { color:var(--body); } .brandbar .for b { color:var(--ink); }
+  .hero { background:var(--teal); color:#fff; }
+  .hero h1 { font-weight:400; letter-spacing:-.02em; font-size:clamp(46px,9vw,104px); line-height:1.02; }
+  .hero h1 span { color:#fff; }
+  .hero .label { color:var(--green); }
+  .hero .lead { color:#E3ECE9; font-weight:400; }
+  .facts { border-top-color:rgba(255,255,255,.18); }
+  .fact + .fact { border-left-color:rgba(255,255,255,.18); }
+  .fact strong { font-family:inherit; font-weight:400; color:var(--green); letter-spacing:-.01em; }
+  .fact span { color:#C9D8D4; }
+  .h2 { font-weight:400; letter-spacing:-.015em; font-size:clamp(30px,4.2vw,48px); line-height:1.1; }
+  .label { color:var(--malachite); letter-spacing:.14em; }
+  nav.toc { background:#fff; }
+  nav.toc a { color:var(--muted); letter-spacing:.04em; }
+  nav.toc a:hover, nav.toc a.on { color:var(--ink); border-bottom-color:var(--green); }
+  .hud { border-radius:16px; } .hud::before, .hud::after { display:none; }
+  .item { border-top:2px solid var(--green); }
+  .item .tag { color:var(--malachite); }
+  .group-title { font-family:inherit; letter-spacing:.06em; }
+  .media figure { border-radius:16px; border-color:var(--line); }
+  .seg div { border-radius:14px; border-color:var(--line); }
+  .seg strong { font-family:inherit; font-weight:700; color:var(--teal); }
+  .seg span { color:var(--body); }
+  figure img[src*="plan-cuadrantes"], .ref img { border-radius:14px; }
+  table.bom th { color:var(--malachite); border-bottom-color:var(--teal); }
+  table.bom td.n { font-family:inherit; color:var(--malachite); }
+  .stop { border-radius:14px; border-color:var(--line); }
+  .stop .n { font-family:inherit; font-weight:400; font-size:32px; color:var(--malachite); }
+  .stop:not(:last-child)::after { background:var(--green); }
+  .lead-me img { border-color:var(--green); }
+  .lead-me .role, .lead-me a { color:var(--malachite); }
+  .lead-me a { display:inline-block; background:var(--malachite); color:#fff; padding:12px 26px; border-radius:999px; font-weight:700; }
+  html body .sm-clientes .sm-eb, html body .sm-testi .sm-eb { color:var(--malachite); }
+  html body .sm-clientes h2, html body .sm-testi h2 { font-weight:400; letter-spacing:-.015em; color:var(--ink); }
+  html body .sm-clientes li, html body .sm-testi li { border-radius:16px; border-color:var(--line); }
+  html body .sm-testi { background:#fff; } html body .sm-testi blockquote::before { color:var(--green); }
+  #inversion { background:var(--teal); color:#fff; border-top:0; }
+  #inversion .label { color:var(--green); }
+  #inversion .h2 { color:#fff; }
+  .total .amount { font-family:inherit; font-weight:400; letter-spacing:-.02em; color:var(--green); }
+  .total .cur { color:#C9D8D4; }
+  .incl li { color:#E3ECE9; border-bottom-color:rgba(255,255,255,.16); }
+  .incl li::before { border-color:var(--green); border-radius:50%; transform:none; }
+  html body .sm-ficha { background:#F3F6F5; color:var(--ink); } html body .sm-clientes, html body .sm-testi { color:var(--ink); } html body .sm-clientes .sm-lead { color:var(--body); }
+  footer { background:#fff; }
+</style>
 </head>
 <body>
 
@@ -414,7 +466,7 @@
 :root[data-theme="dark"] .sm-clientes{color:#EEEBDD}:root[data-theme="dark"] .sm-clientes .sm-lead{color:#B5B29C}:root[data-theme="dark"] .sm-clientes .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-clientes li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-clientes img{filter:brightness(2.2)}
 .sm-clientes.sm-dark{color:#F2EEE3}.sm-clientes.sm-dark .sm-lead{color:#B9B6A8}.sm-clientes.sm-dark .sm-eb{color:#F2A03D}
 </style>
-<section class="sm-clientes sm-dark" id="clientes" aria-label="Empresas que han confiado en Simoné">
+<section class="sm-clientes" id="clientes" aria-label="Empresas que han confiado en Simoné">
   <div class="sm-in">
     <p class="sm-eb">Experiencia con empresas</p>
     <h2>Empresas que han confiado en Simoné</h2>
@@ -453,7 +505,7 @@
 .sm-testi.sm-4 ul{grid-template-columns:1fr 1fr}@media (max-width:560px){.sm-testi.sm-4 ul{grid-template-columns:1fr}}
 .sm-testi.sm-dark{color:#F2EEE3}.sm-testi.sm-dark .sm-eb{color:#F2A03D}.sm-testi.sm-dark li{background:#14170F;border-color:#2C3020}.sm-testi.sm-dark .who span{color:#B9B6A8}
 </style>
-<section class="sm-testi sm-4 sm-dark" id="testimonios" aria-label="Testimonios">
+<section class="sm-testi sm-4" id="testimonios" aria-label="Testimonios">
   <div class="sm-in">
     <p class="sm-eb">Testimonios</p>
     <h2>Lo que dicen quienes han vivido la experiencia</h2>
