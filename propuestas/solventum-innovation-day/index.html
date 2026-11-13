@@ -210,6 +210,12 @@
   table.bom td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--line); color: var(--body); vertical-align: top; }
   table.bom td:first-child { color: var(--ink); font-weight: 600; }
   table.bom td.n { font-family: var(--display); color: var(--malachite); font-weight: 700; white-space: nowrap; }
+  .deadlines { margin-top: 28px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .deadlines div { display: flex; gap: 18px; align-items: flex-start; padding: 20px 22px; border-radius: 16px; background: #01332B; color: #E3ECE9; }
+  .deadlines .d { flex: none; font-size: 26px; line-height: 1.1; color: #05DD4D; white-space: nowrap; }
+  .deadlines p { font-size: 15px; line-height: 1.5; }
+  .deadlines b { color: #fff; }
+  @media (max-width: 640px) { .deadlines { grid-template-columns: 1fr; } }
   .lead-me { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: center; }
   .lead-me img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 2px solid var(--malachite); }
   .lead-me h3 { font-size: 22px; font-weight: 700; }
@@ -350,7 +356,7 @@
         <li class="item"><span class="tag">Gráfica en movimiento</span><h3>Animaciones 2D de textos</h3><p>Los mensajes clave aparecen animados sobre las fotos y videos de la memoria.</p></li>
         <li class="item"><span class="tag">Insumos de Solventum</span><h3>Fotos, videos y copy</h3><p>Se reciben <b>antes del 18 de noviembre</b> para poder editar a tiempo.</p></li>
         <li class="item"><span class="tag">20 de noviembre</span><h3>Revisión con Solventum</h3><p>Presentamos el primer corte para su revisión.</p></li>
-        <li class="item"><span class="tag">Incluidos</span><h3>Hasta 4 cambios</h3><p>Se aceptan 4 cambios sobre la revisión antes de la entrega final.</p></li>
+        <li class="item"><span class="tag">Incluidos</span><h3>Hasta 4 cambios</h3><p>Se aceptan 4 cambios sobre la revisión. <b>Los últimos cambios se reciben hasta el 20 de noviembre.</b></p></li>
       </ul>
     </div>
   </section>
@@ -408,7 +414,7 @@
         <div>
           <p class="label" style="margin-bottom:10px">Así se distribuye la información</p>
           <p>Cada cuadrante lleva una pieza vertical con el nombre de la solución, una descripción breve, sus componentes y los <b>objetivos y beneficios clínicos</b>. Como ejemplo, el <b>Cuadrante D</b>: Solución Integral de Optimización Quirúrgica y Protección Térmica.</p>
-          <p>Las piezas se imprimen a partir del contenido que Solventum entrega para cada cuadrante.</p>
+          <p>Las piezas se imprimen a partir del contenido que Solventum entrega para cada cuadrante. <b>Los artes finales del stand deben estar listos el 18 de noviembre</b>, por el alto volumen de trabajo que tienen las imprentas en esta temporada.</p>
         </div>
       </div>
     </div>
@@ -423,12 +429,16 @@
       </div>
       <ol class="route">
         <li class="stop"><span class="n">13</span><h3>Cotización</h3><p>Con su aprobación iniciamos la producción.</p></li>
-        <li class="stop"><span class="n">18</span><h3>Insumos del video</h3><p>Antes de esta fecha: fotos, videos y copy.</p></li>
-        <li class="stop"><span class="n">20</span><h3>Revisión del video</h3><p>Primer corte. Se aceptan hasta 4 cambios.</p></li>
+        <li class="stop"><span class="n">18</span><h3>Insumos y artes finales</h3><p>Fotos, videos y copy del video. Artes finales del stand listos para impresión.</p></li>
+        <li class="stop"><span class="n">20</span><h3>Revisión y últimos cambios</h3><p>Primer corte del video. Último día para recibir cambios (hasta 4).</p></li>
         <li class="stop"><span class="n">26</span><h3>Entrega e instalación</h3><p>Stand armado en el Salón Amatista a la 1:00 p.&nbsp;m.</p></li>
         <li class="stop"><span class="n">26</span><h3>Acompañamiento</h3><p>Nuestro equipo acompaña el montaje.</p></li>
       </ol>
       <p class="note">Fechas de noviembre de 2026.</p>
+      <div class="deadlines">
+        <div><span class="d">18 nov</span><p><b>Artes finales del stand.</b> Deben estar listos en esta fecha por el alto tráfico que hay en este momento en impresión.</p></div>
+        <div><span class="d">20 nov</span><p><b>Últimos cambios del video.</b> Se reciben hasta esta fecha, con un máximo de 4 cambios sobre la revisión.</p></div>
+      </div>
     </div>
   </section>
 
@@ -532,7 +542,8 @@
         </div>
         <ul class="incl">
           <li>Video de memoria de 5 minutos con voz en off y animaciones 2D de textos</li>
-          <li>Revisión del video el 20 de noviembre con hasta 4 cambios</li>
+          <li>Revisión del video con hasta 4 cambios; los últimos cambios se reciben hasta el 20 de noviembre</li>
+          <li>Impresión de las piezas del stand a partir de los artes finales entregados el 18 de noviembre</li>
           <li>Escenografía de 4 cuadrantes (MP, M, D y J): 4 paredes de 100 × 220 × 6 cm, 4 paredes de 70 × 220 × 6 cm y octágono central de 100 × 220 cm</li>
           <li>Cajas: 4 de 55 × 55 × 55 cm</li>
           <li>Cartón doble pared entamborado con vinilo impreso y acabado mate; armado con alma en MDF y tornillo de sistema</li>
