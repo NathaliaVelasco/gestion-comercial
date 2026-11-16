@@ -178,14 +178,15 @@ td small{color:var(--muted);font-size:.86rem;display:block}
 
 /* Enlaces de trabajo */
 .links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:l}
-.links a{counter-increment:l;display:flex;flex-direction:column;gap:8px;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:0 0 12px 12px;padding:22px;text-decoration:none;color:var(--ink);min-width:0}
-.links a:nth-child(2){border-top-color:var(--orange)}
-.links a:nth-child(3){border-top-color:var(--magenta)}
-.links a:hover{background:var(--tint)}
-.links .lbl::before{content:"Paso " counter(l) " · "}
-.links h3{font-size:1.1rem;font-weight:700}
-.links p{font-size:.93rem;color:var(--muted)}
-.links .url{font-family:var(--display);font-size:.8rem;font-weight:600;color:var(--rust);word-break:break-all;margin-top:auto;padding-top:6px}
+.lk{counter-increment:l;display:flex;flex-direction:column;gap:8px;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:0 0 12px 12px;padding:22px;min-width:0}
+.lk:nth-child(2){border-top-color:var(--orange)}
+.lk:nth-child(3){border-top-color:var(--magenta)}
+.lk .lbl::before{content:"Paso " counter(l) " · "}
+.lk h3{font-size:1.1rem;font-weight:700}
+.lk p{font-size:.93rem;color:var(--muted);margin-bottom:10px}
+.lk .qr{width:160px;height:160px;align-self:center;margin:auto 0 4px;background:#fff;border-radius:8px;padding:6px;border:1px solid var(--line)}
+.lk .url{font-family:var(--display);font-size:.8rem;font-weight:600;color:var(--rust);word-break:break-all;padding-top:6px;text-align:center;min-height:3.2em}
+.lk .dl{font-family:var(--display);font-size:.78rem;font-weight:600;color:var(--muted);text-align:center}
 @media (max-width:860px){.links{grid-template-columns:1fr}}
 
 /* Cierre */
@@ -541,12 +542,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="sec-head">
         <p class="eyebrow">Proyecto en ejecución · enlaces de trabajo</p>
         <h2>Los enlaces de Ecoeficiencia 360</h2>
-        <p>Estos son los enlaces que usamos durante las jornadas. Estarán disponibles al público hasta el <strong>20 de diciembre de 2026</strong>, un mes después del inicio de las actividades, para que puedan compartirlos con los colaboradores que no pudieron asistir por incapacidades, vacaciones u otras razones.</p>
+        <p>Estos son los enlaces que usamos durante las jornadas; cada uno tiene su código QR para abrirlo desde el celular. Estarán disponibles al público hasta el <strong>20 de diciembre de 2026</strong>, un mes después del inicio de las actividades, para que puedan compartirlos con los colaboradores que no pudieron asistir por incapacidades, vacaciones u otras razones.</p>
       </div>
       <div class="links">
-        <a href="https://www.experienciasimone.com/eco-eficiencia-360/puerta-de-entrada/" target="_blank" rel="noopener"><p class="lbl">Antes</p><h3>Encuesta de entrada</h3><p>La prueba de entrada que responde cada colaborador para conocer su punto de partida.</p><span class="url">experienciasimone.com/eco-eficiencia-360/puerta-de-entrada</span></a>
-        <a href="https://www.experienciasimone.com/eco-eficiencia-360/" target="_blank" rel="noopener"><p class="lbl">Durante</p><h3>Entrega y valoración de conocimiento</h3><p>La plataforma con los contenidos y el cuestionario. Desde aquí se genera el informe de resultados.</p><span class="url">experienciasimone.com/eco-eficiencia-360</span></a>
-        <a href="https://www.experienciasimone.com/eco-eficiencia-360/rompecabezas/" target="_blank" rel="noopener"><p class="lbl">Después</p><h3>Instrucciones del rompecabezas</h3><p>Cómo armar el rompecabezas del kit y qué representa cada pilar de la Política Ambiental.</p><span class="url">experienciasimone.com/eco-eficiencia-360/rompecabezas</span></a>
+        <div class="lk"><p class="lbl">Antes</p><h3>Encuesta de entrada</h3><p>La prueba de entrada que responde cada colaborador para conocer su punto de partida.</p><img class="qr" src="img/qr-encuesta-entrada.png" alt="Código QR para abrir Encuesta de entrada" width="160" height="160"><a class="url" href="https://www.experienciasimone.com/eco-eficiencia-360/puerta-de-entrada/" target="_blank" rel="noopener">experienciasimone.com/eco-eficiencia-360/puerta-de-entrada</a><a class="dl" href="img/qr-encuesta-entrada.png" download>Descargar código QR</a></div>
+        <div class="lk"><p class="lbl">Durante</p><h3>Entrega y valoración de conocimiento</h3><p>La plataforma con los contenidos y el cuestionario. Desde aquí se genera el informe de resultados.</p><img class="qr" src="img/qr-valoracion-conocimiento.png" alt="Código QR para abrir Entrega y valoración de conocimiento" width="160" height="160"><a class="url" href="https://www.experienciasimone.com/eco-eficiencia-360/" target="_blank" rel="noopener">experienciasimone.com/eco-eficiencia-360</a><a class="dl" href="img/qr-valoracion-conocimiento.png" download>Descargar código QR</a></div>
+        <div class="lk"><p class="lbl">Después</p><h3>Instrucciones del rompecabezas</h3><p>Cómo armar el rompecabezas del kit y qué representa cada pilar de la Política Ambiental.</p><img class="qr" src="img/qr-rompecabezas.png" alt="Código QR para abrir Instrucciones del rompecabezas" width="160" height="160"><a class="url" href="https://www.experienciasimone.com/eco-eficiencia-360/rompecabezas/" target="_blank" rel="noopener">experienciasimone.com/eco-eficiencia-360/rompecabezas</a><a class="dl" href="img/qr-rompecabezas.png" download>Descargar código QR</a></div>
       </div>
     </div>
   </section>
