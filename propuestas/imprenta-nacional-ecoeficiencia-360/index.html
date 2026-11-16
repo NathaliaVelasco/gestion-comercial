@@ -176,6 +176,18 @@ td small{color:var(--muted);font-size:.86rem;display:block}
 .lead-card a{font-family:var(--display);font-weight:600;font-size:.92rem;display:inline-block;margin-top:16px}
 .team{margin-top:16px;font-size:.95rem;color:var(--muted);max-width:76ch}
 
+/* Enlaces de trabajo */
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:l}
+.links a{counter-increment:l;display:flex;flex-direction:column;gap:8px;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:0 0 12px 12px;padding:22px;text-decoration:none;color:var(--ink);min-width:0}
+.links a:nth-child(2){border-top-color:var(--orange)}
+.links a:nth-child(3){border-top-color:var(--magenta)}
+.links a:hover{background:var(--tint)}
+.links .lbl::before{content:"Paso " counter(l) " · "}
+.links h3{font-size:1.1rem;font-weight:700}
+.links p{font-size:.93rem;color:var(--muted)}
+.links .url{font-family:var(--display);font-size:.8rem;font-weight:600;color:var(--rust);word-break:break-all;margin-top:auto;padding-top:6px}
+@media (max-width:860px){.links{grid-template-columns:1fr}}
+
 /* Cierre */
 .next{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(28px,5vw,64px)}
 .next > *{min-width:0}
@@ -228,6 +240,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <a href="#inversion">Inversión</a>
     <a href="#equipo">Equipo</a>
     <a href="#pasos">Próximos pasos</a>
+    <a href="#enlaces">Enlaces de trabajo</a>
   </div>
 </nav>
 
@@ -520,6 +533,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <span class="mail">experienciasimone@gmail.com</span>
         <span class="lbl">WhatsApp</span>
         <a class="mail" href="https://wa.me/573217738039" target="_blank" rel="noopener">321 773 8039</a>
+      </div>
+    </div>
+  </section>
+  <section class="band" id="enlaces">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Proyecto en ejecución · enlaces de trabajo</p>
+        <h2>Los enlaces de Ecoeficiencia 360</h2>
+        <p>Estos son los enlaces que usamos durante las jornadas. Estarán disponibles al público hasta el <strong>20 de diciembre de 2026</strong>, un mes después del inicio de las actividades, para que puedan compartirlos con los colaboradores que no pudieron asistir por incapacidades, vacaciones u otras razones.</p>
+      </div>
+      <div class="links">
+        <a href="https://www.experienciasimone.com/eco-eficiencia-360/puerta-de-entrada/" target="_blank" rel="noopener"><p class="lbl">Antes</p><h3>Encuesta de entrada</h3><p>La prueba de entrada que responde cada colaborador para conocer su punto de partida.</p><span class="url">experienciasimone.com/eco-eficiencia-360/puerta-de-entrada</span></a>
+        <a href="https://www.experienciasimone.com/eco-eficiencia-360/" target="_blank" rel="noopener"><p class="lbl">Durante</p><h3>Entrega y valoración de conocimiento</h3><p>La plataforma con los contenidos y el cuestionario. Desde aquí se genera el informe de resultados.</p><span class="url">experienciasimone.com/eco-eficiencia-360</span></a>
+        <a href="https://www.experienciasimone.com/eco-eficiencia-360/rompecabezas/" target="_blank" rel="noopener"><p class="lbl">Después</p><h3>Instrucciones del rompecabezas</h3><p>Cómo armar el rompecabezas del kit y qué representa cada pilar de la Política Ambiental.</p><span class="url">experienciasimone.com/eco-eficiencia-360/rompecabezas</span></a>
       </div>
     </div>
   </section>
