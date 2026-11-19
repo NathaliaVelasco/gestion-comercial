@@ -1,329 +1,279 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>El Expreso de la Salud · Propuesta</title>
+<title>El Expreso de la Salud · Propuesta para Solventum</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Propuesta comercial de Simoné para Solventum: El Expreso de la Salud, experiencia gamificada de formación clínica en manejo de heridas.">
-<meta property="og:title" content="El Expreso de la Salud · Propuesta comercial">
-<meta property="og:description" content="6 vagones, 6 temas clínicos y medición antes y después. Preparado por Simoné para Solventum.">
-<link rel="icon" href="img/favicon.png">
+<meta name="description" content="Propuesta comercial de Simoné para Solventum: El Expreso de la Salud, experiencia gamificada de formación clínica en manejo de heridas para Let's Heal Ecuador.">
+<meta property="og:title" content="El Expreso de la Salud · Propuesta para Solventum">
+<meta property="og:description" content="6 vagones, 6 temas clínicos y medición antes y después. Preparado por Simoné para Let's Heal Ecuador.">
+<link rel="icon" href="img/simbolo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
-  /* Layout: one scrolling proposal on a dark clinical ground; HUD corner brackets mark the key panels; the route E1→E5 is the one drawn sequence; the investment closes the page.
-     Single dark look by choice: Solventum brand (Deep Teal, Malachite, black). */
-  :root {
-    --void: #050B0A;
-    --teal: #01332B;
-    --teal-2: #0A2621;
-    --malachite: #05DD4D;
-    --malachite-soft: #7FEFA4;
-    --ink: #EEF4F2;
-    --body: #B9C7C3;
-    --muted: #82948F;
-    --line: #1C3A34;
-    --display: 'Orbitron', 'Eurostile', 'Arial Black', sans-serif;
-    --text: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    --wrap: 1120px;
-    color-scheme: dark;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
-  body { margin: 0; background: var(--void); color: var(--ink); font-family: var(--text); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-  img { max-width: 100%; display: block; }
-  h1, h2, h3, p, ul, ol { margin: 0; }
-  h1, h2, h3 { text-wrap: balance; }
-  ul, ol { padding: 0; list-style: none; }
-  sup { font-size: .55em; vertical-align: super; line-height: 0; }
+/* Layout: una columna editorial en crema; el tren del hero abre el viaje y la ruta de 5 paradas es la única secuencia dibujada; la inversión cierra. */
+:root{
+  --bg:#FBFAF6; --surface:#FFFFFF; --ink:#2B2F0C; --muted:#5D5F4A; --line:#E4E1D4;
+  --olive:#353A0E; --rust:#8B3A12; --magenta:#B0247F; --orange:#F2A03D; --tint:#F4EFE3;
+  --on-dark:#FBFAF6;
+  --display:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Lato",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--ink)}
+p,ul,ol{margin:0}
+sup{font-size:.55em;vertical-align:super;line-height:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--display);font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rust)}
+a{color:var(--rust)}
+a:focus-visible{outline:2px solid var(--magenta);outline-offset:3px}
 
-  .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-  section { padding-block: clamp(56px, 8vw, 104px); scroll-margin-top: 56px; border-top: 1px solid var(--line); }
-  .label { font-size: 12px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--malachite); }
-  .h2 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.15; letter-spacing: .01em; }
-  .lead { font-size: clamp(17px, 1.8vw, 20px); color: var(--body); max-width: 62ch; }
-  .head { display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(28px, 4vw, 48px); }
+header.top{border-bottom:1px solid var(--line);background:var(--surface)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:18px}
+.logo{height:56px;width:auto}
+.meta{font-family:var(--display);font-size:.78rem;color:var(--muted);text-align:right;line-height:1.5}
+.meta strong{color:var(--ink);font-weight:600}
 
-  /* HUD frame: corner brackets */
-  .hud { position: relative; background: var(--teal-2); padding: 26px 28px; }
-  .hud::before, .hud::after { content: ""; position: absolute; width: 18px; height: 18px; border: 2px solid var(--malachite); pointer-events: none; }
-  .hud::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
-  .hud::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+/* Portada */
+.hero{padding-block:clamp(44px,7vw,84px) 0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:end}
+.hero h1{font-size:clamp(2.4rem,6.4vw,4.4rem);font-weight:800;line-height:1.03;letter-spacing:-.02em;margin-top:14px}
+.hero h1 em{font-style:normal;color:var(--magenta)}
+.hero .lead{font-size:1.16rem;color:var(--muted);max-width:56ch;margin-top:22px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--olive);color:var(--on-dark);font-family:var(--display);font-weight:700;font-size:.95rem;text-decoration:none;padding:14px 24px;border-radius:999px}
+.btn:hover{background:var(--rust)}
+.partner{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;gap:14px}
+.partner img{width:100%;max-width:300px;height:auto}
+.partner p{font-size:.9rem;color:var(--muted)}
+.partner b{color:var(--ink);font-family:var(--display);font-weight:700}
+.train{margin-top:clamp(36px,5vw,56px)}
+.train svg{width:100%;height:auto;display:block}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--olive);margin-top:0}
+.fact{padding:18px 18px 24px 0}
+.fact + .fact{padding-left:18px;border-left:1px solid var(--line)}
+.fact strong{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3.6vw,2.5rem);line-height:1.1;color:var(--magenta);font-variant-numeric:tabular-nums}
+.fact span{font-size:.92rem;color:var(--muted);line-height:1.4;display:block;margin-top:4px}
 
-  /* Hero */
-  .hero { border-top: 0; padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 88px); background: radial-gradient(120% 90% at 85% 0%, var(--teal) 0%, var(--void) 62%); }
-  .hero .wrap { display: flex; flex-direction: column; gap: clamp(32px, 5vw, 56px); }
-  .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-  .brandbar { background: #F7F2E8; }
-  .brandbar .top { padding-block: 18px; }
-  .brandbar .for { color: #5A5C3A; }
-  .brandbar .for b { color: #373A0E; }
-  .logo { width: clamp(170px, 20vw, 240px); height: auto; }
-  .for { font-size: 14px; color: var(--muted); }
-  .for b { color: var(--ink); font-weight: 600; }
-  .hero-main { display: flex; flex-direction: column; gap: 20px; }
-  .hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 8vw, 92px); line-height: 1; letter-spacing: .01em; }
-  .hero h1 span { color: var(--malachite); }
-  .hero .lead { font-size: clamp(18px, 2.1vw, 23px); color: var(--ink); max-width: 46ch; }
-  .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-  .fact { padding: 18px 16px 0 0; display: flex; flex-direction: column; gap: 2px; }
-  .fact + .fact { padding-left: 16px; border-left: 1px solid var(--line); }
-  .fact strong { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); color: var(--malachite); line-height: 1.1; font-variant-numeric: tabular-nums; }
-  .fact span { font-size: 13px; color: var(--body); line-height: 1.35; }
+nav.toc{position:sticky;top:0;z-index:9;background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;color:var(--muted);text-decoration:none;font-family:var(--display);font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:15px 12px;border-bottom:2px solid transparent}
+nav.toc a:hover,nav.toc a.on{color:var(--ink);border-bottom-color:var(--magenta)}
 
-  /* Nav */
-  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--void); }
-  nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--void); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  nav.toc .wrap { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
-  nav.toc .wrap::-webkit-scrollbar { display: none; }
-  nav.toc a { flex: none; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 15px 12px; border-bottom: 2px solid transparent; }
-  nav.toc a:hover, nav.toc a.on { color: var(--ink); border-bottom-color: var(--malachite); }
-  a:focus-visible { outline: 2px solid var(--malachite); outline-offset: 2px; }
+section{padding-block:clamp(52px,7vw,88px);scroll-margin-top:52px}
+.band{background:var(--tint)}
+.sec-head{max-width:64ch;margin-bottom:36px}
+.sec-head h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;line-height:1.15;margin-top:10px}
+.sec-head p{color:var(--muted);margin-top:14px}
 
-  /* Alcance */
-  .scope { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
-  .scope p + p { margin-top: 16px; }
-  .scope .text p { color: var(--body); max-width: 60ch; }
-  .scope .text b { color: var(--ink); }
-  .spec { display: flex; flex-direction: column; }
-  .spec div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
-  .spec div:last-child { border-bottom: 0; }
-  .spec dt, .spec .k { color: var(--body); }
-  .spec .v { font-weight: 600; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+/* Resumen */
+.why{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.why > *{min-width:0}
+.why p + p{margin-top:16px}
+.signs{list-style:none;padding:0;display:grid;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px 24px}
+.signs li{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.signs li:last-child{border-bottom:0}
+.signs b{font-family:var(--display);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rust);font-weight:600;padding-top:3px}
+.signs span{font-family:var(--display);font-weight:600;text-align:right}
 
-  /* Kit */
-  .group + .group { margin-top: clamp(36px, 5vw, 56px); }
-  .group-title { font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin-bottom: 20px; }
-  .kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-  .item { display: flex; flex-direction: column; gap: 10px; border-top: 2px solid var(--malachite); padding-top: 18px; }
-  .item h3 { font-size: 18px; font-weight: 700; line-height: 1.3; }
-  .item p { font-size: 15px; color: var(--body); }
-  .item .tag { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); }
-  .case { margin-top: clamp(28px, 4vw, 44px); display: flex; gap: 20px; align-items: center; }
-  .case .swatch { flex: none; width: 56px; height: 40px; border-radius: 6px; background: linear-gradient(160deg, #1F8A4C, #0E5A30); box-shadow: inset 0 -6px 0 rgba(0,0,0,.25); position: relative; }
-  .case .swatch::before { content: ""; position: absolute; top: -8px; left: 18px; width: 20px; height: 9px; border: 3px solid #0E5A30; border-bottom: 0; border-radius: 6px 6px 0 0; }
-  .case + .case { margin-top: 18px; }
-  .case .rollup { flex: none; width: 56px; height: 56px; position: relative; }
-  .case .rollup::before { content: ""; position: absolute; left: 19px; top: 0; width: 18px; height: 50px; border: 2px solid var(--malachite); border-radius: 2px; }
-  .case .rollup::after { content: ""; position: absolute; left: 12px; bottom: 0; width: 32px; height: 6px; background: var(--malachite); border-radius: 3px; }
-  .case p { font-size: 15px; color: var(--body); max-width: 70ch; }
-  .case b { color: var(--ink); }
+/* Ruta */
+.flow{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:3px solid var(--olive)}
+.flow li{padding:20px 20px 4px 0;min-width:0;position:relative}
+.flow li::before{content:"";position:absolute;top:-9px;left:0;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--magenta)}
+.flow .t{font-family:var(--display);font-size:.78rem;font-weight:700;color:var(--rust);letter-spacing:.08em;text-transform:uppercase;display:block;margin-top:6px}
+.flow h3{font-size:1.08rem;font-weight:700;margin-top:6px}
+.flow p{font-size:.94rem;color:var(--muted);margin-top:8px}
+.phones{margin-top:clamp(36px,5vw,52px);display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.phones figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.phones img{width:100%;aspect-ratio:520/846;object-fit:cover;object-position:top;border-radius:16px;border:6px solid var(--olive);background:var(--olive)}
+.phones figcaption{font-family:var(--display);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center}
+.note{font-size:.88rem;color:var(--muted);margin-top:16px;max-width:72ch}
 
-  /* Ruta */
-  .route { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; counter-reset: st; }
-  .stop { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 20px 18px 22px; background: var(--teal-2); border: 1px solid var(--line); }
-  .stop .n { font-family: var(--display); font-weight: 700; font-size: 26px; color: var(--malachite); line-height: 1; }
-  .stop h3 { font-size: 15px; font-weight: 700; line-height: 1.35; }
-  .stop p { font-size: 13px; color: var(--body); line-height: 1.45; }
-  .stop:not(:last-child)::after { content: ""; position: absolute; top: 31px; right: -12px; width: 12px; height: 2px; background: var(--malachite); }
-  .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+/* Vagones */
+.cars{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.car{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0;min-width:0;overflow:hidden;display:flex;flex-direction:column}
+.car .roof{height:10px;background:var(--c)}
+.car .in{padding:22px 24px 24px;display:flex;flex-direction:column;gap:8px}
+.car .n{font-family:var(--display);font-size:.74rem;font-weight:700;letter-spacing:.16em;color:var(--muted)}
+.car h3{font-size:1.2rem;font-weight:700;line-height:1.25}
+.car .prod{align-self:flex-start;font-family:var(--display);font-size:.74rem;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--tint);border:1px solid var(--line)}
+.car p{font-size:.94rem;color:var(--muted)}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(32px,5vw,48px)}
+.steps li{border-top:3px solid var(--orange);padding-top:16px;min-width:0}
+.steps .pts{font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--rust)}
+.steps .t{display:block;font-family:var(--display);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.steps h3{font-size:1.05rem;font-weight:700;margin-top:8px}
+.steps p{font-size:.94rem;color:var(--muted);margin-top:6px}
 
-  /* Roles */
-  .roles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
-  .crew { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
-  .badge { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
-  .badge i { display: block; width: 100%; aspect-ratio: 3 / 4; max-width: 64px; border-radius: 6px; border: 1px solid var(--line); background: var(--teal-2); position: relative; }
-  .badge i::before { content: ""; position: absolute; top: 8px; left: 50%; width: 30%; height: 4px; margin-left: -15%; border-radius: 2px; background: var(--line); }
-  .badge.lead i { border-color: var(--malachite); background: var(--teal); }
-  .badge.lead i::after { content: ""; position: absolute; left: 50%; top: -9px; width: 26px; height: 9px; margin-left: -13px; background: var(--malachite); border-radius: 13px 13px 2px 2px; }
-  .badge span { font-size: 11px; font-weight: 600; color: var(--body); line-height: 1.25; }
-  .badge.lead span { color: var(--ink); }
-  .roles .text p { color: var(--body); }
-  .roles .text p + p { margin-top: 14px; }
-  .roles .text b { color: var(--ink); }
+/* Medición */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px;min-width:0}
+.card .k{font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--magenta);line-height:1}
+.card h3{font-size:1.15rem;font-weight:700;margin-top:12px}
+.card p{color:var(--muted);font-size:.96rem;margin-top:8px}
+.bars{margin-top:18px;display:grid;gap:10px}
+.bars div{display:grid;grid-template-columns:64px 1fr 44px;gap:10px;align-items:center;font-family:var(--display);font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.bars i{display:block;height:10px;border-radius:5px;background:var(--line);position:relative;overflow:hidden}
+.bars i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--muted);border-radius:5px}
+.bars .after i::after{background:var(--magenta)}
+.bars .after{color:var(--ink)}
+.bars em{font-style:normal;text-align:right}
+.bars small{grid-column:1/-1;font-family:var(--body);letter-spacing:0;text-transform:none;font-weight:400;font-size:.8rem}
 
-  /* Onboarding */
-  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-  .two .hud { display: flex; flex-direction: column; gap: 10px; }
-  .two .k { font-family: var(--display); font-weight: 700; font-size: 30px; color: var(--malachite); line-height: 1; }
-  .two h3 { font-size: 19px; font-weight: 700; }
-  .two p { font-size: 15px; color: var(--body); }
+/* Valor */
+.vals{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:26px 48px}
+.vals li{padding-left:18px;border-left:3px solid var(--orange)}
+.vals h3{font-size:1.08rem;font-weight:700}
+.vals p{color:var(--muted);font-size:.96rem;margin-top:6px}
 
-  /* Justificación */
-  .why { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
-  .why li { display: flex; flex-direction: column; gap: 6px; padding-left: 18px; border-left: 2px solid var(--line); }
-  .why h3 { font-size: 17px; font-weight: 700; }
-  .why p { font-size: 15px; color: var(--body); }
+/* Mediadora */
+.lead-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,44px)}
+.lead-card > *{min-width:0}
+.lead-card img{width:128px;height:128px;border-radius:50%;object-fit:cover;border:3px solid var(--orange)}
+.lead-card h3{color:var(--on-dark);font-size:1.5rem;font-weight:700}
+.lead-card .role{font-family:var(--display);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-top:6px;font-weight:600}
+.lead-card p.bio{margin-top:14px;opacity:.92;max-width:62ch}
+.lead-card a{color:var(--orange);font-family:var(--display);font-weight:600;font-size:.92rem;display:inline-block;margin-top:14px}
 
-  /* Inversión */
-  #inversion { background: radial-gradient(100% 120% at 0% 100%, var(--teal) 0%, var(--void) 60%); }
-  .invest { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
-  .total { display: flex; flex-direction: column; gap: 8px; }
-  .total .amount { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 6vw, 64px); color: var(--malachite); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
-  .total .cur { font-size: 15px; color: var(--body); }
-  .options { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-  .options .hud { display: flex; flex-direction: column; gap: 8px; }
-  .opt-label { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--malachite-soft); }
-  .options h3 { font-size: 19px; font-weight: 700; }
-  .opt-amount { font-family: var(--display); font-weight: 700; font-size: clamp(24px, 3vw, 32px); color: var(--ink); font-variant-numeric: tabular-nums; line-height: 1.2; }
-  .opt-amount small { font-family: var(--text); font-size: 14px; font-weight: 500; color: var(--body); }
-  .options p { font-size: 15px; color: var(--body); }
-  @media (max-width: 640px) { .options { grid-template-columns: 1fr; } }
-  .breakdown { margin: 14px 0 0; display: flex; flex-direction: column; max-width: 440px; }
-  .breakdown div { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
-  .breakdown dt { color: var(--body); }
-  .breakdown dd { margin: 0; color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .breakdown .sum { border-bottom: 0; }
-  .breakdown .sum dt, .breakdown .sum dd { color: var(--malachite); font-weight: 700; }
-  .incl { display: flex; flex-direction: column; }
-  .incl li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--body); }
-  .incl li:last-child { border-bottom: 0; }
-  .incl li::before { content: ""; flex: none; width: 10px; height: 10px; margin-top: 7px; border: 2px solid var(--malachite); transform: rotate(45deg); }
-  .phase { margin-top: 28px; font-size: 14px; color: var(--muted); max-width: 70ch; }
+/* Inversión */
+.invest{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,48px);align-items:start}
+.invest > *{min-width:0}
+.price{background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,36px)}
+.price .lbl{font-family:var(--display);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:600}
+.price .big{display:block;font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.05;margin-top:8px;font-variant-numeric:tabular-nums}
+.price .big small{font-size:1rem;font-weight:500;opacity:.85}
+.price dl{margin:22px 0 0;display:grid}
+.price dl div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid rgba(251,250,246,.18);font-size:.95rem}
+.price dd{margin:0;font-family:var(--display);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.price dl .sum{font-weight:700;color:var(--orange)}
+.price dl .sum dd{font-weight:800}
+.list{list-style:none;padding:0;display:grid}
+.list li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.96rem}
+.list li:last-child{border-bottom:0}
+.list li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--magenta);margin-top:9px}
+.list.alt li::before{background:var(--orange)}
+.list b{font-family:var(--display);font-weight:700}
+.boxes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(28px,4vw,40px)}
+.boxes .card h3{margin-top:0;margin-bottom:8px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rust)}
 
-  footer { border-top: 1px solid var(--line); padding-block: 32px; font-size: 13px; color: var(--muted); }
-  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
-  @media (max-width: 900px) {
-    .route { grid-template-columns: 1fr; }
-    .stop:not(:last-child)::after { top: auto; bottom: -12px; right: auto; left: 31px; width: 2px; height: 12px; }
-    .kit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .scope, .roles, .invest { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 640px) {
-    .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .fact:nth-child(3) { padding-left: 0; border-left: 0; }
-    .fact:nth-child(n+3) { padding-top: 18px; }
-    .kit, .two, .why { grid-template-columns: 1fr; }
-    .crew { gap: 5px; }
-    .badge span { font-size: 10px; }
-  }
-</style>
-<style>
-  /* Ecosistema: 6 módulos */
-  .mods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-  .mod { display: flex; flex-direction: column; background: var(--teal-2); border: 1px solid var(--line); min-width: 0; }
-  .mod .shot { aspect-ratio: 4 / 3; overflow: hidden; background: #000; border-bottom: 1px solid var(--line); }
-  .mod .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-  .mod .body { display: flex; flex-direction: column; gap: 8px; padding: 20px 22px 24px; }
-  .mod .n { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: .14em; color: var(--malachite); }
-  .mod h3 { font-size: 19px; font-weight: 700; line-height: 1.3; }
-  .mod p { font-size: 15px; color: var(--body); }
-  .mod .when { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); }
-  /* Evaluación: gráfico antes / después en CSS */
-  .eval { aspect-ratio: 4 / 3; display: flex; flex-direction: column; justify-content: center; gap: 14px; padding: 24px 26px; background: radial-gradient(110% 90% at 80% 0%, var(--teal) 0%, #000 70%); border-bottom: 1px solid var(--line); }
-  .eval .row { display: grid; grid-template-columns: 64px minmax(0, 1fr) 40px; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--body); }
-  .eval .bar { height: 12px; background: var(--line); position: relative; }
-  .eval .bar i { position: absolute; inset: 0 auto 0 0; background: var(--muted); }
-  .eval .row.after .bar i { background: var(--malachite); }
-  .eval .row.after { color: var(--ink); }
-  .eval .v { font-family: var(--display); font-size: 14px; text-align: right; color: inherit; }
-  .eval .cap { font-size: 12px; color: var(--muted); letter-spacing: 0; text-transform: none; }
-
-  /* Fotos del evento */
-  .duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
-  .duo figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
-  .duo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--line); }
-  .duo figcaption { font-size: 14px; color: var(--body); }
-  .duo figcaption b { color: var(--ink); }
-  .wide { margin-top: 24px; position: relative; }
-  .wide img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; border: 1px solid var(--line); }
-
-  /* Ruta de 6 paradas */
-  .route.six { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .stop .t { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); }
-
-  /* Casos 2027 */
-  .cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-  .cases .hud { display: flex; flex-direction: column; gap: 12px; }
-  .cases .k { font-family: var(--display); font-weight: 700; font-size: 30px; color: var(--malachite); line-height: 1; }
-  .cases h3 { font-size: 19px; font-weight: 700; }
-  .cases .incl li { padding: 9px 0; }
-  .reuse { margin-top: clamp(28px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
-  .reuse .box { border: 1px solid var(--line); padding: 22px 24px; display: flex; flex-direction: column; gap: 10px; }
-  .reuse .box.add { border-color: var(--malachite); border-style: dashed; }
-  .reuse h3 { font-size: 16px; font-weight: 700; letter-spacing: .02em; }
-  .reuse p { font-size: 15px; color: var(--body); }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .chips span { font-size: 13px; font-weight: 600; color: var(--ink); border: 1px solid var(--line); background: var(--teal-2); padding: 6px 12px; border-radius: 999px; }
-
-  /* Inversión en 3 bloques */
-  .blocks { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-  .blocks .hud { display: flex; flex-direction: column; gap: 8px; }
-  .blocks h3 { font-size: 18px; font-weight: 700; }
-  .blocks p { font-size: 14px; color: var(--body); }
-  .blocks .breakdown { max-width: none; }
-  .blocks .breakdown div { font-size: 14px; }
-  .pay { margin-top: clamp(28px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
-  .pay .hud { display: flex; flex-direction: column; gap: 6px; }
-
-  @media (max-width: 1000px) { .route.six { grid-template-columns: repeat(3, minmax(0, 1fr)); } .route.six .stop:nth-child(3)::after { display: none; } }
-  @media (max-width: 900px) {
-    .mods, .blocks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .route.six { grid-template-columns: 1fr; }
-    .route.six .stop:nth-child(3)::after { display: block; }
-  }
-  @media (max-width: 640px) {
-    .mods, .blocks, .duo, .cases, .reuse, .pay { grid-template-columns: 1fr; }
-    .duo img { aspect-ratio: 4 / 3; }
-    .wide img { aspect-ratio: 4 / 3; }
-  }
-  .roi-num { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(20px, 4vw, 48px); align-items: center; }
-  .roi-num .k { font-family: var(--display); font-weight: 800; font-size: clamp(32px, 5vw, 52px); color: var(--malachite); line-height: 1; display: block; margin-bottom: 10px; }
-  .roi-num p { font-size: 14px; color: var(--body); }
-  .roi-num .roi-quote { font-size: clamp(19px, 2.2vw, 24px); font-weight: 600; color: var(--ink); line-height: 1.4; }
-  @media (max-width: 640px) { .roi-num { grid-template-columns: 1fr; } }
-</style>
-<style>
-  .cta { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; background: var(--malachite); color: #01332B; font-weight: 700; text-decoration: none; padding: 14px 22px; border-radius: 999px; font-size: 16px; }
-  .cta:hover { background: var(--malachite-soft); }
-  .route.five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-  .phones { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
-  .phones figure { margin: 0; display: flex; flex-direction: column; gap: 8px; }
-  .phones img { width: 100%; aspect-ratio: 520 / 846; object-fit: cover; object-position: top; border: 1px solid var(--line); border-radius: 14px; }
-  .phones figcaption { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--body); text-align: center; }
-  .cars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-  .car { display: flex; flex-direction: column; gap: 10px; }
-  .car .n { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: .14em; color: var(--malachite); }
-  .car h3 { font-size: 19px; font-weight: 700; line-height: 1.3; }
-  .car .prod { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); }
-  .car p { font-size: 15px; color: var(--body); }
-  .steps { margin-top: clamp(32px, 5vw, 48px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-  .steps .stop .n { font-size: 22px; }
-  .lead-me { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: center; }
-  .lead-me img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 2px solid var(--malachite); }
-  .lead-me h3 { font-size: 22px; font-weight: 700; }
-  .lead-me .role { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--malachite-soft); margin: 4px 0 10px; }
-  .lead-me p { color: var(--body); font-size: 15px; max-width: 70ch; }
-  .lead-me a { display: inline-block; margin-top: 12px; color: var(--malachite); font-weight: 600; text-decoration: none; }
-  @media (max-width: 1000px) { .phones { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-  @media (max-width: 900px) { .route.five { grid-template-columns: 1fr; } .cars { grid-template-columns: repeat(2, minmax(0, 1fr)); } .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } .steps .stop::after { display: none; } }
-  @media (max-width: 640px) { .cars, .steps { grid-template-columns: 1fr; } .phones { grid-template-columns: repeat(2, minmax(0, 1fr)); } .lead-me { grid-template-columns: 1fr; } .lead-me img { width: 110px; height: 110px; } }
+@media (max-width:900px){
+  .hero-grid,.why,.invest{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr;border-top:0;border-left:3px solid var(--olive)}
+  .flow li{padding:0 0 22px 24px}
+  .flow li::before{top:2px;left:-9px}
+  .cars{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .phones{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:640px){
+  .facts{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){padding-left:0;border-left:0}
+  .fact:nth-child(n+3){border-top:1px solid var(--line)}
+  .cars,.steps,.two,.vals,.boxes{grid-template-columns:1fr}
+  .phones{grid-template-columns:1fr 1fr}
+  .lead-card{grid-template-columns:1fr}
+  .lead-card img{width:96px;height:96px}
+  .meta{text-align:left}
+}
 </style>
 </head>
 <body>
 
-<div class="brandbar">
-  <div class="wrap top">
-    <img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte">
-    <p class="for">Propuesta comercial para <b>María Paula Ramos · Solventum</b> · Noviembre 2026</p>
-  </div>
-</div>
-
-<header class="hero">
+<header class="top">
   <div class="wrap">
-    <div class="hero-main">
-      <p class="label">Experiencia gamificada de formación clínica · Let's Heal</p>
-      <h1>El Expreso de la <span>Salud</span></h1>
-      <p class="lead">Un viaje en tren por seis vagones, uno por cada reto del manejo de heridas. Cada participante aprende con casos clínicos reales, trabaja en equipo con las manos y sale con evidencia de cuánto avanzó. Los dispositivos de Solventum viajan en el centro del recorrido.</p>
-      <a class="cta" href="../" target="_blank" rel="noopener">Recorrer el demo →</a>
-    </div>
-    <div class="facts">
-      <div class="fact"><strong>6</strong><span>vagones, uno por tema clínico</span></div>
-      <div class="fact"><strong>6</strong><span>grupos que viajan en paralelo</span></div>
-      <div class="fact"><strong>7 + 7</strong><span>preguntas de entrada y de salida</span></div>
-      <div class="fact"><strong>100</strong><span>puntos posibles por pasajero</span></div>
-    </div>
+    <img class="logo" src="img/logo-simone-crema.png" alt="Simoné · Desarrollo humano a través del arte">
+    <p class="meta">Propuesta comercial para<br><strong>María Paula Ramos · Solventum</strong><br>Noviembre 2026</p>
   </div>
 </header>
 
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Let's Heal Ecuador · Clinical Challenge</p>
+        <h1>El Expreso de la <em>Salud</em></h1>
+        <p class="lead">Un viaje en tren por seis vagones, uno por cada reto del manejo de heridas. Las licenciadas aprenden con casos clínicos, trabajan en equipo con las manos y salen con evidencia de cuánto avanzaron. Los productos de Solventum viajan en el centro del recorrido.</p>
+        <div class="actions"><a class="btn" href="../" target="_blank" rel="noopener">Recorrer el demo →</a></div>
+      </div>
+      <div class="partner">
+        <img src="img/lets-heal.png" alt="Let's heal by Solventum">
+        <p>Cierre académico del programa <b>Let's Heal Ecuador</b> · 27 de noviembre de 2026</p>
+      </div>
+    </div>
+
+    <figure class="train" aria-label="Ilustración de un tren moderno de seis vagones">
+      <svg viewBox="0 0 1080 200" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="win" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E9E3D2"/></linearGradient>
+        </defs>
+        <!-- paisaje -->
+        <path d="M0 150 C120 118 210 132 300 120 C400 106 470 128 560 118 C660 106 760 126 860 112 C950 100 1020 116 1080 110 V160 H0Z" fill="#F4EFE3"/>
+        <circle cx="940" cy="52" r="26" fill="#F2A03D" opacity=".85"/>
+        <!-- vagones -->
+        <g>
+          <rect x="20" y="76" width="152" height="70" rx="12" fill="#FFFFFF" stroke="#353A0E" stroke-width="3"/>
+          <rect x="182" y="76" width="152" height="70" rx="12" fill="#FFFFFF" stroke="#353A0E" stroke-width="3"/>
+          <rect x="344" y="76" width="152" height="70" rx="12" fill="#FFFFFF" stroke="#353A0E" stroke-width="3"/>
+          <rect x="506" y="76" width="152" height="70" rx="12" fill="#FFFFFF" stroke="#353A0E" stroke-width="3"/>
+          <rect x="668" y="76" width="152" height="70" rx="12" fill="#FFFFFF" stroke="#353A0E" stroke-width="3"/>
+          <path d="M830 76 H930 C990 76 1040 104 1058 132 Q1064 146 1048 146 H830 Z" fill="#FFFFFF" stroke="#353A0E" stroke-width="3" stroke-linejoin="round"/>
+          <!-- franjas de color por vagón -->
+          <rect x="22" y="122" width="148" height="8" fill="#E5484D"/>
+          <rect x="184" y="122" width="148" height="8" fill="#F2C14E"/>
+          <rect x="346" y="122" width="148" height="8" fill="#3B82F6"/>
+          <rect x="508" y="122" width="148" height="8" fill="#2FA84F"/>
+          <rect x="670" y="122" width="148" height="8" fill="#B8B3A3"/>
+          <path d="M832 122 H1046 Q1052 130 1054 134 H832Z" fill="#C9A227"/>
+          <!-- ventanas -->
+          <g fill="url(#win)" stroke="#353A0E" stroke-width="2">
+            <rect x="34" y="90" width="38" height="22" rx="5"/><rect x="78" y="90" width="38" height="22" rx="5"/><rect x="122" y="90" width="38" height="22" rx="5"/>
+            <rect x="196" y="90" width="38" height="22" rx="5"/><rect x="240" y="90" width="38" height="22" rx="5"/><rect x="284" y="90" width="38" height="22" rx="5"/>
+            <rect x="358" y="90" width="38" height="22" rx="5"/><rect x="402" y="90" width="38" height="22" rx="5"/><rect x="446" y="90" width="38" height="22" rx="5"/>
+            <rect x="520" y="90" width="38" height="22" rx="5"/><rect x="564" y="90" width="38" height="22" rx="5"/><rect x="608" y="90" width="38" height="22" rx="5"/>
+            <rect x="682" y="90" width="38" height="22" rx="5"/><rect x="726" y="90" width="38" height="22" rx="5"/><rect x="770" y="90" width="38" height="22" rx="5"/>
+            <rect x="844" y="90" width="38" height="22" rx="5"/><rect x="888" y="90" width="38" height="22" rx="5"/>
+            <path d="M940 90 H968 C992 92 1010 102 1022 112 H940Z"/>
+          </g>
+          <!-- números -->
+          <g font-family="Montserrat, sans-serif" font-weight="800" font-size="13" fill="#353A0E" text-anchor="middle">
+            <text x="96" y="143">1</text><text x="258" y="143">2</text><text x="420" y="143">3</text><text x="582" y="143">4</text><text x="744" y="143">5</text><text x="880" y="143">6</text>
+          </g>
+          <!-- uniones -->
+          <g fill="#353A0E"><rect x="172" y="104" width="10" height="20" rx="2"/><rect x="334" y="104" width="10" height="20" rx="2"/><rect x="496" y="104" width="10" height="20" rx="2"/><rect x="658" y="104" width="10" height="20" rx="2"/><rect x="820" y="104" width="10" height="20" rx="2"/></g>
+          <circle cx="1040" cy="136" r="4" fill="#B0247F"/>
+        </g>
+        <!-- ruedas y riel -->
+        <g fill="#353A0E">
+          <circle cx="50" cy="152" r="7"/><circle cx="142" cy="152" r="7"/><circle cx="212" cy="152" r="7"/><circle cx="304" cy="152" r="7"/><circle cx="374" cy="152" r="7"/><circle cx="466" cy="152" r="7"/><circle cx="536" cy="152" r="7"/><circle cx="628" cy="152" r="7"/><circle cx="698" cy="152" r="7"/><circle cx="790" cy="152" r="7"/><circle cx="860" cy="152" r="7"/><circle cx="990" cy="152" r="7"/>
+        </g>
+        <rect x="0" y="160" width="1080" height="4" fill="#353A0E"/>
+        <g fill="#8B3A12" opacity=".5"><rect x="10" y="168" width="40" height="5"/><rect x="90" y="168" width="40" height="5"/><rect x="170" y="168" width="40" height="5"/><rect x="250" y="168" width="40" height="5"/><rect x="330" y="168" width="40" height="5"/><rect x="410" y="168" width="40" height="5"/><rect x="490" y="168" width="40" height="5"/><rect x="570" y="168" width="40" height="5"/><rect x="650" y="168" width="40" height="5"/><rect x="730" y="168" width="40" height="5"/><rect x="810" y="168" width="40" height="5"/><rect x="890" y="168" width="40" height="5"/><rect x="970" y="168" width="40" height="5"/><rect x="1050" y="168" width="30" height="5"/></g>
+      </svg>
+    </figure>
+
+    <div class="facts">
+      <div class="fact"><strong>47</strong><span>licenciadas de clínicas de heridas</span></div>
+      <div class="fact"><strong>6</strong><span>grupos por color que viajan en paralelo</span></div>
+      <div class="fact"><strong>6</strong><span>vagones, uno por tema clínico</span></div>
+      <div class="fact"><strong>3 h</strong><span>de experiencia en el salón</span></div>
+    </div>
+  </div>
+</div>
+
 <nav class="toc" aria-label="Secciones">
   <div class="wrap">
-    <a href="#alcance">Alcance</a>
+    <a href="#resumen">Resumen</a>
     <a href="#recorrido">Recorrido</a>
     <a href="#vagones">Vagones</a>
     <a href="#medicion">Medición</a>
@@ -334,122 +284,131 @@
 </nav>
 
 <main>
-  <section id="alcance">
+  <section id="resumen" class="band">
     <div class="wrap">
-      <div class="head">
-        <p class="label">Resumen ejecutivo</p>
-        <h2 class="h2">Un tren que convierte la formación en una experiencia</h2>
+      <div class="sec-head">
+        <p class="eyebrow">Resumen ejecutivo</p>
+        <h2>Un tren que convierte la formación en una experiencia</h2>
       </div>
-      <div class="scope">
-        <div class="text">
-          <p><b>El Expreso de la Salud</b> es una experiencia de aprendizaje gamificada para profesionales de la salud que manejan heridas. Cada persona elige su personaje, compra su tiquete con una prueba de entrada y recorre seis vagones con su grupo.</p>
+      <div class="why">
+        <div>
+          <p><b>El Expreso de la Salud</b> es la experiencia gamificada del cierre académico de Let's Heal Ecuador. Cada licenciada elige su personaje, compra su tiquete con una prueba de entrada y recorre seis vagones con su grupo.</p>
           <p>En cada vagón hay un caso clínico, una pregunta individual, una pregunta grupal y un <b>rompecabezas en acrílico</b> que el equipo arma contra el reloj. Quien supera el reto gana la insignia del vagón y la mediadora perfora su tiquete.</p>
           <p>El viaje termina en la <b>Puerta de salida</b> con la misma prueba del inicio. Así Solventum sabe, tema por tema, cuánto aprendió cada participante y cada grupo.</p>
         </div>
-        <div class="hud">
-          <dl class="spec">
-            <div><dt class="k">Vagones</dt><dd class="v">6 temas clínicos</dd></div>
-            <div><dt class="k">Grupos</dt><dd class="v">6, por colores</dd></div>
-            <div><dt class="k">Prueba de entrada</dt><dd class="v">7 preguntas · 14 pts</dd></div>
-            <div><dt class="k">Retos por vagón</dt><dd class="v">3 · 12 pts</dd></div>
-            <div><dt class="k">Prueba de salida</dt><dd class="v">7 preguntas · 14 pts</dd></div>
-            <div><dt class="k">Pieza física</dt><dd class="v">Rompecabezas 35 × 25 cm</dd></div>
-            <div><dt class="k">Funciona en</dt><dd class="v">Celular, sin instalar apps</dd></div>
-          </dl>
-        </div>
+        <ul class="signs">
+          <li><b>Vagones</b><span>6 temas clínicos</span></li>
+          <li><b>Grupos</b><span>6, de 7 u 8 personas</span></li>
+          <li><b>Prueba de entrada</b><span>7 preguntas · 14 pts</span></li>
+          <li><b>Retos por vagón</b><span>3 · 12 pts</span></li>
+          <li><b>Prueba de salida</b><span>7 preguntas · 14 pts</span></li>
+          <li><b>Pieza física</b><span>Rompecabezas 35 × 25 cm</span></li>
+          <li><b>Funciona en</b><span>Celular, sin instalar apps</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section id="recorrido">
     <div class="wrap">
-      <div class="head">
-        <p class="label">El viaje del participante</p>
-        <h2 class="h2">Del andén a la puerta de salida</h2>
-        <p class="lead">Cinco momentos que ordenan la experiencia y le dan ritmo, desde la llegada al salón hasta el resultado final.</p>
+      <div class="sec-head">
+        <p class="eyebrow">El viaje de cada participante</p>
+        <h2>Del andén a la puerta de salida</h2>
+        <p>Cinco paradas que ordenan la experiencia y le dan ritmo, desde la llegada al salón hasta el resultado final.</p>
       </div>
-      <ol class="route five">
-        <li class="stop"><span class="n">1</span><span class="t">Llegada</span><h3>Andén</h3><p>Cada persona elige su personaje y su grupo de color.</p></li>
-        <li class="stop"><span class="n">2</span><span class="t">Antes</span><h3>Taquilla</h3><p>Prueba de entrada de 7 preguntas: el punto de partida.</p></li>
-        <li class="stop"><span class="n">3</span><span class="t">Tiquete</span><h3>Tiquete impreso</h3><p>Muestra el puntaje de entrada y guarda las insignias del viaje.</p></li>
-        <li class="stop"><span class="n">4</span><span class="t">El juego</span><h3>Seis vagones</h3><p>Caso clínico, retos individuales y grupales, y rompecabezas.</p></li>
-        <li class="stop"><span class="n">5</span><span class="t">Después</span><h3>Puerta de salida</h3><p>La misma prueba del inicio y el resultado sobre 100 puntos.</p></li>
+      <ol class="flow">
+        <li><span class="t">Llegada</span><h3>Andén</h3><p>Cada persona elige su personaje y su grupo de color.</p></li>
+        <li><span class="t">Antes</span><h3>Taquilla</h3><p>Prueba de entrada de 7 preguntas: el punto de partida.</p></li>
+        <li><span class="t">Tiquete</span><h3>Tiquete impreso</h3><p>Muestra el puntaje de entrada y guarda las insignias del viaje.</p></li>
+        <li><span class="t">El juego</span><h3>Seis vagones</h3><p>Caso clínico, retos individuales y grupales, y rompecabezas.</p></li>
+        <li><span class="t">Después</span><h3>Puerta de salida</h3><p>La misma prueba del inicio y el resultado sobre 100 puntos.</p></li>
       </ol>
       <div class="phones">
         <figure><img src="img/anden.jpg" alt="Pantalla del Andén con los personajes" loading="lazy"><figcaption>Andén</figcaption></figure>
         <figure><img src="img/taquilla.jpg" alt="Pantalla de la Taquilla con la prueba de entrada" loading="lazy"><figcaption>Taquilla</figcaption></figure>
         <figure><img src="img/boleto.jpg" alt="Tiquete con puntaje de entrada e insignias" loading="lazy"><figcaption>Tiquete</figcaption></figure>
         <figure><img src="img/mapa.jpg" alt="Mapa de los seis vagones" loading="lazy"><figcaption>Vagones</figcaption></figure>
-        <figure><img src="img/vagon.jpg" alt="Vagón 4, pie diabético, pregunta individual" loading="lazy"><figcaption>Dentro del vagón</figcaption></figure>
+        <figure><img src="img/vagon.jpg" alt="Vagón 4, pie diabético, pregunta individual" loading="lazy"><figcaption>En el vagón</figcaption></figure>
         <figure><img src="img/resultados.jpg" alt="Resultado final con entrada y salida por tema" loading="lazy"><figcaption>Resultado</figcaption></figure>
       </div>
-      <p class="note">Pantallas del demo. Los nombres, personajes y puntajes son de ejemplo.</p>
+      <p class="note">Pantallas del demo, con la identidad de Solventum. Los nombres, personajes y puntajes son de ejemplo.</p>
     </div>
   </section>
 
-  <section id="vagones">
+  <section id="vagones" class="band">
     <div class="wrap">
-      <div class="head">
-        <p class="label">Los seis vagones</p>
-        <h2 class="h2">Un tema clínico y un dispositivo en cada vagón</h2>
-        <p class="lead">Cada vagón parte de un paciente y lleva al grupo a decidir como lo haría en el servicio.</p>
+      <div class="sec-head">
+        <p class="eyebrow">Los seis vagones</p>
+        <h2>Un tema clínico y un producto en cada vagón</h2>
+        <p>Cada vagón parte de un paciente y lleva al grupo a decidir como lo haría en la clínica de heridas.</p>
       </div>
       <ul class="cars">
-        <li class="car hud"><span class="n">VAGÓN 1</span><span class="prod">Valoración integral</span><h3>Lesiones por presión</h3><p>Paciente de 87 años con lesión sacra. Escalas de riesgo y factores que favorecen la lesión.</p></li>
-        <li class="car hud"><span class="n">VAGÓN 2</span><span class="prod">Apósitos avanzados y V.A.C.<sup>®</sup></span><h3>Tratamiento de la herida</h3><p>Lesión profunda con exudado abundante. Un subgrupo defiende apósitos avanzados y el otro presión negativa.</p></li>
-        <li class="car hud"><span class="n">VAGÓN 3</span><span class="prod">Coban<sup>™</sup> 2</span><h3>Lesión vascular</h3><p>Úlcera venosa de 8 meses. Qué evaluar antes de aplicar una compresión segura.</p></li>
-        <li class="car hud"><span class="n">VAGÓN 4</span><span class="prod">Veraflo<sup>™</sup></span><h3>Pie diabético</h3><p>Úlcera plantar en un paciente que rechaza la cirugía. Prioridades del plan interdisciplinario.</p></li>
-        <li class="car hud"><span class="n">VAGÓN 5</span><span class="prod">Prevena<sup>™</sup></span><h3>Prevención en la incisión</h3><p>Paciente que sale de una cirugía de alto riesgo. Cuándo indicar Prevena<sup>™</sup>.</p></li>
-        <li class="car hud"><span class="n">VAGÓN 6</span><span class="prod">AbThera<sup>™</sup></span><h3>Abdomen abierto</h3><p>Paciente crítico tras cirugía de control de daños. Cuidados de enfermería y cambio del apósito.</p></li>
+        <li class="car" style="--c:#E5484D"><div class="roof"></div><div class="in"><span class="n">VAGÓN 1</span><h3>Lesiones por presión</h3><span class="prod">Valoración integral</span><p>Paciente de 87 años con lesión sacra. Escalas de riesgo y factores que favorecen la lesión.</p></div></li>
+        <li class="car" style="--c:#F2C14E"><div class="roof"></div><div class="in"><span class="n">VAGÓN 2</span><h3>Tratamiento de la herida</h3><span class="prod">Apósitos avanzados y V.A.C.<sup>®</sup></span><p>Lesión profunda con exudado abundante. Un subgrupo defiende apósitos avanzados y el otro presión negativa.</p></div></li>
+        <li class="car" style="--c:#3B82F6"><div class="roof"></div><div class="in"><span class="n">VAGÓN 3</span><h3>Lesión vascular</h3><span class="prod">Coban<sup>™</sup> 2</span><p>Úlcera venosa de 8 meses. Qué evaluar antes de aplicar una compresión segura.</p></div></li>
+        <li class="car" style="--c:#2FA84F"><div class="roof"></div><div class="in"><span class="n">VAGÓN 4</span><h3>Pie diabético</h3><span class="prod">Veraflo<sup>™</sup></span><p>Úlcera plantar en un paciente que rechaza la cirugía. Prioridades del plan interdisciplinario.</p></div></li>
+        <li class="car" style="--c:#B8B3A3"><div class="roof"></div><div class="in"><span class="n">VAGÓN 5</span><h3>Prevención en la incisión</h3><span class="prod">Prevena<sup>™</sup></span><p>Paciente que sale de una cirugía de alto riesgo. Cuándo indicar Prevena<sup>™</sup>.</p></div></li>
+        <li class="car" style="--c:#C9A227"><div class="roof"></div><div class="in"><span class="n">VAGÓN 6</span><h3>Abdomen abierto</h3><span class="prod">AbThera<sup>™</sup></span><p>Paciente crítico tras cirugía de control de daños. Cuidados de enfermería y cambio del apósito.</p></div></li>
       </ul>
       <ol class="steps">
-        <li class="stop"><span class="n">4 pts</span><span class="t">Paso 1</span><h3>Pregunta individual</h3><p>Se responde sin consultar. Es obligatoria para ganar la insignia.</p></li>
-        <li class="stop"><span class="n">4 pts</span><span class="t">Paso 2 · 3 min</span><h3>Pregunta grupal</h3><p>El equipo construye la respuesta y la mediadora la valida.</p></li>
-        <li class="stop"><span class="n">4 pts</span><span class="t">Paso 3 · 3 min</span><h3>Rompecabezas</h3><p>Pieza en acrílico de 35 × 25 cm con las palabras clave del tema.</p></li>
-        <li class="stop"><span class="n">8/12</span><span class="t">Paso 4</span><h3>Insignia</h3><p>Con 8 puntos o más y la individual correcta, el tiquete se perfora y gana el pin.</p></li>
+        <li><span class="pts">4 pts</span><span class="t">Paso 1</span><h3>Pregunta individual</h3><p>Se responde sin consultar. Es obligatoria para ganar la insignia.</p></li>
+        <li><span class="pts">4 pts</span><span class="t">Paso 2 · 3 minutos</span><h3>Pregunta grupal</h3><p>El equipo construye la respuesta y la mediadora la valida.</p></li>
+        <li><span class="pts">4 pts</span><span class="t">Paso 3 · 3 minutos</span><h3>Rompecabezas</h3><p>Pieza en acrílico de 35 × 25 cm con las palabras clave del tema.</p></li>
+        <li><span class="pts">8 / 12</span><span class="t">Paso 4</span><h3>Insignia</h3><p>Con 8 puntos o más y la individual correcta, se perfora el tiquete y se gana el pin.</p></li>
       </ol>
     </div>
   </section>
 
   <section id="medicion">
     <div class="wrap">
-      <div class="head">
-        <p class="label">Antes y después</p>
-        <h2 class="h2">Evidencia de lo aprendido, tema por tema</h2>
+      <div class="sec-head">
+        <p class="eyebrow">Antes y después</p>
+        <h2>Evidencia de lo aprendido, tema por tema</h2>
       </div>
       <div class="two">
-        <div class="hud"><span class="k">7</span><h3>La misma prueba al entrar y al salir</h3><p>Una pregunta por tema: los seis vagones y la marca Solventum. Comparar las dos pruebas muestra el avance real, sin depender de la percepción del participante.</p></div>
-        <div class="hud"><span class="k">100</span><h3>Un resultado claro para cada pasajero</h3><p>Taquilla (14), vagones (72) y salida (14). Al final cada persona ve su puntaje, sus insignias y en qué temas mejoró. Solventum recibe el consolidado por grupo y por tema.</p></div>
+        <div class="card">
+          <span class="k">7</span>
+          <h3>La misma prueba al entrar y al salir</h3>
+          <p>Una pregunta por cada vagón y una sobre Solventum. Comparar las dos pruebas muestra el avance real, sin depender de la percepción de quien participa.</p>
+          <div class="bars" role="img" aria-label="Ejemplo ilustrativo del avance entre la entrada y la salida">
+            <div><span>Entrada</span><i style="--w:57%"></i><em>8/14</em></div>
+            <div class="after"><span>Salida</span><i style="--w:86%"></i><em>12/14</em></div>
+            <div><small>Ejemplo ilustrativo</small></div>
+          </div>
+        </div>
+        <div class="card">
+          <span class="k">100</span>
+          <h3>Un resultado claro para cada pasajera</h3>
+          <p>Taquilla (14 puntos), vagones (72) y salida (14). Al final cada persona ve su puntaje, sus insignias y en qué temas mejoró. Solventum recibe el consolidado por grupo y por tema.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="valor">
+  <section id="valor" class="band">
     <div class="wrap">
-      <div class="head">
-        <p class="label">Justificación ejecutiva</p>
-        <h2 class="h2">Por qué esta inversión</h2>
+      <div class="sec-head">
+        <p class="eyebrow">Justificación ejecutiva</p>
+        <h2>Por qué esta inversión</h2>
       </div>
-      <ul class="why">
+      <ul class="vals">
         <li><h3>Se aprende haciendo</h3><p>Casos clínicos, decisiones en equipo y retos con las manos. Lo que se vive se recuerda mucho más que una presentación.</p></li>
-        <li><h3>La marca en el centro del caso</h3><p>Cada vagón muestra un dispositivo de Solventum en el momento clínico en el que se indica: V.A.C.<sup>®</sup>, Coban<sup>™</sup> 2, Veraflo<sup>™</sup>, Prevena<sup>™</sup> y AbThera<sup>™</sup>.</p></li>
-        <li><h3>Impacto que se puede reportar</h3><p>La prueba de entrada y salida deja un dato objetivo de aprendizaje para el programa Let's Heal.</p></li>
-        <li><h3>Un recuerdo que se lleva</h3><p>El tiquete perforado y los pines del viaje convierten el aprendizaje en un objeto que el participante guarda y muestra.</p></li>
+        <li><h3>Los productos en el momento justo</h3><p>Cada vagón muestra un producto de Solventum en la situación clínica en la que se indica: V.A.C.<sup>®</sup>, Coban<sup>™</sup> 2, Veraflo<sup>™</sup>, Prevena<sup>™</sup> y AbThera<sup>™</sup>.</p></li>
+        <li><h3>Impacto que se puede reportar</h3><p>La prueba de entrada y salida deja un dato objetivo del aprendizaje del programa Let's Heal.</p></li>
+        <li><h3>Un recuerdo que se lleva</h3><p>El tiquete perforado y los pines del viaje convierten el aprendizaje en un objeto que se guarda y se muestra.</p></li>
       </ul>
     </div>
   </section>
 
   <section id="equipo">
     <div class="wrap">
-      <div class="head">
-        <p class="label">Mediadora líder</p>
-      </div>
-      <div class="lead-me">
+      <div class="lead-card">
         <img src="img/nathalia.jpg" alt="Nathalia Andrea Velasco">
         <div>
-          <h3>Nathalia Andrea Velasco</h3>
-          <p class="role">Directora de Simoné · Mediadora líder</p>
-          <p>Diseñadora gráfica con estudios en artes plásticas, profesional en estudios sociohumanísticos y gestión cultural, con 15 años de experiencia en educación experiencial. Lidera el diseño metodológico y la gamificación del Expreso de la Salud.</p>
+          <p class="eyebrow" style="color:var(--orange)">Mediadora líder</p>
+          <h3 style="margin-top:8px">Nathalia Andrea Velasco</h3>
+          <p class="role">Directora de Simoné</p>
+          <p class="bio">Diseñadora gráfica con estudios en artes plásticas, profesional en estudios sociohumanísticos y gestión cultural, con 15 años de experiencia en educación experiencial. Lidera el diseño metodológico y la gamificación del Expreso de la Salud.</p>
           <a href="https://www.linkedin.com/in/nathalia-andrea-velasco-duarte/" target="_blank" rel="noopener">Ver perfil en LinkedIn →</a>
         </div>
       </div>
@@ -472,7 +431,7 @@
 :root[data-theme="dark"] .sm-clientes{color:#EEEBDD}:root[data-theme="dark"] .sm-clientes .sm-lead{color:#B5B29C}:root[data-theme="dark"] .sm-clientes .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-clientes li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-clientes img{filter:brightness(2.2)}
 .sm-clientes.sm-dark{color:#F2EEE3}.sm-clientes.sm-dark .sm-lead{color:#B9B6A8}.sm-clientes.sm-dark .sm-eb{color:#F2A03D}
 </style>
-<section class="sm-clientes sm-dark" id="clientes" aria-label="Empresas que han confiado en Simoné">
+<section class="sm-clientes" id="clientes" aria-label="Empresas que han confiado en Simoné">
   <div class="sm-in">
     <p class="sm-eb">Experiencia con empresas</p>
     <h2>Empresas que han confiado en Simoné</h2>
@@ -512,7 +471,7 @@
 .sm-testi.sm-4 ul{grid-template-columns:1fr 1fr}@media (max-width:560px){.sm-testi.sm-4 ul{grid-template-columns:1fr}}
 .sm-testi.sm-dark{color:#F2EEE3}.sm-testi.sm-dark .sm-eb{color:#F2A03D}.sm-testi.sm-dark li{background:#14170F;border-color:#2C3020}.sm-testi.sm-dark .who span{color:#B9B6A8}
 </style>
-<section class="sm-testi sm-4 sm-dark" id="testimonios" aria-label="Testimonios">
+<section class="sm-testi sm-4" id="testimonios" aria-label="Testimonios">
   <div class="sm-in">
     <p class="sm-eb">Testimonios</p>
     <h2>Lo que dicen quienes han vivido la experiencia</h2>
@@ -522,51 +481,53 @@
     </ul>
   </div>
 </section>
-  <section id="inversion">
+  <section id="inversion" class="band">
     <div class="wrap">
-      <div class="head">
-        <p class="label">Inversión</p>
-        <h2 class="h2">Inversión total del proyecto</h2>
+      <div class="sec-head">
+        <p class="eyebrow">Inversión</p>
+        <h2>Inversión total del proyecto</h2>
       </div>
       <div class="invest">
-        <div class="total">
-          <span class="amount">$9.500.000</span>
-          <span class="cur">Pesos colombianos (COP) + IVA · El Expreso de la Salud completo</span>
-          <dl class="breakdown">
+        <div class="price">
+          <span class="lbl">El Expreso de la Salud completo</span>
+          <span class="big">$9.500.000 <small>+ IVA</small></span>
+          <dl>
             <div><dt>Valor antes de IVA</dt><dd>$9.500.000</dd></div>
             <div><dt>IVA (19 %)</dt><dd>$1.805.000</dd></div>
             <div class="sum"><dt>Total con IVA</dt><dd>$11.305.000</dd></div>
           </dl>
         </div>
-        <ul class="incl">
-          <li>Diseño metodológico y gamificación del recorrido: andén, taquilla, tiquete, 6 vagones y puerta de salida</li>
-          <li>Contenido clínico: 6 casos con pregunta individual y grupal, y la prueba de entrada y salida de 7 preguntas</li>
-          <li>Plataforma web con la identidad de Solventum y Let's Heal, para celular, sin instalar aplicaciones</li>
-          <li>Panel de la mediadora para validar las respuestas grupales y controlar el tiempo de cada reto</li>
-          <li>6 rompecabezas en acrílico de 35 × 25 cm, uno por vagón</li>
-          <li>Diseño del tiquete y de los pines de los 6 vagones y de Let's Heal</li>
-          <li>Resultado antes y después por participante, por grupo y por tema</li>
-        </ul>
-      </div>
-
-      <div class="pay">
-        <div class="hud">
-          <span class="opt-label">Forma de pago</span>
-          <ul class="incl">
-            <li><span><b style="color:var(--ink)">Anticipo del 30 % · $2.850.000</b> (calculado antes de IVA) al aprobar la propuesta</span></li>
-            <li><span><b style="color:var(--ink)">Saldo · $6.650.000 + el 100 % del IVA ($1.805.000)</b> en la factura final, a la entrega, con pago a 30 días</span></li>
-          </ul>
-        </div>
-        <div class="hud">
-          <span class="opt-label">Adicional · no incluido en el valor</span>
-          <ul class="incl">
-            <li>Producción de tiquetes impresos y pines, según el número de participantes</li>
-            <li>Celulares de los participantes y pantalla del salón, que aporta Solventum</li>
-            <li>Traslados y viáticos si se requiere acompañamiento presencial</li>
+        <div>
+          <p class="eyebrow" style="margin-bottom:8px">Incluye</p>
+          <ul class="list">
+            <li><span>Diseño metodológico y gamificación del recorrido: andén, taquilla, tiquete, 6 vagones y puerta de salida</span></li>
+            <li><span>Contenido clínico: 6 casos con pregunta individual y grupal, y la prueba de entrada y salida de 7 preguntas</span></li>
+            <li><span>Plataforma web con la identidad de Solventum y Let's Heal, para celular, sin instalar aplicaciones</span></li>
+            <li><span>Panel de la mediadora para validar las respuestas grupales y controlar el tiempo de cada reto</span></li>
+            <li><span>6 rompecabezas en acrílico de 35 × 25 cm, uno por vagón</span></li>
+            <li><span>Diseño del tiquete y de los pines de los 6 vagones y de Let's Heal</span></li>
+            <li><span>Resultado antes y después por participante, por grupo y por tema</span></li>
           </ul>
         </div>
       </div>
-      <p class="phase">El contenido clínico se entrega para la validación final del equipo médico de Solventum. La metodología y la plataforma son propiedad de Simoné; Solventum recibe la licencia de uso.</p>
+      <div class="boxes">
+        <div class="card">
+          <h3>Forma de pago</h3>
+          <ul class="list">
+            <li><span><b>Anticipo del 30 % · $2.850.000</b> (calculado antes de IVA) al aprobar la propuesta</span></li>
+            <li><span><b>Saldo · $6.650.000 + el 100 % del IVA ($1.805.000)</b> en la factura final, a la entrega, con pago a 30 días</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Adicional · no incluido en el valor</h3>
+          <ul class="list alt">
+            <li><span>Producción de tiquetes impresos y pines, según el número de participantes</span></li>
+            <li><span>Celulares de las participantes y pantalla del salón, que aporta Solventum</span></li>
+            <li><span>Traslados y viáticos si se requiere acompañamiento presencial</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">El contenido clínico se entrega para la validación final del equipo médico de Solventum. La metodología y la plataforma son propiedad de Simoné; Solventum recibe la licencia de uso.</p>
     </div>
   </section>
 </main>
