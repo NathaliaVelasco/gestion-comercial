@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Innovation Day · Solventum</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Cotización de Simoné para Solventum: video de memoria y stand de 4 cuadrantes para el Innovation Day.">
+<meta name="description" content="Cotización de Simoné para Solventum: stand octagonal del viaje del paciente, video "El arte de construir grandes alianzas" y enlace digital para el Innovation Day.">
 <meta property="og:title" content="Innovation Day · Cotización Simoné para Solventum">
-<meta property="og:description" content="Video de memoria de 5 minutos y stand de 4 cuadrantes. 26 de noviembre de 2026, Hotel Marriott, Bogotá.">
+<meta property="og:description" content="Stand octagonal, video de 5 minutos y enlace digital. 26 de noviembre de 2026, Hotel Marriott, Bogotá.">
 <link rel="icon" href="img/favicon.png">
 <style>
   /* Layout: one scrolling proposal on a dark clinical ground; HUD corner brackets mark the key panels; the route E1→E5 is the one drawn sequence; the investment closes the page.
@@ -216,6 +216,22 @@
   .deadlines p { font-size: 15px; line-height: 1.5; }
   .deadlines b { color: #fff; }
   @media (max-width: 640px) { .deadlines { grid-template-columns: 1fr; } }
+  .journey { list-style:none; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; counter-reset:none; }
+  .journey li { background:var(--teal-2); border:1px solid var(--line); border-radius:16px; padding:clamp(20px,3vw,30px); border-top:3px solid var(--green); }
+  .journey .q { font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--malachite); }
+  .journey h3 { font-size:clamp(24px,3vw,32px); font-weight:400; color:var(--ink); margin-top:8px; letter-spacing:-.01em; }
+  .journey .sub { font-weight:700; color:var(--malachite); font-size:15px; margin:4px 0 12px; }
+  .journey p { color:var(--body); font-size:15px; line-height:1.55; }
+  .addons { margin-top:clamp(40px,6vw,64px); padding-top:clamp(28px,4vw,40px); border-top:1px solid rgba(255,255,255,.18); }
+  .addons-lead { color:#C9D8D4; font-size:15px; margin:8px 0 20px; }
+  .addon-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+  .addon { border:1px solid rgba(255,255,255,.22); border-radius:16px; padding:24px; display:flex; flex-direction:column; gap:10px; }
+  .addon h3 { color:#fff; font-size:20px; font-weight:700; }
+  .addon p { color:#D5E3DF; font-size:15px; line-height:1.5; flex:1; }
+  .addon .price { display:flex; flex-direction:column; gap:2px; margin-top:8px; }
+  .addon .price strong { color:var(--green); font-size:32px; font-weight:400; letter-spacing:-.01em; }
+  .addon .price span { color:#C9D8D4; font-size:13px; }
+  @media (max-width:760px) { .journey, .addon-grid { grid-template-columns:1fr; } }
   .lead-me { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: center; }
   .lead-me img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 2px solid var(--malachite); }
   .lead-me h3 { font-size: 22px; font-weight: 700; }
@@ -293,14 +309,14 @@
 <header class="hero">
   <div class="wrap">
     <div class="hero-main">
-      <p class="label">Video de memoria y stand · 26 de noviembre de 2026</p>
+      <p class="label">Stand, video y enlace digital · 26 de noviembre de 2026</p>
       <h1>Innovation <span>Day</span></h1>
-      <p class="lead">Un video que cuenta la historia de los distribuidores con las marcas de Solventum y un stand de 4 cuadrantes para recorrer las soluciones. Salón Amatista, Hotel Marriott de la Calle 26, Bogotá.</p>
+      <p class="lead">Un stand octagonal que recorre el viaje del paciente en cuatro etapas, un video sobre la relación de las marcas distribuidoras con Solventum y un enlace digital con los objetivos de esa relación. Salón Amatista, Hotel Marriott de la Calle 26, Bogotá.</p>
     </div>
     <div class="facts">
+      <div class="fact"><strong>4</strong><span>etapas del viaje del paciente</span></div>
+      <div class="fact"><strong>5 min</strong><span>de video</span></div>
       <div class="fact"><strong>32</strong><span>marcas de distribuidores</span></div>
-      <div class="fact"><strong>5 min</strong><span>de video de memoria</span></div>
-      <div class="fact"><strong>4</strong><span>cuadrantes en el stand</span></div>
       <div class="fact"><strong>26 nov</strong><span>instalación a la 1:00 p.&nbsp;m.</span></div>
     </div>
   </div>
@@ -309,8 +325,9 @@
 <nav class="toc" aria-label="Secciones">
   <div class="wrap">
     <a href="#alcance">Alcance</a>
-    <a href="#video">Video</a>
     <a href="#stand">Stand</a>
+    <a href="#video">Video</a>
+    <a href="#enlace">Enlace digital</a>
     <a href="#cronograma">Cronograma</a>
     <a href="#equipo">Equipo</a>
     <a href="#inversion">Inversión</a>
@@ -322,13 +339,15 @@
     <div class="wrap">
       <div class="head">
         <p class="label">Resumen</p>
-        <h2 class="h2">Dos proyectos para un mismo encuentro</h2>
+        <h2 class="h2">Tres piezas para un mismo encuentro</h2>
       </div>
       <div class="scope">
         <div class="text">
-          <p>El <b>Innovation Day</b> reúne a las <b>32 marcas de distribuidores</b> que representan los productos de Solventum. Simoné desarrolla dos piezas para ese encuentro:</p>
-          <p><b>1. Video de memoria (5 minutos):</b> el recorrido de la relación entre los distribuidores y las marcas, con voz en off y animaciones 2D de textos.</p>
-          <p><b>2. Stand de 4 cuadrantes:</b> escenografía en cartón de doble pared con vinilo impreso, que organiza la información en cuatro segmentos alrededor de un octágono central, más cajas para ambientar y exhibir.</p>
+          <p>El <b>Innovation Day</b> reúne a las <b>32 marcas de distribuidores</b> que representan los productos de Solventum. Simoné desarrolla tres piezas para ese encuentro:</p>
+          <p><b>1. Stand octagonal:</b> cuatro cuadrantes que muestran el viaje del paciente, de la esterilización a la hospitalización, en cartón doble pared con vinilo impreso.</p>
+          <p><b>2. Video de 5 minutos:</b> la relación de las marcas con Solventum, bajo el concepto <b>"El arte de construir grandes alianzas"</b>.</p>
+          <p><b>3. Enlace digital:</b> una página para explicar los principales objetivos de la relación con Solventum.</p>
+          <p>Además, proponemos dos <b>adicionales opcionales</b>: recordatorios para los asistentes y una landing del caso para la pantalla de fondo.</p>
         </div>
         <div class="hud">
           <dl class="spec">
@@ -343,12 +362,51 @@
     </div>
   </section>
 
+
+  <section id="stand">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Pieza 1</p>
+        <h2 class="h2">Stand octagonal: el viaje del paciente</h2>
+        <p class="lead">Cada cuadrante representa una etapa crítica del proceso clínico y muestra cómo un grupo integral de soluciones optimiza la práctica médica mientras protege la calidad de vida y la seguridad del paciente.</p>
+      </div>
+      <ol class="journey">
+        <li><span class="q">Cuadrante 1</span><h3>Esterilización</h3><p class="sub">El cimiento de la seguridad</p><p>Garantizar la esterilidad y seguridad del instrumental quirúrgico antes de que entre en contacto con el paciente, estandarizando los procesos en la Central de Esterilización para mitigar el riesgo de infecciones de sitio quirúrgico (ISQ).</p></li>
+        <li><span class="q">Cuadrante 2</span><h3>Preparación</h3><p class="sub">Acondicionamiento y protección preoperatoria</p><p>Preparar de forma óptima el entorno cutáneo, mantener la normotermia central del paciente y asegurar la integridad de la piel y los accesos desde el inicio del procedimiento para prevenir complicaciones.</p></li>
+        <li><span class="q">Cuadrante 3</span><h3>Cirugía</h3><p class="sub">Control quirúrgico y gestión de alta complejidad</p><p>Brindar soporte clínico avanzado durante el acto quirúrgico mediante aislamiento microbiano, gestión de incisiones cerradas, manejo de abdomen abierto y normotermia transoperatoria.</p></li>
+        <li><span class="q">Cuadrante 4</span><h3>Hospitalización y/o UCI</h3><p class="sub">Recuperación, accesos vasculares y cuidado crítico</p><p>Mantener la continuidad del cuidado postoperatorio, prevenir infecciones del torrente sanguíneo asociadas a líneas centrales (CLABSI), gestionar heridas complejas o crónicas y acelerar la recuperación funcional del paciente.</p></li>
+      </ol>
+      <div class="media" style="margin-top:clamp(36px,5vw,56px)">
+        <figure><img src="img/stand-perspectiva.jpg" alt="Render en perspectiva del stand octagonal con paredes verdes y una pieza gráfica vertical"></figure>
+        <div class="side">
+          <figure><img src="img/stand-frente.jpg" alt="Vista frontal de un cuadrante del stand con una persona leyendo la pieza gráfica"></figure>
+          <figure><img src="img/stand-planta.jpg" alt="Vista en planta del stand: octágono central con ocho paredes radiales"></figure>
+        </div>
+      </div>
+      <p class="cap">Renders de referencia del stand. Medidas, colores y piezas gráficas finales según esta cotización y la marca de Solventum.</p>
+
+      <div class="group" style="margin-top:clamp(36px,5vw,56px)">
+        <h3 class="group-title">Escenografía</h3>
+        <p class="lead" style="font-size:15px;margin-bottom:18px">Cartón doble pared entamborado, terminado con vinilo adhesivo impreso. Sistema de armado con alma en MDF y tornillo de sistema.</p>
+        <table class="bom">
+          <thead><tr><th>Pieza</th><th>Medidas</th><th>Cant.</th></tr></thead>
+          <tbody>
+            <tr><td>Paredes largas</td><td>110 × 220 × 6 cm</td><td class="n">4</td></tr>
+            <tr><td>Paredes cortas</td><td>50 × 220 × 6 cm</td><td class="n">4</td></tr>
+            <tr><td>Octágono central</td><td>110 × 110 × 220 cm · cada cara de 45 × 220 cm</td><td class="n">1</td></tr>
+          </tbody>
+        </table>
+        <p class="cap" style="margin-top:16px"><b>Los artes finales del stand deben estar listos el 18 de noviembre</b>, por el alto tráfico que hay en este momento en impresión.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="video">
     <div class="wrap">
       <div class="head">
-        <p class="label">Proyecto 1</p>
-        <h2 class="h2">Video de memoria de la relación con los distribuidores</h2>
-        <p class="lead">Una pieza de 5 minutos que pone en pantalla la historia compartida entre los distribuidores y las marcas de Solventum.</p>
+        <p class="label">Pieza 2</p>
+        <h2 class="h2">El arte de construir grandes alianzas</h2>
+        <p class="lead">Un video de 5 minutos sobre la relación de las marcas distribuidoras con Solventum: cómo se ha construido la alianza y hacia dónde va.</p>
       </div>
       <ul class="kit">
         <li class="item"><span class="tag">Duración</span><h3>5 minutos</h3><p>Pensado para proyectarse en el salón durante el encuentro.</p></li>
@@ -360,65 +418,21 @@
       </ul>
     </div>
   </section>
-
-  <section id="stand">
+  <section id="enlace">
     <div class="wrap">
       <div class="head">
-        <p class="label">Proyecto 2</p>
-        <h2 class="h2">Stand de 4 cuadrantes</h2>
-        <p class="lead">Ocho paredes salen de un octágono central y forman cuatro espacios. En cada cuadrante, una pieza gráfica vertical presenta un grupo de soluciones de Solventum.</p>
+        <p class="label">Pieza 3</p>
+        <h2 class="h2">Enlace digital de la relación con Solventum</h2>
+        <p class="lead">Una página web, con la línea gráfica de Solventum, que explica los principales objetivos de la relación con las marcas distribuidoras.</p>
       </div>
-      <div class="media">
-        <figure><img src="img/stand-perspectiva.jpg" alt="Render en perspectiva del stand octagonal con paredes verdes y una pieza gráfica vertical"></figure>
-        <div class="side">
-          <figure><img src="img/stand-frente.jpg" alt="Vista frontal de un cuadrante del stand con una persona leyendo la pieza gráfica"></figure>
-          <figure><img src="img/stand-planta.jpg" alt="Vista en planta del stand: octágono central con ocho paredes radiales"></figure>
-        </div>
-      </div>
-      <p class="cap">Renders de referencia del stand. Colores y piezas gráficas finales según la marca de Solventum.</p>
-      <div class="seg">
-        <div><strong>MP</strong><span>Cicatrización avanzada · Heridas complejas y tejidos</span></div>
-        <div><strong>M</strong><span>Acceso vascular · Protección de líneas vitales</span></div>
-        <div><strong>D</strong><span>Optimización quirúrgica · Quirófano seguro y normotermia</span></div>
-        <div><strong>J</strong><span>Esterilización y diagnóstico · Trazabilidad y certeza clínica</span></div>
-      </div>
-      <figure style="margin:clamp(28px,4vw,44px) 0 0"><img src="img/plan-cuadrantes.jpg" alt="Plan de exhibición: los 4 cuadrantes del stand y sus soluciones" style="border:1px solid var(--line)"></figure>
-      <p class="cap">Plan de exhibición: cada cuadrante agrupa soluciones que protegen al paciente en un momento crítico de su atención hospitalaria y quirúrgica.</p>
-
-      <div class="group" style="margin-top:clamp(36px,5vw,56px)">
-        <h3 class="group-title">Escenografía</h3>
-        <p class="lead" style="font-size:15px;margin-bottom:18px">Cartón doble pared entamborado, terminado con vinilo adhesivo impreso y laminado mate. Sistema de armado con alma en MDF y tornillo de sistema.</p>
-        <table class="bom">
-          <thead><tr><th>Pieza</th><th>Medidas</th><th>Cant.</th></tr></thead>
-          <tbody>
-            <tr><td>Paredes largas</td><td>100 × 220 × 6 cm</td><td class="n">4</td></tr>
-            <tr><td>Paredes cortas</td><td>70 × 220 × 6 cm</td><td class="n">4</td></tr>
-            <tr><td>Octágono central</td><td>100 × 220 cm</td><td class="n">1</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="group">
-        <h3 class="group-title">Cajas</h3>
-        <p class="lead" style="font-size:15px;margin-bottom:18px">Cartón doble pared entamborado, terminado con vinilo adhesivo impreso, acabado mate.</p>
-        <table class="bom">
-          <thead><tr><th>Pieza</th><th>Medidas</th><th>Cant.</th></tr></thead>
-          <tbody>
-            <tr><td>Cajas</td><td>55 × 55 × 55 cm</td><td class="n">4</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="ref">
-        <img src="img/cuadrante-d.jpg" alt="Pieza gráfica del Cuadrante D: Solución Integral de Optimización Quirúrgica y Protección Térmica">
-        <div>
-          <p class="label" style="margin-bottom:10px">Así se distribuye la información</p>
-          <p>Cada cuadrante lleva una pieza vertical con el nombre de la solución, una descripción breve, sus componentes y los <b>objetivos y beneficios clínicos</b>. Como ejemplo, el <b>Cuadrante D</b>: Solución Integral de Optimización Quirúrgica y Protección Térmica.</p>
-          <p>Las piezas se imprimen a partir del contenido que Solventum entrega para cada cuadrante. <b>Los artes finales del stand deben estar listos el 18 de noviembre</b>, por el alto volumen de trabajo que tienen las imprentas en esta temporada.</p>
-        </div>
-      </div>
+      <ul class="kit">
+        <li class="item"><span class="tag">Formato</span><h3>Página web</h3><p>Se abre desde cualquier celular o computador, sin descargar nada.</p></li>
+        <li class="item"><span class="tag">Contenido</span><h3>Objetivos de la relación</h3><p>Los mensajes principales de la alianza, organizados para leerse en pocos minutos.</p></li>
+        <li class="item"><span class="tag">Difusión</span><h3>Un enlace para compartir</h3><p>Solventum puede enviarlo a los distribuidores antes, durante o después del evento.</p></li>
+      </ul>
     </div>
   </section>
+
 
   <section id="cronograma">
     <div class="wrap">
@@ -428,7 +442,7 @@
         <p class="lead">El calendario es corto, así que los insumos a tiempo son la clave para llegar al 26.</p>
       </div>
       <ol class="route">
-        <li class="stop"><span class="n">13</span><h3>Cotización</h3><p>Con su aprobación iniciamos la producción.</p></li>
+        <li class="stop"><span class="n">18</span><h3>Cotización</h3><p>Con su aprobación iniciamos la producción.</p></li>
         <li class="stop"><span class="n">18</span><h3>Insumos y artes finales</h3><p>Fotos, videos y copy del video. Artes finales del stand listos para impresión.</p></li>
         <li class="stop"><span class="n">20</span><h3>Revisión y últimos cambios</h3><p>Primer corte del video. Último día para recibir cambios (hasta 4).</p></li>
         <li class="stop"><span class="n">26</span><h3>Entrega e instalación</h3><p>Stand armado en el Salón Amatista a la 1:00 p.&nbsp;m.</p></li>
@@ -452,7 +466,7 @@
         <div>
           <h3>Nathalia Andrea Velasco</h3>
           <p class="role">Directora de Simoné · Mediadora líder</p>
-          <p>Diseñadora gráfica con estudios en artes plásticas y 15 años de experiencia en educación experiencial. Lidera la dirección creativa del video y del stand y acompaña personalmente el montaje.</p>
+          <p>Diseñadora gráfica con estudios en artes plásticas y 15 años de experiencia en educación experiencial. Lidera la dirección creativa del stand, el video y el enlace digital, y acompaña personalmente el montaje.</p>
           <a href="https://www.linkedin.com/in/nathalia-andrea-velasco-duarte/" target="_blank" rel="noopener">Ver perfil en LinkedIn →</a>
         </div>
       </div>
@@ -538,18 +552,35 @@
       <div class="invest">
         <div class="total">
           <span class="amount">$10.700.000</span>
-          <span class="cur">Pesos colombianos (COP) + IVA · video y stand</span>
+          <span class="cur">Pesos colombianos (COP) + IVA · stand, video y enlace digital</span>
         </div>
         <ul class="incl">
-          <li>Video de memoria de 5 minutos con voz en off y animaciones 2D de textos</li>
-          <li>Revisión del video con hasta 4 cambios; los últimos cambios se reciben hasta el 20 de noviembre</li>
+          <li>Stand octagonal de 4 cuadrantes (viaje del paciente): 4 paredes de 110 × 220 × 6 cm, 4 paredes de 50 × 220 × 6 cm y octágono central de 110 × 110 × 220 cm con caras de 45 × 220 cm</li>
+          <li>Cartón doble pared entamborado con vinilo adhesivo impreso; armado con alma en MDF y tornillo de sistema</li>
           <li>Impresión de las piezas del stand a partir de los artes finales entregados el 18 de noviembre</li>
-          <li>Escenografía de 4 cuadrantes (MP, M, D y J): 4 paredes de 100 × 220 × 6 cm, 4 paredes de 70 × 220 × 6 cm y octágono central de 100 × 220 cm</li>
-          <li>Cajas: 4 de 55 × 55 × 55 cm</li>
-          <li>Cartón doble pared entamborado con vinilo impreso y acabado mate; armado con alma en MDF y tornillo de sistema</li>
+          <li>Video de 5 minutos "El arte de construir grandes alianzas", con voz en off y animaciones 2D de textos</li>
+          <li>Revisión del video con hasta 4 cambios; los últimos cambios se reciben hasta el 20 de noviembre</li>
+          <li>Enlace digital para explicar los principales objetivos de la relación con Solventum</li>
           <li>Transporte del material hasta el Hotel Marriott de la Calle 26</li>
           <li>Entrega del material armado el 26 de noviembre, instalación a la 1:00 p.&nbsp;m. y acompañamiento en el montaje</li>
         </ul>
+      </div>
+
+      <div class="addons">
+        <p class="label">Adicionales opcionales</p>
+        <p class="addons-lead">Se pueden sumar al proyecto. Su valor no está incluido en la inversión total.</p>
+        <div class="addon-grid">
+          <div class="addon">
+            <h3>50 recordatorios de caballete</h3>
+            <p>Caballete trípode mini con obra impresa en vinilo adhesivo sobre MDF de 5 mm con bastidor, entregado en caja.</p>
+            <div class="price"><span class="u">$86.000 + IVA por unidad</span><strong>$4.300.000</strong><span>+ IVA · 50 unidades</span></div>
+          </div>
+          <div class="addon">
+            <h3>Landing del caso para pantalla de fondo</h3>
+            <p>Página digital del caso, diseñada para proyectarse en la pantalla de fondo del salón durante el encuentro.</p>
+            <div class="price"><span class="u">&nbsp;</span><strong>$1.050.000</strong><span>+ IVA</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -577,10 +608,10 @@
   <div class="sm-in">
     <img src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte">
     <dl>
-      <div><dt>Fecha de emisión</dt><dd>13 de noviembre de 2026</dd></div>
+      <div><dt>Fecha de emisión</dt><dd>18 de noviembre de 2026</dd></div>
       <div><dt>NIT</dt><dd>901.838.283-3</dd></div>
       <div><dt>Teléfono</dt><dd><a href="tel:+573217738039">321 773 8039</a></dd></div>
-      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 13 de diciembre de 2026</small></dd></div>
+      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 18 de diciembre de 2026</small></dd></div>
     </dl>
     <div class="sm-notas">
       <p class="t">Notas finales</p>
