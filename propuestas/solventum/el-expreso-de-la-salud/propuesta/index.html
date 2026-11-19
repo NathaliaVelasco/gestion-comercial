@@ -146,6 +146,10 @@ section{padding-block:clamp(52px,7vw,88px);scroll-margin-top:52px}
 .price .per-list{list-style:none;padding:0;margin-top:8px;display:grid;gap:6px}
 .price .per-list li{display:flex;gap:10px;font-size:.95rem}
 .price .per-list li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--orange);margin-top:9px}
+.invest .price .big{font-size:clamp(2rem,4vw,2.7rem);white-space:nowrap}
+.price .unit{margin-top:22px;padding-top:18px;border-top:1px dashed rgba(251,250,246,.3);font-size:.92rem}
+.price .unit p{opacity:.9}
+.price .unit b{color:var(--orange)}
 /* Mediadora */
 .lead-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,44px)}
 .lead-card > *{min-width:0}
@@ -533,20 +537,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </div>
       <div class="invest">
         <div class="price">
-          <span class="lbl">Valor por participante</span>
-          <span class="big">$227.000 <small>+ IVA</small></span>
-          <p class="per">Cubre la experiencia completa de cada profesional:</p>
-          <ul class="per-list">
-            <li>Su avatar</li>
-            <li>La prueba de entrada y la de salida</li>
-            <li>Los 6 vagones, cada uno con su insignia</li>
-            <li>Su resultado individual</li>
-          </ul>
+          <span class="lbl">Valor integral · El Expreso de la Salud</span>
+          <span class="big">$10.669.000 <small style="white-space:nowrap">+ IVA</small></span>
+          <p class="per">Experiencia completa para las 47 participantes, en un solo valor.</p>
           <dl>
-            <div><dt>47 participantes × $227.000</dt><dd>$10.669.000</dd></div>
+            <div><dt>Valor antes de IVA</dt><dd>$10.669.000</dd></div>
             <div><dt>IVA (19 %)</dt><dd>$2.027.110</dd></div>
             <div class="sum"><dt>Total con IVA</dt><dd>$12.696.110</dd></div>
           </dl>
+          <div class="unit">
+            <p>Equivale a <b>$227.000 + IVA por participante</b>, e incluye la experiencia completa de cada profesional:</p>
+            <ul class="per-list">
+              <li>Su avatar</li>
+              <li>La prueba de entrada y la de salida</li>
+              <li>Los 6 vagones, cada uno con su insignia</li>
+              <li>Su resultado individual</li>
+            </ul>
+          </div>
         </div>
         <div>
           <p class="eyebrow" style="margin-bottom:8px">Incluye</p>
