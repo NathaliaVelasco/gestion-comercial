@@ -14,7 +14,6 @@ Presentaciones comerciales publicadas con GitHub Pages para compartirlas con cli
 | USKO SAS | Árboles Plegados — 9 árboles plegados de 130 cm en cartulina iris azul celeste y blanca | [Ver propuesta](https://nathaliavelasco.github.io/gestion-comercial/propuestas/usko-arboles-plegados/) |
 | Barack Creative | Arte en Equipo — evento corporativo de 2 días para 70 personas | [Ver propuesta](https://nathaliavelasco.github.io/gestion-comercial/propuestas/barack-creative-arte-en-equipo/) |
 | Evoforma · Megalabs | La Ruta de la Huella — Convención de Ventas 2027 | [Ver presentación](https://nathaliavelasco.github.io/gestion-comercial/propuestas/megalabs-la-ruta-de-la-huella/) |
-| Evoforma · Megalabs | El Circuito del Reconocimiento — demo del artefacto digital | [Ver demo](https://www.experienciasimone.com/megalabs-circuito-del-reconocimiento/) |
 | Solventum | El Expreso de la Salud — experiencia gamificada de 6 vagones sobre manejo de heridas | [Ver propuesta](https://nathaliavelasco.github.io/gestion-comercial/propuestas/solventum/el-expreso-de-la-salud/propuesta/) |
 | Solventum | Innovation Day — video de memoria de 5 min y stand de 4 cuadrantes (26 nov 2026) | [Ver propuesta](https://nathaliavelasco.github.io/gestion-comercial/propuestas/solventum/innovation-day/) |
 | Solventum | Máquina del Tiempo — Ecosistema Tecnológico-Pedagógico, 3 años de infraestructura y 2 casos clínicos 2027 | [Ver propuesta](https://nathaliavelasco.github.io/gestion-comercial/propuestas/solventum-maquina-del-tiempo-ecosistema/) |
