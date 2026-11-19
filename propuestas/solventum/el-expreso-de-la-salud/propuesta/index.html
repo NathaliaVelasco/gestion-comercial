@@ -155,6 +155,13 @@ section{padding-block:clamp(52px,7vw,88px);scroll-margin-top:52px}
 .noinc .list{grid-template-columns:repeat(3,1fr);column-gap:24px}
 .noinc .list li{border-bottom:0}
 @media (max-width:640px){.noinc .list{grid-template-columns:1fr}}
+.cond{margin-top:clamp(32px,5vw,48px)}
+.cond-grid{list-style:none;padding:0;margin-top:14px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cond-grid li{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--magenta);border-radius:12px;padding:20px 22px;min-width:0}
+.cond-grid li:last-child{grid-column:1/-1}
+.cond-grid h3{font-size:1.02rem;font-weight:700}
+.cond-grid p{color:var(--muted);font-size:.94rem;margin-top:6px}
+@media (max-width:640px){.cond-grid{grid-template-columns:1fr}}
 /* Mediadora */
 .lead-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,44px)}
 .lead-card > *{min-width:0}
@@ -543,19 +550,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="invest">
         <div class="price">
           <span class="lbl">Valor integral · El Expreso de la Salud</span>
-          <span class="big">$8.120.000 <small style="white-space:nowrap">+ IVA</small></span>
-          <p class="per">Experiencia completa para las 47 participantes, en un solo valor.</p>
+          <span class="big">$9.500.000 <small style="white-space:nowrap">+ IVA</small></span>
+          <p class="per">Valor integral de la herramienta, con 2 cambios de preguntas incluidos y uso sin límite de veces.</p>
           <dl>
-            <div><dt>Valor antes de IVA</dt><dd>$8.120.000</dd></div>
-            <div><dt>IVA (19 %)</dt><dd>$1.542.800</dd></div>
-            <div class="sum"><dt>Total con IVA</dt><dd>$9.662.800</dd></div>
+            <div><dt>Valor antes de IVA</dt><dd>$9.500.000</dd></div>
+            <div><dt>IVA (19 %)</dt><dd>$1.805.000</dd></div>
+            <div class="sum"><dt>Total con IVA</dt><dd>$11.305.000</dd></div>
           </dl>
           <div class="unit">
-            <p>Equivale a cerca de <b>$172.800 + IVA por participante</b>, e incluye la experiencia completa de cada profesional:</p>
+            <p>Cada participante vive la experiencia completa:</p>
             <ul class="per-list">
               <li>Su avatar</li>
               <li>La prueba de entrada y la de salida</li>
-              <li>Los 6 vagones, cada uno con su insignia</li>
+              <li>Los 6 vagones, con su puntaje y sus insignias</li>
               <li>Su resultado individual</li>
             </ul>
           </div>
@@ -567,8 +574,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <li><span>Contenido clínico: 6 casos con pregunta individual y grupal, y la prueba de entrada y salida de 5 preguntas</span></li>
             <li><span>Constructor de avatar con la paleta de Solventum y tiquete digital con la colección de insignias</span></li>
             <li><span>Herramienta digital con la identidad de Solventum y Let's Heal, para celular, sin descargar aplicaciones</span></li>
+            <li><span>2 cambios de preguntas incluidos, para la puerta de entrada, los 6 vagones y la puerta de salida</span></li>
             <li><span>6 rompecabezas en acrílico de 35 × 25 cm, uno por vagón</span></li>
-                        <li><span>Informe de resultados en PDF, que entrega Simoné a Solventum</span></li>
+            <li><span>Informe de resultados en PDF, que entrega Simoné a Solventum</span></li>
           </ul>
         </div>
       </div>
@@ -576,8 +584,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="card">
           <h3>Forma de pago</h3>
           <ul class="list">
-            <li><span><b>Anticipo del 30 % · $2.436.000</b> (calculado antes de IVA) al aprobar la propuesta</span></li>
-            <li><span><b>Saldo · $5.684.000 + el 100 % del IVA ($1.542.800)</b> en la factura final, a la entrega, con pago a 30 días</span></li>
+            <li><span><b>Anticipo del 30 % · $2.850.000</b> (calculado antes de IVA) al aprobar la propuesta</span></li>
+            <li><span><b>Saldo · $6.650.000 + el 100 % del IVA ($1.805.000)</b> en la factura final, a la entrega, con pago a 30 días</span></li>
           </ul>
         </div>
         <div class="card">
@@ -586,6 +594,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <li><span><b>Acompañamiento remoto desde Bogotá durante todo el horario del evento, para resolver en el momento cualquier dificultad con la herramienta digital</b></span></li>
           </ul>
         </div>
+      </div>
+      <div class="cond">
+        <p class="eyebrow">Condiciones de uso</p>
+        <ul class="cond-grid">
+          <li><h3>Uso sin límite de veces</h3><p>La herramienta se puede usar varias veces, no solo en el evento del 27 de noviembre.</p></li>
+          <li><h3>Avatares sin memoria</h3><p>Cada persona crea su avatar cada vez que entra. La herramienta no guarda el nombre ni el historial de las participantes.</p></li>
+          <li><h3>2 cambios de preguntas incluidos</h3><p>El valor incluye 2 cambios de preguntas para la puerta de entrada, los 6 vagones y la puerta de salida. Los vagones conservan siempre su nombre.</p></li>
+          <li><h3>Cambios adicionales · $650.000 + IVA cada uno</h3><p>Después, Solventum puede cambiar preguntas y casos las veces que necesite. Cada cambio cubre las 5 preguntas de entrada, las 5 de salida y las preguntas de los 6 vagones, y Solventum las entrega previamente en un documento de Word.</p></li>
+          <li><h3>Los puntos siempre se mantienen</h3><p>Los puntos son parte de la estrategia de gamificación y su conteo es permanente. Lo que se anuncia como premio no siempre tiene que ser una insignia: con cada cambio de preguntas, Simoné ajusta la tabla de equivalencia de los puntos.</p></li>
+        </ul>
       </div>
       <div class="card noinc">
         <h3>No incluye</h3>
@@ -596,7 +614,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         </ul>
       </div>
       <p class="note">El contenido clínico se entrega para la validación final del equipo médico de Solventum. La metodología y la herramienta digital son propiedad de Simoné.</p>
-      <p class="note"><b>Esta experiencia está diseñada para usarse en el evento Let's Heal del 27 de noviembre de 2026 en Ecuador.</b></p>
+      <p class="note"><b>La experiencia se diseña para el evento Let's Heal del 27 de noviembre de 2026 en Ecuador, y Solventum puede volver a usarla después, según las condiciones de uso.</b></p>
     </div>
   </section>
 </main>
