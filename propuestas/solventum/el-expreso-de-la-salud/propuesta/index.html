@@ -150,6 +150,11 @@ section{padding-block:clamp(52px,7vw,88px);scroll-margin-top:52px}
 .price .unit{margin-top:22px;padding-top:18px;border-top:1px dashed rgba(251,250,246,.3);font-size:.92rem}
 .price .unit p{opacity:.9}
 .price .unit b{color:var(--orange)}
+.noinc{margin-top:16px}
+.noinc h3{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:8px}
+.noinc .list{grid-template-columns:repeat(3,1fr);column-gap:24px}
+.noinc .list li{border-bottom:0}
+@media (max-width:640px){.noinc .list{grid-template-columns:1fr}}
 /* Mediadora */
 .lead-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,44px)}
 .lead-card > *{min-width:0}
@@ -316,9 +321,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <ul class="signs">
           <li><b>Participantes</b><span>47 · 6 grupos de color</span></li>
           <li><b>Vagones</b><span>6 temas clínicos</span></li>
-          <li><b>Prueba de entrada</b><span>7 preguntas · 14 pts</span></li>
+          <li><b>Prueba de entrada</b><span>5 preguntas</span></li>
           <li><b>Retos por vagón</b><span>3 · 12 pts</span></li>
-          <li><b>Prueba de salida</b><span>7 preguntas · 14 pts</span></li>
+          <li><b>Prueba de salida</b><span>5 preguntas</span></li>
           <li><b>Pieza física</b><span>Rompecabezas 35 × 25 cm</span></li>
           <li><b>Funciona en</b><span>Celular, sin descargar apps</span></li>
         </ul>
@@ -335,10 +340,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </div>
       <ol class="flow">
         <li><span class="t">Llegada</span><h3>Andén de bienvenida</h3><p>Cada participante arma su avatar, escoge un nombre único de pasajero y su grupo.</p></li>
-        <li><span class="t">Antes</span><h3>Taquilla</h3><p>Prueba de entrada de 7 preguntas, por 14 puntos. El resultado imprime su tiquete digital.</p></li>
+        <li><span class="t">Antes</span><h3>Taquilla</h3><p>Prueba de entrada de 5 preguntas. El resultado imprime su tiquete digital.</p></li>
         <li><span class="t">El juego</span><h3>Seis vagones</h3><p>Un caso, una práctica técnica y una insignia por vagón.</p></li>
-        <li><span class="t">Después</span><h3>Puerta de salida</h3><p>Las mismas 7 preguntas de la entrada, en otro orden, para medir lo aprendido.</p></li>
-        <li><span class="t">Cierre</span><h3>Resultados y premiación</h3><p>Puntaje sobre 100, insignias y avance. El tablero del grupo se proyecta en la premiación.</p></li>
+        <li><span class="t">Después</span><h3>Puerta de salida</h3><p>Las mismas 5 preguntas de la entrada, en otro orden, para medir lo aprendido.</p></li>
+        <li><span class="t">Cierre</span><h3>Resultados y premiación</h3><p>Cada participante ve su puntaje, sus insignias y su avance.</p></li>
       </ol>
       <div class="phones">
         <figure><img src="img/anden.jpg" alt="Andén de bienvenida con el constructor de avatar" loading="lazy"><figcaption>Andén</figcaption></figure>
@@ -384,19 +389,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </div>
       <div class="two">
         <div class="card">
-          <span class="k">100</span>
-          <h3>Resultados y premiación</h3>
-          <p>Cada participante ve su puntaje sobre 100, sus insignias y su avance entre la entrada y la salida. La organización proyecta el tablero del grupo en la premiación.</p>
+          <span class="k">6</span>
+          <h3>Resultado individual</h3>
+          <p>Al terminar, cada participante ve en su celular su puntaje, las insignias que ganó en los 6 vagones y su avance entre la prueba de entrada y la de salida.</p>
           <div class="bars" role="img" aria-label="Ejemplo ilustrativo del avance entre la entrada y la salida">
-            <div><span>Entrada</span><i style="--w:57%"></i><em>8/14</em></div>
-            <div class="after"><span>Salida</span><i style="--w:86%"></i><em>12/14</em></div>
+            <div><span>Entrada</span><i style="--w:40%"></i><em>2/5</em></div>
+            <div class="after"><span>Salida</span><i style="--w:100%"></i><em>5/5</em></div>
             <div><small>Ejemplo ilustrativo</small></div>
           </div>
         </div>
         <div class="card">
           <span class="k">PDF</span>
           <h3>Informe de resultados para Solventum</h3>
-          <p>Panel privado con clave e informe descargable en PDF, con:</p>
+          <p>Al cierre del evento, Simoné entrega a Solventum un informe en PDF con:</p>
           <ul class="list" style="margin-top:8px">
             <li><span>Comparativo de entrada y salida por tema</span></li>
             <li><span>Porcentaje de insignias ganadas por vagón</span></li>
@@ -538,15 +543,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="invest">
         <div class="price">
           <span class="lbl">Valor integral · El Expreso de la Salud</span>
-          <span class="big">$10.669.000 <small style="white-space:nowrap">+ IVA</small></span>
+          <span class="big">$8.120.000 <small style="white-space:nowrap">+ IVA</small></span>
           <p class="per">Experiencia completa para las 47 participantes, en un solo valor.</p>
           <dl>
-            <div><dt>Valor antes de IVA</dt><dd>$10.669.000</dd></div>
-            <div><dt>IVA (19 %)</dt><dd>$2.027.110</dd></div>
-            <div class="sum"><dt>Total con IVA</dt><dd>$12.696.110</dd></div>
+            <div><dt>Valor antes de IVA</dt><dd>$8.120.000</dd></div>
+            <div><dt>IVA (19 %)</dt><dd>$1.542.800</dd></div>
+            <div class="sum"><dt>Total con IVA</dt><dd>$9.662.800</dd></div>
           </dl>
           <div class="unit">
-            <p>Equivale a <b>$227.000 + IVA por participante</b>, e incluye la experiencia completa de cada profesional:</p>
+            <p>Equivale a cerca de <b>$172.800 + IVA por participante</b>, e incluye la experiencia completa de cada profesional:</p>
             <ul class="per-list">
               <li>Su avatar</li>
               <li>La prueba de entrada y la de salida</li>
@@ -559,12 +564,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <p class="eyebrow" style="margin-bottom:8px">Incluye</p>
           <ul class="list">
             <li><span>Diseño metodológico y gamificación del recorrido: andén, taquilla, 6 vagones, puerta de salida y premiación</span></li>
-            <li><span>Contenido clínico: 6 casos con pregunta individual y grupal, y la prueba de entrada y salida de 7 preguntas</span></li>
+            <li><span>Contenido clínico: 6 casos con pregunta individual y grupal, y la prueba de entrada y salida de 5 preguntas</span></li>
             <li><span>Constructor de avatar con la paleta de Solventum y tiquete digital con la colección de insignias</span></li>
             <li><span>Herramienta digital con la identidad de Solventum y Let's Heal, para celular, sin descargar aplicaciones</span></li>
             <li><span>6 rompecabezas en acrílico de 35 × 25 cm, uno por vagón</span></li>
-                        <li><span>Tablero de resultados para proyectar en la premiación</span></li>
-            <li><span>Panel privado con clave e informe en PDF: entrada y salida por tema, insignias por vagón, resultados por grupo y detalle por participante</span></li>
+                        <li><span>Informe de resultados en PDF, que entrega Simoné a Solventum</span></li>
           </ul>
         </div>
       </div>
@@ -572,8 +576,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="card">
           <h3>Forma de pago</h3>
           <ul class="list">
-            <li><span><b>Anticipo del 30 % · $3.200.700</b> (calculado antes de IVA) al aprobar la propuesta</span></li>
-            <li><span><b>Saldo · $7.468.300 + el 100 % del IVA ($2.027.110)</b> en la factura final, a la entrega, con pago a 30 días</span></li>
+            <li><span><b>Anticipo del 30 % · $2.436.000</b> (calculado antes de IVA) al aprobar la propuesta</span></li>
+            <li><span><b>Saldo · $5.684.000 + el 100 % del IVA ($1.542.800)</b> en la factura final, a la entrega, con pago a 30 días</span></li>
           </ul>
         </div>
         <div class="card">
@@ -582,6 +586,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <li><span><b>Acompañamiento remoto desde Bogotá durante todo el horario del evento, para resolver en el momento cualquier dificultad con la herramienta digital</b></span></li>
           </ul>
         </div>
+      </div>
+      <div class="card noinc">
+        <h3>No incluye</h3>
+        <ul class="list alt">
+          <li><span>Recopilación de base de datos</span></li>
+          <li><span>Tablero de administrador</span></li>
+          <li><span>Tablero de resultados</span></li>
+        </ul>
       </div>
       <p class="note">El contenido clínico se entrega para la validación final del equipo médico de Solventum. La metodología y la herramienta digital son propiedad de Simoné.</p>
       <p class="note"><b>Esta experiencia está diseñada para usarse en el evento Let's Heal del 27 de noviembre de 2026 en Ecuador.</b></p>
