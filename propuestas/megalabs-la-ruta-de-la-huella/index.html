@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="La Ruta de la Huella · Propuesta de inversión">
+<meta property="og:title" content="Hacemos que pase · La Ruta de la Huella · Propuesta de servicio">
 <meta property="og:description" content="Convención de Ventas 2027 · Megalabs. Preparado por Simoné para Evoforma.">
 <link rel="icon" href="img/simbolo.png">
 <title>La Ruta de la Huella · Simoné</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Propuesta de inversión de Simoné para la Convención de Ventas 2027 de Megalabs, preparada para Evoforma.">
+<meta name="description" content="Propuesta de servicio de Simoné para la Convención de Ventas Megalabs 2027 (Hacemos que pase · La Ruta de la Huella), preparada para Evoforma.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,400&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap">
@@ -259,20 +259,68 @@
 </head>
 <body>
 
+<style>
+  /* Ajuste nov 2026: nuevo alcance (diseño experiencial e instruccional) */
+  .premisa { background: var(--sand); }
+  .premisa .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+  .premisa p { color: var(--body); max-width: 58ch; }
+  .keyword { display: flex; flex-direction: column; gap: 6px; background: var(--olive); border-radius: var(--radius); padding: clamp(28px, 4vw, 44px); }
+  .keyword .k { font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--orange); }
+  .keyword strong { font-size: clamp(40px, 6vw, 72px); font-weight: 800; letter-spacing: .04em; color: var(--on-dark); line-height: 1; }
+  .keyword p { color: var(--on-dark-soft); font-size: 16px; }
+  .objeto { font-size: clamp(19px, 2.2vw, 23px); line-height: 1.55; color: var(--ink); max-width: 62ch; }
+  .actores { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: clamp(28px, 4vw, 44px); }
+  .actor { background: var(--card); border-radius: var(--radius); padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 8px; border-top: 4px solid var(--line); min-width: 0; }
+  .actor.me { border-top-color: var(--magenta); background: #FFF9F1; }
+  .actor .k { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--rust); }
+  .actor h3 { font-size: 21px; font-weight: 700; line-height: 1.2; }
+  .actor p { font-size: 15px; color: var(--body); line-height: 1.5; }
+  .ruta { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; counter-reset: m; }
+  .ruta li { position: relative; background: var(--card); border-radius: var(--radius); padding: 22px 20px 24px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .ruta .n { font-size: 40px; font-weight: 800; line-height: 1; color: var(--orange); font-variant-numeric: tabular-nums; }
+  .ruta .when { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--rust); }
+  .ruta h3 { font-size: 20px; font-weight: 700; line-height: 1.2; }
+  .ruta p { font-size: 14.5px; color: var(--body); line-height: 1.5; }
+  .gami { margin-top: 20px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 18px 28px; align-items: center; background: var(--olive); border-radius: var(--radius); padding: clamp(22px, 3.5vw, 34px); }
+  .gami .big { font-size: clamp(48px, 7vw, 80px); font-weight: 800; color: var(--orange); line-height: 1; font-variant-numeric: tabular-nums; }
+  .gami .big small { display: block; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--on-dark-soft); margin-top: 6px; }
+  .gami p { color: var(--on-dark-soft); font-size: 16px; }
+  .gami p b { color: var(--on-dark); }
+  .fases { display: flex; flex-direction: column; gap: 14px; }
+  .fase { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 12px 32px; background: var(--card); border-radius: var(--radius); padding: clamp(20px, 3vw, 30px); }
+  .fase .lbl { display: flex; flex-direction: column; gap: 4px; }
+  .fase .lbl span { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--rust); }
+  .fase .lbl h3 { font-size: 21px; font-weight: 700; line-height: 1.2; }
+  .fase ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+  .fase li { position: relative; padding-left: 20px; font-size: 15.5px; line-height: 1.5; color: var(--ink); }
+  .fase li::before { content: ""; position: absolute; left: 0; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+  .fase li em { font-style: normal; color: var(--muted); }
+  .fase .day { font-weight: 700; color: var(--rust); }
+  .lead-card { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(24px, 4vw, 44px); align-items: center; background: var(--card); border-radius: var(--radius); padding: clamp(20px, 3.5vw, 36px); margin-top: 24px; }
+  .lead-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; }
+  .lead-card h3 { font-size: 24px; font-weight: 700; }
+  .lead-card .role { font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--rust); margin-top: 6px; font-weight: 600; line-height: 1.5; }
+  .lead-card p.bio { margin-top: 12px; color: var(--body); font-size: 15.5px; max-width: 64ch; }
+  .lead-card a { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 15px; color: var(--rust); }
+  @media (max-width: 1000px) { .ruta { grid-template-columns: repeat(2, minmax(0, 1fr)); } .actores { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 900px) { .premisa .wrap, .fase { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) { .ruta, .actores { grid-template-columns: 1fr; } .gami { grid-template-columns: 1fr; } .lead-card { grid-template-columns: 1fr; } .lead-card img { max-width: 220px; } }
+</style>
+
 <header class="hero" id="inicio">
   <div class="hero-copy">
     <img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte" width="1020" height="280">
     <div class="hero-main">
-      <p class="eyebrow">Propuesta de inversión · Convención de Ventas 2027</p>
-      <h1>La Ruta de la Huella</h1>
-      <p class="quote">“Cada visita cuenta, cada conversación transforma. ¡Juntos dejamos huella!”</p>
-      <p class="prepared">Preparado para <b>Evoforma</b> · Proyecto <b>Megalabs</b></p>
+      <p class="eyebrow">Propuesta de servicio · Convención de Ventas 2027</p>
+      <h1>Hacemos que pase</h1>
+      <p class="quote">La Ruta de la Huella · “Cada visita cuenta, cada conversación transforma. ¡Juntos dejamos huella!”</p>
+      <p class="prepared">Preparado para <b>Evoforma</b> · Cliente final <b>Megalabs</b> · Hotel Royal Decameron Salinitas, El Salvador</p>
     </div>
     <div class="facts" aria-label="La propuesta en cifras">
       <div class="fact"><strong>300</strong><span>participantes</span></div>
-      <div class="fact"><strong>6</strong><span>estaciones de experiencia</span></div>
-      <div class="fact"><strong>310</strong><span>impactos en El Acuario</span></div>
-      <div class="fact"><strong>7</strong><span>líderes y facilitadores en sitio</span></div>
+      <div class="fact"><strong>15</strong><span>grupos de 20 personas</span></div>
+      <div class="fact"><strong>3</strong><span>días de convención</span></div>
+      <div class="fact"><strong>5</strong><span>momentos en la ruta</span></div>
     </div>
   </div>
   <div class="hero-photo"><img src="img/entrada.jpg" alt="Participantes entrando al evento entre pendones de La Ruta de la Huella y El Arrecife Vivo"></div>
@@ -282,10 +330,10 @@
   <div class="wrap">
     <a href="#proyecto">El proyecto</a>
     <a href="#asistentes">Asistentes</a>
-    <a href="#analogia">La analogía</a>
-    <a href="#experiencia">La experiencia</a>
+    <a href="#roles">Quién hace qué</a>
+    <a href="#ruta">La ruta</a>
+    <a href="#alcance">Alcance</a>
     <a href="#equipo">Equipo</a>
-    <a href="#beneficios">Beneficios</a>
     <a href="#inversion">Inversión</a>
   </div>
 </nav>
@@ -295,12 +343,12 @@
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">El proyecto</p>
-        <h2 class="h2">Una convención que deja huella</h2>
+        <h2 class="h2">Convención de Ventas Megalabs 2027 — HACEMOS QUE PASE · La Ruta de la Huella</h2>
       </div>
       <div class="ficha">
-        <div><span class="k">Cliente</span><span class="v">Megalabs</span></div>
-        <div><span class="k">Evento</span><span class="v">Convención de Ventas 2027</span></div>
-        <div><span class="k">Nombre del evento</span><span class="v">La Ruta de la Huella</span></div>
+        <div><span class="k">Cliente final</span><span class="v">Megalabs</span></div>
+        <div><span class="k">Sede</span><span class="v">Hotel Royal Decameron Salinitas · Sonsonate, El Salvador</span></div>
+        <div><span class="k">Formato</span><span class="v">3 días · 300 participantes · 15 grupos de 20</span></div>
       </div>
       <div class="slogan">
         <span class="k">Slogan</span>
@@ -314,42 +362,61 @@
     <div class="wrap">
       <p class="eyebrow">Objetivo general</p>
       <h2 id="obj-t">“Hacemos que pase”</h2>
-      <p>Unificar la visión del negocio y movilizar a la fuerza comercial de primera línea y al equipo gerencial <span>desde la estrategia abstracta hacia la ejecución concreta e impecable en el territorio.</span></p>
+      <p>Unificar la visión del negocio y movilizar tanto a la fuerza comercial de primera línea (85%) como al equipo gerencial (15%) <span>para pasar de la estrategia a la ejecución impecable en el territorio.</span></p>
+    </div>
+  </section>
+
+  <section class="premisa" aria-labelledby="gob-t">
+    <div class="wrap">
+      <div class="stack" style="display:flex;flex-direction:column;gap:16px">
+        <p class="eyebrow">Premisa de gobernanza</p>
+        <h2 class="h2" id="gob-t">Nadie asiste como espectador</h2>
+        <p>Todas las áreas participan y construyen activamente el resultado 2027: Gerencia General, Marketing, Promoción, Comercial, Médica, P&amp;C, Finanzas y Compliance.</p>
+      </div>
+      <div class="keyword">
+        <span class="k">Palabra clave y motor</span>
+        <strong>SINERGIA</strong>
+        <p>La interacción horizontal entre el 15% estratégico y el 85% operativo es lo que mueve cada dinámica del evento.</p>
+      </div>
     </div>
   </section>
 
   <section id="asistentes">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">Perfil y composición de los asistentes · Aforo total: 300 participantes</p>
-        <h2 class="h2">Dos perfiles, una misma ruta</h2>
-        <p class="lead">Para garantizar un diseño instruccional y experiencial efectivo, el evento reconoce la dualidad y riqueza del perfil de los asistentes.</p>
+        <p class="eyebrow">Perfil de los asistentes · Aforo: 300 personas</p>
+        <h2 class="h2">Dos frentes que trabajan en conjunto</h2>
+        <p class="lead">Para que el diseño experiencial conecte con la realidad del negocio, el encuentro integra dos frentes clave.</p>
       </div>
       <div class="split-bar" role="img" aria-label="85% fuerza de ventas en campo, 15% líderes de gerencias"><div class="a"></div><div class="b"></div></div>
       <div class="perfiles">
         <article class="perfil">
           <span class="pct">85%</span>
-          <h3>Fuerza de Ventas en Campo<small>El Frente Comercial Activo</small></h3>
-          <p><b>Composición:</b> Visitadores Médicos, Dermoconsultores y Visitadores Clínicos.</p>
-          <p><b>Rol en la Convención:</b> son los protagonistas de la ejecución diaria, quienes viven la interacción directa con médicos, puntos de venta, farmacias e instituciones de salud. Aportan el dinamismo, el conocimiento real del cliente y la agilidad para “hacer que las cosas pasen” en el territorio.</p>
+          <h3>Fuerza de Ventas en Campo<small>Frente Comercial Activo</small></h3>
+          <p><b>Quiénes son:</b> visitadores médicos, dermoconsultores y visitadores clínicos.</p>
+          <p><b>Su rol:</b> son los protagonistas de la ejecución diaria frente a médicos, farmacias, puntos de venta e instituciones de salud. Aportan el pulso real del mercado y la agilidad para que las cosas pasen en cada territorio.</p>
         </article>
         <article class="perfil">
           <span class="pct">15%</span>
           <h3>Líderes de Gerencias Estratégicas y Soporte</h3>
-          <p><b>Composición:</b> directores y líderes de Gerencia General, Marketing, Promoción, Comercial, Médica, P&amp;C (Personas &amp; Cultura), Finanzas y Compliance.</p>
-          <p><b>Rol en la Convención:</b> facilitadores del éxito comercial. Asisten para escuchar de primera mano la realidad del mercado, desmantelar cuellos de botella (“esponjas”) y entregar los insumos, aprobaciones y herramientas que la fuerza de ventas necesita para ganar.</p>
+          <p><b>Quiénes son:</b> directores y líderes de Gerencia General, Marketing, Promoción, Comercial, Médica, Personas &amp; Cultura (P&amp;C), Finanzas y Compliance.</p>
+          <p><b>Su rol:</b> son facilitadores del éxito comercial. Participan para escuchar de primera mano lo que ocurre en la calle, absorber y destrabar cuellos de botella (“esponjas”) y entregar las aprobaciones, insumos y herramientas que el equipo de campo necesita para ganar.</p>
         </article>
+      </div>
+      <div class="slogan" style="margin-top:20px">
+        <span class="k">Premisa de trabajo: sinergia en sitio</span>
+        <p style="color:var(--on-dark-soft);font-size:17px;line-height:1.6;max-width:70ch">Nadie asiste como espectador. La interacción horizontal entre el 15% estratégico y el 85% operativo asegura que los compromisos que nazcan en la convención sean realistas, accionables y aplicables desde el primer día de regreso en las oficinas y zonas de visita.</p>
       </div>
     </div>
   </section>
 
-  <section class="analogia" id="analogia">
+  <section class="analogia" id="concepto">
     <div class="wrap ana-grid">
       <div class="ana-text">
-        <p class="eyebrow">La analogía natural</p>
+        <p class="eyebrow">Concepto creativo · El Arrecife Vivo</p>
         <h2 class="h2">Los Cóbanos y la Tortuga Carey</h2>
-        <p>Frente a las costas de Salinitas yace el único arrecife rocoso-coralino de la región: <b>Los Cóbanos</b>. En este ecosistema convive la <b>Tortuga Carey</b>, una especie emblemática que protege la salud del arrecife al alimentarse de las esponjas que de otro modo sofocarían los corales.</p>
-        <p>A su vez, la estructura firme y corpulenta del arrecife le brinda a la tortuga refugio, alimento y un rompeolas natural contra las marejadas del Pacífico.</p>
+        <p>La sede está junto a la reserva marina del <b>Arrecife de Los Cóbanos</b>, el único arrecife rocoso-coralino de la región. Allí convive la <b>Tortuga Carey</b>, que protege la salud del arrecife al alimentarse de las esponjas que de otro modo sofocarían los corales.</p>
+        <p>A su vez, la estructura firme del arrecife le brinda a la tortuga refugio, alimento y un rompeolas natural contra las marejadas del Pacífico. Así funciona la sinergia que buscamos entre campo y gerencias.</p>
       </div>
       <div class="ana-side">
         <img src="img/tortuga.jpg" alt="Rompecabezas ilustrado de la Tortuga Carey sobre el arrecife: Sinergia y trabajo en equipo">
@@ -361,83 +428,119 @@
     </div>
   </section>
 
-  <section id="experiencia">
+  <section id="roles">
+    <div class="wrap">
+      <div class="head" style="margin-bottom:20px">
+        <p class="eyebrow">Objeto del servicio</p>
+        <h2 class="h2">Qué hace Simoné en la convención</h2>
+      </div>
+      <p class="objeto">Simoné diseña y acompaña la experiencia educativa y lúdica de la convención: el concepto creativo, la ruta del participante en 5 momentos, las dinámicas de aprendizaje y el sistema de gamificación. El objetivo es que los 300 participantes pasen de la estrategia a la ejecución y salgan con compromisos accionables para 2027.</p>
+      <div class="actores">
+        <article class="actor"><span class="k">Cliente final</span><h3>Megalabs</h3><p>Arma los 15 grupos y su organización. Define y maneja los 8 ejes estratégicos. Entrega los contenidos de negocio (datos simulados de DDD y rotación, fichas de los 24 lanzamientos, portafolio y valores) y aprueba los contenidos.</p></article>
+        <article class="actor"><span class="k">Agencia contratante</span><h3>Evoforma</h3><p>Relación con el cliente, producción general del evento y logística con el hotel. Coordina a todos los proveedores.</p></article>
+        <article class="actor"><span class="k">Desarrollo digital</span><h3>Neurona</h3><p>Aplicación corporativa: rompecabezas digital, encuesta, avatares, tablero de puntos, realidad aumentada, módulos interactivos, roles y proyección en vivo.</p></article>
+        <article class="actor me"><span class="k">Diseño experiencial e instruccional</span><h3>Simoné</h3><p>Concepto, metodología, contenidos y mecánicas de todas las dinámicas, más la mediación en sitio.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="analogia" id="ruta">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">La experiencia</p>
-        <h2 class="h2">Todo lo que viven los participantes</h2>
+        <p class="eyebrow">La ruta del participante</p>
+        <h2 class="h2">5 momentos para pasar de la estrategia a la ejecución</h2>
       </div>
-
-      <div class="block">
-        <img class="photo" src="img/circuito.jpg" alt="Participantes recorriendo las estaciones: Jenga gigante, pintura colectiva y tableros de juego">
-        <div class="block-copy">
-          <span class="tag">Materiales estaciones</span>
-          <h3>6 estaciones para aprender haciendo</h3>
-          <div class="stat"><strong>150</strong><span>impactos<br>por estación</span></div>
-          <ul class="estaciones">
-            <li><span class="n">1</span><b>Pintura Colectiva</b><span>Tortuga Carey</span></li>
-            <li><span class="n">2</span><b>Jenga Gigante</b><span>Arquitectura de Portafolio</span></li>
-            <li><span class="n">3</span><b>Retratos Dirigidos</b><span>Perfil de Cliente PX/IE</span></li>
-            <li><span class="n">4</span><b>Pictionary Gigante</b><span>Marcas y Lanzamientos 2027</span></li>
-            <li><span class="n">5</span><b>Circuito de Relevos</b><span>Cadena de Ejecución en Campo</span></li>
-            <li><span class="n">6</span><b>El Espejo</b><span></span></li>
-          </ul>
-          <p class="small"><b>Incluye:</b> recursos necesarios para lograr 150 impactos por estación, como pinturas, colores, marcadores, tableros de juego, superficies para pintar, pinceles, instrucciones de juego, cintas y otros requerimientos.</p>
-        </div>
+      <ol class="ruta">
+        <li><span class="n">1</span><span class="when">Pre-evento</span><h3>Conectar</h3><p>Correo “Piezas que encajan”, encuesta “Sinergia previa” y elección de los 15 avatares.</p></li>
+        <li><span class="n">2</span><span class="when">Día 1</span><h3>Alinear</h3><p>Registro y mural “La huella de la transición” con sus preguntas detonantes.</p></li>
+        <li><span class="n">3</span><span class="when">Día 2</span><h3>Plenaria</h3><p>Sensibilización El Espejo y gamificación de la plenaria: retos por eje, rompecabezas en acrílico y muro de los 15 compromisos.</p></li>
+        <li><span class="n">4</span><span class="when">Día 3</span><h3>Carrera de observación</h3><p>15 estaciones en exteriores: 3 simulaciones comerciales, 7 preguntas de marca y portafolio y 5 retos de destreza.</p></li>
+        <li><span class="n">5</span><span class="when">Día 3 y post-evento</span><h3>Éxito colectivo</h3><p>Cierre del tablero en la gala y plan post-evento “Efecto Eco”.</p></li>
+      </ol>
+      <div class="gami">
+        <div class="big">1.000<small>puntos por grupo</small></div>
+        <p><b>Sistema de gamificación:</b> 15 avatares con sus atributos, uno por grupo de 20 personas, y una meta de 1.000 puntos que se reparte entre los momentos de la ruta. El tablero de puntos vive en la aplicación de Neurona y se cierra en la gala.</p>
       </div>
     </div>
   </section>
 
-  <section class="acuario" aria-labelledby="acu-t">
-    <div class="acuario-grid">
-      <img src="img/acuario.jpg" alt="Salón El Acuario con pantallas de fondo marino y la Tortuga Carey: Sinergia en acción">
-      <div class="acuario-copy">
-        <p class="eyebrow">Materiales El Acuario</p>
-        <h2 class="h2" id="acu-t">El Acuario</h2>
-        <div class="stat"><strong>310</strong><span>impactos<br>por estación</span></div>
-        <p>Recursos necesarios para lograr 310 impactos por estación, como pinturas, colores, marcadores, tableros de juego, superficies para pintar, pinceles, instrucciones de juego, cintas y otros requerimientos.</p>
-      </div>
-    </div>
-  </section>
-
-  <section aria-labelledby="dig-t">
+  <section id="alcance">
     <div class="wrap">
-      <div class="block" style="margin-top:0">
-        <img class="photo" src="img/tablero.jpg" alt="Participantes frente al tablero digital interactivo del evento">
-        <div class="block-copy">
-          <span class="tag">Material digital</span>
-          <h3 id="dig-t">La conversación empieza antes del evento</h3>
-          <div class="digital">
-            <div class="dig">
-              <h4>Encuesta de expectativa gamificada</h4>
-              <span class="name">“Sinergia Previa”</span>
-              <p><b>Plataforma:</b> formulario móvil gamificado (vía WhatsApp institucional / QR), con entrega de resultados.</p>
-            </div>
-            <div class="dig">
-              <h4>Gamificación de insignias, votación cruzada y álbum de sellos</h4>
-              <span class="name">“El Circuito del Reconocimiento”</span>
-              <p>Plataforma digital de elección y cuotas (pre-evento).</p>
-            </div>
-          </div>
-        </div>
+      <div class="head">
+        <p class="eyebrow">Alcance de Simoné por fases</p>
+        <h2 class="h2">Del concepto al informe de resultados</h2>
+      </div>
+      <div class="fases">
+        <article class="fase">
+          <div class="lbl"><span>Fase 1</span><h3>Conceptualización y diseño metodológico</h3></div>
+          <ul>
+            <li>Concepto creativo y narrativo El Arrecife Vivo, el manifiesto y el slogan.</li>
+            <li>Diseño de la ruta en 5 momentos: Conectar, Alinear, Plenaria, Carrera de observación y Éxito colectivo.</li>
+            <li>Guion metodológico minuto a minuto de cada dinámica.</li>
+            <li>Diseño del sistema de gamificación: los 15 avatares y sus atributos, la meta de 1.000 puntos y la distribución de puntos por momento.</li>
+          </ul>
+        </article>
+        <article class="fase">
+          <div class="lbl"><span>Fase 2</span><h3>Desarrollo de contenidos</h3></div>
+          <ul>
+            <li>Textos del pre-evento: el correo “Piezas que encajan” y las palabras clave de las piezas.</li>
+            <li>Contenido de la encuesta “Sinergia previa”: 3 preguntas, opciones por perfil y estructura del dashboard.</li>
+            <li>Diseño del mural “La huella de la transición” con sus preguntas detonantes.</li>
+            <li>Diseño de la sensibilización El Espejo en 3 fases.</li>
+            <li>Mecánica de la gamificación de la plenaria: el rompecabezas en acrílico y el muro de los 15 compromisos.</li>
+            <li>Carrera de observación con 15 estaciones: 3 simulaciones comerciales, 7 preguntas de marca y portafolio y 5 retos de destreza, con su rúbrica de validación.</li>
+            <li>Mensajes de contenido para el plan post-evento “Efecto Eco”.</li>
+          </ul>
+        </article>
+        <article class="fase">
+          <div class="lbl"><span>Fase 3</span><h3>Articulación y alistamiento</h3></div>
+          <ul>
+            <li>Entrega a Neurona de las especificaciones funcionales y los contenidos de cada módulo digital. <em>Neurona desarrolla.</em></li>
+            <li>Entrega de las especificaciones de diseño y contenido de las piezas físicas: escarapelas, mural, rompecabezas de acrílico, pendones y banderas. <em>Producción e ilustración de los 15 avatares: por definir con Evoforma.</em></li>
+            <li>Manual del mediador y preparación del equipo de mediación.</li>
+            <li>Reuniones de alineación con Evoforma, Neurona y Megalabs.</li>
+            <li>Alistamiento de los materiales de las dinámicas: lazos, cintas y elementos de los retos.</li>
+          </ul>
+        </article>
+        <article class="fase">
+          <div class="lbl"><span>Fase 4</span><h3>Ejecución en sitio</h3></div>
+          <ul>
+            <li><span class="day">Día 1:</span> acompañamiento del registro y activación del mural.</li>
+            <li><span class="day">Día 2:</span> mediación de El Espejo y de la gamificación de la plenaria: retos por eje, rompecabezas y registro de compromisos.</li>
+            <li><span class="day">Día 3:</span> coordinación de la carrera de observación en exteriores con 3 mediadores del conocimiento, y apoyo al cierre del tablero en la gala.</li>
+            <li>Registro fotográfico de las dinámicas. <em>Por definir con Evoforma.</em></li>
+          </ul>
+        </article>
+        <article class="fase">
+          <div class="lbl"><span>Fase 5</span><h3>Cierre</h3></div>
+          <ul>
+            <li>Informe de resultados de la experiencia: lectura del mural, compromisos de los grupos, resultados de la carrera y recomendaciones para el “Efecto Eco”.</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
 
   <section class="equipo" id="equipo">
-    <div class="wrap eq-grid">
-      <div class="eq-copy">
-        <p class="eyebrow">Equipo de la experiencia</p>
-        <div class="seven"><strong>7</strong><h2>personas acompañan la experiencia</h2></div>
-        <p class="lead">Este presupuesto contempla <b>2 Líderes Mediadores</b> presentes durante los 3 días del evento y <b>5 facilitadores creativos</b> que acompañan las estaciones y El Acuario.</p>
-        <ul class="checks">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Guían cada estación y El Acuario con instrucciones claras.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Sostienen el ritmo para lograr los impactos previstos.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Conectan cada dinámica con el mensaje del negocio.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Cuidan la vivencia de cada asistente, de inicio a fin.</span></li>
-        </ul>
+    <div class="wrap">
+      <div class="eq-grid">
+        <div class="eq-copy">
+          <p class="eyebrow">Equipo de mediación</p>
+          <div class="seven"><strong>7</strong><h2>personas acompañan la experiencia</h2></div>
+          <p class="lead"><b>2 Líderes Mediadores</b> presentes durante los 3 días y <b>5 mediadores del conocimiento</b>, profesionales en teatro, danza contemporánea, diseño industrial y artes plásticas que trabajan bajo el modelo de educación experiencial de Simoné.</p>
+        </div>
+        <img src="img/bienvenidos.jpg" alt="Equipo de bienvenida recibiendo a los participantes en el módulo de registro">
       </div>
-      <img src="img/bienvenidos.jpg" alt="Equipo de bienvenida recibiendo a los participantes en el módulo de registro">
+      <div class="lead-card">
+        <img src="img/nathalia.jpg" alt="Retrato de Nathalia Andrea Velasco">
+        <div>
+          <p class="eyebrow">Mediadora líder</p>
+          <h3>Nathalia Andrea Velasco</h3>
+          <p class="role">CEO y fundadora de Simoné · Magíster en Educación · Estratega de Bienestar Regenerativo</p>
+          <p class="bio">Estratega en procesos de transformación humana con 16 años de trayectoria diseñando y liderando proyectos interdisciplinarios que integran la educación, las artes plásticas y la gestión cultural. Desde 2013 lidera Simoné, donde ha consolidado una metodología que usa la creatividad y el contacto con la naturaleza para humanizar las organizaciones y fortalecer el tejido emocional de los equipos.</p>
+          <a href="https://www.linkedin.com/in/nathalia-andrea-velasco-duarte/" target="_blank" rel="noopener">Ver perfil en LinkedIn →</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -448,12 +551,12 @@
         <h2 class="h2">Lo que Megalabs se lleva</h2>
       </div>
       <div class="benef">
-        <div class="ben"><h3>Una sola visión</h3><p>Campo y gerencias alineados en la misma ruta y el mismo lenguaje.</p></div>
-        <div class="ben"><h3>De la estrategia a la acción</h3><p>Cada dinámica traduce el plan 2027 en conductas concretas para el territorio.</p></div>
-        <div class="ben"><h3>Menos “esponjas”</h3><p>Los cuellos de botella se nombran y se trabajan con quienes pueden resolverlos.</p></div>
-        <div class="ben"><h3>Aprendizaje que se recuerda</h3><p>El arte y el juego fijan los mensajes de portafolio, cliente y lanzamientos.</p></div>
-        <div class="ben"><h3>Reconocimiento y orgullo</h3><p>Insignias, votación cruzada y sellos celebran a quienes hacen que pase.</p></div>
-        <div class="ben"><h3>Tribus balanceadas</h3><p>La plataforma digital arma grupos que mezclan campo y gerencias desde antes del evento.</p></div>
+        <div class="ben"><h3>Sinergia real</h3><p>El 15% estratégico y el 85% operativo construyen juntos el resultado 2027.</p></div>
+        <div class="ben"><h3>De la estrategia a la acción</h3><p>El muro de los 15 compromisos deja acuerdos aplicables desde el primer día de regreso.</p></div>
+        <div class="ben"><h3>Menos “esponjas”</h3><p>La encuesta y el mural nombran los cuellos de botella antes de trabajarlos en la plenaria.</p></div>
+        <div class="ben"><h3>Portafolio que se aprende jugando</h3><p>La carrera de observación fija marcas, lanzamientos y situaciones comerciales reales.</p></div>
+        <div class="ben"><h3>Reconocimiento visible</h3><p>Los 15 avatares y la meta de 1.000 puntos llevan el esfuerzo de cada grupo hasta la gala.</p></div>
+        <div class="ben"><h3>Resultados medibles</h3><p>El informe de cierre recoge la lectura del mural, los compromisos y los resultados de la carrera.</p></div>
       </div>
     </div>
   </section>
@@ -536,22 +639,21 @@
         </div>
         <ul class="incluye">
           <li><b>Metodología</b><span>Diseño conceptual y metodológico de toda la experiencia</span></li>
-          <li><b>Equipo</b><span>2 Líderes Mediadores durante los 3 días y 5 facilitadores creativos</span></li>
-          <li><b>Estaciones</b><span>Materiales para 6 estaciones · 150 impactos por estación</span></li>
-          <li><b>El Acuario</b><span>Materiales para 310 impactos</span></li>
-          <li><b>Plataforma digital</b><span>Encuesta de expectativa y herramienta de formación de grupos</span></li>
+          <li><b>Equipo</b><span>2 Líderes Mediadores durante los 3 días y 5 mediadores del conocimiento</span></li>
           <li><b>Logística</b><span>Alimentación, transporte interno en Salinitas y estadía del equipo</span></li>
+          <li><b>El Espejo</b><span>Materiales y preparación del taller de sensibilización</span></li>
+          <li><b>Carrera de observación</b><span>Diseño de la gamificación de las 15 estaciones</span></li>
         </ul>
       </div>
       <div class="price">
-        <p class="eyebrow">Inversión total</p>
-        <p class="total">$50.506.000 <span>+&nbsp;IVA</span></p>
-        <p class="withtax">Total con IVA (19%): <b>$60.102.140</b> · <a href="#desglose">Ver desglose por rubro</a></p>
+        <p class="eyebrow">Inversión final</p>
+        <p class="total">$34.190.000 <span>+&nbsp;IVA</span></p>
+        <p class="withtax">IVA (19%): <b>$6.496.100</b> · Total con IVA: <b>$40.686.100</b></p>
         <div class="terms">
           <div class="term">
             <span class="k">Forma de pago</span>
             <h3>Anticipo del 30%</h3>
-            <p>Anticipo de <span class="num">$15.151.800</span>, antes de IVA. Pago final: saldo del 70% (<span class="num">$35.354.200</span>) más el IVA total (<span class="num">$9.596.140</span>) = <span class="num">$44.950.340</span>.</p>
+            <p>Anticipo de <span class="num">$10.257.000</span>, antes de IVA. Pago final: saldo del 70% (<span class="num">$23.933.000</span>) más el IVA total (<span class="num">$6.496.100</span>) = <span class="num">$30.429.100</span>.</p>
           </div>
           <div class="term">
             <span class="k">Beneficio</span>
@@ -559,25 +661,6 @@
             <p>Aplica para pagos realizados dentro de los 20 días siguientes a emitida la factura.</p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="wrap desglose" id="desglose">
-      <div class="head" style="margin-bottom:20px">
-        <p class="eyebrow">Desglose de la inversión</p>
-        <h2 class="h2" style="color:var(--on-dark)">Inversión por rubro</h2>
-      </div>
-      <div class="tablebox">
-        <table>
-          <thead><tr><th scope="col">Rubro y qué incluye</th><th scope="col">Base</th><th scope="col">IVA 19%</th><th scope="col">Total</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">Gestión de conocimiento<span class="inc">Diseño conceptual, diseño metodológico y presencia de 2 Líderes Mediadores durante los 3 días del evento.</span></th><td>$9.596.000</td><td>$1.823.240</td><td>$11.419.240</td></tr>
-            <tr><th scope="row">6 estaciones<span class="inc">Acompañamiento de 5 facilitadores creativos y materiales necesarios para las 6 estaciones.</span></th><td>$19.055.000</td><td>$3.620.450</td><td>$22.675.450</td></tr>
-            <tr><th scope="row">El Acuario<span class="inc">Acompañamiento de 5 facilitadores creativos y materiales necesarios para la dinámica de El Acuario.</span></th><td>$7.545.000</td><td>$1.433.550</td><td>$8.978.550</td></tr>
-            <tr><th scope="row">Plataforma digital<span class="inc">Herramienta digital para la encuesta de expectativa y herramienta de formación de grupos.</span></th><td>$4.650.000</td><td>$883.500</td><td>$5.533.500</td></tr>
-            <tr><th scope="row">Viáticos<span class="inc">Alimentación, transporte interno en Salinitas y estadía de 7 personas.</span></th><td>$9.660.000</td><td>$1.835.400</td><td>$11.495.400</td></tr>
-          </tbody>
-          <tfoot><tr><th scope="row">Total</th><td>$50.506.000</td><td>$9.596.140</td><td>$60.102.140</td></tr></tfoot>
-        </table>
       </div>
     </div>
   </section>
@@ -588,9 +671,10 @@
       <h2 class="h2" id="cie-t">Juntos dejamos huella</h2>
       <p class="quote">Gracias por la confianza, Evoforma.</p>
       <div class="contacto">
-        <span class="who">Nathalia Velasco · Simoné</span>
+        <span class="who">Nathalia Andrea Velasco · Simoné</span>
         <div class="mail"><code>nathalia@experienciasimone.com</code><button type="button" data-copy="nathalia@experienciasimone.com">Copiar</button></div>
         <div class="mail"><code>experienciasimone@gmail.com</code><button type="button" data-copy="experienciasimone@gmail.com">Copiar</button></div>
+        <div class="mail"><code>321 773 8039</code><button type="button" data-copy="3217738039">Copiar</button></div>
       </div>
     </div>
     <img class="ph" src="img/premiacion.jpg" alt="Noche de premiación con la Tortuga Carey en pantalla">
@@ -619,10 +703,10 @@
   <div class="sm-in">
     <img src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte">
     <dl>
-      <div><dt>Fecha de emisión</dt><dd>16 de octubre de 2026</dd></div>
+      <div><dt>Fecha de emisión</dt><dd>21 de noviembre de 2026</dd></div>
       <div><dt>NIT</dt><dd>901.838.283-3</dd></div>
       <div><dt>Teléfono</dt><dd><a href="tel:+573217738039">321 773 8039</a></dd></div>
-      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 15 de noviembre de 2026</small></dd></div>
+      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 21 de diciembre de 2026</small></dd></div>
     </dl>
     <div class="sm-notas">
       <p class="t">Notas finales</p>
@@ -637,7 +721,7 @@
 <footer>
   <div class="wrap">
     <span>Simoné · Desarrollo humano a través del arte</span>
-    <span>Propuesta para Evoforma · Proyecto Megalabs · Octubre 2026</span>
+    <span>Propuesta para Evoforma · Proyecto Megalabs · Noviembre 2026</span>
   </div>
 </footer>
 
