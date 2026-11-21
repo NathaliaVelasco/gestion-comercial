@@ -261,6 +261,12 @@
 
 <style>
   /* Ajuste nov 2026: nuevo alcance (diseño experiencial e instruccional) */
+  .pilares { margin-top: 6px; background: var(--card); border-left: 4px solid var(--orange); border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; }
+  .pilares .k { font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--rust); }
+  .pilares p { color: var(--ink); font-size: 16px; }
+  .vinculo { font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--rust); margin-top: 4px; }
+  .ana-side .role.t:nth-child(2) { background: var(--olive-2); }
+  .ana-side img[src="img/delfin.jpg"] { aspect-ratio: 16 / 10; object-position: 50% 45%; }
   .premisa { background: var(--sand); }
   .premisa .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
   .premisa p { color: var(--body); max-width: 58ch; }
@@ -413,16 +419,22 @@
   <section class="analogia" id="concepto">
     <div class="wrap ana-grid">
       <div class="ana-text">
-        <p class="eyebrow">Concepto creativo · El Arrecife Vivo</p>
-        <h2 class="h2">Los Cóbanos y la Tortuga Carey</h2>
-        <p>La sede está junto a la reserva marina del <b>Arrecife de Los Cóbanos</b>, el único arrecife rocoso-coralino de la región. Allí convive la <b>Tortuga Carey</b>, que protege la salud del arrecife al alimentarse de las esponjas que de otro modo sofocarían los corales.</p>
-        <p>A su vez, la estructura firme del arrecife le brinda a la tortuga refugio, alimento y un rompeolas natural contra las marejadas del Pacífico. Así funciona la sinergia que buscamos entre campo y gerencias.</p>
+        <p class="eyebrow">Concepto creativo · La analogía natural</p>
+        <h2 class="h2">Los Cóbanos y el Delfín del Pacífico</h2>
+        <p>Frente a las costas de Salinitas se extiende el <b>arrecife de Los Cóbanos</b>, un ecosistema donde el coral brinda estructura y protección contra las corrientes del Pacífico, mientras el <b>Delfín del Pacífico</b> navega con agilidad, inteligencia colectiva y ecolocalización.</p>
+        <p>Los delfines cazan y avanzan en manadas sincronizadas, comunicándose con precisión para leer el entorno, rodear oportunidades y superar cualquier obstáculo.</p>
+        <div class="pilares">
+          <span class="k">Pilares de negocio</span>
+          <p>Encarna el <b>“Ganar Correctamente”</b> y <b>“Proteger el Mercado”</b> a través de la inteligencia compartida y la sincronía entre oficinas y campo.</p>
+        </div>
       </div>
       <div class="ana-side">
-        <img src="img/tortuga.jpg" alt="Rompecabezas ilustrado de la Tortuga Carey sobre el arrecife: Sinergia y trabajo en equipo">
+        <img src="img/delfin.jpg" alt="Ilustración de un delfín saltando entre las olas sobre el arrecife">
+        <p class="vinculo">El vínculo con Megalabs</p>
+        <div class="role r arrecife"><span class="k">El Arrecife de Coral · La estructura</span><p>Nuestro portafolio de más de 1.800 productos, el rigor científico y la solidez institucional que nos protegen y diferencian en el mercado.</p></div>
         <div class="roles">
-          <div class="role t"><span class="k">La tortuga</span><p>Quien despeja las “esponjas” para que el negocio respire y crezca.</p></div>
-          <div class="role r"><span class="k">El arrecife</span><p>La estructura que da refugio, recursos y respaldo a quien sale al territorio.</p></div>
+          <div class="role t"><span class="k">La manada · Campo 85%</span><p>Navegan el territorio con agilidad, leen las señales de cada médico y punto de venta, y ejecutan con velocidad para capturar oportunidades.</p></div>
+          <div class="role t"><span class="k">La manada · Líderes 15%</span><p>Marcan el rumbo, mantienen la comunicación fluida y despejan el camino administrativo para que la manada avance sin fricciones.</p></div>
         </div>
       </div>
     </div>
@@ -677,7 +689,7 @@
         <div class="mail"><code>321 773 8039</code><button type="button" data-copy="3217738039">Copiar</button></div>
       </div>
     </div>
-    <img class="ph" src="img/premiacion.jpg" alt="Noche de premiación con la Tortuga Carey en pantalla">
+    <img class="ph" src="img/premiacion.jpg" alt="Noche de premiación de la convención con pantallas del arrecife">
   </section>
 </main>
 
