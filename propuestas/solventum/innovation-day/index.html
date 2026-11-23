@@ -239,6 +239,11 @@
   .breakdown dt small { display:block; margin-top:3px; font-size:11px; font-weight:700; letter-spacing:.12em; color:var(--green); }
   .breakdown { max-width:460px !important; }
   .breakdown .t { border-bottom:0; font-weight:700; } .breakdown .t dd { color:var(--green); }
+  .arts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+  .arts figure { margin:0; }
+  .arts img { border-radius:14px; border:1px solid var(--line); }
+  .arts figcaption { margin-top:8px; font-size:13px; font-weight:700; color:var(--malachite); }
+  @media (max-width:640px) { .arts { grid-template-columns:1fr; } }
   .lead-me { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: center; }
   .lead-me img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 2px solid var(--malachite); }
   .lead-me h3 { font-size: 22px; font-weight: 700; }
@@ -354,7 +359,7 @@
           <p><b>1. Stand octagonal:</b> cuatro cuadrantes que muestran el viaje del paciente, de la esterilización a la hospitalización, en cartón doble pared con vinilo impreso.</p>
           <p><b>2. Video de 5 minutos:</b> la relación de las marcas con Solventum, bajo el concepto <b>"El arte de construir grandes alianzas"</b>.</p>
           <p><b>3. Enlace digital:</b> una página para explicar los principales objetivos de la relación con Solventum.</p>
-          <p>Por solicitud de Solventum se suman un <b>cabezote para el stand</b> y la <b>edición de dos videos testimoniales</b>.</p>
+          <p>Por solicitud de Solventum se suman un <b>cabezote para el stand</b> y la <b>edición de cuatro videos testimoniales</b>.</p>
           <p>También incluye la <b>landing del caso para la pantalla de fondo</b> (Loop caso Don Jesús). Como adicional opcional proponemos recordatorios para los asistentes.</p>
         </div>
         <div class="hud">
@@ -384,6 +389,16 @@
         <li><span class="q">Cuadrante 3</span><h3>Cirugía</h3><p class="sub">Control quirúrgico y gestión de alta complejidad</p><p>Brindar soporte clínico avanzado durante el acto quirúrgico mediante aislamiento microbiano, gestión de incisiones cerradas, manejo de abdomen abierto y normotermia transoperatoria.</p></li>
         <li><span class="q">Cuadrante 4</span><h3>Hospitalización y/o UCI</h3><p class="sub">Recuperación, accesos vasculares y cuidado crítico</p><p>Mantener la continuidad del cuidado postoperatorio, prevenir infecciones del torrente sanguíneo asociadas a líneas centrales (CLABSI), gestionar heridas complejas o crónicas y acelerar la recuperación funcional del paciente.</p></li>
       </ol>
+      <div class="group" style="margin-top:clamp(36px,5vw,56px)">
+        <h3 class="group-title">Artes de los cuadrantes</h3>
+        <p class="lead" style="font-size:15px;margin-bottom:18px">Los artes finales de las cuatro etapas ya están listos para impresión.</p>
+        <div class="arts">
+          <figure><img src="img/arte-esterilizacion.jpg" alt="Arte del cuadrante Esterilización"><figcaption>1 · Esterilización</figcaption></figure>
+          <figure><img src="img/arte-preparacion.jpg" alt="Arte del cuadrante Preparación"><figcaption>2 · Preparación</figcaption></figure>
+          <figure><img src="img/arte-cirugia.jpg" alt="Arte del cuadrante Cirugía"><figcaption>3 · Cirugía</figcaption></figure>
+          <figure><img src="img/arte-hospitalizacion.jpg" alt="Arte del cuadrante Hospitalización"><figcaption>4 · Hospitalización y/o UCI</figcaption></figure>
+        </div>
+      </div>
       <div class="media" style="margin-top:clamp(36px,5vw,56px)">
         <figure><img src="img/stand-perspectiva.jpg" alt="Render en perspectiva del stand octagonal con paredes verdes y una pieza gráfica vertical"></figure>
         <div class="side">
@@ -405,7 +420,7 @@
             <tr><td>Cabezote <small style="font-weight:400;color:var(--muted)">· solicitado por Solventum</small></td><td>140 × 140 × 50 cm</td><td class="n">1</td></tr>
           </tbody>
         </table>
-        <p class="cap" style="margin-top:16px"><b>Los artes finales del stand deben estar listos el 18 de noviembre</b>, por el alto tráfico que hay en este momento en impresión.</p>
+        <p class="cap" style="margin-top:16px">Incluye el <b>diseño de planimetrías</b> del stand para producción y montaje.</p>
       </div>
     </div>
   </section>
@@ -428,7 +443,7 @@
       <div class="group" style="margin-top:clamp(36px,5vw,56px)">
         <h3 class="group-title">Videos testimoniales</h3>
         <ul class="kit">
-          <li class="item"><span class="tag">Adicional</span><h3>Edición de 2 videos testimoniales</h3><p>Dos piezas cortas con testimonios sobre la alianza con Solventum, editadas con la misma línea gráfica del video principal.</p></li>
+          <li class="item"><span class="tag">Adicional</span><h3>Edición de 4 videos testimoniales</h3><p>Cuatro piezas cortas con testimonios sobre la alianza con Solventum, editadas con la misma línea gráfica del video principal.</p></li>
         </ul>
       </div>
     </div>
@@ -458,14 +473,14 @@
       </div>
       <ol class="route">
         <li class="stop"><span class="n">18</span><h3>Cotización</h3><p>Con su aprobación iniciamos la producción.</p></li>
-        <li class="stop"><span class="n">18</span><h3>Insumos y artes finales</h3><p>Fotos, videos y copy del video. Artes finales del stand listos para impresión.</p></li>
+        <li class="stop"><span class="n">18</span><h3>Insumos y artes finales</h3><p>Fotos, videos y copy del video. Artes finales del stand recibidos.</p></li>
         <li class="stop"><span class="n">20</span><h3>Revisión y últimos cambios</h3><p>Primer corte del video. Último día para recibir cambios (hasta 4).</p></li>
         <li class="stop"><span class="n">26</span><h3>Entrega e instalación</h3><p>Stand armado en el Salón Amatista a la 1:00 p.&nbsp;m.</p></li>
         <li class="stop"><span class="n">26</span><h3>Acompañamiento</h3><p>Nuestro equipo acompaña el montaje.</p></li>
       </ol>
       <p class="note">Fechas de noviembre de 2026.</p>
       <div class="deadlines">
-        <div><span class="d">18 nov</span><p><b>Artes finales del stand.</b> Deben estar listos en esta fecha por el alto tráfico que hay en este momento en impresión.</p></div>
+        <div><span class="d">18 nov</span><p><b>Artes finales del stand.</b> Recibidos y listos para impresión.</p></div>
         <div><span class="d">20 nov</span><p><b>Últimos cambios del video.</b> Se reciben hasta esta fecha, con un máximo de 4 cambios sobre la revisión.</p></div>
       </div>
     </div>
@@ -566,24 +581,18 @@
       </div>
       <div class="invest">
         <div class="total">
-          <span class="amount">$14.755.000</span>
+          <span class="amount">$17.035.000</span>
           <span class="cur">Pesos colombianos (COP) + IVA</span>
-          <dl class="breakdown">
-            <div><dt>Stand octagonal de 2,70 m de altura final, de 4 paredes de 110 cm y 4 paredes de 50 cm. Video distribuidores y enlace digital de gamificación</dt><dd>$10.700.000</dd></div>
-            <div><dt>Cabezote del stand 140 × 140 × 50 cm</dt><dd>$895.000</dd></div>
-            <div><dt>Edición de 2 videos testimoniales</dt><dd>$2.110.000</dd></div>
-            <div><dt>Landing del caso para pantalla de fondo<small>LOOP CASO DON JESÚS</small></dt><dd>$1.050.000</dd></div>
-            <div class="t"><dt>Total + IVA</dt><dd>$14.755.000</dd></div>
-          </dl>
         </div>
         <ul class="incl">
           <li>Stand octagonal de 4 cuadrantes (viaje del paciente): 4 paredes de 110 × 220 × 6 cm, 4 paredes de 50 × 220 × 6 cm y octágono central de 110 × 110 × 220 cm con caras de 45 × 220 cm</li>
           <li>Cabezote del stand de 140 × 140 × 50 cm</li>
           <li>Cartón doble pared entamborado con vinilo adhesivo impreso; armado con alma en MDF y tornillo de sistema</li>
-          <li>Impresión de las piezas del stand a partir de los artes finales entregados el 18 de noviembre</li>
+          <li>Diseño de planimetrías del stand</li>
+          <li>Impresión de las piezas del stand a partir de los artes finales de los cuatro cuadrantes</li>
           <li>Video de 5 minutos "El arte de construir grandes alianzas", con voz en off y animaciones 2D de textos</li>
           <li>Revisión del video con hasta 4 cambios; los últimos cambios se reciben hasta el 20 de noviembre</li>
-          <li>Edición de 2 videos testimoniales</li>
+          <li>Edición de 4 videos testimoniales</li>
           <li>Landing del caso para pantalla de fondo (Loop caso Don Jesús): página digital diseñada para proyectarse en la pantalla de fondo del salón durante el encuentro</li>
           <li>Enlace digital para explicar los principales objetivos de la relación con Solventum</li>
           <li>Transporte del material hasta el Hotel Marriott de la Calle 26</li>
