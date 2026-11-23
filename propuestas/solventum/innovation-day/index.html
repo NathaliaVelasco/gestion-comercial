@@ -232,6 +232,11 @@
   .addon .price strong { color:var(--green); font-size:32px; font-weight:400; letter-spacing:-.01em; }
   .addon .price span { color:#C9D8D4; font-size:13px; }
   @media (max-width:760px) { .journey, .addon-grid { grid-template-columns:1fr; } }
+  .breakdown { margin-top:22px; display:grid; gap:8px; max-width:420px; }
+  .breakdown div { display:flex; justify-content:space-between; gap:16px; font-size:14px; color:#C9D8D4; padding-bottom:8px; border-bottom:1px solid rgba(255,255,255,.14); }
+  .breakdown dt { color:#D5E3DF !important; } .breakdown dd { color:#fff; white-space:nowrap; }
+  .breakdown .t dt { color:#fff !important; }
+  .breakdown .t { border-bottom:0; font-weight:700; } .breakdown .t dd { color:var(--green); }
   .lead-me { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: center; }
   .lead-me img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 2px solid var(--malachite); }
   .lead-me h3 { font-size: 22px; font-weight: 700; }
@@ -347,6 +352,7 @@
           <p><b>1. Stand octagonal:</b> cuatro cuadrantes que muestran el viaje del paciente, de la esterilización a la hospitalización, en cartón doble pared con vinilo impreso.</p>
           <p><b>2. Video de 5 minutos:</b> la relación de las marcas con Solventum, bajo el concepto <b>"El arte de construir grandes alianzas"</b>.</p>
           <p><b>3. Enlace digital:</b> una página para explicar los principales objetivos de la relación con Solventum.</p>
+          <p>Por solicitud de Solventum se suman un <b>cabezote para el stand</b> y la <b>edición de dos videos testimoniales</b>.</p>
           <p>Además, proponemos dos <b>adicionales opcionales</b>: recordatorios para los asistentes y una landing del caso para la pantalla de fondo.</p>
         </div>
         <div class="hud">
@@ -394,6 +400,7 @@
             <tr><td>Paredes largas</td><td>110 × 220 × 6 cm</td><td class="n">4</td></tr>
             <tr><td>Paredes cortas</td><td>50 × 220 × 6 cm</td><td class="n">4</td></tr>
             <tr><td>Octágono central</td><td>110 × 110 × 220 cm · cada cara de 45 × 220 cm</td><td class="n">1</td></tr>
+            <tr><td>Cabezote <small style="font-weight:400;color:var(--muted)">· solicitado por Solventum</small></td><td>140 × 140 × 50 cm</td><td class="n">1</td></tr>
           </tbody>
         </table>
         <p class="cap" style="margin-top:16px"><b>Los artes finales del stand deben estar listos el 18 de noviembre</b>, por el alto tráfico que hay en este momento en impresión.</p>
@@ -416,6 +423,12 @@
         <li class="item"><span class="tag">20 de noviembre</span><h3>Revisión con Solventum</h3><p>Presentamos el primer corte para su revisión.</p></li>
         <li class="item"><span class="tag">Incluidos</span><h3>Hasta 4 cambios</h3><p>Se aceptan 4 cambios sobre la revisión. <b>Los últimos cambios se reciben hasta el 20 de noviembre.</b></p></li>
       </ul>
+      <div class="group" style="margin-top:clamp(36px,5vw,56px)">
+        <h3 class="group-title">Videos testimoniales</h3>
+        <ul class="kit">
+          <li class="item"><span class="tag">Adicional</span><h3>Edición de 2 videos testimoniales</h3><p>Dos piezas cortas con testimonios sobre la alianza con Solventum, editadas con la misma línea gráfica del video principal.</p></li>
+        </ul>
+      </div>
     </div>
   </section>
   <section id="enlace">
@@ -551,15 +564,23 @@
       </div>
       <div class="invest">
         <div class="total">
-          <span class="amount">$10.700.000</span>
-          <span class="cur">Pesos colombianos (COP) + IVA · stand, video y enlace digital</span>
+          <span class="amount">$13.705.000</span>
+          <span class="cur">Pesos colombianos (COP) + IVA</span>
+          <dl class="breakdown">
+            <div><dt>Stand, video y enlace digital</dt><dd>$10.700.000</dd></div>
+            <div><dt>Cabezote del stand 140 × 140 × 50 cm</dt><dd>$895.000</dd></div>
+            <div><dt>Edición de 2 videos testimoniales</dt><dd>$2.110.000</dd></div>
+            <div class="t"><dt>Total + IVA</dt><dd>$13.705.000</dd></div>
+          </dl>
         </div>
         <ul class="incl">
           <li>Stand octagonal de 4 cuadrantes (viaje del paciente): 4 paredes de 110 × 220 × 6 cm, 4 paredes de 50 × 220 × 6 cm y octágono central de 110 × 110 × 220 cm con caras de 45 × 220 cm</li>
+          <li>Cabezote del stand de 140 × 140 × 50 cm</li>
           <li>Cartón doble pared entamborado con vinilo adhesivo impreso; armado con alma en MDF y tornillo de sistema</li>
           <li>Impresión de las piezas del stand a partir de los artes finales entregados el 18 de noviembre</li>
           <li>Video de 5 minutos "El arte de construir grandes alianzas", con voz en off y animaciones 2D de textos</li>
           <li>Revisión del video con hasta 4 cambios; los últimos cambios se reciben hasta el 20 de noviembre</li>
+          <li>Edición de 2 videos testimoniales</li>
           <li>Enlace digital para explicar los principales objetivos de la relación con Solventum</li>
           <li>Transporte del material hasta el Hotel Marriott de la Calle 26</li>
           <li>Entrega del material armado el 26 de noviembre, instalación a la 1:00 p.&nbsp;m. y acompañamiento en el montaje</li>
@@ -608,10 +629,10 @@
   <div class="sm-in">
     <img src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte">
     <dl>
-      <div><dt>Fecha de emisión</dt><dd>18 de noviembre de 2026</dd></div>
+      <div><dt>Fecha de emisión</dt><dd>23 de noviembre de 2026</dd></div>
       <div><dt>NIT</dt><dd>901.838.283-3</dd></div>
       <div><dt>Teléfono</dt><dd><a href="tel:+573217738039">321 773 8039</a></dd></div>
-      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 18 de diciembre de 2026</small></dd></div>
+      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 23 de diciembre de 2026</small></dd></div>
     </dl>
     <div class="sm-notas">
       <p class="t">Notas finales</p>
