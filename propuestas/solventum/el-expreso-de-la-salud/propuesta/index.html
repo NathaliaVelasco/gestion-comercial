@@ -141,7 +141,7 @@ section{padding-block:clamp(52px,7vw,88px);scroll-margin-top:52px}
 .tag{align-self:flex-start;font-family:var(--display);font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark);background:var(--magenta);padding:6px 12px;border-radius:999px}
 .ind{margin-top:auto!important;padding-top:12px;border-top:1px solid var(--line);font-size:.9rem!important}
 .ind b{display:block;font-family:var(--display);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rust);margin-bottom:4px}
-@media (max-width:900px){.vals.three,.roi{grid-template-columns:1fr}}
+@media screen and (max-width:900px){.vals.three,.roi{grid-template-columns:1fr}}
 .price .per{margin-top:16px;font-size:.95rem;opacity:.9}
 .price .per-list{list-style:none;padding:0;margin-top:8px;display:grid;gap:6px}
 .price .per-list li{display:flex;gap:10px;font-size:.95rem}
@@ -154,13 +154,25 @@ section{padding-block:clamp(52px,7vw,88px);scroll-margin-top:52px}
 .noinc h3{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:8px}
 .noinc .list{grid-template-columns:repeat(3,1fr);column-gap:24px}
 .noinc .list li{border-bottom:0}
-@media (max-width:640px){.noinc .list{grid-template-columns:1fr}}
+@media screen and (max-width:640px){.noinc .list{grid-template-columns:1fr}}
 .cond{margin-top:clamp(32px,5vw,48px)}
 .cond-grid{list-style:none;padding:0;margin-top:14px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .cond-grid li{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--magenta);border-radius:12px;padding:20px 22px;min-width:0}
 .cond-grid h3{font-size:1.02rem;font-weight:700}
 .cond-grid p{color:var(--muted);font-size:.94rem;margin-top:6px}
-@media (max-width:640px){.cond-grid{grid-template-columns:1fr}}
+@media screen and (max-width:640px){.cond-grid{grid-template-columns:1fr}}
+.paytotal{margin-top:10px;padding-top:12px;border-top:1px solid var(--line);font-size:.95rem}
+@media print{
+  @page{size:1120px 1584px;margin:40px 0}
+  html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  nav.toc,.actions{display:none!important}
+  .card,.car,.steps li,.flow li,.cond-grid li,.vals li,.price,.lead-card,.signs,.phones figure,.sm-clientes li,.sm-testimonios li,.sec-head,.invest,.boxes,.roi,.two{break-inside:avoid}
+  .sec-head{break-after:avoid}
+  #inversion,#resumen{break-before:page}
+  .sm-clientes,.sm-testi,#equipo,.note{break-inside:avoid}
+  .phones{break-after:avoid}
+  section{padding-block:44px}
+}
 /* Mediadora */
 .lead-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--olive);color:var(--on-dark);border-radius:14px;padding:clamp(24px,4vw,44px)}
 .lead-card > *{min-width:0}
@@ -194,7 +206,7 @@ section{padding-block:clamp(52px,7vw,88px);scroll-margin-top:52px}
 footer{border-top:1px solid var(--line);padding-block:28px;font-size:.85rem;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
-@media (max-width:900px){
+@media screen and (max-width:900px){
   .hero-grid,.why,.invest{grid-template-columns:1fr}
   .flow{grid-template-columns:1fr;border-top:0;border-left:3px solid var(--olive)}
   .flow li{padding:0 0 22px 24px}
@@ -203,7 +215,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .steps{grid-template-columns:1fr 1fr}
   .phones{grid-template-columns:repeat(3,1fr)}
 }
-@media (max-width:640px){
+@media screen and (max-width:640px){
   .facts{grid-template-columns:1fr 1fr}
   .fact:nth-child(3){padding-left:0;border-left:0}
   .fact:nth-child(n+3){border-top:1px solid var(--line)}
@@ -327,9 +339,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <ul class="signs">
           <li><b>Participantes</b><span>47 · 6 grupos de color</span></li>
           <li><b>Vagones</b><span>6 temas clínicos</span></li>
-          <li><b>Prueba de entrada</b><span>5 preguntas</span></li>
+          <li><b>Prueba de entrada</b><span>5 preguntas · 12,5 pts</span></li>
           <li><b>Retos por vagón</b><span>3 · 12 pts</span></li>
-          <li><b>Prueba de salida</b><span>5 preguntas</span></li>
+          <li><b>Prueba de salida</b><span>5 preguntas · 12,5 pts</span></li>
           <li><b>Pieza física</b><span>Rompecabezas 35 × 25 cm</span></li>
           <li><b>Funciona en</b><span>Celular, sin descargar apps</span></li>
         </ul>
@@ -346,10 +358,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </div>
       <ol class="flow">
         <li><span class="t">Llegada</span><h3>Andén de bienvenida</h3><p>Cada participante arma su avatar, escoge un nombre único de pasajero y su grupo.</p></li>
-        <li><span class="t">Antes</span><h3>Taquilla</h3><p>Prueba de entrada de 5 preguntas. El resultado imprime su tiquete digital.</p></li>
+        <li><span class="t">Antes</span><h3>Taquilla</h3><p>Prueba de entrada de 5 preguntas, por 12,5 puntos. El resultado imprime su tiquete digital.</p></li>
         <li><span class="t">El juego</span><h3>Seis vagones</h3><p>Un caso, una práctica técnica y una insignia por vagón.</p></li>
         <li><span class="t">Después</span><h3>Puerta de salida</h3><p>Las mismas 5 preguntas de la entrada, en otro orden, para medir lo aprendido.</p></li>
-        <li><span class="t">Cierre</span><h3>Resultados y premiación</h3><p>Cada participante ve su puntaje, sus insignias y su avance.</p></li>
+        <li><span class="t">Cierre</span><h3>Resultados y premiación</h3><p>Puntaje sobre 100, insignias y avance entre la entrada y la salida.</p></li>
       </ol>
       <div class="phones">
         <figure><img src="img/anden.jpg" alt="Andén de bienvenida con el constructor de avatar" loading="lazy"><figcaption>Andén</figcaption></figure>
@@ -381,7 +393,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <ol class="steps">
         <li><span class="pts">4 pts</span><span class="t">Paso 1</span><h3>Pregunta individual</h3><p>Se responde sin consultar. Es obligatoria para ganar la insignia.</p></li>
         <li><span class="pts">4 pts</span><span class="t">Paso 2</span><h3>Pregunta grupal</h3><p>El equipo construye la respuesta y suma el trabajo en conjunto.</p></li>
-        <li><span class="pts">4 pts</span><span class="t">Paso 3 · máximo 3 minutos</span><h3>Rompecabezas</h3><p>Pieza física en acrílico de 35 × 25 cm con palabras clave del producto.</p></li>
+        <li><span class="pts">4 pts</span><span class="t">Paso 3 · máximo 3 minutos</span><h3>Rompecabezas</h3><p>Pieza física en acrílico de 35 × 25 cm con palabras clave del producto. Armarla con rapidez suma 0,5 puntos de bono.</p></li>
         <li><span class="pts">8 / 12</span><span class="t">Paso 4</span><h3>Insignia</h3><p>Solo con 8 de 12 puntos y la pregunta individual correcta. Nadie la recibe sin mérito propio.</p></li>
       </ol>
     </div>
@@ -397,10 +409,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="card">
           <span class="k">6</span>
           <h3>Resultado individual</h3>
-          <p>Al terminar, cada participante ve en su celular su puntaje, las insignias que ganó en los 6 vagones y su avance entre la prueba de entrada y la de salida.</p>
+          <p>Al terminar, cada participante ve en su celular su puntaje sobre 100, las insignias que ganó en los 6 vagones y su avance entre la prueba de entrada y la de salida.</p>
           <div class="bars" role="img" aria-label="Ejemplo ilustrativo del avance entre la entrada y la salida">
-            <div><span>Entrada</span><i style="--w:40%"></i><em>2/5</em></div>
-            <div class="after"><span>Salida</span><i style="--w:100%"></i><em>5/5</em></div>
+            <div><span>Entrada</span><i style="--w:60%"></i><em>7,5/12,5</em></div>
+            <div class="after"><span>Salida</span><i style="--w:100%"></i><em>12,5/12,5</em></div>
             <div><small>Ejemplo ilustrativo</small></div>
           </div>
         </div>
@@ -484,8 +496,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .sm-clientes ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .sm-clientes li{background:#fff;border:1px solid #E4E1D4;border-radius:10px;height:120px;display:flex;align-items:center;justify-content:center;padding:18px 22px;min-width:0}
 .sm-clientes img{max-width:100%;max-height:70px;width:auto;height:auto;object-fit:contain;display:block}
-@media (max-width:860px){.sm-clientes ul{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:560px){.sm-clientes ul{grid-template-columns:1fr 1fr}.sm-clientes li{height:96px;padding:14px}.sm-clientes img{max-height:54px}}
+@media screen and (max-width:860px){.sm-clientes ul{grid-template-columns:repeat(3,1fr)}}
+@media screen and (max-width:560px){.sm-clientes ul{grid-template-columns:1fr 1fr}.sm-clientes li{height:96px;padding:14px}.sm-clientes img{max-height:54px}}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-clientes{color:#EEEBDD}:root:not([data-theme="light"]) .sm-clientes .sm-lead{color:#B5B29C}:root:not([data-theme="light"]) .sm-clientes .sm-eb{color:#E58A5A}:root:not([data-theme="light"]) .sm-clientes li{background:#202214;border-color:#34361F}:root:not([data-theme="light"]) .sm-clientes img{filter:brightness(2.2)}}
 :root[data-theme="dark"] .sm-clientes{color:#EEEBDD}:root[data-theme="dark"] .sm-clientes .sm-lead{color:#B5B29C}:root[data-theme="dark"] .sm-clientes .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-clientes li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-clientes img{filter:brightness(2.2)}
 .sm-clientes.sm-dark{color:#F2EEE3}.sm-clientes.sm-dark .sm-lead{color:#B9B6A8}.sm-clientes.sm-dark .sm-eb{color:#F2A03D}
@@ -523,11 +535,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .sm-testi .who{margin-top:auto;font-family:"Montserrat",system-ui,sans-serif;font-size:.86rem;line-height:1.4}
 .sm-testi .who b{display:block;font-weight:700}
 .sm-testi .who span{color:#6A6C55}
-@media (max-width:860px){.sm-testi ul{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.sm-testi ul{grid-template-columns:1fr}}
+@media screen and (max-width:860px){.sm-testi ul{grid-template-columns:1fr 1fr}}
+@media screen and (max-width:560px){.sm-testi ul{grid-template-columns:1fr}}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sm-testi{color:#EEEBDD}:root:not([data-theme="light"]) .sm-testi .sm-eb{color:#E58A5A}:root:not([data-theme="light"]) .sm-testi li{background:#202214;border-color:#34361F}:root:not([data-theme="light"]) .sm-testi .who span{color:#B5B29C}}
 :root[data-theme="dark"] .sm-testi{color:#EEEBDD}:root[data-theme="dark"] .sm-testi .sm-eb{color:#E58A5A}:root[data-theme="dark"] .sm-testi li{background:#202214;border-color:#34361F}:root[data-theme="dark"] .sm-testi .who span{color:#B5B29C}
-.sm-testi.sm-4 ul{grid-template-columns:1fr 1fr}@media (max-width:560px){.sm-testi.sm-4 ul{grid-template-columns:1fr}}
+.sm-testi.sm-4 ul{grid-template-columns:1fr 1fr}@media screen and (max-width:560px){.sm-testi.sm-4 ul{grid-template-columns:1fr}}
 .sm-testi.sm-dark{color:#F2EEE3}.sm-testi.sm-dark .sm-eb{color:#F2A03D}.sm-testi.sm-dark li{background:#14170F;border-color:#2C3020}.sm-testi.sm-dark .who span{color:#B9B6A8}
 </style>
 <section class="sm-testi sm-4" id="testimonios" aria-label="Testimonios">
@@ -548,13 +560,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </div>
       <div class="invest">
         <div class="price">
-          <span class="lbl">Valor integral · El Expreso de la Salud</span>
-          <span class="big">$9.500.000 <small style="white-space:nowrap">+ IVA</small></span>
+          <span class="lbl">Valor total · IVA incluido</span>
+          <span class="big">$11.305.000 <small style="white-space:nowrap">IVA incluido</small></span>
           <p class="per">Valor integral de la herramienta, con 2 cambios de preguntas incluidos y uso sin límite de veces.</p>
           <dl>
             <div><dt>Valor antes de IVA</dt><dd>$9.500.000</dd></div>
             <div><dt>IVA (19 %)</dt><dd>$1.805.000</dd></div>
-            <div class="sum"><dt>Total con IVA</dt><dd>$11.305.000</dd></div>
+            <div class="sum"><dt>Total a pagar, IVA incluido</dt><dd>$11.305.000</dd></div>
           </dl>
           <div class="unit">
             <p>Cada participante vive la experiencia completa:</p>
@@ -583,9 +595,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="card">
           <h3>Forma de pago</h3>
           <ul class="list">
-            <li><span><b>Anticipo del 30 % · $2.850.000</b> (calculado antes de IVA) al aprobar la propuesta</span></li>
-            <li><span><b>Saldo · $6.650.000 + el 100 % del IVA ($1.805.000)</b> en la factura final, a la entrega, con pago a 30 días</span></li>
+            <li><span><b>Anticipo del 30 % · $2.850.000</b> (calculado sobre el valor antes de IVA, sin IVA) al aprobar la propuesta</span></li>
+            <li><span><b>Saldo · $8.455.000</b> ($6.650.000 + el 100 % del IVA, $1.805.000) en la factura final, a la entrega, con pago a 30 días</span></li>
           </ul>
+          <p class="paytotal">Anticipo + saldo = <b>$11.305.000</b>, IVA incluido.</p>
         </div>
         <div class="card">
           <h3>Acompañamiento durante el evento</h3>
@@ -600,7 +613,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <li><h3>Uso sin límite de veces</h3><p>La herramienta se puede usar varias veces, no solo en el evento del 27 de noviembre.</p></li>
           <li><h3>Avatares sin memoria</h3><p>Cada persona crea su avatar cada vez que entra. La herramienta no guarda el nombre ni el historial de las participantes.</p></li>
           <li><h3>2 cambios de preguntas incluidos</h3><p>El valor incluye 2 cambios de preguntas para la puerta de entrada, los 6 vagones y la puerta de salida. Los vagones conservan siempre su nombre.</p></li>
-          <li><h3>Cambios adicionales · $650.000 + IVA cada uno</h3><p>Después, Solventum puede cambiar preguntas y casos las veces que necesite. Cada cambio cubre las 5 preguntas de entrada, las 5 de salida y las preguntas de los 6 vagones, y Solventum las entrega previamente en un documento de Word.</p></li>
+          <li><h3>Cambios adicionales · $773.500 IVA incluido cada uno</h3><p>Después, Solventum puede cambiar preguntas y casos las veces que necesite ($650.000 + IVA de $123.500 por cambio). Cada cambio cubre las 5 preguntas de entrada, las 5 de salida y las preguntas de los 6 vagones, y Solventum las entrega previamente en un documento de Word.</p></li>
           <li><h3>Informe del evento en 3 días hábiles</h3><p>Simoné entrega el informe en PDF dentro de los 3 días hábiles (de lunes a viernes) siguientes al evento, una vez Solventum confirme que la actividad quedó cerrada.</p></li>
           <li><h3>Los puntos siempre se mantienen</h3><p>Los puntos son parte de la estrategia de gamificación y su conteo es permanente. Lo que se anuncia como premio no siempre tiene que ser una insignia: con cada cambio de preguntas, Simoné ajusta la tabla de equivalencia de los puntos.</p></li>
         </ul>
