@@ -71,7 +71,7 @@
   a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
 
   /* Lo que escuchamos */
-  .necesidades { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+  .necesidades { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
   .nec { display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 3px solid var(--olive); }
   .nec:nth-child(5n+2) { border-top-color: var(--rust); }
   .nec:nth-child(5n+3) { border-top-color: var(--magenta); }
@@ -249,7 +249,7 @@
   footer { background: var(--paper); border-top: 1px solid var(--line); }
   footer .wrap { padding-block: 22px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--muted); }
 
-  @media (max-width: 1100px) { .necesidades { grid-template-columns: repeat(3, minmax(0, 1fr)); } .fase { grid-template-columns: 200px minmax(0, 1fr); } .fase .ent { grid-column: 2; border-left: 0; padding-left: 0; } .pasos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 1100px) { .necesidades { grid-template-columns: repeat(2, minmax(0, 1fr)); } .fase { grid-template-columns: 200px minmax(0, 1fr); } .fase .ent { grid-column: 2; border-left: 0; padding-left: 0; } .pasos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 900px) {
     .hero, .cierre { grid-template-columns: 1fr; }
     .hero-photo { order: -1; min-height: 52vw; }
@@ -316,13 +316,12 @@
       <div class="head">
         <p class="eyebrow">Lo que escuchamos</p>
         <h2 class="h2">Un portafolio sólido que merece comunicarse con más claridad</h2>
-        <p class="lead">Entorno &amp; Compañía IPS tiene 29 años de trayectoria. En las conversaciones con la dirección aparecieron cinco necesidades.</p>
+        <p class="lead">Entorno &amp; Compañía IPS tiene 29 años de trayectoria. En las conversaciones con la dirección aparecieron cuatro necesidades.</p>
       </div>
       <div class="necesidades">
         <div class="nec"><h3>Cotizar más rápido</h3><p>Propuestas más dinámicas, rápidas de crear y con el valor agregado visible para el cliente.</p></div>
         <div class="nec"><h3>Venta consultiva</h3><p>Pasar de vender servicios a resolver necesidades, con un método que el equipo pueda seguir.</p></div>
         <div class="nec"><h3>Todos los roles cuentan</h3><p>Una cultura de servicio en la que cada persona, desde quien contesta el teléfono hasta la dirección, es parte de la experiencia del cliente.</p></div>
-        <div class="nec"><h3>Un equipo comercial nuevo</h3><p>La coordinación y la asistencia comercial están por crearse: una oportunidad para empezar con un modelo nuevo.</p></div>
         <div class="nec"><h3>Posicionar Huoli</h3><p>El programa estrella necesita una oferta clara y presencia en los canales digitales.</p></div>
       </div>
     </div>
@@ -416,13 +415,13 @@
             <li>Revisar las plantillas de cotizaciones, de comunicados y los instructivos para usuarios.</li>
             <li>Auditoría de activos digitales: web, redes, WhatsApp, correo, portal de citas y Google.</li>
             <li>Definir pequeñas victorias y herramientas digitales para mejorar procedimientos.</li>
-            <li>Levantar la línea base, entrevistar clientes y definir los perfiles del equipo comercial.</li>
+            <li>Levantar la línea base y entrevistar clientes.</li>
           </ul>
-          <div class="ent"><span>Entregable</span><p>Informe de auditoría y diagnóstico, lista de pequeñas victorias ejecutadas o en curso, y perfiles de cargo listos para contratar</p></div>
+          <div class="ent"><span>Entregable</span><p>Informe de auditoría y diagnóstico y lista de pequeñas victorias ejecutadas o en curso</p></div>
         </div>
         <div class="fase pausa">
           <div class="lbl"><span>Pausa · 26 dic – 9 ene</span></div>
-          <p>Entorno avanza la publicación de las vacantes comerciales.</p>
+          <p>Sin sesiones de trabajo por las fiestas de fin de año.</p>
         </div>
         <div class="fase">
           <div class="lbl"><span>Periodo 2 · 10 ene – 10 feb 2027</span><h3>Portafolio y oferta comercial</h3></div>
@@ -440,7 +439,6 @@
             <li>Plantilla de propuesta modular y biblioteca de módulos.</li>
             <li>Guion de venta consultiva.</li>
             <li>Instructivos para usuarios como enlaces.</li>
-            <li>Inducción del equipo comercial nuevo.</li>
           </ul>
           <div class="ent"><span>Entregable</span><p>Kit comercial completo y primeras 5 propuestas enviadas con el modelo nuevo</p></div>
         </div>
@@ -513,7 +511,7 @@
         <li><b>10 de abril</b><span>Huoli lanzado en LinkedIn e Instagram.</span></li>
         <li><b>10 de mayo</b><span>Primer comité comercial con datos reales, 10 capacitaciones realizadas y plan de continuidad entregado.</span></li>
       </ul>
-      <p class="mover"><b>Lo que puede mover el calendario:</b> que la información interna no llegue antes del 6 de diciembre, que el equipo comercial no esté contratado al 10 de febrero, o que cambien los acuerdos con la marca. Las fechas y los entregables se ajustan con la directora en cada cierre de periodo. <em>Este cronograma es una propuesta y está sujeto a los acuerdos con la marca.</em></p>
+      <p class="mover"><b>Lo que puede mover el calendario:</b> que la información interna no llegue antes del 6 de diciembre o que cambien los acuerdos con la marca. Las fechas y los entregables se ajustan con la directora en cada cierre de periodo. <em>Este cronograma es una propuesta y está sujeto a los acuerdos con la marca.</em></p>
     </div>
   </section>
 
@@ -526,10 +524,11 @@
       <div class="alc-grid">
         <div class="alc no">
           <span class="k">No incluye</span>
-          <h3>Acompañamiento comercial ni metas de ventas</h3>
+          <h3>Acompañamiento comercial, metas de ventas ni búsqueda de equipo comercial</h3>
           <ul>
             <li>La consultora no asiste a reuniones de venta, no gestiona clientes ni hace seguimiento a oportunidades.</li>
             <li>Los indicadores de resultados en ventas son responsabilidad del equipo comercial de Entorno.</li>
+            <li>La búsqueda, selección, contratación e inducción de personal comercial.</li>
           </ul>
         </div>
         <div class="alc si">
@@ -538,7 +537,6 @@
             <li>Designar a una persona de enlace para el proyecto.</li>
             <li>Entregar la información solicitada en las fechas acordadas.</li>
             <li>Dar tiempo al personal para asistir a las capacitaciones.</li>
-            <li>Avanzar la contratación del equipo comercial.</li>
             <li>Validar precios, mensajes y textos legales antes de publicarlos.</li>
           </ul>
         </div>
@@ -646,7 +644,6 @@
           <li>¿Qué valor agregado siente que el cliente no ve hoy?</li>
         </ul></div>
         <div class="preg"><span class="k">Equipo y cultura</span><ul>
-          <li>¿Qué persona imagina en la coordinación comercial y en la asistencia comercial?</li>
           <li>¿Qué conductas del equipo reflejan mejor el espíritu de Entorno? ¿Cuáles quisiera cambiar?</li>
           <li>¿Qué rol cree que el cliente subvalora, pero es clave en su experiencia?</li>
         </ul></div>
