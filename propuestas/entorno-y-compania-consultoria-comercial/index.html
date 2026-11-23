@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Consultoría comercial y de comunicaciones externas · Entorno & Compañía IPS">
+<meta property="og:description" content="Propuesta comercial de Simoné para la Dra. Leyla Rossi, directora de Entorno & Compañía IPS.">
+<link rel="icon" href="img/simbolo.png">
+<title>Propuesta comercial · Entorno & Compañía IPS · Simoné</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Propuesta de consultoría comercial y de comunicaciones externas de Simoné para Entorno & Compañía IPS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,400&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap">
+<style>
+  /* Layout: una propuesta que se recorre bajando, bandas crema y oliva, menú fijo de secciones y la inversión como cierre.
+     Paleta de Simoné sobre tonos papel, un solo modo claro a propósito. */
+  :root {
+    --olive: #373A0E; --olive-2: #4A4D1C; --rust: #8A3200; --magenta: #B5157F; --orange: #F5A33F;
+    --paper: #F7F2E8; --sand: #EFE6D6; --card: #FFFDF8; --ink: #2E300C; --body: #4A4C2E; --muted: #6E7050; --line: #DCD3BF;
+    --on-dark: #F7F2E8; --on-dark-soft: #DCD8BE;
+    --display: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    --accent-face: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --radius: 18px; --wrap: 1180px; color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--display); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  h1, h2, h3, h4, p { margin: 0; }
+  h1, h2, h3 { text-wrap: balance; color: var(--ink); }
+  b, strong { font-weight: 700; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  section { padding-block: clamp(56px, 9vw, 112px); scroll-margin-top: 64px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--rust); }
+  .h2 { font-size: clamp(30px, 4.4vw, 50px); font-weight: 700; line-height: 1.1; letter-spacing: -.01em; }
+  .lead { font-size: clamp(18px, 2vw, 21px); line-height: 1.6; color: var(--body); max-width: 62ch; }
+  .head { display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(32px, 5vw, 56px); }
+  .quote { font-family: var(--accent-face); font-style: italic; font-weight: 500; color: var(--magenta); line-height: 1.25; }
+  .sub { font-size: clamp(22px, 2.4vw, 28px); font-weight: 700; line-height: 1.2; margin: clamp(48px, 6vw, 72px) 0 18px; }
+
+  /* Portada */
+  .hero { padding-block: 0; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); min-height: min(860px, 92vh); }
+  .hero-copy { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; padding-block: clamp(32px, 5vw, 64px); padding-left: max(16px, env(safe-area-inset-left, 0px), calc((100vw - var(--wrap)) / 2 + 16px)); padding-right: clamp(16px, 4vw, 64px); }
+  .logo { width: clamp(190px, 22vw, 280px); height: auto; }
+  .hero h1 { font-size: clamp(34px, 4.4vw, 62px); overflow-wrap: break-word; font-weight: 800; line-height: 1; letter-spacing: -.02em; }
+  .hero .quote { font-size: clamp(22px, 2.6vw, 32px); max-width: 26ch; }
+  .hero-main { display: flex; flex-direction: column; gap: 22px; }
+  .para { display: flex; flex-direction: column; gap: 14px; background: var(--card); border-radius: var(--radius); padding: 22px 24px; max-width: 560px; }
+  .para .k { font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  .para img { width: min(340px, 100%); height: auto; }
+  .para p { font-size: 15.5px; color: var(--body); }
+  .para p b { color: var(--ink); }
+  .hero-photo { position: relative; min-height: 420px; }
+  .hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+  .fact { padding: 18px 16px 0 0; display: flex; flex-direction: column; gap: 2px; }
+  .fact + .fact { padding-left: 16px; border-left: 1px solid var(--line); }
+  .fact strong { font-size: clamp(26px, 3vw, 36px); font-weight: 800; color: var(--olive); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .fact span { font-size: 13px; color: var(--muted); line-height: 1.35; }
+
+  /* Menú */
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--olive); }
+  nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--olive); }
+  nav.toc .wrap { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+  nav.toc .wrap::-webkit-scrollbar { display: none; }
+  nav.toc a { flex: none; color: var(--on-dark-soft); text-decoration: none; font-size: 14px; font-weight: 600; padding: 16px 14px; border-bottom: 3px solid transparent; white-space: nowrap; }
+  nav.toc a:hover, nav.toc a.on { color: var(--on-dark); border-bottom-color: var(--orange); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+
+  /* Lo que escuchamos */
+  .necesidades { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+  .nec { display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 3px solid var(--olive); }
+  .nec:nth-child(5n+2) { border-top-color: var(--rust); }
+  .nec:nth-child(5n+3) { border-top-color: var(--magenta); }
+  .nec:nth-child(5n+4) { border-top-color: var(--orange); }
+  .nec h3 { font-size: 19px; font-weight: 700; line-height: 1.25; }
+  .nec p { font-size: 15px; color: var(--body); }
+
+  /* Avances */
+  .avances { background: var(--sand); }
+  .av-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+  .av-grid p + p { margin-top: 14px; }
+  .activos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .activos li { background: var(--card); border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 2px; }
+  .activos strong { font-size: 30px; font-weight: 800; color: var(--magenta); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .activos span { font-size: 14.5px; color: var(--body); line-height: 1.4; }
+  .consid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .con { background: var(--card); border-radius: 14px; padding: 20px 22px; display: grid; grid-template-columns: 34px 1fr; gap: 4px 12px; align-items: baseline; }
+  .con .n { grid-row: span 2; font-size: 26px; font-weight: 800; color: var(--orange); line-height: 1; font-variant-numeric: tabular-nums; }
+  .con b { font-size: 16.5px; color: var(--ink); line-height: 1.35; }
+  .con span { font-size: 14.5px; color: var(--muted); line-height: 1.45; }
+  .victorias { margin-top: 16px; background: var(--olive); border-radius: var(--radius); padding: clamp(22px, 3.5vw, 32px); color: var(--on-dark-soft); font-size: 16px; }
+  .victorias b { color: var(--orange); }
+
+  /* Propuesta */
+  .objetivo { position: relative; color: var(--on-dark); background: var(--olive); overflow: hidden; }
+  .objetivo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .objetivo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(38,40,9,.96) 0%, rgba(38,40,9,.88) 55%, rgba(38,40,9,.45) 100%); }
+  .objetivo .wrap { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 22px; }
+  .objetivo .eyebrow { color: var(--orange); }
+  .objetivo h2 { color: var(--on-dark); font-size: clamp(34px, 5vw, 64px); font-weight: 800; line-height: 1.05; letter-spacing: -.02em; max-width: 20ch; }
+  .objetivo p { font-size: clamp(18px, 2vw, 22px); line-height: 1.55; color: var(--on-dark-soft); max-width: 54ch; }
+  .objs { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; max-width: 900px; counter-reset: o; }
+  .objs li { counter-increment: o; display: grid; grid-template-columns: 40px 1fr; gap: 10px; color: var(--on-dark); font-size: 16.5px; line-height: 1.45; background: rgba(247,242,232,.08); border-radius: 14px; padding: 18px 20px; }
+  .objs li::before { content: counter(o); font-size: 28px; font-weight: 800; color: var(--orange); line-height: 1; }
+
+  /* Incluye */
+  .incluye-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .inc { background: var(--card); border-radius: var(--radius); padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; gap: 10px; border-top: 4px solid var(--olive); }
+  .inc:nth-child(2) { border-top-color: var(--magenta); }
+  .inc:nth-child(3) { border-top-color: var(--rust); }
+  .inc:nth-child(4) { border-top-color: var(--orange); }
+  .inc .freq { align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--olive); background: var(--sand); padding: 6px 12px; border-radius: 999px; }
+  .inc h3 { font-size: 22px; font-weight: 700; line-height: 1.2; }
+  .inc p { font-size: 16px; color: var(--body); }
+  .nota { margin-top: 18px; font-size: 15.5px; color: var(--muted); }
+
+  /* Ruta */
+  .ruta { background: var(--sand); }
+  .fases { display: flex; flex-direction: column; gap: 14px; }
+  .fase { display: grid; grid-template-columns: 230px minmax(0, 1fr) 260px; gap: 14px 32px; background: var(--card); border-radius: var(--radius); padding: clamp(20px, 3vw, 30px); }
+  .fase.pausa { background: transparent; border: 1px dashed var(--line); padding-block: 16px; }
+  .fase .lbl { display: flex; flex-direction: column; gap: 4px; }
+  .fase .lbl span { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--rust); }
+  .fase .lbl h3 { font-size: 21px; font-weight: 700; line-height: 1.2; }
+  .fase ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+  .fase li { position: relative; padding-left: 20px; font-size: 15.5px; line-height: 1.5; color: var(--ink); }
+  .fase li::before { content: ""; position: absolute; left: 0; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+  .fase .ent { border-left: 1px solid var(--line); padding-left: 20px; display: flex; flex-direction: column; gap: 4px; }
+  .fase .ent span { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--magenta); }
+  .fase .ent p { font-size: 15px; color: var(--body); line-height: 1.5; }
+  .fase.pausa p { font-size: 15.5px; color: var(--body); grid-column: span 2; }
+
+  .tablebox { overflow-x: auto; border-radius: var(--radius); background: var(--card); }
+  table.t { width: 100%; min-width: 640px; border-collapse: collapse; }
+  table.t th, table.t td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15.5px; vertical-align: top; line-height: 1.45; }
+  table.t thead th { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--rust); background: var(--card); }
+  table.t tbody tr:last-child td, table.t tbody tr:last-child th { border-bottom: 0; }
+  table.t tbody th { font-weight: 700; color: var(--ink); white-space: nowrap; }
+  table.t td { color: var(--body); }
+  .eje { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .06em; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+  .eje.adn { background: rgba(181,21,127,.1); color: var(--magenta); }
+  .eje.srv { background: rgba(138,50,0,.1); color: var(--rust); }
+  .eje.vta { background: rgba(55,58,14,.1); color: var(--olive); }
+
+  .capa { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 4vw, 48px); align-items: start; }
+  .capa img { border-radius: var(--radius); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .capa-copy { display: flex; flex-direction: column; gap: 14px; }
+  .capa-copy p { color: var(--body); }
+
+  .hitos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .hitos li { background: var(--olive); border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; }
+  .hitos b { color: var(--orange); font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+  .hitos span { color: var(--on-dark); font-size: 15px; line-height: 1.45; }
+  .mover { margin-top: 18px; font-size: 15.5px; color: var(--body); max-width: 80ch; }
+  .mover em { color: var(--muted); }
+
+  /* Alcance */
+  .alc-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+  .alc { border-radius: var(--radius); padding: clamp(24px, 3vw, 34px); display: flex; flex-direction: column; gap: 14px; }
+  .alc.no { background: var(--rust); }
+  .alc.no .k { color: #F8D3A0; }
+  .alc.no h3, .alc.no li { color: var(--on-dark); }
+  .alc.si { background: var(--card); }
+  .alc .k { font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--rust); }
+  .alc h3 { font-size: 22px; line-height: 1.25; }
+  .alc ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .alc li { position: relative; padding-left: 20px; font-size: 16px; line-height: 1.5; color: var(--ink); }
+  .alc li::before { content: ""; position: absolute; left: 0; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+
+  /* Equipo */
+  .lead-card { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(24px, 4vw, 44px); align-items: center; background: var(--card); border-radius: var(--radius); padding: clamp(20px, 3.5vw, 36px); }
+  .lead-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; }
+  .lead-card h3 { font-size: 24px; font-weight: 700; }
+  .lead-card .role { font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--rust); margin-top: 6px; font-weight: 600; line-height: 1.5; }
+  .lead-card p.bio { margin-top: 12px; color: var(--body); font-size: 15.5px; max-width: 64ch; }
+  .lead-card a { display: inline-block; margin-top: 14px; font-weight: 700; font-size: 15px; color: var(--rust); }
+  .clientes { list-style: none; padding: 0; margin: 24px 0 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .clientes li { background: #fff; border: 1px solid #E4E1D4; border-radius: 10px; height: 110px; display: flex; align-items: center; justify-content: center; padding: 16px 20px; min-width: 0; }
+  .clientes img { max-width: 100%; max-height: 64px; width: auto; height: auto; object-fit: contain; }
+
+  /* Inversión */
+  .inversion { background: var(--olive); color: var(--on-dark); }
+  .inversion .eyebrow { color: var(--orange); }
+  .inv-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+  .incluye { list-style: none; margin: 0; padding: 0; }
+  .incluye li { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(247, 242, 232, .16); }
+  .incluye li:first-child { border-top: 1px solid rgba(247, 242, 232, .16); }
+  .incluye b { color: var(--orange); font-size: 15px; }
+  .incluye span { color: var(--on-dark-soft); font-size: 15.5px; line-height: 1.45; }
+  .price { display: flex; flex-direction: column; gap: 22px; }
+  .price .total { font-size: clamp(44px, 6.6vw, 88px); font-weight: 800; line-height: 1; letter-spacing: -.02em; color: var(--on-dark); font-variant-numeric: tabular-nums; }
+  .price .total span { color: var(--orange); }
+  .price .per { font-size: 15px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--on-dark-soft); }
+  .withtax { font-size: 17px; color: var(--on-dark-soft); font-variant-numeric: tabular-nums; }
+  .withtax b { color: var(--on-dark); }
+  .terms { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .term { background: var(--olive-2); border-radius: var(--radius); padding: 22px 24px; display: flex; flex-direction: column; gap: 6px; border-top: 4px solid var(--orange); }
+  .term + .term { border-top-color: var(--magenta); }
+  .term .k { font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--orange); }
+  .term h3 { color: var(--on-dark); font-size: 20px; line-height: 1.25; }
+  .term p { color: var(--on-dark-soft); font-size: 15.5px; }
+
+  /* Próximos pasos */
+  .pasos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; counter-reset: p; }
+  .pasos li { counter-increment: p; background: var(--card); border-radius: var(--radius); padding: 22px 20px 24px; display: flex; flex-direction: column; gap: 8px; }
+  .pasos li::before { content: counter(p); font-size: 40px; font-weight: 800; line-height: 1; color: var(--orange); }
+  .pasos p { font-size: 16px; color: var(--ink); line-height: 1.45; }
+  .preguntas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .preg { background: var(--card); border-radius: var(--radius); padding: clamp(22px, 3vw, 30px); display: flex; flex-direction: column; gap: 12px; }
+  .preg .k { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--rust); }
+  .preg ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .preg li { position: relative; padding-left: 20px; font-size: 15.5px; line-height: 1.5; color: var(--ink); }
+  .preg li::before { content: ""; position: absolute; left: 0; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: var(--magenta); }
+  .preg.datos { grid-column: 1 / -1; background: var(--olive); }
+  .preg.datos .k { color: var(--orange); }
+  .preg.datos p { color: var(--on-dark-soft); font-size: 15.5px; }
+  .preg.datos ul { grid-template-columns: 1fr 1fr; gap: 10px 28px; }
+  .preg.datos li { color: var(--on-dark); }
+  .preg.datos li::before { background: var(--orange); }
+  .preg.datos li b { color: var(--orange); }
+
+  /* Cierre */
+  .cierre { padding-block: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); background: var(--sand); }
+  .cierre-copy { display: flex; flex-direction: column; justify-content: center; gap: 22px; padding-block: clamp(48px, 7vw, 96px); padding-left: max(16px, env(safe-area-inset-left, 0px), calc((100vw - var(--wrap)) / 2 + 16px)); padding-right: clamp(16px, 4vw, 64px); }
+  .cierre-copy .quote { font-size: clamp(24px, 2.8vw, 34px); }
+  .cierre img.ph { width: 100%; height: 100%; object-fit: cover; min-height: 360px; }
+  .contacto { display: flex; flex-direction: column; gap: 10px; }
+  .contacto .who { font-weight: 700; }
+  .mail { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .mail code { font-family: var(--display); font-size: 16px; color: var(--ink); user-select: all; overflow-wrap: anywhere; }
+  .mail button { font: 600 13px var(--display); color: var(--olive); background: var(--card); border: 0; border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+  .mail button:hover { background: var(--line); }
+
+  .ficha { border-top: 1px solid rgba(53,58,14,.16); background: #F4EFE3; }
+  .ficha .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px 36px; }
+  .ficha img { height: 52px; width: auto; background: #fff; border-radius: 8px; padding: 6px 10px; }
+  .ficha dl { display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 0; }
+  .ficha dt { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #6A6C55; }
+  .ficha dd { margin: 2px 0 0; font-weight: 600; font-size: 15px; font-variant-numeric: tabular-nums; }
+  .ficha dd small { font-weight: 500; color: #6A6C55; font-size: 13px; }
+  .ficha a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+  .ficha .notas { flex-basis: 100%; border-top: 1px solid rgba(53,58,14,.16); padding-top: 16px; }
+  .ficha .notas p { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #6A6C55; margin: 0 0 8px; }
+  .ficha .notas ul { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; font-size: 14px; line-height: 1.5; max-width: 80ch; }
+  footer { background: var(--paper); border-top: 1px solid var(--line); }
+  footer .wrap { padding-block: 22px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--muted); }
+
+  @media (max-width: 1100px) { .necesidades { grid-template-columns: repeat(3, minmax(0, 1fr)); } .fase { grid-template-columns: 200px minmax(0, 1fr); } .fase .ent { grid-column: 2; border-left: 0; padding-left: 0; } .pasos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 900px) {
+    .hero, .cierre { grid-template-columns: 1fr; }
+    .hero-photo { order: -1; min-height: 52vw; }
+    .hero-copy, .cierre-copy { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+    .av-grid, .capa, .inv-grid, .alc-grid, .fase { grid-template-columns: 1fr; }
+    .fase .ent { grid-column: auto; }
+    .fase.pausa p { grid-column: auto; }
+    .hitos { grid-template-columns: 1fr 1fr; }
+    .clientes { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .facts { grid-template-columns: 1fr 1fr; row-gap: 16px; }
+    .fact:nth-child(3) { padding-left: 0; border-left: 0; }
+    .necesidades, .consid, .activos, .incluye-grid, .objs, .hitos, .terms, .pasos, .preguntas, .preg.datos ul { grid-template-columns: 1fr; }
+    .incluye li { grid-template-columns: 1fr; gap: 4px; }
+    .lead-card { grid-template-columns: 1fr; } .lead-card img { max-width: 220px; }
+    .clientes { grid-template-columns: 1fr 1fr; }
+  }
+  @media print { nav.toc { display: none; } section { break-inside: avoid-page; } }
+</style>
+</head>
+<body>
+
+<header class="hero" id="inicio">
+  <div class="hero-copy">
+    <img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte" width="1020" height="280">
+    <div class="hero-main">
+      <p class="eyebrow">Propuesta comercial · Noviembre 2026</p>
+      <h1>Consultoría comercial y de comunicaciones externas</h1>
+      <p class="quote">Que la forma de contar sus servicios esté a la altura de 29 años de trayectoria.</p>
+      <div class="para">
+        <span class="k">Preparada para</span>
+        <img src="img/logo-entorno.png" alt="Entorno & Compañía · La IPS de las Buenas Empresas" width="1200" height="214">
+        <p><b>Dra. Leyla Verónica Rossi Sarmiento</b> · Directora de Entorno &amp; Compañía IPS</p>
+      </div>
+    </div>
+    <div class="facts" aria-label="La propuesta en cifras">
+      <div class="fact"><strong>5</strong><span>periodos de trabajo, de noviembre a mayo</span></div>
+      <div class="fact"><strong>3 h</strong><span>de sesión de trabajo cada semana</span></div>
+      <div class="fact"><strong>10</strong><span>capacitaciones con el equipo</span></div>
+      <div class="fact"><strong>1</strong><span>kit comercial que se queda en la IPS</span></div>
+    </div>
+  </div>
+  <div class="hero-photo"><img src="img/equipo.jpg" alt="Equipo de trabajo sonriendo alrededor de una mesa durante un taller de Simoné"></div>
+</header>
+
+<nav class="toc" aria-label="Secciones de la propuesta">
+  <div class="wrap">
+    <a href="#escuchamos">Lo que escuchamos</a>
+    <a href="#avances">Primeros avances</a>
+    <a href="#propuesta">Nuestra propuesta</a>
+    <a href="#incluye">Qué incluye</a>
+    <a href="#ruta">Ruta de trabajo</a>
+    <a href="#alcance">Alcance</a>
+    <a href="#equipo">Quién acompaña</a>
+    <a href="#inversion">Inversión</a>
+    <a href="#pasos">Próximos pasos</a>
+  </div>
+</nav>
+
+<main>
+  <section id="escuchamos">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Lo que escuchamos</p>
+        <h2 class="h2">Un portafolio sólido que merece comunicarse con más claridad</h2>
+        <p class="lead">Entorno &amp; Compañía IPS tiene 29 años de trayectoria. En las conversaciones con la dirección aparecieron cinco necesidades.</p>
+      </div>
+      <div class="necesidades">
+        <div class="nec"><h3>Cotizar más rápido</h3><p>Propuestas más dinámicas, rápidas de crear y con el valor agregado visible para el cliente.</p></div>
+        <div class="nec"><h3>Venta consultiva</h3><p>Pasar de vender servicios a resolver necesidades, con un método que el equipo pueda seguir.</p></div>
+        <div class="nec"><h3>Todos los roles cuentan</h3><p>Una cultura de servicio en la que cada persona, desde quien contesta el teléfono hasta la dirección, es parte de la experiencia del cliente.</p></div>
+        <div class="nec"><h3>Un equipo comercial nuevo</h3><p>La coordinación y la asistencia comercial están por crearse: una oportunidad para empezar con un modelo nuevo.</p></div>
+        <div class="nec"><h3>Posicionar Huoli</h3><p>El programa estrella necesita una oferta clara y presencia en los canales digitales.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="avances" id="avances">
+    <div class="wrap">
+      <div class="av-grid">
+        <div class="head" style="margin-bottom:0">
+          <p class="eyebrow">Primeros avances del diagnóstico</p>
+          <h2 class="h2">El sitio tiene buen contenido técnico, pero todavía no vende</h2>
+          <div class="lead">
+            <p>Ya revisamos 8 páginas de entornoycia.co y los perfiles de LinkedIn e Instagram. El sitio describe servicios en vez de responder lo que pregunta el comprador: qué gano, cuánto toma y cómo empiezo.</p>
+            <p>El análisis completo se entrega en el periodo 1, con la información interna de Entorno.</p>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow" style="margin-bottom:14px">Activos de confianza que hoy no se aprovechan</p>
+          <ul class="activos">
+            <li><strong>29</strong><span>años de operación desde 1997</span></li>
+            <li><strong>168</strong><span>ciudades y municipios de cobertura</span></li>
+            <li><strong>1</strong><span>centro médico propio en el norte de Bogotá</span></li>
+            <li><strong>5</strong><span>testimonios de clientes que no aparecen donde se toma la decisión</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="sub">Consideraciones importantes</h3>
+      <p class="lead" style="margin-bottom:24px">Estos puntos se pueden atender pronto y tienen efecto directo en la confianza del cliente y en las ventas.</p>
+      <div class="consid">
+        <div class="con"><span class="n">1</span><b>El teléfono del pie de página tiene un prefijo internacional equivocado y el enlace para llamar no funciona</b><span>Un cliente que intenta llamar desde la web no llega a la IPS.</span></div>
+        <div class="con"><span class="n">2</span><b>Algunos indicadores de la página de inicio podrían estar mostrándose en cero</b><span>Comunican lo contrario de la trayectoria real.</span></div>
+        <div class="con"><span class="n">3</span><b>Las páginas de servicio terminan en «Escríbenos» y «Agenda tu demo» no lleva a ningún lado</b><span>Un gerente de SST que quiere cotizar no tiene un camino directo.</span></div>
+        <div class="con"><span class="n">4</span><b>El sitio habla igual a empresas y a personas</b><span>Ninguno de los dos encuentra rápido lo que busca.</span></div>
+        <div class="con"><span class="n">5</span><b>Ninguna página explica la diferencia entre Huoli Wellbeing, Care y Family</b><span>El programa estrella no se entiende como sistema.</span></div>
+        <div class="con"><span class="n">6</span><b>Algunos textos hacen promesas absolutas, legales o clínicas</b><span>En salud conviene un lenguaje prudente y con respaldo.</span></div>
+        <div class="con"><span class="n">7</span><b>La marca usa dos logos y tres eslogans según el canal</b><span>El cliente no reconoce una sola identidad.</span></div>
+      </div>
+      <p class="victorias">Algunos de estos ajustes se convierten en las primeras <b>pequeñas victorias</b> del periodo 1.</p>
+    </div>
+  </section>
+
+  <section class="objetivo" id="propuesta" aria-labelledby="prop-t">
+    <img src="img/taller.jpg" alt="">
+    <div class="wrap">
+      <p class="eyebrow">Nuestra propuesta</p>
+      <h2 id="prop-t">Una oferta clara, herramientas propias y un equipo formado</h2>
+      <p>Trabajamos con el modelo experiencial de Simoné: se aprende haciendo. Cada sesión produce algo que el equipo usa al día siguiente, y cada capacitación parte de casos reales de la IPS.</p>
+      <ol class="objs">
+        <li>Ordenar el portafolio y la oferta comercial, incluido Huoli, para que cada servicio se entienda en un minuto.</li>
+        <li>Diseñar herramientas comerciales que hagan las propuestas más rápidas y con el valor agregado visible.</li>
+        <li>Formar al equipo en servicio al cliente y en la información clave de la marca.</li>
+        <li>Dejar un plan de comunicaciones externas e indicadores para seguir midiendo.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="incluye">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Qué incluye</p>
+        <h2 class="h2">Cuatro componentes durante toda la consultoría</h2>
+      </div>
+      <div class="incluye-grid">
+        <div class="inc"><span class="freq">1 por semana · 3 horas</span><h3>Reuniones de trabajo</h3><p>Sesión con la dirección y los responsables de cada tema para avanzar el plan, revisar entregables y tomar decisiones, según el horario acordado.</p></div>
+        <div class="inc"><span class="freq">2 al mes · 60 minutos</span><h3>Capacitaciones con el equipo</h3><p>Talleres vivenciales para bajar la información clave de la marca y capacitar en servicio al cliente y venta consultiva.</p></div>
+        <div class="inc"><span class="freq">Toda la consultoría</span><h3>Acomodamiento estratégico y táctico</h3><p>Ordenar la oferta, los mensajes y los procesos comerciales y de comunicación externa; definir prioridades y la ruta para lograrlas.</p></div>
+        <div class="inc"><span class="freq">Según el periodo</span><h3>Diseño de herramientas comerciales</h3><p>Portafolio, oferta en niveles, plantilla de propuesta modular, encuestas de perfilación B2B y B2C, guion de venta consultiva e instructivos para usuarios, publicados como enlaces.</p></div>
+      </div>
+      <p class="nota">Cada periodo cierra con una revisión de avances con la dirección y los entregables acordados.</p>
+    </div>
+  </section>
+
+  <section class="ruta" id="ruta">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Ruta de trabajo</p>
+        <h2 class="h2">Cinco periodos, del 25 de noviembre de 2026 al 10 de mayo de 2027</h2>
+        <p class="lead">El trabajo arranca el 25 de noviembre (día cero) con una pausa por las fiestas de fin de año del 26 de diciembre al 9 de enero. Tres líneas corren al mismo tiempo: el trabajo de cada periodo, el plan Huoli y dos capacitaciones al mes con el equipo.</p>
+      </div>
+      <div class="fases">
+        <div class="fase">
+          <div class="lbl"><span>Día cero · 25 nov 2026</span><h3>Reunión con la directora</h3></div>
+          <ul><li>Validar el diagnóstico externo, la visión y las prioridades (dinámica de tarjetas).</li></ul>
+          <div class="ent"><span>Entregable</span><p>Acta de acuerdos y cronograma ajustado (en 5 días hábiles)</p></div>
+        </div>
+        <div class="fase">
+          <div class="lbl"><span>Periodo 1 · 25 nov – 25 dic 2026</span><h3>Diagnóstico y pequeñas victorias</h3></div>
+          <ul>
+            <li>Revisar los canales de comunicación externa.</li>
+            <li>Revisar las plantillas de cotizaciones, de comunicados y los instructivos para usuarios.</li>
+            <li>Auditoría de activos digitales: web, redes, WhatsApp, correo, portal de citas y Google.</li>
+            <li>Definir pequeñas victorias y herramientas digitales para mejorar procedimientos.</li>
+            <li>Levantar la línea base, entrevistar clientes y definir los perfiles del equipo comercial.</li>
+          </ul>
+          <div class="ent"><span>Entregable</span><p>Informe de auditoría y diagnóstico, lista de pequeñas victorias ejecutadas o en curso, y perfiles de cargo listos para contratar</p></div>
+        </div>
+        <div class="fase pausa">
+          <div class="lbl"><span>Pausa · 26 dic – 9 ene</span></div>
+          <p>Entorno avanza la publicación de las vacantes comerciales.</p>
+        </div>
+        <div class="fase">
+          <div class="lbl"><span>Periodo 2 · 10 ene – 10 feb 2027</span><h3>Portafolio y oferta comercial</h3></div>
+          <ul>
+            <li>Seguir trabajando el portafolio de Entorno.</li>
+            <li>Construir las herramientas para perfilar las necesidades de los clientes (encuestas B2B y B2C).</li>
+            <li>Construir la oferta comercial en tres niveles: Cumplir, Gestionar y Transformar.</li>
+            <li>Configurar GitHub y Claude para publicar páginas.</li>
+          </ul>
+          <div class="ent"><span>Entregable</span><p>Portafolio y oferta comercial publicados como enlaces, y encuestas de perfilación listas</p></div>
+        </div>
+        <div class="fase">
+          <div class="lbl"><span>Periodo 3 · 10 feb – 10 mar 2027</span><h3>Kit comercial</h3></div>
+          <ul>
+            <li>Plantilla de propuesta modular y biblioteca de módulos.</li>
+            <li>Guion de venta consultiva.</li>
+            <li>Instructivos para usuarios como enlaces.</li>
+            <li>Inducción del equipo comercial nuevo.</li>
+          </ul>
+          <div class="ent"><span>Entregable</span><p>Kit comercial completo y primeras 5 propuestas enviadas con el modelo nuevo</p></div>
+        </div>
+        <div class="fase">
+          <div class="lbl"><span>Periodo 4 · 10 mar – 10 abr 2027</span><h3>Canales digitales</h3></div>
+          <ul>
+            <li>LinkedIn e Instagram: perfiles, línea gráfica, calendario de contenidos y voceros.</li>
+            <li>Preparar y hacer el lanzamiento digital del programa Huoli.</li>
+          </ul>
+          <div class="ent"><span>Entregable</span><p>Canales digitales renovados y lanzamiento digital de Huoli</p></div>
+        </div>
+        <div class="fase">
+          <div class="lbl"><span>Periodo 5 · 10 abr – 10 may 2027</span><h3>Medir y transferir</h3></div>
+          <ul>
+            <li>Plan de comunicaciones externas a 12 meses.</li>
+            <li>Tableros de indicadores de la IPS y de Huoli.</li>
+            <li>Primer comité comercial.</li>
+            <li>Resultados frente a la línea base.</li>
+          </ul>
+          <div class="ent"><span>Entregable</span><p>Informe de resultados, tableros funcionando y plan de continuidad a 6 meses</p></div>
+        </div>
+      </div>
+
+      <h3 class="sub">Plan Huoli en paralelo</h3>
+      <p class="lead" style="margin-bottom:20px">Huoli avanza todos los meses para llegar al periodo 4 listo para el lanzamiento digital.</p>
+      <div class="tablebox">
+        <table class="t">
+          <thead><tr><th scope="col">Periodo</th><th scope="col">Trabajo en Huoli</th><th scope="col">Resultado</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">1 · nov – dic</th><td>Diagnóstico del programa: oferta actual, empresas atendidas, resultados, inversión y casos</td><td>Línea base de Huoli</td></tr>
+            <tr><th scope="row">2 · ene – feb</th><td>Empaquetar Wellbeing, Care y Family: fases, entregables, duración e inversión de referencia</td><td>Fichas de Huoli publicadas como enlaces</td></tr>
+            <tr><th scope="row">3 · feb – mar</th><td>Propuesta comercial de Huoli y lista de 15 empresas para el piloto</td><td>Kit comercial de Huoli</td></tr>
+            <tr><th scope="row">4 · mar – abr</th><td>Lanzamiento digital en LinkedIn e Instagram y contacto con las empresas del piloto</td><td>Huoli lanzado</td></tr>
+            <tr><th scope="row">5 · abr – may</th><td>Indicadores de Huoli y seguimiento al piloto</td><td>Al menos 3 empresas en conversación formal</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub" id="capacitaciones">Capacitaciones con el equipo</h3>
+      <div class="capa">
+        <div class="capa-copy">
+          <img src="img/taller.jpg" alt="Participante de un taller de Simoné dibujando mientras sus compañeros observan">
+          <p>Cada mes hay dos sesiones de 60 minutos con el equipo, separadas 15 días, sobre tres ejes: <b>venta consultiva</b>, <b>servicio al cliente</b> y <b>ADN de la marca</b>. Son 10 sesiones vivenciales en total. Las fechas sugeridas son miércoles y se ajustan con la directora.</p>
+        </div>
+        <div class="tablebox">
+          <table class="t" style="min-width:520px">
+            <thead><tr><th scope="col">#</th><th scope="col">Fecha sugerida</th><th scope="col">Eje</th><th scope="col">Tema</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">1</th><td>Mié 2 dic 2026</td><td><span class="eje adn">ADN de la marca</span></td><td>Nuestra historia y nuestra promesa: de 1997 a Huoli</td></tr>
+              <tr><th scope="row">2</th><td>Mié 16 dic 2026</td><td><span class="eje srv">Servicio al cliente</span></td><td>Los momentos de verdad: el recorrido del cliente en Entorno</td></tr>
+              <tr><th scope="row">3</th><td>Mié 13 ene 2027</td><td><span class="eje vta">Venta consultiva</span></td><td>Preguntar antes de ofrecer</td></tr>
+              <tr><th scope="row">4</th><td>Mié 27 ene 2027</td><td><span class="eje adn">ADN de la marca</span></td><td>Todos los roles cuentan: estándares por cargo</td></tr>
+              <tr><th scope="row">5</th><td>Mié 17 feb 2027</td><td><span class="eje srv">Servicio al cliente</span></td><td>Atención por WhatsApp, teléfono y correo</td></tr>
+              <tr><th scope="row">6</th><td>Mié 3 mar 2027</td><td><span class="eje vta">Venta consultiva</span></td><td>Usar las encuestas de perfilación y el brief</td></tr>
+              <tr><th scope="row">7</th><td>Mié 17 mar 2027</td><td><span class="eje vta">Venta consultiva</span></td><td>Presentar la propuesta y el valor agregado</td></tr>
+              <tr><th scope="row">8</th><td>Mié 31 mar 2027</td><td><span class="eje adn">ADN de la marca</span></td><td>Cómo hablamos en LinkedIn e Instagram: embajadores de Huoli</td></tr>
+              <tr><th scope="row">9</th><td>Mié 14 abr 2027</td><td><span class="eje srv">Servicio al cliente</span></td><td>Quejas, objeciones y PQRS como oportunidad</td></tr>
+              <tr><th scope="row">10</th><td>Mié 28 abr 2027</td><td><span class="eje adn">ADN de la marca</span></td><td>Cierre: compromisos y guardianes del ADN por área</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 class="sub">Hitos para revisar con la directora</h3>
+      <ul class="hitos">
+        <li><b>25 de noviembre</b><span>Día cero: prioridades acordadas con la directora.</span></li>
+        <li><b>25 de diciembre</b><span>Auditoría de activos digitales entregada, línea base aprobada y primeras pequeñas victorias ejecutadas.</span></li>
+        <li><b>10 de febrero</b><span>Portafolio, oferta comercial y encuestas de perfilación publicados.</span></li>
+        <li><b>10 de marzo</b><span>Primera propuesta enviada por enlace con el modelo nuevo.</span></li>
+        <li><b>10 de abril</b><span>Huoli lanzado en LinkedIn e Instagram.</span></li>
+        <li><b>10 de mayo</b><span>Primer comité comercial con datos reales, 10 capacitaciones realizadas y plan de continuidad entregado.</span></li>
+      </ul>
+      <p class="mover"><b>Lo que puede mover el calendario:</b> que la información interna no llegue antes del 6 de diciembre, que el equipo comercial no esté contratado al 10 de febrero, o que cambien los acuerdos con la marca. Las fechas y los entregables se ajustan con la directora en cada cierre de periodo. <em>Este cronograma es una propuesta y está sujeto a los acuerdos con la marca.</em></p>
+    </div>
+  </section>
+
+  <section id="alcance">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Alcance y corresponsabilidades</p>
+        <h2 class="h2">Simoné diseña, forma y entrega las herramientas; la operación comercial y sus resultados son de Entorno</h2>
+      </div>
+      <div class="alc-grid">
+        <div class="alc no">
+          <span class="k">No incluye</span>
+          <h3>Acompañamiento comercial ni metas de ventas</h3>
+          <ul>
+            <li>La consultora no asiste a reuniones de venta, no gestiona clientes ni hace seguimiento a oportunidades.</li>
+            <li>Los indicadores de resultados en ventas son responsabilidad del equipo comercial de Entorno.</li>
+          </ul>
+        </div>
+        <div class="alc si">
+          <span class="k">Entorno &amp; Compañía se compromete a</span>
+          <ul>
+            <li>Designar a una persona de enlace para el proyecto.</li>
+            <li>Entregar la información solicitada en las fechas acordadas.</li>
+            <li>Dar tiempo al personal para asistir a las capacitaciones.</li>
+            <li>Avanzar la contratación del equipo comercial.</li>
+            <li>Validar precios, mensajes y textos legales antes de publicarlos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="avances" id="equipo">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Quién acompaña</p>
+        <h2 class="h2">Una consultora con 16 años diseñando procesos de transformación humana</h2>
+      </div>
+      <div class="lead-card">
+        <img src="img/nathalia.jpg" alt="Retrato de Nathalia Andrea Velasco">
+        <div>
+          <p class="eyebrow">Consultora líder</p>
+          <h3>Nathalia Andrea Velasco Duarte</h3>
+          <p class="role">CEO y fundadora de Simoné · Profesional en Estudios y Gestión Cultural</p>
+          <p class="bio">Estratega en procesos de transformación humana con 16 años de trayectoria diseñando y liderando proyectos interdisciplinarios que integran la educación, las artes plásticas y la gestión cultural. Desde 2013 lidera Simoné, la agencia pedagógica que diseña experiencias de formación y bienestar para empresas con un modelo de educación experiencial: se aprende haciendo, no escuchando.</p>
+          <a href="https://www.linkedin.com/in/nathalia-andrea-velasco-duarte/" target="_blank" rel="noopener">Ver perfil en LinkedIn →</a>
+        </div>
+      </div>
+      <h3 class="sub" style="margin-bottom:0">Empresas que han confiado en Simoné</h3>
+      <ul class="clientes">
+        <li><img src="img/clientes/bancoldex.png" alt="Bancóldex"></li>
+        <li><img src="img/clientes/nueva-eps.png" alt="Nueva EPS"></li>
+        <li><img src="img/clientes/fundacion-santa-fe.png" alt="Fundación Santa Fe de Bogotá"></li>
+        <li><img src="img/clientes/imprenta-nacional.png" alt="Imprenta Nacional de Colombia"></li>
+        <li><img src="img/clientes/linktic.png" alt="Linktic"></li>
+        <li><img src="img/clientes/roche.png" alt="Roche"></li>
+        <li><img src="img/clientes/convatec.png" alt="Convatec"></li>
+        <li><img src="img/clientes/camara-comercio-cartagena.png" alt="Cámara de Comercio de Cartagena"></li>
+        <li><img src="img/clientes/cavipetrol.png" alt="Cavipetrol"></li>
+        <li><img src="img/clientes/ajover.png" alt="Ajover"></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="inversion" id="inversion">
+    <div class="wrap inv-grid">
+      <div>
+        <div class="head" style="margin-bottom:24px">
+          <p class="eyebrow">Alcance de la inversión</p>
+          <h2 class="h2" style="color:var(--on-dark)">Qué incluye cada mes</h2>
+        </div>
+        <ul class="incluye">
+          <li><b>Reuniones</b><span>1 sesión de trabajo semanal de 3 horas, según horario acordado</span></li>
+          <li><b>Capacitaciones</b><span>2 capacitaciones mensuales de 60 minutos con el equipo</span></li>
+          <li><b>Estrategia</b><span>Acomodamiento estratégico y táctico de la oferta, los mensajes y los procesos</span></li>
+          <li><b>Herramientas</b><span>Diseño de las herramientas comerciales del periodo</span></li>
+        </ul>
+      </div>
+      <div class="price">
+        <p class="eyebrow">Inversión mensual</p>
+        <p class="total">$2.950.000 <span>+&nbsp;IVA</span></p>
+        <p class="withtax">IVA (19 %): <b>$560.500</b> · Total mensual con IVA: <b>$3.510.500</b></p>
+        <div class="terms">
+          <div class="term">
+            <span class="k">Facturación</span>
+            <h3>Factura de Simoné</h3>
+            <p>La factura la emite Simoné, a nombre de Nathalia Andrea Velasco Duarte.</p>
+          </div>
+          <div class="term">
+            <span class="k">Corresponsabilidad</span>
+            <h3>Resultados de ventas</h3>
+            <p>No incluye acompañamiento comercial. Los indicadores de ventas son responsabilidad del equipo comercial de Entorno.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pasos">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Próximos pasos</p>
+        <h2 class="h2">Cuatro pasos para empezar el 25 de noviembre</h2>
+      </div>
+      <ol class="pasos">
+        <li><p>Aprobar esta propuesta.</p></li>
+        <li><p>Confirmar el horario de la reunión semanal y las fechas de las capacitaciones.</p></li>
+        <li><p>Designar a la persona de enlace de Entorno.</p></li>
+        <li><p>Reunión de diagnóstico con la directora el 25 de noviembre de 2026.</p></li>
+      </ol>
+
+      <h3 class="sub">Preguntas que necesitamos resolver</h3>
+      <p class="lead" style="margin-bottom:24px">Estas preguntas guiarán la reunión de diagnóstico.</p>
+      <div class="preguntas">
+        <div class="preg"><span class="k">Historia y visión</span><ul>
+          <li>¿Qué la hace sentir más orgullosa de estos 29 años?</li>
+          <li>Si en 3 años Entorno fuera un éxito, ¿qué dirían sus clientes de la empresa?</li>
+          <li>La visión de la empresa estaba escrita «al 2026». ¿Qué se cumplió y qué queda pendiente?</li>
+        </ul></div>
+        <div class="preg"><span class="k">Negocio y portafolio</span><ul>
+          <li>¿Qué servicios generan hoy la mayor parte de los ingresos? ¿Cuáles dejan más margen?</li>
+          <li>¿Quiénes son sus 5 clientes más importantes y por qué se quedan?</li>
+          <li>¿Qué espera de Huoli: que sea un producto propio, un valor agregado para clientes de exámenes, o ambas cosas?</li>
+          <li>¿Cuánta capacidad libre tiene la sede y el equipo extramural?</li>
+        </ul></div>
+        <div class="preg"><span class="k">Proceso comercial</span><ul>
+          <li>¿Cómo llega hoy un cliente nuevo? ¿Quién lo atiende y quién hace la cotización?</li>
+          <li>¿Cuánto tarda una cotización y cuántas se cierran?</li>
+          <li>¿Por qué se perdió la cotización que trajo?</li>
+          <li>¿Qué valor agregado siente que el cliente no ve hoy?</li>
+        </ul></div>
+        <div class="preg"><span class="k">Equipo y cultura</span><ul>
+          <li>¿Qué persona imagina en la coordinación comercial y en la asistencia comercial?</li>
+          <li>¿Qué conductas del equipo reflejan mejor el espíritu de Entorno? ¿Cuáles quisiera cambiar?</li>
+          <li>¿Qué rol cree que el cliente subvalora, pero es clave en su experiencia?</li>
+        </ul></div>
+        <div class="preg datos">
+          <span class="k">Datos internos de redes sociales</span>
+          <p>Para completar el diagnóstico necesitamos algunos datos internos del comportamiento de las redes sociales. Las capturas de pantalla sirven.</p>
+          <ul>
+            <li><b>Instagram (Meta Business Suite), últimos 90 días:</b> alcance, interacciones, publicaciones con mejor resultado y datos de la audiencia.</li>
+            <li><b>Página de LinkedIn (vista de administrador):</b> visitantes, impresiones y crecimiento de seguidores.</li>
+            <li><b>Sitio web:</b> datos de Google Analytics, Search Console o Perfil de Empresa en Google, si los tienen.</li>
+            <li><b>Gestión de redes:</b> quién maneja hoy las redes y con qué frecuencia publica.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre" aria-labelledby="cie-t">
+    <div class="cierre-copy">
+      <img class="logo" src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte" width="1020" height="280">
+      <h2 class="h2" id="cie-t">Que cada servicio se entienda y se elija</h2>
+      <p class="quote">Gracias por la confianza, Dra. Leyla.</p>
+      <div class="contacto">
+        <span class="who">Nathalia Andrea Velasco · Simoné</span>
+        <div class="mail"><code>nathalia@experienciasimone.com</code><button type="button" data-copy="nathalia@experienciasimone.com">Copiar</button></div>
+        <div class="mail"><code>experienciasimone@gmail.com</code><button type="button" data-copy="experienciasimone@gmail.com">Copiar</button></div>
+        <div class="mail"><code>321 773 8039</code><button type="button" data-copy="3217738039">Copiar</button></div>
+      </div>
+    </div>
+    <img class="ph" src="img/equipo.jpg" alt="Equipo participando en un taller de Simoné">
+  </section>
+</main>
+
+<aside class="ficha" aria-label="Datos de la oferta">
+  <div class="wrap">
+    <img src="img/logo-simone.png" alt="Simoné · Desarrollo humano a través del arte">
+    <dl>
+      <div><dt>Fecha de emisión</dt><dd>23 de noviembre de 2026</dd></div>
+      <div><dt>NIT</dt><dd>901.838.283-3</dd></div>
+      <div><dt>Teléfono</dt><dd><a href="tel:+573217738039">321 773 8039</a></dd></div>
+      <div><dt>Validez de la oferta</dt><dd>30 días <small>· hasta el 23 de diciembre de 2026</small></dd></div>
+    </dl>
+    <div class="notas">
+      <p>Notas finales</p>
+      <ul>
+        <li>Somos facturadores electrónicos y responsables de IVA.</li>
+        <li>Nos acogemos a la norma de pagos a 30 días para pymes. De ser necesario, enviamos la carta de certificación Mipyme.</li>
+        <li>Pertenecemos al Régimen Simple de Tributación, por lo que la única retención que deben practicarnos es un reteIVA del 15%.</li>
+      </ul>
+    </div>
+  </div>
+</aside>
+<footer>
+  <div class="wrap">
+    <span>Simoné · Desarrollo humano a través del arte</span>
+    <span>Propuesta para Entorno &amp; Compañía IPS · Noviembre 2026</span>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-copy]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.dataset.copy;
+      const done = () => { btn.textContent = 'Copiado'; setTimeout(() => { btn.textContent = 'Copiar'; }, 1600); };
+      const fallback = () => {
+        const code = btn.previousElementSibling;
+        const r = document.createRange(); r.selectNodeContents(code);
+        const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent = 'Seleccionado';
+      };
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+  const links = [...document.querySelectorAll('nav.toc a')];
+  const targets = links.map(a => document.querySelector(a.getAttribute('href')));
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id)); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    targets.forEach(t => t && io.observe(t));
+  }
+</script>
+</body>
+</html>
