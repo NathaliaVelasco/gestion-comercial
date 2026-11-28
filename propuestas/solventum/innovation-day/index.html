@@ -249,6 +249,20 @@
   .addon-total span { color:#C9D8D4; font-size:14px; }
   .addon-total strong { color:var(--green); font-size:32px; font-weight:400; }
   @media (max-width:760px) { .addon-grid.two { grid-template-columns:1fr; } }
+  .final { margin-top:clamp(36px,5vw,56px); padding:clamp(24px,4vw,40px); border-radius:20px; background:rgba(5,221,77,.08); border:1px solid rgba(5,221,77,.45); display:grid; grid-template-columns:minmax(0,1fr) minmax(0,340px); gap:28px; align-items:center; }
+  .final .label { color:var(--green); }
+  .final-amount { display:block; color:var(--green); font-size:clamp(44px,7vw,76px); font-weight:400; letter-spacing:-.02em; line-height:1.05; margin-top:8px; }
+  .final-cur { display:block; color:#D5E3DF; font-size:14px; margin-top:8px; }
+  .pdf-btn { display:inline-block; background:var(--green); color:#01332B; font-weight:700; text-decoration:none; padding:14px 28px; border-radius:999px; font-size:16px; }
+  .pdf-btn::before { content:"\1F512\00a0"; }
+  .pdf-block p { color:#C9D8D4; font-size:13px; margin-top:12px; line-height:1.5; }
+  @media (max-width:760px) { .final { grid-template-columns:1fr; } }
+  @media print {
+    nav.toc, .pdf-block { display:none !important; }
+    * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+    @page { size: 1280px 1810px; margin: 0; }
+    .journey li, .item, .addon, .final, figure, .stop, .lead-me, .sm-testi li, table.bom tr { break-inside:avoid; }
+  }
   .lead-me { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: center; }
   .lead-me img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 2px solid var(--malachite); }
   .lead-me h3 { font-size: 22px; font-weight: 700; }
@@ -611,8 +625,8 @@
       </div>
       <div class="invest">
         <div class="total">
-          <span class="amount">$17.335.000</span>
-          <span class="cur">Pesos colombianos (COP) + IVA · valor total a facturar</span>
+          <span class="amount">$16.575.000</span>
+          <span class="cur">Pesos colombianos (COP) + IVA · proyecto Innovation Day</span>
         </div>
         <ul class="incl">
           <li>Stand octagonal de 2,70 m de altura final, 4 cuadrantes (viaje del paciente): 4 paredes de 110 × 220 × 6 cm, 4 paredes de 50 × 220 × 6 cm y octágono central de 110 × 110 × 220 cm con caras de 45 × 220 cm</li>
@@ -645,9 +659,21 @@
         <div class="addon-total"><span>Valor adicional</span><strong>$760.000</strong><span>+ IVA</span></div>
       </div>
 
+      <div class="final">
+        <div class="final-main">
+          <p class="label">Valor final a facturar</p>
+          <span class="final-amount">$17.335.000</span>
+          <span class="final-cur">Pesos colombianos (COP) + IVA</span>
+        </div>
+        <div class="pdf-block">
+          <a class="pdf-btn" href="cotizacion-simone-solventum-innovation-day.pdf" download>Descargar propuesta en PDF</a>
+          <p>El PDF está protegido con clave. Simoné entrega la clave una vez se aprueba la propuesta.</p>
+        </div>
+      </div>
+
       <div class="addons">
-        <p class="label">Adicional opcional</p>
-        <p class="addons-lead">Se puede sumar al proyecto. Su valor no está incluido en la inversión total.</p>
+        <p class="label">Opcionales de la propuesta</p>
+        <p class="addons-lead">Se pueden sumar al proyecto. Su valor no está incluido en el valor final a facturar.</p>
         <div class="addon-grid">
           <div class="addon">
             <h3>50 recordatorios de caballete</h3>
