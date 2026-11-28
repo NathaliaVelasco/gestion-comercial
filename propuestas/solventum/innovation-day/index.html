@@ -244,6 +244,11 @@
   .arts img { border-radius:14px; border:1px solid var(--line); }
   .arts figcaption { margin-top:8px; font-size:13px; font-weight:700; color:var(--malachite); }
   @media (max-width:640px) { .arts { grid-template-columns:1fr; } }
+  .addon-grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .addon-total { margin-top:16px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+  .addon-total span { color:#C9D8D4; font-size:14px; }
+  .addon-total strong { color:var(--green); font-size:32px; font-weight:400; }
+  @media (max-width:760px) { .addon-grid.two { grid-template-columns:1fr; } }
   .lead-me { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: center; }
   .lead-me img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 2px solid var(--malachite); }
   .lead-me h3 { font-size: 22px; font-weight: 700; }
@@ -606,8 +611,8 @@
       </div>
       <div class="invest">
         <div class="total">
-          <span class="amount">$16.575.000</span>
-          <span class="cur">Pesos colombianos (COP) + IVA</span>
+          <span class="amount">$17.335.000</span>
+          <span class="cur">Pesos colombianos (COP) + IVA · valor total a facturar</span>
         </div>
         <ul class="incl">
           <li>Stand octagonal de 2,70 m de altura final, 4 cuadrantes (viaje del paciente): 4 paredes de 110 × 220 × 6 cm, 4 paredes de 50 × 220 × 6 cm y octágono central de 110 × 110 × 220 cm con caras de 45 × 220 cm</li>
@@ -622,6 +627,22 @@
           <li>Transporte del material hasta el Hotel Marriott de la Calle 26</li>
           <li>Entrega del material armado el 26 de noviembre, instalación a la 1:00 p.&nbsp;m. y acompañamiento en el montaje</li>
         </ul>
+      </div>
+
+      <div class="addons">
+        <p class="label">Adicionales del servicio</p>
+        <p class="addons-lead">Servicios solicitados durante la ejecución del proyecto, incluidos en el valor total a facturar.</p>
+        <div class="addon-grid two">
+          <div class="addon">
+            <h3>Montaje en horario nocturno</h3>
+            <p>25 de noviembre. Equipo de 3 personas para el montaje del stand en horario nocturno.</p>
+          </div>
+          <div class="addon">
+            <h3>Transporte Hotel Marriott – Hotel Dann</h3>
+            <p>27 de noviembre. Servicio de transporte con 3 personas para movilizar la pieza octagonal del Hotel Marriott al Hotel Dann.</p>
+          </div>
+        </div>
+        <div class="addon-total"><span>Valor adicional</span><strong>$760.000</strong><span>+ IVA</span></div>
       </div>
 
       <div class="addons">
